@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChefManager.Vistas.VistaRegister"
+             Title="VistaRegister">
+    <VerticalStackLayout>
+         <Label Text="Nombre de tu empresa"></Label>
+         <Entry></Entry>
+
+        <Label Text="Imagen del logo de tu empresa"></Label>
+        <Entry></Entry>
+
+        <Label Text="Nombre Usuario"></Label>
+        <Entry></Entry>
+
+        <Label Text="Contraseña"></Label>
+        <Entry></Entry>
+
+        <Label></Label>
+        <Entry></Entry>
+
+        <Label></Label>
+        <Entry></Entry>
+
+        <Label></Label>
+        <Entry></Entry>
+    </VerticalStackLayout>
+   
+</ContentPage>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChefManager.Vistas.Calendario"
+             xmlns:cal="clr-namespace:Plugin.Maui.Calendar.Controls;assembly=Plugin.Maui.Calendar"
+             Title="Calendario">
+    <cal:Calendar Events="{Binding Events}" EventsScrollViewVisible="True" ArrowsFontSize="30" FooterArrowVisible="False">
+
+        <cal:Calendar.EventTemplate>
+            <DataTemplate>
+                <VerticalStackLayout>
+                    <Label Text="{Binding Name}"></Label>
+                    <Label Text="{Binding Description}"></Label>
+                </VerticalStackLayout>
+            </DataTemplate>
+        </cal:Calendar.EventTemplate>
+        
+    </cal:Calendar>
+</ContentPage>

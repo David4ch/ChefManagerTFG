@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ChefManager.Vistas.Bienvenida"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label
+            FontSize="65"
+            HorizontalOptions="Center"
+            Text="WELCOME!"
+            TextColor="#634E2C" />
+        <Image
+            x:Name="img"
+            HeightRequest="200"
+            Source="chefmg.png"
+            WidthRequest="200" />
+        <Button
+            BackgroundColor="#8D6E3A"
+            Clicked="RegisterButton_Clicked"
+            FontSize="20"
+            HeightRequest="50"
+            Text="Registro"
+            TextColor="White"
+            WidthRequest="180" />
+
+        <Button
+            BackgroundColor="#8D6E3A"
+            Clicked="LoginButton_Clicked"
+            FontSize="20"
+            HeightRequest="50"
+            Text="Inicio Sesión"
+            TextColor="White"
+            WidthRequest="180" />
+
+    </StackLayout>
+
+</ContentPage>

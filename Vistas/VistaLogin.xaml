@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChefManager.Vistas.VistaLogin"
+             Title="VistaLogin">
+    <VerticalStackLayout>
+        <Label Text="Username:" Margin="155, 40, 0, 5" FontSize="25" TextColor="White"  />
+        <Entry WidthRequest="830" FontSize="16" TextColor="White" />
+        <Label Text="Contrasena:" Margin="155, 40, 0, 5" FontSize="25" TextColor="White"  />
+        <Entry  WidthRequest="830" FontSize="16" TextColor="White" IsPassword="True" />
+        <Button Text="LOGIN" Margin="0, 20, 0, 0"
+    BackgroundColor="#36393b" FontSize="16" TextColor="#e6ddbc" FontAttributes="Bold" WidthRequest="230"></Button>
+
+        <Button Text="¿No tienes una cuenta? Pincha aqui"  Margin="0, 20, 0, 0"
+    BackgroundColor="#eee6ab"  FontSize="14" TextColor="Black" FontAttributes="Italic" WidthRequest="330"
+    ></Button>
+    </VerticalStackLayout>
+</ContentPage>

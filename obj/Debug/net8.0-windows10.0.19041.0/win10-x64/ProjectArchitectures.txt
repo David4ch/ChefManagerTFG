@@ -1,0 +1,1 @@
+C:\Users\david\source\repos\ChefManager\ChefManager.csproj;x64

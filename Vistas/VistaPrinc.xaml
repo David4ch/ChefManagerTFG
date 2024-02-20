@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ChefManager.Vistas.VistaPrinc"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundImageSource="fondo.jpg">
+
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="David">
+
+
+            <MenuFlyoutItem Text="Ver perfil">
+                <MenuFlyoutItem.IconImageSource>
+                    <FontImageSource FontFamily="Arial" Glyph="&#x2630;" />
+                </MenuFlyoutItem.IconImageSource>
+            </MenuFlyoutItem>
+
+            <MenuFlyoutItem Text="Ajustes">
+                <MenuFlyoutItem.IconImageSource>
+                    <FontImageSource FontFamily="Arial" Glyph="&#x2699;" />
+                </MenuFlyoutItem.IconImageSource>
+            </MenuFlyoutItem>
+
+            <MenuFlyoutItem Text="Cerrar sesión">
+                <MenuFlyoutItem.IconImageSource>
+                    <FontImageSource FontFamily="Arial" Glyph="&#xE8BB;" />
+                </MenuFlyoutItem.IconImageSource>
+            </MenuFlyoutItem>
+        </MenuBarItem>
+
+    </ContentPage.MenuBarItems>
+
+    <Grid
+        Margin="0,0,0,70"
+        HorizontalOptions="Center"
+        VerticalOptions="End">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="150" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120" />
+            <ColumnDefinition Width="120" />
+            <ColumnDefinition Width="120" />
+        </Grid.ColumnDefinitions>
+
+
+
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <ImageButton
+                Margin="20"
+                Padding="10"
+                BorderColor="Black"
+                BorderWidth="6"
+                CornerRadius="20"
+                HorizontalOptions="Center"
+                Source="proveedores.png"
+                VerticalOptions="Center" />
+
+
+
+            <Label
+                FontFamily="WoodDragon"
+                FontSize="33"
+                HorizontalOptions="Center"
+                Text="Proveedores"
+                VerticalOptions="End" />
+
+
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="1">
+            <ImageButton
+                Margin="20"
+                Padding="10"
+                BorderColor="Black"
+                BorderWidth="6"
+                CornerRadius="20"
+                HorizontalOptions="Center"
+                Source="caja.png"
+                VerticalOptions="Center" />
+            <Label
+                FontFamily="WoodDragon"
+                FontSize="33"
+                HorizontalOptions="Center"
+                Text="Caja"
+                VerticalOptions="End" />
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="2">
+            <ImageButton
+                Margin="20"
+                Padding="10"
+                BorderColor="Black"
+                BorderWidth="6"
+                CornerRadius="20"
+                HorizontalOptions="Center"
+                Source="inventario.png"
+                VerticalOptions="Center" />
+            <Label
+                FontFamily="WoodDragon"
+                FontSize="33"
+                HorizontalOptions="Center"
+                Text="Inventario"
+                VerticalOptions="End" />
+        </Grid>
+
+
+
+        <Grid Grid.Row="1" Grid.Column="0">
+            <ImageButton
+                Margin="20"
+                Padding="10"
+                BorderColor="Black"
+                BorderWidth="6"
+                CornerRadius="20"
+                HorizontalOptions="Center"
+                Source="empleados.png"
+                VerticalOptions="Center" />
+            <Label
+                FontFamily="WoodDragon"
+                FontSize="33"
+                HorizontalOptions="Center"
+                Text="Empleados"
+                VerticalOptions="End" />
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <ImageButton
+                Margin="20"
+                Padding="10"
+                BorderColor="Black"
+                BorderWidth="6"
+                CornerRadius="20"
+                HorizontalOptions="Center"
+                Source="calendario.png"
+                VerticalOptions="Center" />
+            <Label
+                FontFamily="WoodDragon"
+                FontSize="33"
+                HorizontalOptions="Center"
+                Text="Calendario"
+                VerticalOptions="End" />
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="2">
+            <ImageButton
+                Margin="20"
+                Padding="10"
+                BorderColor="Black"
+                BorderWidth="6"
+                CornerRadius="20"
+                HorizontalOptions="Center"
+                Released="ImageButton_Released"
+                Source="notas.png"
+                VerticalOptions="Center" />
+            <Label
+                FontFamily="WoodDragon"
+                FontSize="33"
+                HorizontalOptions="Center"
+                Text="Notas"
+                VerticalOptions="End" />
+        </Grid>
+
+
+
+    </Grid>
+</ContentPage>
