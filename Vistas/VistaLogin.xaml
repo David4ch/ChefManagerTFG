@@ -1,18 +1,41 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage BackgroundColor="#361f00" 
+            xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ChefManager.Vistas.VistaLogin"
-             Title="VistaLogin">
-    <VerticalStackLayout>
-        <Label Text="Username:" Margin="155, 40, 0, 5" FontSize="25" TextColor="White"  />
-        <Entry WidthRequest="830" FontSize="16" TextColor="White" />
-        <Label Text="Contrasena:" Margin="155, 40, 0, 5" FontSize="25" TextColor="White"  />
-        <Entry  WidthRequest="830" FontSize="16" TextColor="White" IsPassword="True" />
-        <Button Text="LOGIN" Margin="0, 20, 0, 0"
-    BackgroundColor="#36393b" FontSize="16" TextColor="#e6ddbc" FontAttributes="Bold" WidthRequest="230"></Button>
+             x:Class="ChefManager.Vistas.VistaLogin">
+    <StackLayout Padding="20" Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
+       
+        <Border Stroke="Black" StrokeThickness="3" Background="#fff" HeightRequest="500" WidthRequest="700">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10,10,10,10" />
+            </Border.StrokeShape>
+            <Grid BackgroundColor="Gray">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Image Source="user.png" Margin="0,20,0,0" Grid.Row="0" Background="Transparent" HeightRequest="70" WidthRequest="70"></Image>
 
-        <Button Text="¿No tienes una cuenta? Pincha aqui"  Margin="0, 20, 0, 0"
-    BackgroundColor="#eee6ab"  FontSize="14" TextColor="Black" FontAttributes="Italic" WidthRequest="330"
-    ></Button>
-    </VerticalStackLayout>
+                <HorizontalStackLayout Grid.Row="1" Spacing="40" BackgroundColor="Aquamarine" HorizontalOptions="Center">
+                    <Label Text="LOGIN" FontSize="30" TextColor="#361f00"></Label>
+                    <Label Text="REGISTER" FontSize="30" TextColor="#361f00"></Label>
+                </HorizontalStackLayout>
+                <Label Grid.Row="2"></Label>
+                <Entry Grid.Row="3"></Entry>
+
+                <Label Grid.Row="4"></Label>
+                <Entry Grid.Row="5"></Entry>
+
+                <Button Grid.Row="6"></Button>
+            </Grid>
+            <Border.Shadow>
+                <Shadow Brush="Black" Offset="0,10" Radius="5" Opacity="1.2" />
+            </Border.Shadow>
+        </Border>
+    </StackLayout>
 </ContentPage>

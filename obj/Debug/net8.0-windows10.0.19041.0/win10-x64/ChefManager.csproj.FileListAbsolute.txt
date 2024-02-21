@@ -183,3 +183,6 @@ C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win
 C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Plugin.Maui.Calendar.dll
 C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\chefmg.scale-100.png
 C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Plugin.Media.dll
+C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ChefManager.sourcelink.json
+C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\fondobienvenida.scale-100.jpg
+C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\user.scale-100.png

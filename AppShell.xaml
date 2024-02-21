@@ -8,7 +8,7 @@
     Shell.FlyoutBehavior="Disabled">
     
     <ShellContent
-        ContentTemplate="{DataTemplate vi:Caja}"
+        ContentTemplate="{DataTemplate vi:VistaLogin}"
          />
 
 </Shell>
