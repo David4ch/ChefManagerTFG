@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "u6XZtEsg3Z3MD2TPkma4A3yraDFTvCeH3kdHqk+XzC/wuMS2xXQESTJumKcIY+8k4AyfSTNesXri5r2fJBervg==",
+  "dgSpecHash": "vbXB8N7UvkO5WESdylbiHneedQxbYMqsMsLHH/sKKLdXImAhchjQbkpv9w7GOsR6n6xazz+vtHgAElOkC3T71w==",
   "success": true,
   "projectFilePath": "C:\\Users\\david\\source\\repos\\ChefManager\\ChefManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\david\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\firesharp\\2.0.4\\firesharp.2.0.4.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.bcl\\1.1.9\\microsoft.bcl.1.1.9.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.bcl.async\\1.0.168\\microsoft.bcl.async.1.0.168.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.bcl.build\\1.0.14\\microsoft.bcl.build.1.0.14.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
@@ -16,20 +20,22 @@
     "C:\\Users\\david\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\microsoft.graphics.win2d\\1.0.5.1\\microsoft.graphics.win2d.1.0.5.1.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.controls\\8.0.6\\microsoft.maui.controls.8.0.6.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\8.0.6\\microsoft.maui.controls.build.tasks.8.0.6.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.controls.compatibility\\8.0.6\\microsoft.maui.controls.compatibility.8.0.6.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.controls.core\\8.0.6\\microsoft.maui.controls.core.8.0.6.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.controls.xaml\\8.0.6\\microsoft.maui.controls.xaml.8.0.6.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.core\\8.0.6\\microsoft.maui.core.8.0.6.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.essentials\\8.0.6\\microsoft.maui.essentials.8.0.6.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.graphics\\8.0.6\\microsoft.maui.graphics.8.0.6.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.graphics.win2d.winui.desktop\\8.0.6\\microsoft.maui.graphics.win2d.winui.desktop.8.0.6.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.6\\microsoft.maui.resizetizer.8.0.6.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.0\\microsoft.net.illink.tasks.8.0.0.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.controls\\8.0.14\\microsoft.maui.controls.8.0.14.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\8.0.14\\microsoft.maui.controls.build.tasks.8.0.14.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.controls.compatibility\\8.0.14\\microsoft.maui.controls.compatibility.8.0.14.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.controls.core\\8.0.14\\microsoft.maui.controls.core.8.0.14.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.controls.xaml\\8.0.14\\microsoft.maui.controls.xaml.8.0.14.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.core\\8.0.14\\microsoft.maui.core.8.0.14.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.essentials\\8.0.14\\microsoft.maui.essentials.8.0.14.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.graphics\\8.0.14\\microsoft.maui.graphics.8.0.14.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.graphics.win2d.winui.desktop\\8.0.14\\microsoft.maui.graphics.win2d.winui.desktop.8.0.14.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.maui.resizetizer\\8.0.14\\microsoft.maui.resizetizer.8.0.14.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.net.http\\2.2.28\\microsoft.net.http.2.2.28.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.3\\microsoft.net.illink.tasks.8.0.3.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\microsoft.windowsappsdk\\1.3.230724000\\microsoft.windowsappsdk.1.3.230724000.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\plugin.maui.calendar\\1.1.1\\plugin.maui.calendar.1.1.1.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.windowsappsdk\\1.4.240211001\\microsoft.windowsappsdk.1.4.240211001.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\newtonsoft.json\\6.0.4\\newtonsoft.json.6.0.4.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\plugin.maui.calendar\\1.1.4\\plugin.maui.calendar.1.1.4.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\system.runtime.interopservices.nfloat.internal\\6.0.1\\system.runtime.interopservices.nfloat.internal.6.0.1.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\xam.plugin.media\\6.0.2\\xam.plugin.media.6.0.2.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\xamarin.android.glide\\4.15.1.2\\xamarin.android.glide.4.15.1.2.nupkg.sha512",
@@ -117,5 +123,56 @@
     "C:\\Users\\david\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.7.2.1\\xamarin.kotlinx.coroutines.core.jvm.1.7.2.1.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.31\\microsoft.windows.sdk.net.ref.10.0.19041.31.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"FireSharp 2.0.4\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0-ios17.2\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "FireSharp",
+      "targetGraphs": [
+        "net8.0-ios17.2"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Microsoft.Bcl 1.1.9\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0-ios17.2\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Microsoft.Bcl",
+      "targetGraphs": [
+        "net8.0-ios17.2"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Microsoft.Bcl.Async 1.0.168\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0-ios17.2\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Microsoft.Bcl.Async",
+      "targetGraphs": [
+        "net8.0-ios17.2"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Microsoft.Net.Http 2.2.28\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0-ios17.2\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Microsoft.Net.Http",
+      "targetGraphs": [
+        "net8.0-ios17.2"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Newtonsoft.Json 6.0.4\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0-ios17.2\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net8.0-ios17.2"
+      ]
+    }
+  ]
 }

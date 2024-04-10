@@ -1,29 +1,124 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ChefManager.Vistas.VistaRegister"
-             Title="VistaRegister">
-    <VerticalStackLayout>
-         <Label Text="Nombre de tu empresa"></Label>
-         <Entry></Entry>
+<ContentPage
+    x:Class="ChefManager.Vistas.VistaRegister"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#361f00">
+    <ScrollView VerticalScrollBarVisibility="Always">
+        <StackLayout Padding="20" HorizontalOptions="Center">
 
-        <Label Text="Imagen del logo de tu empresa"></Label>
-        <Entry></Entry>
+            <Border
+                Background="#fff"
+                Stroke="Black"
+                StrokeThickness="3"
+                WidthRequest="700">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10,10,10,10" />
+                </Border.StrokeShape>
+                <VerticalStackLayout BackgroundColor="#fff7e5">
 
-        <Label Text="Nombre Usuario"></Label>
-        <Entry></Entry>
+                    <Image
+                        Margin="0,20,0,0"
+                        Background="Transparent"
+                        HeightRequest="70"
+                        Source="user.png"
+                        WidthRequest="70" />
+                    <Label
+                        FontSize="30"
+                        HorizontalOptions="Center"
+                        Text="REGISTRO"
+                        TextColor="#361f00" />
 
-        <Label Text="Contraseña"></Label>
-        <Entry></Entry>
+                    <Label
+                        Margin="85,0,0,10"
+                        FontSize="20"
+                        Text="Información Usuario"
+                        TextColor="Black" />
 
-        <Label></Label>
-        <Entry></Entry>
+                    <Label
+                        Margin="85,0,0,10"
+                        FontSize="16"
+                        Text="Nombre"
+                        TextColor="Black" />
 
-        <Label></Label>
-        <Entry></Entry>
+                    <Entry
+                        BackgroundColor="#320000"
+                        FontSize="14"
+                        WidthRequest="530" />
 
-        <Label></Label>
-        <Entry></Entry>
-    </VerticalStackLayout>
-   
+                    <Label
+                        Margin="85,30,0,10"
+                        FontSize="16"
+                        Text="Correo Electrónico"
+                        TextColor="Black" />
+                    <Entry
+                        BackgroundColor="#320000"
+                        FontSize="14"
+                        WidthRequest="530" />
+                    <Label
+                        Margin="85,30,0,10"
+                        FontSize="16"
+                        Text="Contraseña"
+                        TextColor="Black" />
+                    <Entry
+                        BackgroundColor="#320000"
+                        FontSize="14"
+                        WidthRequest="530" />
+
+                    <Label
+                        Margin="85,0,0,10"
+                        FontSize="20"
+                        Text="Información restaurante"
+                        TextColor="Black" />
+                    <Label
+                        Margin="85,30,0,10"
+                        FontSize="16"
+                        Text="Nombre"
+                        TextColor="Black" />
+                    <Entry
+                        BackgroundColor="#320000"
+                        FontSize="14"
+                        WidthRequest="530" />
+                    <Label
+                        Margin="85,30,0,10"
+                        FontSize="16"
+                        Text="Dirección"
+                        TextColor="Black" />
+                    <Entry
+                        BackgroundColor="#320000"
+                        FontSize="14"
+                        WidthRequest="530" />
+                    <Label
+                        Margin="85,20,0,10"
+                        FontSize="16"
+                        Text="Logo"
+                        TextColor="Black" />
+                    <Entry
+                        Margin="80,20,0,20"
+                        BackgroundColor="#320000"
+                        FontSize="14"
+                        HorizontalOptions="Start"
+                        WidthRequest="100" />
+                    <Button
+                        Margin="0,20,0,20"
+                        BackgroundColor="#eee6ab"
+                        BorderColor="#320000"
+                        BorderWidth="2"
+                        FontSize="14"
+                        Text="Registrarse"
+                        TextColor="Black"
+                        WidthRequest="330" />
+                </VerticalStackLayout>
+
+                <Border.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity="1.2"
+                        Radius="5"
+                        Offset="0,10" />
+                </Border.Shadow>
+            </Border>
+        </StackLayout>
+    </ScrollView>
+
 </ContentPage>

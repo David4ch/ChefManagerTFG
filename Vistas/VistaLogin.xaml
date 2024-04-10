@@ -1,40 +1,76 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage BackgroundColor="#361f00" 
-            xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ChefManager.Vistas.VistaLogin">
-    <StackLayout Padding="20" Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
-       
-        <Border Stroke="Black" StrokeThickness="3" Background="#fff" HeightRequest="500" WidthRequest="700">
+<ContentPage
+    x:Class="ChefManager.Vistas.VistaLogin"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#361f00">
+    <StackLayout
+        Padding="20"
+        HorizontalOptions="Center"
+        Spacing="20"
+        VerticalOptions="Center">
+
+        <Border
+            Background="#fff"
+            HeightRequest="500"
+            Stroke="Black"
+            StrokeThickness="3"
+            WidthRequest="700">
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="10,10,10,10" />
             </Border.StrokeShape>
-            <Grid BackgroundColor="Gray">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="90"></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
-                <Image Source="user.png" Margin="0,20,0,0" Grid.Row="0" Background="Transparent" HeightRequest="70" WidthRequest="70"></Image>
+            <VerticalStackLayout BackgroundColor="#fff7e5">
 
-                <HorizontalStackLayout Grid.Row="1" Spacing="40" BackgroundColor="Aquamarine" HorizontalOptions="Center">
-                    <Label Text="LOGIN" FontSize="30" TextColor="#361f00"></Label>
-                    <Label Text="REGISTER" FontSize="30" TextColor="#361f00"></Label>
-                </HorizontalStackLayout>
-                <Label Grid.Row="2"></Label>
-                <Entry Grid.Row="3"></Entry>
+                <Image
+                    Margin="0,20,0,0"
+                    Background="Transparent"
+                    HeightRequest="70"
+                    Source="user.png"
+                    WidthRequest="70" />
+                <Label
+                    FontSize="30"
+                    HorizontalOptions="Center"
+                    Text="LOGIN"
+                    TextColor="#361f00" />
 
-                <Label Grid.Row="4"></Label>
-                <Entry Grid.Row="5"></Entry>
+                <Label
+                    Margin="85,0,0,10"
+                    FontSize="16"
+                    Text="Usuario"
+                    TextColor="Black" />
 
-                <Button Grid.Row="6"></Button>
-            </Grid>
+                <Entry
+                    BackgroundColor="#320000"
+                    FontSize="14"
+                    WidthRequest="530" />
+
+                <Label
+                    Margin="85,30,0,10"
+                    FontSize="16"
+                    Text="Contraseña"
+                    TextColor="Black" />
+                <Entry
+                    BackgroundColor="#320000"
+                    FontSize="14"
+                    WidthRequest="530" />
+
+                <Button
+                    Margin="0,20,0,0"
+                    BackgroundColor="#eee6ab"
+                    BorderColor="#320000"
+                    BorderWidth="2"
+                    FontSize="14"
+                    Text="LOGIN"
+                    TextColor="Black"
+                    WidthRequest="330" />
+            </VerticalStackLayout>
+
             <Border.Shadow>
-                <Shadow Brush="Black" Offset="0,10" Radius="5" Opacity="1.2" />
+                <Shadow
+                    Brush="Black"
+                    Opacity="1.2"
+                    Radius="5"
+                    Offset="0,10" />
             </Border.Shadow>
         </Border>
     </StackLayout>
