@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ChefManager.Modelo
 {
-    class Usuario
+    public class Usuario
     {
+        public string Nombre { get; set; }
+        public string Email { get; set; }
+        public string Contrasena { get; set; }
     }
 }

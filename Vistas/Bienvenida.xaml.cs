@@ -10,7 +10,7 @@ public partial class Bienvenida : ContentPage
     {
         try
         {
-            await AppShell.Current.GoToAsync(nameof(VistaRegister));
+            await AppShell.Current.GoToAsync(nameof(VistaUserRegister));
 
         }
         catch (Exception ex)
@@ -31,12 +31,4 @@ public partial class Bienvenida : ContentPage
             Console.WriteLine($"Processing failed: {ex.Message}");
         }
     }
-/*
-        var foto = await MediaPicker.PickPhotoAsync();
-
-        if (foto != null)
-        {
-            var memoriaStream = await foto.OpenReadAsync();
-            img.Source = ImageSource.FromStream(() => memoriaStream);
-        }*/
 }

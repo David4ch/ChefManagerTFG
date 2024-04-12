@@ -189,6 +189,10 @@ C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win
 C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Threading.Tasks.dll
 C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Net.Http.Extensions.dll
 C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Net.Http.Primitives.dll
-C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Providers.Projection.dll
 C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Newtonsoft.Json.dll
 C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ChefMana.FAE6937C.Up2Date
+C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Management.Deployment.Projection.dll
+C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Projection.dll
+C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\restaurante.scale-100.png
+C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\upload.scale-100.png
+C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\ARIAL.TTF

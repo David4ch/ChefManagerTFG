@@ -14,6 +14,7 @@ namespace ChefManager
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                     fonts.AddFont("Wood Dragon.ttf", "WoodDragon");
+                    fonts.AddFont("Arial.ttf", "Arial");
                 });
 
 #if DEBUG

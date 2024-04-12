@@ -38,13 +38,16 @@
     <MauiXaml Update="Vistas\Proveedores.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Vistas\RegistroRestaurante.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Vistas\VistaLogin.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Vistas\VistaPrinc.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Vistas\VistaRegister.xaml">
+    <MauiXaml Update="Vistas\VistaUserRegister.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

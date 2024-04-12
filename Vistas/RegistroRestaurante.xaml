@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ChefManager.Vistas.RegistroRestaurante"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Loaded="ContentPage_Loaded"
+    BackgroundColor="{StaticResource darkBrown}">
+    <StackLayout>
+        <Label
+            Margin="15,15,0,0"
+            FontFamily="Arial"
+            FontSize="25"
+            Text="¿Tienes un restaurante ya registrado?" />
+        <StackLayout
+            Margin="25,0,0,0"
+            Orientation="Horizontal"
+            RadioButtonGroup.GroupName="respuesta">
+            <RadioButton
+                x:Name="radiobutton1"
+                CheckedChanged="radiobutton1_CheckedChanged"
+                CornerRadius="20"
+                Value="si">
+                <RadioButton.Content>
+                    <StackLayout>
+                        <Image HorizontalOptions="Center" VerticalOptions="Center">
+                            <Image.Source>
+                                <FontImageSource
+                                    FontFamily="Arial"
+                                    Glyph="&#x2713;"
+                                    Color="Green" />
+                            </Image.Source>
+                        </Image>
+                        <Label
+                            HorizontalOptions="Center"
+                            Text="Si"
+                            VerticalOptions="End" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton
+                CheckedChanged="radiobutton2_CheckedChanged"
+                CornerRadius="20"
+                Value="no">
+                <RadioButton.Content>
+                    <StackLayout>
+                        <Image HorizontalOptions="Center" VerticalOptions="Center">
+                            <Image.Source>
+                                <FontImageSource
+                                    FontFamily="Arial"
+                                    Glyph="&#x2717;"
+                                    Color="Red" />
+                            </Image.Source>
+                        </Image>
+                        <Label
+                            HorizontalOptions="Center"
+                            Text="No"
+                            VerticalOptions="End" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+        </StackLayout>
+        <StackLayout>
+            <Border
+                Stroke="Black"
+                StrokeThickness="3"
+                WidthRequest="480">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10,10,10,10" />
+                </Border.StrokeShape>
+                <VerticalStackLayout x:Name="fondo1" BackgroundColor="Gray">
+
+                    <Image
+                        Margin="0,20,0,0"
+                        Background="Transparent"
+                        HeightRequest="70"
+                        Source="restaurante.png"
+                        WidthRequest="70" />
+                    <Label
+                        FontFamily="Arial"
+                        FontSize="25"
+                        HorizontalOptions="Center"
+                        Text="REGISTRO RESTAURANTE"
+                        TextColor="#361f00" />
+
+                    <Label
+                        Margin="85,20,0,10"
+                        FontSize="16"
+                        Text="Nombre"
+                        TextColor="Black" />
+
+                    <Entry
+                        x:Name="entryNombre"
+                        BackgroundColor="#320000"
+                        FontSize="14"
+                        IsEnabled="False"
+                        WidthRequest="330" />
+
+                    <Label
+                        Margin="85,20,0,10"
+                        FontSize="16"
+                        Text="Dirección"
+                        TextColor="Black" />
+                    <Entry
+                        x:Name="entryDireccion"
+                        BackgroundColor="#320000"
+                        FontSize="14"
+                        IsEnabled="False"
+                        WidthRequest="330" />
+
+                    <Label
+                        Margin="85,20,0,0"
+                        FontSize="16"
+                        Text="Logo"
+                        TextColor="Black" />
+                    <HorizontalStackLayout Margin="75,10,0,10">
+                        <ImageButton
+                            Background="Transparent"
+                            Clicked="ImageButton_Clicked"
+                            HeightRequest="15"
+                            Source="upload.png"
+                            VerticalOptions="Start"
+                            WidthRequest="15" />
+                        <Entry
+                            x:Name="entryLogo"
+                            Margin="0,0,0,15"
+                            BackgroundColor="#320000"
+                            FontSize="14"
+                            HorizontalOptions="Start"
+                            IsEnabled="False"
+                            WidthRequest="130" />
+
+                    </HorizontalStackLayout>
+
+
+
+
+                </VerticalStackLayout>
+
+                <Border.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity="1.2"
+                        Radius="5"
+                        Offset="0,10" />
+                </Border.Shadow>
+            </Border>
+            <Button
+                x:Name="boton"
+                Margin="0,30,0,20"
+                BackgroundColor="#eee6ab"
+                BorderColor="#320000"
+                BorderWidth="2"
+                Clicked="boton_Clicked"
+                FontSize="14"
+                Text="Registrar"
+                TextColor="Black"
+                WidthRequest="330" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
