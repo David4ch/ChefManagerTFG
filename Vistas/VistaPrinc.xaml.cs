@@ -8,11 +8,6 @@ public partial class VistaPrinc : ContentPage
 	}
 	
 
-    private void ImageButton_Released(object sender, EventArgs e)
-    {
-        System.Diagnostics.Debug.WriteLine("Chao chao cao");
-    }
-
     private void OnPointerEntered(object sender, PointerEventArgs e)
     {
         ImageButton imgbutton = (ImageButton)sender;

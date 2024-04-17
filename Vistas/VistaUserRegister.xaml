@@ -32,10 +32,11 @@
                     <Label
                         Margin="85,20,0,10"
                         FontSize="16"
-                        Text="Nombre"
+                        Text="Nombre User"
                         TextColor="Black" />
 
                     <Entry
+                        x:Name="entryNombreUser"
                         BackgroundColor="#320000"
                         FontSize="14"
                         WidthRequest="330" />
@@ -46,6 +47,7 @@
                         Text="Correo Electrónico"
                         TextColor="Black" />
                     <Entry
+                        x:Name="entryCorreo"
                         BackgroundColor="#320000"
                         FontSize="14"
                         WidthRequest="330" />
@@ -55,12 +57,14 @@
                         Text="Contraseña"
                         TextColor="Black" />
                     <Entry
+                        x:Name="entryContrasena"
                         Margin="0,0,0,10"
                         BackgroundColor="#320000"
                         FontSize="14"
                         IsPassword="True"
                         WidthRequest="330" />
                     <Label
+                        x:Name="entryContrasena2"
                         Margin="85,0,0,10"
                         FontSize="16"
                         Text=" Repetir Contraseña"
@@ -77,6 +81,7 @@
                         BackgroundColor="#eee6ab"
                         BorderColor="#320000"
                         BorderWidth="2"
+                        Clicked="Button_Clicked"
                         FontSize="14"
                         Text="Registrarse"
                         TextColor="Black"

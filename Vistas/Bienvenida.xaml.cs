@@ -10,7 +10,7 @@ public partial class Bienvenida : ContentPage
     {
         try
         {
-            await AppShell.Current.GoToAsync(nameof(VistaUserRegister));
+            await AppShell.Current.GoToAsync(nameof(RegistroRestaurante));
 
         }
         catch (Exception ex)

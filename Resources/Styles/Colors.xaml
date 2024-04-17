@@ -19,8 +19,11 @@
 
 
 
+    <Color x:Key="darkBrown2">#472910</Color>
     <Color x:Key="darkBrown">#361f00</Color>
     <Color x:Key="darkBlue">#122224</Color>
+    <Color x:Key="rosa">#FF86F7</Color>
+    <Color x:Key="naranja">#FF8016</Color>
 
 
     <Color x:Key="Gray100">#E1E1E1</Color>

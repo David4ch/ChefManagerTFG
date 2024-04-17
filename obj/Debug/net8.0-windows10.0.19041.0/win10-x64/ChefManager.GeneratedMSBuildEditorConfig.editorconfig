@@ -36,6 +36,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Resources.Styl
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/david/source/repos/ChefManager/Templates/TemplateRestaurantes.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Templates.TemplateRestaurantes.xaml
+build_metadata.AdditionalFiles.TargetPath = Templates\TemplateRestaurantes.xaml
+build_metadata.AdditionalFiles.RelativePath = Templates\TemplateRestaurantes.xaml
+
+[C:/Users/david/source/repos/ChefManager/Templates/TemplateUsuarios.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Templates.TemplateUsuarios.xaml
+build_metadata.AdditionalFiles.TargetPath = Templates\TemplateUsuarios.xaml
+build_metadata.AdditionalFiles.RelativePath = Templates\TemplateUsuarios.xaml
+
 [C:/Users/david/source/repos/ChefManager/Vistas/Ajustes.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.Ajustes.xaml
@@ -95,6 +107,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.RegistroRestaurante.xaml
 build_metadata.AdditionalFiles.TargetPath = Vistas\RegistroRestaurante.xaml
 build_metadata.AdditionalFiles.RelativePath = Vistas\RegistroRestaurante.xaml
+
+[C:/Users/david/source/repos/ChefManager/Vistas/VistaAdmin.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.VistaAdmin.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\VistaAdmin.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\VistaAdmin.xaml
 
 [C:/Users/david/source/repos/ChefManager/Vistas/VistaLogin.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

@@ -7,23 +7,21 @@ namespace ChefManager.Vistas;
 
 public partial class RegistroRestaurante : ContentPage
 {
-    IFirebaseConfig config = new FirebaseConfig
-    {
-        AuthSecret = "H58xpKu2FTVE58DvJcVWSmRTbaPmlZkjJuvdzr7O",
-        BasePath = "https://chefmg-664a2-default-rtdb.europe-west1.firebasedatabase.app/"
+    FirebaseConnection connection = new FirebaseConnection();
+    public static string _idRestaurante;
 
+    bool tieneRestaurante = false;
 
-    };
-    IFirebaseClient client;
 
     public RegistroRestaurante()
-	{
-        
+    {
+
         InitializeComponent();
     }
 
     private void radiobutton1_CheckedChanged(object sender, CheckedChangedEventArgs e)
     {
+        tieneRestaurante = true;
         fondo1.BackgroundColor = Colors.Gray;
         entryNombre.IsEnabled = false;
         entryDireccion.IsEnabled = false;
@@ -31,7 +29,7 @@ public partial class RegistroRestaurante : ContentPage
     }
     private void radiobutton2_CheckedChanged(object sender, CheckedChangedEventArgs e)
     {
-        
+        tieneRestaurante = false;
         fondo1.BackgroundColor = Colors.White;
         entryNombre.IsEnabled = true;
         entryDireccion.IsEnabled = true;
@@ -40,27 +38,43 @@ public partial class RegistroRestaurante : ContentPage
 
     private async void boton_Clicked(object sender, EventArgs e)
     {
-        try {
-        Restaurante restaurante = new Restaurante
+        try
         {
-            Nombre = entryNombre.Text,
-            Direccion = entryDireccion.Text,
-            Logo = entryLogo.Text,
+            if (!tieneRestaurante)
+            {
+                Restaurante restaurante = new Restaurante
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Nombre = entryNombre.Text,
+                    Direccion = entryDireccion.Text,
+                    Logo = entryLogo.Text,
 
-          
-        };
-            SetResponse response = await client.SetAsync("RestauranteDatabase/" + restaurante.Id, restaurante);
+
+                };
+                
+                var SetData = connection.client.SetAsync("RestauranteDatabase/" + restaurante.Id, restaurante);
+
+                _idRestaurante = restaurante.Id;
+
+                await AppShell.Current.GoToAsync(nameof(VistaUserRegister));
+
+            }
+            else
+            {
+                await AppShell.Current.GoToAsync(nameof(VistaLogin));
+            }
+
         }
-        catch (Exception) {
-            System.Diagnostics.Debug.WriteLine("Error");
+        catch (Exception)
+        {
+            System.Diagnostics.Debug.WriteLine("Error upload");
 
-            throw;
         }
     }
 
     private async void ImageButton_Clicked(object sender, EventArgs e)
     {
-        
+
         var foto = await MediaPicker.PickPhotoAsync();
 
         if (foto != null)
@@ -70,11 +84,5 @@ public partial class RegistroRestaurante : ContentPage
 
             // img.Source = ImageSource.FromStream(() => memoriaStream);
         }
-    }
-
-    private void ContentPage_Loaded(object sender, EventArgs e)
-    {
-
-        client = new FireSharp.FirebaseClient(config);
     }
 }

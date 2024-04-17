@@ -88,6 +88,10 @@
               "version": "[8.0.4, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Plugin.Maui.Calendar": {
               "target": "Package",
               "version": "[1.1.4, )"
@@ -142,6 +146,10 @@
               "target": "Package",
               "version": "[8.0.4, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Plugin.Maui.Calendar": {
               "target": "Package",
@@ -198,6 +206,10 @@
               "version": "[8.0.4, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Plugin.Maui.Calendar": {
               "target": "Package",
               "version": "[1.1.4, )"
@@ -247,6 +259,10 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.20, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Plugin.Maui.Calendar": {
               "target": "Package",

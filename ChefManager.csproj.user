@@ -11,6 +11,12 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
+    <MauiXaml Update="Templates\TemplateRestaurantes.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Templates\TemplateUsuarios.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Vistas\Ajustes.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
@@ -39,6 +45,9 @@
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Vistas\RegistroRestaurante.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Vistas\VistaAdmin.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Vistas\VistaLogin.xaml">

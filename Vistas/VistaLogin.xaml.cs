@@ -5,24 +5,22 @@ namespace ChefManager.Vistas;
 
 public partial class VistaLogin : ContentPage
 {
-    IFirebaseConfig config = new FirebaseConfig{
-            AuthSecret = "H58xpKu2FTVE58DvJcVWSmRTbaPmlZkjJuvdzr7O",
-            BasePath= "https://chefmg-664a2-default-rtdb.europe-west1.firebasedatabase.app/"
-
-
-    };
-    IFirebaseClient client;
+  
 
     public VistaLogin()
 	{	
 		InitializeComponent();
-        client = new FireSharp.FirebaseClient(config);
-        if (client != null)
+        
+	}
+
+    private async void Button_Clicked(object sender, EventArgs e)
+    {
+        if (entryEmail.Equals("admin") && entryPassword.Equals("1234"))
         {
-            System.Diagnostics.Debug.WriteLine("CONECTADO MAAAAN");
+            await AppShell.Current.GoToAsync(nameof(VistaAdmin));
         }
         else {
-            System.Diagnostics.Debug.WriteLine("Que pringao");
+            await AppShell.Current.GoToAsync(nameof(VistaPrinc));
         }
-	}
+    }
 }

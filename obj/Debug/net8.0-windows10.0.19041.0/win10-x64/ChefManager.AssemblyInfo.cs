@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChefManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+9571e641fd042f47934092808d62fa1bc43f8316")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+63b03b0d696cb075b96184e7cb6b7f37f4d41698")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChefManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChefManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
