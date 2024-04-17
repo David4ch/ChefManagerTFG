@@ -42,8 +42,7 @@
               "RelativeToolTip": "Vistas\\VistaUserRegister.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T16:52:53.552Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T16:52:53.552Z"
             },
             {
               "$type": "Document",
@@ -55,8 +54,7 @@
               "RelativeToolTip": "Vistas\\VistaUserRegister.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-17T16:52:47.234Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T16:52:47.234Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "Vistas\\VistaAdmin.xaml",
               "ViewState": "AQIAADAAAAAAAAAAAAAAAHEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-17T15:57:07.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-17T15:57:07.429Z"
             }
           ]
         }
