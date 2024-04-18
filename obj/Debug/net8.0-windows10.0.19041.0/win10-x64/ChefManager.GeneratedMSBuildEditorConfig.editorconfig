@@ -48,86 +48,74 @@ build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Templates.Temp
 build_metadata.AdditionalFiles.TargetPath = Templates\TemplateUsuarios.xaml
 build_metadata.AdditionalFiles.RelativePath = Templates\TemplateUsuarios.xaml
 
-[C:/Users/david/source/repos/ChefManager/Vistas/Ajustes.xaml]
+[C:/Users/david/source/repos/ChefManager/Vistas/LoginRegister/RegistroRestaurante.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.Ajustes.xaml
-build_metadata.AdditionalFiles.TargetPath = Vistas\Ajustes.xaml
-build_metadata.AdditionalFiles.RelativePath = Vistas\Ajustes.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.LoginRegister.RegistroRestaurante.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\LoginRegister\RegistroRestaurante.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\LoginRegister\RegistroRestaurante.xaml
 
-[C:/Users/david/source/repos/ChefManager/Vistas/Bienvenida.xaml]
+[C:/Users/david/source/repos/ChefManager/Vistas/LoginRegister/RegistroUser.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.Bienvenida.xaml
-build_metadata.AdditionalFiles.TargetPath = Vistas\Bienvenida.xaml
-build_metadata.AdditionalFiles.RelativePath = Vistas\Bienvenida.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.LoginRegister.RegistroUser.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\LoginRegister\RegistroUser.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\LoginRegister\RegistroUser.xaml
 
-[C:/Users/david/source/repos/ChefManager/Vistas/Caja.xaml]
+[C:/Users/david/source/repos/ChefManager/Vistas/LoginRegister/VistaLogin.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.Caja.xaml
-build_metadata.AdditionalFiles.TargetPath = Vistas\Caja.xaml
-build_metadata.AdditionalFiles.RelativePath = Vistas\Caja.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.LoginRegister.VistaLogin.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\LoginRegister\VistaLogin.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\LoginRegister\VistaLogin.xaml
 
-[C:/Users/david/source/repos/ChefManager/Vistas/Calendario.xaml]
+[C:/Users/david/source/repos/ChefManager/Vistas/LoginRegister/VistaPrinc.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.Calendario.xaml
-build_metadata.AdditionalFiles.TargetPath = Vistas\Calendario.xaml
-build_metadata.AdditionalFiles.RelativePath = Vistas\Calendario.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.LoginRegister.VistaPrinc.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\LoginRegister\VistaPrinc.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\LoginRegister\VistaPrinc.xaml
 
-[C:/Users/david/source/repos/ChefManager/Vistas/Empleados.xaml]
+[C:/Users/david/source/repos/ChefManager/Vistas/MainPage/Caja.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.Empleados.xaml
-build_metadata.AdditionalFiles.TargetPath = Vistas\Empleados.xaml
-build_metadata.AdditionalFiles.RelativePath = Vistas\Empleados.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.MainPage.Caja.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\MainPage\Caja.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\MainPage\Caja.xaml
 
-[C:/Users/david/source/repos/ChefManager/Vistas/Inventario.xaml]
+[C:/Users/david/source/repos/ChefManager/Vistas/MainPage/Calendario.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.Inventario.xaml
-build_metadata.AdditionalFiles.TargetPath = Vistas\Inventario.xaml
-build_metadata.AdditionalFiles.RelativePath = Vistas\Inventario.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.MainPage.Calendario.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\MainPage\Calendario.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\MainPage\Calendario.xaml
 
-[C:/Users/david/source/repos/ChefManager/Vistas/Notas.xaml]
+[C:/Users/david/source/repos/ChefManager/Vistas/MainPage/Empleados.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.Notas.xaml
-build_metadata.AdditionalFiles.TargetPath = Vistas\Notas.xaml
-build_metadata.AdditionalFiles.RelativePath = Vistas\Notas.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.MainPage.Empleados.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\MainPage\Empleados.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\MainPage\Empleados.xaml
 
-[C:/Users/david/source/repos/ChefManager/Vistas/Perfil.xaml]
+[C:/Users/david/source/repos/ChefManager/Vistas/MainPage/Inventario.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.Perfil.xaml
-build_metadata.AdditionalFiles.TargetPath = Vistas\Perfil.xaml
-build_metadata.AdditionalFiles.RelativePath = Vistas\Perfil.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.MainPage.Inventario.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\MainPage\Inventario.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\MainPage\Inventario.xaml
 
-[C:/Users/david/source/repos/ChefManager/Vistas/Proveedores.xaml]
+[C:/Users/david/source/repos/ChefManager/Vistas/MainPage/Notas.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.Proveedores.xaml
-build_metadata.AdditionalFiles.TargetPath = Vistas\Proveedores.xaml
-build_metadata.AdditionalFiles.RelativePath = Vistas\Proveedores.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.MainPage.Notas.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\MainPage\Notas.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\MainPage\Notas.xaml
 
-[C:/Users/david/source/repos/ChefManager/Vistas/RegistroRestaurante.xaml]
+[C:/Users/david/source/repos/ChefManager/Vistas/MainPage/Proveedores.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.RegistroRestaurante.xaml
-build_metadata.AdditionalFiles.TargetPath = Vistas\RegistroRestaurante.xaml
-build_metadata.AdditionalFiles.RelativePath = Vistas\RegistroRestaurante.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.MainPage.Proveedores.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\MainPage\Proveedores.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\MainPage\Proveedores.xaml
 
-[C:/Users/david/source/repos/ChefManager/Vistas/VistaAdmin.xaml]
+[C:/Users/david/source/repos/ChefManager/Vistas/Others/Bienvenida.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.VistaAdmin.xaml
-build_metadata.AdditionalFiles.TargetPath = Vistas\VistaAdmin.xaml
-build_metadata.AdditionalFiles.RelativePath = Vistas\VistaAdmin.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.Others.Bienvenida.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\Others\Bienvenida.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\Others\Bienvenida.xaml
 
-[C:/Users/david/source/repos/ChefManager/Vistas/VistaLogin.xaml]
+[C:/Users/david/source/repos/ChefManager/Vistas/Others/VistaAdmin.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.VistaLogin.xaml
-build_metadata.AdditionalFiles.TargetPath = Vistas\VistaLogin.xaml
-build_metadata.AdditionalFiles.RelativePath = Vistas\VistaLogin.xaml
-
-[C:/Users/david/source/repos/ChefManager/Vistas/VistaPrinc.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.VistaPrinc.xaml
-build_metadata.AdditionalFiles.TargetPath = Vistas\VistaPrinc.xaml
-build_metadata.AdditionalFiles.RelativePath = Vistas\VistaPrinc.xaml
-
-[C:/Users/david/source/repos/ChefManager/Vistas/VistaUserRegister.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.VistaUserRegister.xaml
-build_metadata.AdditionalFiles.TargetPath = Vistas\VistaUserRegister.xaml
-build_metadata.AdditionalFiles.RelativePath = Vistas\VistaUserRegister.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.Others.VistaAdmin.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\Others\VistaAdmin.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\Others\VistaAdmin.xaml

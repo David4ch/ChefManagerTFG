@@ -17,46 +17,40 @@
     <MauiXaml Update="Templates\TemplateUsuarios.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Vistas\Ajustes.xaml">
+    <MauiXaml Update="Vistas\Others\Bienvenida.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Vistas\Bienvenida.xaml">
+    <MauiXaml Update="Vistas\MainPage\Caja.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Vistas\Caja.xaml">
+    <MauiXaml Update="Vistas\MainPage\Calendario.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Vistas\Calendario.xaml">
+    <MauiXaml Update="Vistas\MainPage\Empleados.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Vistas\Empleados.xaml">
+    <MauiXaml Update="Vistas\MainPage\Inventario.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Vistas\Inventario.xaml">
+    <MauiXaml Update="Vistas\MainPage\Notas.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Vistas\Notas.xaml">
+    <MauiXaml Update="Vistas\MainPage\Proveedores.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Vistas\Perfil.xaml">
+    <MauiXaml Update="Vistas\LoginRegister\RegistroRestaurante.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Vistas\Proveedores.xaml">
+    <MauiXaml Update="Vistas\Others\VistaAdmin.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Vistas\RegistroRestaurante.xaml">
+    <MauiXaml Update="Vistas\LoginRegister\VistaLogin.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Vistas\VistaAdmin.xaml">
+    <MauiXaml Update="Vistas\LoginRegister\VistaPrinc.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Vistas\VistaLogin.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Vistas\VistaPrinc.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Vistas\VistaUserRegister.xaml">
+    <MauiXaml Update="Vistas\LoginRegister\RegistroUser.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

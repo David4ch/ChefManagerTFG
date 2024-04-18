@@ -57,18 +57,20 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui" Version="8.0.1" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="FireSharp" Version="2.0.4" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.20" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.20" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="Plugin.Maui.Calendar" Version="1.1.4" />
+		<PackageReference Include="Plugin.Maui.Calendar" Version="1.1.6" />
 		<PackageReference Include="Xam.Plugin.Media" Version="6.0.2" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Vistas\VistaUserRegister.xaml.cs">
-	    <DependentUpon>VistaUserRegister.xaml</DependentUpon>
+	  <Compile Update="Vistas\LoginRegister\RegistroUser.xaml.cs">
+	    <DependentUpon>RegistroUser.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
@@ -79,46 +81,40 @@
 	  <MauiXaml Update="Templates\TemplateUsuarios.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vistas\Ajustes.xaml">
+	  <MauiXaml Update="Vistas\Others\Bienvenida.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vistas\Bienvenida.xaml">
+	  <MauiXaml Update="Vistas\MainPage\Caja.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vistas\Caja.xaml">
+	  <MauiXaml Update="Vistas\MainPage\Calendario.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vistas\Calendario.xaml">
+	  <MauiXaml Update="Vistas\MainPage\Empleados.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vistas\Empleados.xaml">
+	  <MauiXaml Update="Vistas\MainPage\Inventario.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vistas\Inventario.xaml">
+	  <MauiXaml Update="Vistas\MainPage\Notas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vistas\Notas.xaml">
+	  <MauiXaml Update="Vistas\MainPage\Proveedores.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vistas\Perfil.xaml">
+	  <MauiXaml Update="Vistas\LoginRegister\RegistroRestaurante.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vistas\Proveedores.xaml">
+	  <MauiXaml Update="Vistas\Others\VistaAdmin.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vistas\RegistroRestaurante.xaml">
+	  <MauiXaml Update="Vistas\LoginRegister\VistaLogin.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vistas\VistaAdmin.xaml">
+	  <MauiXaml Update="Vistas\LoginRegister\VistaPrinc.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vistas\VistaLogin.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Vistas\VistaPrinc.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Vistas\VistaUserRegister.xaml">
+	  <MauiXaml Update="Vistas\LoginRegister\RegistroUser.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

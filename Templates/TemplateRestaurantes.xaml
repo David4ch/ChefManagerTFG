@@ -5,34 +5,39 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:mo="clr-namespace:ChefManager.Modelo"
     x:DataType="mo:Restaurante">
-    <Border>
-        <Grid
+
+    <Grid
             Padding="20"
-            BackgroundColor="Blue"
             ColumnDefinitions="*,*,*,*,*"
             RowDefinitions="Auto">
 
-            <Label
+        <Label
                 Grid.Column="0"
                 Text="{Binding Id}"
                 TextColor="Black" />
-            <Label
+        <Label
                 Grid.Column="1"
                 Text="{Binding Nombre}"
                 TextColor="Black" />
-            <Label
+        <Label
                 Grid.Column="2"
                 Text="{Binding Direccion}"
                 TextColor="Black" />
-            <Label
+        <Label
                 Grid.Column="3"
                 Text="{Binding Logo}"
                 TextColor="Black" />
-            <HorizontalStackLayout Grid.Column="4">
-                <Button WidthRequest="10" />
-                <Button WidthRequest="10" />
-            </HorizontalStackLayout>
 
-        </Grid>
-    </Border>
+        <HorizontalStackLayout Grid.Column="4" Spacing="10">
+            <ImageButton
+                    HeightRequest="16"
+                    Source="editar.png"
+                    WidthRequest="16" />
+            <ImageButton
+                    HeightRequest="16"
+                    Source="eliminar.png"
+                    WidthRequest="16" />
+        </HorizontalStackLayout>
+
+    </Grid>
 </ContentView>

@@ -7,6 +7,9 @@ obj\Debug\net8.0-android\resizetizer\r\drawable\fondobienvenida.jpg
 obj\Debug\net8.0-android\resizetizer\r\drawable\inventario.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\notas.png
 obj\Debug\net8.0-android\resizetizer\r\drawable\proveedores.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\restaurante.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\upload.png
+obj\Debug\net8.0-android\resizetizer\r\drawable\user.png
 obj\Debug\net8.0-android\resizetizer\r\mipmap-anydpi-v26\appicon.xml
 obj\Debug\net8.0-android\resizetizer\r\mipmap-anydpi-v26\appicon_round.xml
 obj\Debug\net8.0-android\resizetizer\r\mipmap-hdpi\appicon.png

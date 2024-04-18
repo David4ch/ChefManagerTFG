@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\david\\source\\repos\\ChefManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\vistas\\vistaadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:vistas\\vistaadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\vistas\\others\\vistaadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:vistas\\others\\vistaadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\vistas\\vistauserregister.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:vistas\\vistauserregister.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\templates\\templaterestaurantes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:templates\\templaterestaurantes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\vistas\\vistauserregister.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:vistas\\vistauserregister.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\templates\\templateusuarios.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:templates\\templateusuarios.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\vistas\\vistaadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:vistas\\vistaadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\vistas\\others\\vistaadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:vistas\\others\\vistaadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 116,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,52 +34,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VistaUserRegister.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\VistaUserRegister.xaml.cs",
-              "RelativeDocumentMoniker": "Vistas\\VistaUserRegister.xaml.cs",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\VistaUserRegister.xaml.cs",
-              "RelativeToolTip": "Vistas\\VistaUserRegister.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T16:52:53.552Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "VistaUserRegister.xaml",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\VistaUserRegister.xaml",
-              "RelativeDocumentMoniker": "Vistas\\VistaUserRegister.xaml",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\VistaUserRegister.xaml",
-              "RelativeToolTip": "Vistas\\VistaUserRegister.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-17T16:52:47.234Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "VistaAdmin.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\VistaAdmin.xaml.cs",
-              "RelativeDocumentMoniker": "Vistas\\VistaAdmin.xaml.cs",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\VistaAdmin.xaml.cs",
-              "RelativeToolTip": "Vistas\\VistaAdmin.xaml.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAEwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T15:57:51.207Z",
+              "Title": "VistaAdmin.xaml",
+              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\Others\\VistaAdmin.xaml",
+              "RelativeDocumentMoniker": "Vistas\\Others\\VistaAdmin.xaml",
+              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\Others\\VistaAdmin.xaml",
+              "RelativeToolTip": "Vistas\\Others\\VistaAdmin.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHYAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-18T16:53:49.618Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "VistaAdmin.xaml",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\VistaAdmin.xaml",
-              "RelativeDocumentMoniker": "Vistas\\VistaAdmin.xaml",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\VistaAdmin.xaml",
-              "RelativeToolTip": "Vistas\\VistaAdmin.xaml",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAAHEAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "TemplateUsuarios.xaml",
+              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Templates\\TemplateUsuarios.xaml",
+              "RelativeDocumentMoniker": "Templates\\TemplateUsuarios.xaml",
+              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Templates\\TemplateUsuarios.xaml",
+              "RelativeToolTip": "Templates\\TemplateUsuarios.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-17T15:57:07.429Z"
+              "WhenOpened": "2024-04-18T18:39:39.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TemplateRestaurantes.xaml",
+              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Templates\\TemplateRestaurantes.xaml",
+              "RelativeDocumentMoniker": "Templates\\TemplateRestaurantes.xaml",
+              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Templates\\TemplateRestaurantes.xaml",
+              "RelativeToolTip": "Templates\\TemplateRestaurantes.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-18T18:39:36.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VistaAdmin.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\Others\\VistaAdmin.xaml.cs",
+              "RelativeDocumentMoniker": "Vistas\\Others\\VistaAdmin.xaml.cs",
+              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\Others\\VistaAdmin.xaml.cs",
+              "RelativeToolTip": "Vistas\\Others\\VistaAdmin.xaml.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAADgAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T16:54:07.162Z"
             }
           ]
         }
