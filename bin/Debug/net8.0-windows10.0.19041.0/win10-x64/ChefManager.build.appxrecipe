@@ -268,6 +268,12 @@
     <AppxPackagedFile Include="C:\Users\david\.nuget\packages\communitytoolkit.mvvm\8.2.2\lib\net6.0\CommunityToolkit.Mvvm.dll">
       <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\david\.nuget\packages\firebaseauthentication.net\4.1.0\lib\netstandard2.0\Firebase.Auth.dll">
+      <PackagePath>Firebase.Auth.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\david\.nuget\packages\firebasestorage.net\1.0.3\lib\netstandard1.1\Firebase.Storage.dll">
+      <PackagePath>Firebase.Storage.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\.nuget\packages\firesharp\2.0.4\lib\portable-net45+sl5+wp8+win8\FireSharp.dll">
       <PackagePath>FireSharp.dll</PackagePath>
     </AppxPackagedFile>

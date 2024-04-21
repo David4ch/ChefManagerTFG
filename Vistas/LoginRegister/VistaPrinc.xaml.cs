@@ -5,6 +5,7 @@ public partial class VistaPrinc : ContentPage
 	public VistaPrinc()
 	{
 		InitializeComponent();
+        imgLogo.Source = RegistroRestaurante._urlDescarga;
 	}
 	
 

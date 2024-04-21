@@ -9,11 +9,15 @@ using FireSharp.Config;
 using FireSharp.Response;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
+using Firebase.Storage;
+using Firebase.Auth.Providers;
+using Firebase.Auth;
 
 namespace ChefManager.Modelo
 {
     class FirebaseConnection
     {
+      
         //Configuracion conexion Firebase
         public IFirebaseConfig fc = new FirebaseConfig()
         {
@@ -29,7 +33,7 @@ namespace ChefManager.Modelo
         {
             try
             {
-                client = new FireSharp.FirebaseClient(fc);
+                client = new FirebaseClient(fc);
             }
             catch (Exception)
             {
@@ -37,6 +41,7 @@ namespace ChefManager.Modelo
             }
         }
 
+        //Método que recoge la información de las tablas de Firebase
         public ObservableCollection<T> obtenerInfo<T>(string nombreDb) where T : class
         {
             ObservableCollection<T> auxLista = new ObservableCollection<T>();
@@ -54,5 +59,7 @@ namespace ChefManager.Modelo
 
             return auxLista;
         }
+       
+
     }
 }

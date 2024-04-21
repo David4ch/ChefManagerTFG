@@ -78,6 +78,14 @@
               "target": "Package",
               "version": "[2.0.4, )"
             },
+            "FirebaseAuthentication.net": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "FirebaseStorage.net": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -144,6 +152,14 @@
             "FireSharp": {
               "target": "Package",
               "version": "[2.0.4, )"
+            },
+            "FirebaseAuthentication.net": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "FirebaseStorage.net": {
+              "target": "Package",
+              "version": "[1.0.3, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -212,6 +228,14 @@
               "target": "Package",
               "version": "[2.0.4, )"
             },
+            "FirebaseAuthentication.net": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "FirebaseStorage.net": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -279,6 +303,14 @@
             "FireSharp": {
               "target": "Package",
               "version": "[2.0.4, )"
+            },
+            "FirebaseAuthentication.net": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "FirebaseStorage.net": {
+              "target": "Package",
+              "version": "[1.0.3, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",

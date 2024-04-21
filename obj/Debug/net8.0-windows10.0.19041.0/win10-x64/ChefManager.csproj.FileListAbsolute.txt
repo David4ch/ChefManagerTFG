@@ -201,3 +201,5 @@ C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win
 C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Speech.dll
 C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\editar.scale-100.png
 C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\eliminar.scale-100.png
+C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Firebase.Auth.dll
+C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Firebase.Storage.dll

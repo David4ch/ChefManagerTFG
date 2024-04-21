@@ -1,4 +1,6 @@
 using ChefManager.Modelo;
+using Firebase.Auth.Providers;
+using FireSharp.Config;
 using FireSharp.Response;
 using Microsoft.Maui.Graphics.Text;
 using Newtonsoft.Json;

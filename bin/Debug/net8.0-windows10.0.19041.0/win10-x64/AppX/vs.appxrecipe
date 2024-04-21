@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-04-18T21:02:59.247</Modified>
+      <Modified>2024-04-21T15:14:14.456</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-04-18T17:20:34.115</Modified>
+      <Modified>2024-04-21T15:05:38.317</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ChefManager.runtimeconfig.json">
       <PackagePath>ChefManager.runtimeconfig.json</PackagePath>
-      <Modified>2024-04-18T15:11:43.295</Modified>
+      <Modified>2024-04-21T15:05:37.756</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ChefManager.dll">
       <PackagePath>ChefManager.dll</PackagePath>
-      <Modified>2024-04-18T21:02:58.141</Modified>
+      <Modified>2024-04-21T15:14:12.965</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ChefManager.exe</PackagePath>
-      <Modified>2024-04-18T21:02:58.163</Modified>
+      <Modified>2024-04-21T15:14:12.973</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -335,7 +335,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ChefManager.deps.json">
       <PackagePath>ChefManager.deps.json</PackagePath>
-      <Modified>2024-04-18T15:50:11.611</Modified>
+      <Modified>2024-04-21T15:05:37.518</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -356,6 +356,14 @@
     <AppxPackagedFile Include="C:\Users\david\.nuget\packages\communitytoolkit.mvvm\8.2.2\lib\net6.0\CommunityToolkit.Mvvm.dll">
       <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
       <Modified>2023-10-24T20:16:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\david\.nuget\packages\firebaseauthentication.net\4.1.0\lib\netstandard2.0\Firebase.Auth.dll">
+      <PackagePath>Firebase.Auth.dll</PackagePath>
+      <Modified>2023-09-07T14:50:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\david\.nuget\packages\firebasestorage.net\1.0.3\lib\netstandard1.1\Firebase.Storage.dll">
+      <PackagePath>Firebase.Storage.dll</PackagePath>
+      <Modified>2018-11-26T21:49:32.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\.nuget\packages\firesharp\2.0.4\lib\portable-net45+sl5+wp8+win8\FireSharp.dll">
       <PackagePath>FireSharp.dll</PackagePath>

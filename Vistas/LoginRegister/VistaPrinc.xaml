@@ -30,195 +30,201 @@
 
     </ContentPage.MenuBarItems>
 
-    <HorizontalStackLayout
-        Margin="0,0,0,80"
-        HorizontalOptions="Center"
-        Spacing="50"
-        VerticalOptions="End">
-        <Grid HeightRequest="120" WidthRequest="120">
-            <ImageButton
-                Margin="0,0,0,50"
-                Padding="10"
-                BackgroundColor="Wheat"
-                BorderColor="Wheat"
-                BorderWidth="6"
-                CornerRadius="20"
-                HeightRequest="90"
-                HorizontalOptions="Center"
-                Source="inventario.png"
-                VerticalOptions="Center"
-                WidthRequest="90">
+    <VerticalStackLayout>
+        <Image
+            x:Name="imgLogo"
+            HeightRequest="400"
+            WidthRequest="400" />
+        <HorizontalStackLayout
+            Margin="0,0,0,80"
+            HorizontalOptions="Center"
+            Spacing="50"
+            VerticalOptions="End">
+            <Grid HeightRequest="120" WidthRequest="120">
+                <ImageButton
+                    Margin="0,0,0,50"
+                    Padding="10"
+                    BackgroundColor="Wheat"
+                    BorderColor="Wheat"
+                    BorderWidth="6"
+                    CornerRadius="20"
+                    HeightRequest="90"
+                    HorizontalOptions="Center"
+                    Source="inventario.png"
+                    VerticalOptions="Center"
+                    WidthRequest="90">
 
-                <ImageButton.GestureRecognizers>
-                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                    <ImageButton.GestureRecognizers>
+                        <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
 
-                </ImageButton.GestureRecognizers>
-            </ImageButton>
-
-
-
-            <Label
-                FontFamily="Arial"
-                FontSize="25"
-                HorizontalOptions="Center"
-                Text="Inventario"
-                VerticalOptions="End" />
-
-        </Grid>
-        <Grid HeightRequest="120" WidthRequest="150">
-            <ImageButton
-                Margin="0,0,0,50"
-                Padding="10"
-                BackgroundColor="Wheat"
-                BorderColor="Wheat"
-                BorderWidth="6"
-                CornerRadius="20"
-                HeightRequest="90"
-                HorizontalOptions="Center"
-                Source="proveedores.png"
-                VerticalOptions="Center"
-                WidthRequest="90">
-
-                <ImageButton.GestureRecognizers>
-                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-
-                </ImageButton.GestureRecognizers>
-            </ImageButton>
+                    </ImageButton.GestureRecognizers>
+                </ImageButton>
 
 
 
-            <Label
-                FontFamily="Arial"
-                FontSize="25"
-                HorizontalOptions="Center"
-                Text="Proveedores"
-                VerticalOptions="End" />
+                <Label
+                    FontFamily="Arial"
+                    FontSize="25"
+                    HorizontalOptions="Center"
+                    Text="Inventario"
+                    VerticalOptions="End" />
 
-        </Grid>
-        <Grid HeightRequest="120" WidthRequest="120">
-            <ImageButton
-                Margin="0,0,0,50"
-                Padding="10"
-                BackgroundColor="Wheat"
-                BorderColor="Wheat"
-                BorderWidth="6"
-                CornerRadius="20"
-                HeightRequest="90"
-                HorizontalOptions="Center"
-                Source="caja.png"
-                VerticalOptions="Center"
-                WidthRequest="90">
+            </Grid>
+            <Grid HeightRequest="120" WidthRequest="150">
+                <ImageButton
+                    Margin="0,0,0,50"
+                    Padding="10"
+                    BackgroundColor="Wheat"
+                    BorderColor="Wheat"
+                    BorderWidth="6"
+                    CornerRadius="20"
+                    HeightRequest="90"
+                    HorizontalOptions="Center"
+                    Source="proveedores.png"
+                    VerticalOptions="Center"
+                    WidthRequest="90">
 
-                <ImageButton.GestureRecognizers>
-                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                    <ImageButton.GestureRecognizers>
+                        <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
 
-                </ImageButton.GestureRecognizers>
-            </ImageButton>
-
-
-
-            <Label
-                FontFamily="Arial"
-                FontSize="25"
-                HorizontalOptions="Center"
-                Text="Caja"
-                VerticalOptions="End" />
-
-        </Grid>
-
-        <Grid HeightRequest="120" WidthRequest="130">
-            <ImageButton
-                Margin="0,0,0,50"
-                Padding="10"
-                BackgroundColor="Wheat"
-                BorderColor="Wheat"
-                BorderWidth="6"
-                CornerRadius="20"
-                HeightRequest="90"
-                HorizontalOptions="Center"
-                Source="calendario.png"
-                VerticalOptions="Center"
-                WidthRequest="90">
-
-                <ImageButton.GestureRecognizers>
-                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-
-                </ImageButton.GestureRecognizers>
-            </ImageButton>
+                    </ImageButton.GestureRecognizers>
+                </ImageButton>
 
 
 
-            <Label
-                FontFamily="Arial"
-                FontSize="25"
-                HorizontalOptions="Center"
-                Text="Calendario"
-                VerticalOptions="End" />
+                <Label
+                    FontFamily="Arial"
+                    FontSize="25"
+                    HorizontalOptions="Center"
+                    Text="Proveedores"
+                    VerticalOptions="End" />
 
-        </Grid>
+            </Grid>
+            <Grid HeightRequest="120" WidthRequest="120">
+                <ImageButton
+                    Margin="0,0,0,50"
+                    Padding="10"
+                    BackgroundColor="Wheat"
+                    BorderColor="Wheat"
+                    BorderWidth="6"
+                    CornerRadius="20"
+                    HeightRequest="90"
+                    HorizontalOptions="Center"
+                    Source="caja.png"
+                    VerticalOptions="Center"
+                    WidthRequest="90">
 
-        <Grid HeightRequest="120" WidthRequest="130">
-            <ImageButton
-                Margin="0,0,0,50"
-                Padding="10"
-                BackgroundColor="Wheat"
-                BorderColor="Wheat"
-                BorderWidth="6"
-                CornerRadius="20"
-                HeightRequest="90"
-                HorizontalOptions="Center"
-                Source="empleados.png"
-                VerticalOptions="Center"
-                WidthRequest="90">
+                    <ImageButton.GestureRecognizers>
+                        <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
 
-                <ImageButton.GestureRecognizers>
-                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-
-                </ImageButton.GestureRecognizers>
-            </ImageButton>
-
-
-
-            <Label
-                FontFamily="Arial"
-                FontSize="25"
-                HorizontalOptions="Center"
-                Text="Empleados"
-                VerticalOptions="End" />
-
-        </Grid>
-
-        <Grid HeightRequest="120" WidthRequest="120">
-            <ImageButton
-                Margin="0,0,0,50"
-                Padding="10"
-                BackgroundColor="Wheat"
-                BorderColor="Wheat"
-                BorderWidth="6"
-                CornerRadius="20"
-                HeightRequest="90"
-                HorizontalOptions="Center"
-                Source="notas.png"
-                VerticalOptions="Center"
-                WidthRequest="90">
-
-                <ImageButton.GestureRecognizers>
-                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-
-                </ImageButton.GestureRecognizers>
-            </ImageButton>
+                    </ImageButton.GestureRecognizers>
+                </ImageButton>
 
 
 
-            <Label
-                FontFamily="Arial"
-                FontSize="25"
-                HorizontalOptions="Center"
-                Text="Notas"
-                VerticalOptions="End" />
+                <Label
+                    FontFamily="Arial"
+                    FontSize="25"
+                    HorizontalOptions="Center"
+                    Text="Caja"
+                    VerticalOptions="End" />
 
-        </Grid>
+            </Grid>
 
-    </HorizontalStackLayout>
+            <Grid HeightRequest="120" WidthRequest="130">
+                <ImageButton
+                    Margin="0,0,0,50"
+                    Padding="10"
+                    BackgroundColor="Wheat"
+                    BorderColor="Wheat"
+                    BorderWidth="6"
+                    CornerRadius="20"
+                    HeightRequest="90"
+                    HorizontalOptions="Center"
+                    Source="calendario.png"
+                    VerticalOptions="Center"
+                    WidthRequest="90">
+
+                    <ImageButton.GestureRecognizers>
+                        <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+
+                    </ImageButton.GestureRecognizers>
+                </ImageButton>
+
+
+
+                <Label
+                    FontFamily="Arial"
+                    FontSize="25"
+                    HorizontalOptions="Center"
+                    Text="Calendario"
+                    VerticalOptions="End" />
+
+            </Grid>
+
+            <Grid HeightRequest="120" WidthRequest="130">
+                <ImageButton
+                    Margin="0,0,0,50"
+                    Padding="10"
+                    BackgroundColor="Wheat"
+                    BorderColor="Wheat"
+                    BorderWidth="6"
+                    CornerRadius="20"
+                    HeightRequest="90"
+                    HorizontalOptions="Center"
+                    Source="empleados.png"
+                    VerticalOptions="Center"
+                    WidthRequest="90">
+
+                    <ImageButton.GestureRecognizers>
+                        <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+
+                    </ImageButton.GestureRecognizers>
+                </ImageButton>
+
+
+
+                <Label
+                    FontFamily="Arial"
+                    FontSize="25"
+                    HorizontalOptions="Center"
+                    Text="Empleados"
+                    VerticalOptions="End" />
+
+            </Grid>
+
+            <Grid HeightRequest="120" WidthRequest="120">
+                <ImageButton
+                    Margin="0,0,0,50"
+                    Padding="10"
+                    BackgroundColor="Wheat"
+                    BorderColor="Wheat"
+                    BorderWidth="6"
+                    CornerRadius="20"
+                    HeightRequest="90"
+                    HorizontalOptions="Center"
+                    Source="notas.png"
+                    VerticalOptions="Center"
+                    WidthRequest="90">
+
+                    <ImageButton.GestureRecognizers>
+                        <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+
+                    </ImageButton.GestureRecognizers>
+                </ImageButton>
+
+
+
+                <Label
+                    FontFamily="Arial"
+                    FontSize="25"
+                    HorizontalOptions="Center"
+                    Text="Notas"
+                    VerticalOptions="End" />
+
+            </Grid>
+
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
 
 </ContentPage>
