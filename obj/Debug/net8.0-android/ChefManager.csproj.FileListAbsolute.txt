@@ -1067,3 +1067,7 @@ C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-android\android\src\crc
 C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-android\android\src\crc6452ffdc5b34af3a0f\MauiMaterialButton_MauiResizableDrawable.java
 C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-android\android\src\crc648fc34c62be8fbbff\Snackbar_SnackbarCallback.java
 C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-android\android\src\crc64d6358e7bf64fbac4\SpeechToTextImplementation_SpeechRecognitionListener.java
+C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-android\resizetizer\r\drawable\editar.png
+C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-android\resizetizer\r\drawable\eliminar.png
+C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-android\android\assets\Firebase.Auth.dll
+C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-android\android\assets\Firebase.Storage.dll

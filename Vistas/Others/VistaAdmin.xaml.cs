@@ -13,8 +13,6 @@ public partial class VistaAdmin : ContentPage
 {
     FirebaseConnection firebaseConnection = new FirebaseConnection();
 
-    //public ObservableCollection<Restaurante> listaRestaurantesAux { get; set; }
-
     public VistaAdmin()
     {
         InitializeComponent();

@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\david\\source\\repos\\ChefManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\vistas\\loginregister\\vistaprinc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:vistas\\loginregister\\vistaprinc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\vistamodelo\\validadorinicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:vistamodelo\\validadorinicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\vistas\\loginregister\\vistalogin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:vistas\\loginregister\\vistalogin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\vistas\\loginregister\\vistaprinc.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:vistas\\loginregister\\vistaprinc.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\vistas\\loginregister\\registrorestaurante.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:vistas\\loginregister\\registrorestaurante.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\modelo\\firebaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:modelo\\firebaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,7 +21,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 116,
+          "DockedWidth": 200,
           "SelectedChildIndex": 3,
           "Children": [
             {
@@ -34,54 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\AppShell.xaml",
-              "RelativeDocumentMoniker": "AppShell.xaml",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\AppShell.xaml",
-              "RelativeToolTip": "AppShell.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-21T15:04:08.814Z",
+              "DocumentIndex": 2,
+              "Title": "FirebaseConnection.cs",
+              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Modelo\\FirebaseConnection.cs",
+              "RelativeDocumentMoniker": "Modelo\\FirebaseConnection.cs",
+              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Modelo\\FirebaseConnection.cs",
+              "RelativeToolTip": "Modelo\\FirebaseConnection.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T17:55:55.116Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VistaPrinc.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\LoginRegister\\VistaPrinc.xaml.cs",
-              "RelativeDocumentMoniker": "Vistas\\LoginRegister\\VistaPrinc.xaml.cs",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\LoginRegister\\VistaPrinc.xaml.cs",
-              "RelativeToolTip": "Vistas\\LoginRegister\\VistaPrinc.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T15:00:37.867Z",
+              "DocumentIndex": 1,
+              "Title": "VistaLogin.xaml",
+              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\LoginRegister\\VistaLogin.xaml",
+              "RelativeDocumentMoniker": "Vistas\\LoginRegister\\VistaLogin.xaml",
+              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\LoginRegister\\VistaLogin.xaml",
+              "RelativeToolTip": "Vistas\\LoginRegister\\VistaLogin.xaml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAcwC0AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-25T17:51:35.788Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "VistaPrinc.xaml",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\LoginRegister\\VistaPrinc.xaml",
-              "RelativeDocumentMoniker": "Vistas\\LoginRegister\\VistaPrinc.xaml",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\LoginRegister\\VistaPrinc.xaml",
-              "RelativeToolTip": "Vistas\\LoginRegister\\VistaPrinc.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-21T15:00:28.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RegistroRestaurante.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\LoginRegister\\RegistroRestaurante.xaml.cs",
-              "RelativeDocumentMoniker": "Vistas\\LoginRegister\\RegistroRestaurante.xaml.cs",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\LoginRegister\\RegistroRestaurante.xaml.cs",
-              "RelativeToolTip": "Vistas\\LoginRegister\\RegistroRestaurante.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGcAAAAnAAAA",
+              "Title": "ValidadorInicio.cs",
+              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\VistaModelo\\ValidadorInicio.cs",
+              "RelativeDocumentMoniker": "VistaModelo\\ValidadorInicio.cs",
+              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\VistaModelo\\ValidadorInicio.cs",
+              "RelativeToolTip": "VistaModelo\\ValidadorInicio.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAABwAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T15:12:58.737Z",
+              "WhenOpened": "2024-04-25T17:49:44.238Z",
               "EditorCaption": ""
             }
           ]

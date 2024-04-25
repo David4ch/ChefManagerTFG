@@ -2,15 +2,11 @@ using ChefManager.Modelo;
 using Firebase.Auth;
 using Firebase.Auth.Providers;
 using Firebase.Storage;
-using FireSharp.Config;
-using FireSharp.Interfaces;
-using FireSharp.Response;
 
 namespace ChefManager.Vistas;
 
 public partial class RegistroRestaurante : ContentPage
 {
-    FirebaseConnection connection = new FirebaseConnection();
     public static string _idRestaurante;
     string authDomain = "chefmg-664a2.firebaseapp.com";
     string api_key = "AIzaSyCyrx6jgU-a2dnYYOqlMX2k_8tbO1ia1rw";
@@ -25,38 +21,11 @@ public partial class RegistroRestaurante : ContentPage
     {
 
         InitializeComponent();
-
         MainThread.BeginInvokeOnMainThread(new Action(async ()=> await obtenerToken()));
+            
     }
 
-    private async void boton_Clicked(object sender, EventArgs e)
-    {
-        try
-        {
 
-            Restaurante restaurante = new Restaurante
-            {
-                Id = Guid.NewGuid().ToString(),
-                Nombre = entryNombre.Text,
-                Direccion = entryDireccion.Text,
-                Logo = entryLogo.Text,
-
-            };
-
-            var SetData = connection.client.SetAsync("RestauranteDatabase/" + restaurante.Id, restaurante);
-
-            _idRestaurante = restaurante.Id;
-
-            await AppShell.Current.GoToAsync(nameof(RegistroUser));
-
-
-        }
-        catch (Exception)
-        {
-            System.Diagnostics.Debug.WriteLine("Error upload");
-
-        }
-    }
     //Metodo para subir fotos al Storage
     private async Task obtenerToken()
     {
@@ -100,9 +69,10 @@ public partial class RegistroRestaurante : ContentPage
 
             var urlDescarga = await task;
 
-            entryLogo.Text = urlDescarga;
+            entryLogo.Text = foto.FileName;
             _urlDescarga = urlDescarga;
             
         }
     }
+
 }
