@@ -15,7 +15,7 @@ namespace ChefManager.VistaModelo
         private string nombre;
 
         [Required(ErrorMessage = "El campo nombre es obligatorio.")]
-        [RegularExpression(@"^[a-zA-Z\s]*$", ErrorMessage = "Solo se permiten letras.")]
+        [RegularExpression(@"^[a-zA-Z\s]*$", ErrorMessage = "Solo se permiten letras en el campo Nombre.")]
         [StringLength(15, ErrorMessage = "El campo debe tener máximo 15 caracteres.")]
         public string Nombre
         {

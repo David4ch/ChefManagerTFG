@@ -7,36 +7,49 @@
     x:DataType="mo:Restaurante">
 
     <Grid
-            Padding="20"
-            ColumnDefinitions="*,*,*,*,*"
-            RowDefinitions="Auto">
+        Padding="20"
+        ColumnDefinitions="*,*,*,*"
+        RowDefinitions="Auto">
+        <Label
+            x:Name="labelId"
+            IsVisible="False"
+            Text="{Binding Id}" />
+        <Label
+            Grid.Column="0"
+            Text="{Binding Nombre}"
+            TextColor="Black" />
+        <Label
+            Grid.Column="1"
+            Text="{Binding Direccion}"
+            TextColor="Black" />
+        <Image
+            Grid.Column="2"
+            HeightRequest="70"
+            Source="{Binding Logo}"
+            WidthRequest="70" />
 
-        <Label
-                Grid.Column="0"
-                Text="{Binding Id}"
-                TextColor="Black" />
-        <Label
-                Grid.Column="1"
-                Text="{Binding Nombre}"
-                TextColor="Black" />
-        <Label
-                Grid.Column="2"
-                Text="{Binding Direccion}"
-                TextColor="Black" />
-        <Label
-                Grid.Column="3"
-                Text="{Binding Logo}"
-                TextColor="Black" />
+        <HorizontalStackLayout Grid.Column="3" Spacing="10">
+            <ImageButton
+                BackgroundColor="LightGray"
+                Clicked="ImageEdit_Clicked"
+                HeightRequest="16"
+                Source="editar.png"
+                WidthRequest="16">
+                <ImageButton.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                </ImageButton.GestureRecognizers>
+            </ImageButton>
+            <ImageButton
+                BackgroundColor="LightGray"
+                Clicked="ImageDelete_Clicked"
+                HeightRequest="16"
+                Source="eliminar.png"
+                WidthRequest="16">
+                <ImageButton.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                </ImageButton.GestureRecognizers>
+            </ImageButton>
 
-        <HorizontalStackLayout Grid.Column="4" Spacing="10">
-            <ImageButton
-                    HeightRequest="16"
-                    Source="editar.png"
-                    WidthRequest="16" />
-            <ImageButton
-                    HeightRequest="16"
-                    Source="eliminar.png"
-                    WidthRequest="16" />
         </HorizontalStackLayout>
 
     </Grid>

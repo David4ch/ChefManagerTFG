@@ -7,43 +7,49 @@
     x:DataType="mo:Usuario">
 
     <Grid
-            Padding="20"
-            ColumnDefinitions="*,*,*,*,*,*,*"
-            RowDefinitions="Auto">
+        Padding="20"
+        ColumnDefinitions="*,*,*,*"
+        RowDefinitions="Auto">
+        <Label
+            x:Name="labelId"
+            IsVisible="False"
+            Text="{Binding Id}" />
+        <Label
+            Grid.Column="0"
+            Text="{Binding NombreUser}"
+            TextColor="Black" />
+        <Label
+            Grid.Column="1"
+            Text="{Binding Email}"
+            TextColor="Black" />
+        <Label
+            Grid.Column="2"
+            Text="{Binding Contrasena}"
+            TextColor="Black" />
 
-        <Label
-                Grid.Column="0"
-                Text="{Binding Restaurante_Id}"
-                TextColor="Black" />
-        <Label
-                Grid.Column="1"
-                Text="{Binding Id}"
-                TextColor="Black" />
-
-        <Label
-                Grid.Column="2"
-                Text="{Binding NombreUser}"
-                TextColor="Black" />
-        <Label
-                Grid.Column="3"
-                Text="{Binding Email}"
-                TextColor="Black" />
-        <Label
-                Grid.Column="4"
-                Text="{Binding Contrasena}"
-                TextColor="Black" />
-
-        <HorizontalStackLayout Grid.Column="5" Spacing="10">
+        <HorizontalStackLayout Grid.Column="3" Spacing="10">
             <ImageButton
-                    BackgroundColor="LightGray"
-                    HeightRequest="16"
-                    Source="editar.png"
-                    WidthRequest="16" />
+                BackgroundColor="LightGray"
+                Clicked="ImageEdit_Clicked"
+                HeightRequest="16"
+                Source="editar.png"
+                WidthRequest="16">
+                <ImageButton.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                </ImageButton.GestureRecognizers>
+            </ImageButton>
             <ImageButton
-                    BackgroundColor="LightGray"
-                    HeightRequest="16"
-                    Source="eliminar.png"
-                    WidthRequest="16" />
+                BackgroundColor="LightGray"
+                Clicked="ImageDelete_Clicked"
+                HeightRequest="16"
+                Source="eliminar.png"
+                WidthRequest="16">
+                <ImageButton.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                </ImageButton.GestureRecognizers>
+
+            </ImageButton>
+
         </HorizontalStackLayout>
 
     </Grid>

@@ -5,117 +5,194 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:mo="clr-namespace:ChefManager.Modelo"
     xmlns:te="clr-namespace:ChefManager.Templates">
+
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="&#x2630;">
+            <MenuFlyoutItem Clicked="mostrarMenu" Text="Abrir/Cerrar Menú" />
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
+
+
     <HorizontalStackLayout>
 
-        <VerticalStackLayout BackgroundColor="{StaticResource darkBrown}" WidthRequest="465">
+        <VerticalStackLayout
+            x:Name="verticalLayout"
+            BackgroundColor="{StaticResource darkBrown}"
+            TranslationX="0"
+            WidthRequest="465">
 
             <Image Source="chefmg.png" WidthRequest="200" />
             <Label
                 Margin="30,0,0,0"
                 FontFamily="Arial"
                 FontSize="30"
-                Text="David Chavarria Paccha" />
+                Text="Administrador" />
             <Label
                 Margin="30,0,0,0"
                 FontAttributes="Italic"
                 FontFamily="Arial"
                 FontSize="20"
-                Text="Administrador" />
+                Text="Admin" />
+            <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,*,*,*">
 
-            <Button
-                Clicked="Button_Clicked"
-                Style="{StaticResource boton1}"
-                Text="Usuarios">
-                <Button.GestureRecognizers>
-                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                </Button.GestureRecognizers>
+                <VerticalStackLayout Grid.Row="0" Grid.Column="0">
+                    <ImageButton
+                        Clicked="Button_Clicked"
+                        CornerRadius="6"
+                        HeightRequest="90"
+                        Source="usuarios_icon.png"
+                        WidthRequest="80">
+                        <ImageButton.GestureRecognizers>
+                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                        </ImageButton.GestureRecognizers>
+                    </ImageButton>
+                    <Label HorizontalTextAlignment="Center" Text="USUARIOS" />
 
-            </Button>
-            <Button
-                Clicked="Button_Clicked"
-                Style="{StaticResource boton1}"
-                Text="Restaurantes">
-                <Button.GestureRecognizers>
-                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                </Button.GestureRecognizers>
+                </VerticalStackLayout>
 
-            </Button>
-            <Button
-                Clicked="Button_Clicked"
-                Style="{StaticResource boton1}"
-                Text="Calendario">
-                <Button.GestureRecognizers>
-                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                </Button.GestureRecognizers>
+                <VerticalStackLayout Grid.Row="0" Grid.Column="1">
+                    <ImageButton
+                        Clicked="Button_Clicked"
+                        CornerRadius="6"
+                        HeightRequest="90"
+                        Source="restaurantes_icon.png"
+                        WidthRequest="80">
+                        <ImageButton.GestureRecognizers>
+                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                        </ImageButton.GestureRecognizers>
+                    </ImageButton>
+                    <Label HorizontalTextAlignment="Center" Text="RESTAURANTES" />
+                </VerticalStackLayout>
 
-            </Button>
-            <Button
-                Clicked="Button_Clicked"
-                Style="{StaticResource boton1}"
-                Text="Dinero">
-                <Button.GestureRecognizers>
-                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                </Button.GestureRecognizers>
+                <VerticalStackLayout Grid.Row="1" Grid.Column="0">
+                    <ImageButton
+                        Clicked="Button_Clicked"
+                        CornerRadius="6"
+                        HeightRequest="90"
+                        Source="proveedores.png"
+                        WidthRequest="80">
+                        <ImageButton.GestureRecognizers>
+                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                        </ImageButton.GestureRecognizers>
+                    </ImageButton>
+                    <Label HorizontalTextAlignment="Center" Text="PROVEEDORES" />
+                </VerticalStackLayout>
 
-            </Button>
-            <Button
-                Clicked="Button_Clicked"
-                Style="{StaticResource boton1}"
-                Text="Calendario_has_Dinero">
-                <Button.GestureRecognizers>
-                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                </Button.GestureRecognizers>
+                <VerticalStackLayout Grid.Row="1" Grid.Column="1">
+                    <ImageButton
+                        Clicked="Button_Clicked"
+                        CornerRadius="6"
+                        HeightRequest="90"
+                        Source="proveedoresproductos.png"
+                        WidthRequest="80">
+                        <ImageButton.GestureRecognizers>
+                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                        </ImageButton.GestureRecognizers>
+                    </ImageButton>
+                    <Label
+                        FontSize="10"
+                        HorizontalTextAlignment="Center"
+                        Text="PROVEEDORES_HAS_PRODUCTOS" />
+                </VerticalStackLayout>
 
-            </Button>
+                <VerticalStackLayout Grid.Row="1" Grid.Column="2">
+                    <ImageButton
+                        Clicked="Button_Clicked"
+                        CornerRadius="6"
+                        HeightRequest="90"
+                        Source="productos_icon.png"
+                        WidthRequest="80">
+                        <ImageButton.GestureRecognizers>
+                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                        </ImageButton.GestureRecognizers>
+                    </ImageButton>
+                    <Label HorizontalTextAlignment="Center" Text="PRODUCTOS" />
 
-            <Button
-                Clicked="Button_Clicked"
-                Style="{StaticResource boton1}"
-                Text="Empleados">
-                <Button.GestureRecognizers>
-                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                </Button.GestureRecognizers>
+                </VerticalStackLayout>
 
-            </Button>
-            <Button
-                Clicked="Button_Clicked"
-                Style="{StaticResource boton1}"
-                Text="Notas">
-                <Button.GestureRecognizers>
-                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                </Button.GestureRecognizers>
+                <VerticalStackLayout Grid.Row="2" Grid.Column="0">
+                    <ImageButton
+                        Clicked="Button_Clicked"
+                        CornerRadius="6"
+                        HeightRequest="90"
+                        Source="calendario.png"
+                        WidthRequest="80">
+                        <ImageButton.GestureRecognizers>
+                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                        </ImageButton.GestureRecognizers>
+                    </ImageButton>
+                    <Label HorizontalTextAlignment="Center" Text="CALENDARIOS" />
+                </VerticalStackLayout>
 
-            </Button>
-            <Button
-                Clicked="Button_Clicked"
-                Style="{StaticResource boton1}"
-                Text="Proveedores">
-                <Button.GestureRecognizers>
-                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                </Button.GestureRecognizers>
+                <VerticalStackLayout Grid.Row="2" Grid.Column="1">
+                    <ImageButton
+                        Clicked="Button_Clicked"
+                        CornerRadius="6"
+                        HeightRequest="90"
+                        Source="calendariodinero.png"
+                        WidthRequest="80">
+                        <ImageButton.GestureRecognizers>
+                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                        </ImageButton.GestureRecognizers>
+                    </ImageButton>
+                    <Label
+                        FontSize="10"
+                        HorizontalTextAlignment="Center"
+                        Text="CALENDARIO_HAS_DINERO" />
+                </VerticalStackLayout>
 
-            </Button>
-            <Button
-                Clicked="Button_Clicked"
-                Style="{StaticResource boton1}"
-                Text="Productos">
-                <Button.GestureRecognizers>
-                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                </Button.GestureRecognizers>
+                <VerticalStackLayout Grid.Row="2" Grid.Column="2">
+                    <ImageButton
+                        Clicked="Button_Clicked"
+                        CornerRadius="6"
+                        HeightRequest="90"
+                        Source="dinero_icon.png"
+                        WidthRequest="80">
+                        <ImageButton.GestureRecognizers>
+                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                        </ImageButton.GestureRecognizers>
+                    </ImageButton>
+                    <Label HorizontalTextAlignment="Center" Text="DINERO" />
 
-            </Button>
-            <Button
-                Clicked="Button_Clicked"
-                Style="{StaticResource boton1}"
-                Text="Proveedores_has_Productos">
-                <Button.GestureRecognizers>
-                    <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                </Button.GestureRecognizers>
+                </VerticalStackLayout>
 
-            </Button>
+                <VerticalStackLayout Grid.Row="3" Grid.Column="0">
+                    <ImageButton
+                        Clicked="Button_Clicked"
+                        CornerRadius="6"
+                        HeightRequest="90"
+                        Source="notas.png"
+                        WidthRequest="80">
+                        <ImageButton.GestureRecognizers>
+                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                        </ImageButton.GestureRecognizers>
+                    </ImageButton>
+                    <Label HorizontalTextAlignment="Center" Text="NOTAS" />
+
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Row="3" Grid.Column="1">
+                    <ImageButton
+                        Clicked="Button_Clicked"
+                        CornerRadius="6"
+                        HeightRequest="90"
+                        Source="empleados_icon.png"
+                        WidthRequest="80">
+                        <ImageButton.GestureRecognizers>
+                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                        </ImageButton.GestureRecognizers>
+                    </ImageButton>
+                    <Label HorizontalTextAlignment="Center" Text="EMPLEADOS" />
+
+                </VerticalStackLayout>
+
+            </Grid>
+
+
 
         </VerticalStackLayout>
         <VerticalStackLayout
+            x:Name="verticalLayout2"
             BackgroundColor="LightGray"
             VerticalOptions="FillAndExpand"
             WidthRequest="1071">
@@ -148,10 +225,9 @@
 
                 </StackLayout.Shadow>
 
-                <HorizontalStackLayout>
+                <HorizontalStackLayout Padding="10" HorizontalOptions="Center">
                     <Label
-                        Margin="10,0,10,0"
-                        Text="Mostrar "
+                        Text="Mostrar"
                         TextColor="Black"
                         VerticalTextAlignment="Center" />
                     <Picker
@@ -172,11 +248,38 @@
                         TextColor="Black"
                         VerticalTextAlignment="Center" />
 
+                    <ImageButton
+                        Margin="80,0,0,0"
+                        BackgroundColor="LightGray"
+                        Clicked="ImageAdd_Clicked"
+                        HeightRequest="16"
+                        Source="suma.png"
+                        WidthRequest="16">
+                        <ImageButton.GestureRecognizers>
+                            <PointerGestureRecognizer PointerEntered="OnPointerEntered2" PointerExited="OnPointerExited2" />
+                        </ImageButton.GestureRecognizers>
+
+                    </ImageButton>
+                    <Label
+                        x:Name="labelAdd"
+                        Text="Añadir usuario"
+                        TextColor="Black"
+                        VerticalOptions="Center" />
+
+                    <SearchBar
+                        x:Name="buscador"
+                        Margin="80,0,0,0"
+                        BackgroundColor="LightGray"
+                        Placeholder="Buscar por NombreUser"
+                        SearchButtonPressed="buscar"
+                        TextColor="Black"
+                        WidthRequest="300" />
+
                 </HorizontalStackLayout>
 
                 <Grid
                     Padding="20"
-                    ColumnDefinitions="*,*,*,*,*,*"
+                    ColumnDefinitions="*,*,*,*"
                     HeightRequest="-1"
                     RowDefinitions="Auto"
                     RowSpacing="1"
@@ -186,56 +289,42 @@
                         x:Name="label0"
                         Grid.Row="0"
                         Grid.Column="0"
-                        Text="Id"
+                        Text="NombreUser"
                         TextColor="Black"
                         VerticalOptions="Center" />
                     <Label
                         x:Name="label1"
                         Grid.Row="0"
                         Grid.Column="1"
-                        Text="Restaurante_Id"
+                        Text="Correo"
                         TextColor="Black"
                         VerticalOptions="Center" />
                     <Label
                         x:Name="label2"
                         Grid.Row="0"
                         Grid.Column="2"
-                        Text="NombreUser"
+                        Text="Contraseña"
                         TextColor="Black"
                         VerticalOptions="Center" />
                     <Label
                         x:Name="label3"
                         Grid.Row="0"
                         Grid.Column="3"
-                        Text="Correo"
+                        Text="Acciones"
                         TextColor="Black"
                         VerticalOptions="Center" />
                     <Label
                         x:Name="label4"
                         Grid.Row="0"
                         Grid.Column="4"
-                        Text="Contraseña"
+                        IsVisible="Hidden"
+                        Text=""
                         TextColor="Black"
                         VerticalOptions="Center" />
                     <Label
                         x:Name="label5"
                         Grid.Row="0"
                         Grid.Column="5"
-                        Text="Acciones"
-                        TextColor="Black"
-                        VerticalOptions="Center" />
-                    <Label
-                        x:Name="label6"
-                        Grid.Row="0"
-                        Grid.Column="6"
-                        IsVisible="Hidden"
-                        Text=""
-                        TextColor="Black"
-                        VerticalOptions="Center" />
-                    <Label
-                        x:Name="label7"
-                        Grid.Row="0"
-                        Grid.Column="7"
                         IsVisible="Hidden"
                         Text=""
                         TextColor="Black"

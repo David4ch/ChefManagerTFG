@@ -34,11 +34,18 @@ namespace ChefManager.VistaModelo
 
             if (esUsuarioValido)
             {
+                if (_email == "Admin@gmail.com" && _contrasena == "Administrador4-")
+                {
+                    await AppShell.Current.GoToAsync(nameof(VistaAdmin));
+                }
+                else { 
                 await AppShell.Current.GoToAsync(nameof(VistaPrinc));
+                }
+                
             }
             else
             {
-                await Application.Current.MainPage.DisplayAlert("ERROR UPLOAD", "La contraseña o el correo son incorrectos", "OK");
+                await AppShell.Current.DisplayAlert("ERROR UPLOAD", "La contraseña o el correo son incorrectos", "OK");
             }
         }
     }
