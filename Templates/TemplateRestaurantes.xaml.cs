@@ -13,28 +13,26 @@ public partial class TemplateRestaurantes : ContentView
 		InitializeComponent();
 	}
 
-    private void ImageAdd_Clicked(object sender, EventArgs e)
-    {
-
-    }
 
     private void ImageEdit_Clicked(object sender, EventArgs e)
     {
       
     }
 
-    private void ImageDelete_Clicked(object sender, EventArgs e)
+    private async void ImageDelete_Clicked(object sender, EventArgs e)
     {
         try
         {
             var SetData = connection.client.Delete("RestauranteDatabase/" + labelId.Text);
             admin.actualizarLista("Restaurantes");
+            await Application.Current.MainPage.DisplayAlert("!¡", "Restaurante eliminado correctamente","De acuerdo");
         }
         catch (Exception)
         {
             System.Diagnostics.Debug.WriteLine("Error al eliminar el restaurante");
         }
     }
+
     private void OnPointerEntered(object sender, PointerEventArgs e)
     {
         ImageButton button = (ImageButton)sender;

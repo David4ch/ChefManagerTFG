@@ -8,31 +8,31 @@ public partial class TemplateUsuarios : ContentView
     FirebaseConnection connection = new FirebaseConnection();
     VistaAdmin admin = new VistaAdmin();
 
-	public TemplateUsuarios()
+    public TemplateUsuarios()
 	{
 		InitializeComponent();
-	}
-    private void ImageAdd_Clicked(object sender, EventArgs e)
-    {
-
+        
     }
+   
     private void ImageEdit_Clicked(object sender, EventArgs e)
     {
 
     }
 
-    private void ImageDelete_Clicked(object sender, EventArgs e)
+    private async void ImageDelete_Clicked(object sender, EventArgs e)
     {
         try
         {
             var SetData = connection.client.Delete("UsuarioDatabase/" + labelId.Text);
             admin.actualizarLista("Usuarios");
+            await Application.Current.MainPage.DisplayAlert("!¡", "Usuario eliminado correctamente", "De acuerdo");
         }
         catch (Exception)
         {
             System.Diagnostics.Debug.WriteLine("Error al eliminar el usuario");
         }
     }
+
     private void OnPointerEntered(object sender, PointerEventArgs e)
     {
         ImageButton button = (ImageButton)sender;

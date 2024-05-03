@@ -25,7 +25,9 @@
         <Image
             Grid.Column="2"
             HeightRequest="70"
+            HorizontalOptions="Start"
             Source="{Binding Logo}"
+            VerticalOptions="Center"
             WidthRequest="70" />
 
         <HorizontalStackLayout Grid.Column="3" Spacing="10">

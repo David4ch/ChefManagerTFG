@@ -31,15 +31,100 @@
     </ContentPage.MenuBarItems>
 
     <VerticalStackLayout>
-        <Image
-            x:Name="imgLogo"
-            HeightRequest="400"
-            WidthRequest="400" />
+        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Image
+                x:Name="imgLogo"
+                HeightRequest="400"
+                WidthRequest="400" />
+
+            <Grid Padding="10" VerticalOptions="Center">
+
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Offset="0.1" Color="LightBlue" />
+                        <GradientStop Offset="1.0" Color="MediumPurple" />
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="200" />
+
+                </Grid.ColumnDefinitions>
+                <VerticalStackLayout
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Grid.Column="0">
+                    <Image Source="https://openweathermap.org/img/wn/04d@2x.png" WidthRequest="170" />
+                    <Label
+                        FontFamily="Balance"
+                        FontSize="20"
+                        HorizontalTextAlignment="Center"
+                        Text="Clouds"
+                        TextColor="Black" />
+                </VerticalStackLayout>
+
+
+                <HorizontalStackLayout
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    HorizontalOptions="Center">
+
+                    <Image Source="ubicacion.png" WidthRequest="45" />
+                    <Label
+                        FontFamily="Balance"
+                        FontSize="25"
+                        Text="Madrid,Es"
+                        TextColor="Black"
+                        VerticalOptions="Center" />
+
+                </HorizontalStackLayout>
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    FontFamily="Balance"
+                    FontSize="85"
+                    HorizontalTextAlignment="Center"
+                    Text="6º"
+                    TextColor="Black" />
+
+                <HorizontalStackLayout
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="Center"
+                    Spacing="25"
+                    VerticalOptions="Center">
+                    <Label
+                        FontFamily="Balance"
+                        FontSize="20"
+                        Text="Máx 5º / 1º"
+                        TextColor="Black" />
+                    <Label
+                        FontFamily="Balance"
+                        FontSize="20"
+                        Text="Sens. Term: 8º"
+                        TextColor="Black" />
+
+                </HorizontalStackLayout>
+
+            </Grid>
+        </HorizontalStackLayout>
+
+
+
+
         <HorizontalStackLayout
             Margin="0,0,0,80"
             HorizontalOptions="Center"
             Spacing="50"
             VerticalOptions="End">
+
             <Grid HeightRequest="120" WidthRequest="120">
                 <ImageButton
                     Margin="0,0,0,50"
@@ -130,7 +215,6 @@
                     VerticalOptions="End" />
 
             </Grid>
-
             <Grid HeightRequest="120" WidthRequest="130">
                 <ImageButton
                     Margin="0,0,0,50"
@@ -161,7 +245,6 @@
                     VerticalOptions="End" />
 
             </Grid>
-
             <Grid HeightRequest="120" WidthRequest="130">
                 <ImageButton
                     Margin="0,0,0,50"
@@ -192,7 +275,6 @@
                     VerticalOptions="End" />
 
             </Grid>
-
             <Grid HeightRequest="120" WidthRequest="120">
                 <ImageButton
                     Margin="0,0,0,50"

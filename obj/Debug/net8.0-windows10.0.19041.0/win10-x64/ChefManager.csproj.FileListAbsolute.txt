@@ -208,3 +208,8 @@ C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win
 C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\productos_icon.scale-100.png
 C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\restaurantes_icon.scale-100.png
 C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\usuarios_icon.scale-100.png
+C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\calendariodinero.scale-100.png
+C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dinero.scale-100.png
+C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\proveedoresproductos.scale-100.png
+C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ubicacion.scale-100.png
+C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\Balance.ttf

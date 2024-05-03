@@ -14,6 +14,7 @@ namespace ChefManager
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 fonts.AddFont("Wood Dragon.ttf", "WoodDragon");
                 fonts.AddFont("Arial.ttf", "Arial");
+                fonts.AddFont("Balance.ttf", "Balance");
 
             }).UseMauiCommunityToolkit();
 #if DEBUG

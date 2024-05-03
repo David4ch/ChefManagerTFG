@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:vistas\\others\\vistaadmin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\modelo\\firebaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:modelo\\firebaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\vistas\\others\\vistaadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:vistas\\others\\vistaadmin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
@@ -31,14 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FirebaseConnection.cs",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Modelo\\FirebaseConnection.cs",
-              "RelativeDocumentMoniker": "Modelo\\FirebaseConnection.cs",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Modelo\\FirebaseConnection.cs",
-              "RelativeToolTip": "Modelo\\FirebaseConnection.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACwAAABWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T21:33:51.412Z",
+              "Title": "VistaAdmin.xaml",
+              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\Others\\VistaAdmin.xaml",
+              "RelativeDocumentMoniker": "Vistas\\Others\\VistaAdmin.xaml",
+              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\Others\\VistaAdmin.xaml",
+              "RelativeToolTip": "Vistas\\Others\\VistaAdmin.xaml",
+              "ViewState": "AQIAAOEAAAAAAAAAAAAAAPEAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-03T15:15:09.42Z",
               "EditorCaption": ""
             },
             {
@@ -49,22 +45,9 @@
               "RelativeDocumentMoniker": "Vistas\\Others\\VistaAdmin.xaml.cs",
               "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\Others\\VistaAdmin.xaml.cs",
               "RelativeToolTip": "Vistas\\Others\\VistaAdmin.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAACBAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T20:35:37.129Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VistaAdmin.xaml",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\Others\\VistaAdmin.xaml",
-              "RelativeDocumentMoniker": "Vistas\\Others\\VistaAdmin.xaml",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\Others\\VistaAdmin.xaml",
-              "RelativeToolTip": "Vistas\\Others\\VistaAdmin.xaml",
-              "ViewState": "AQIAAD4BAAAAAAAAAAAAAAYBAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-26T13:59:26.829Z",
+              "WhenOpened": "2024-05-03T15:15:06.774Z",
               "EditorCaption": ""
             }
           ]

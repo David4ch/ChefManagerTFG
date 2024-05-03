@@ -59,7 +59,5 @@ namespace ChefManager.Modelo
 
             return auxLista;
         }
-       
-
     }
 }

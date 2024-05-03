@@ -7,6 +7,7 @@
     x:DataType="mo:Usuario">
 
     <Grid
+        x:Name="miGrid"
         Padding="20"
         ColumnDefinitions="*,*,*,*"
         RowDefinitions="Auto">

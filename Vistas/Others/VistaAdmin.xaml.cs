@@ -1,5 +1,7 @@
 using ChefManager.Modelo;
 using FireSharp.Response;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.Internals;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 
@@ -7,17 +9,38 @@ namespace ChefManager.Vistas;
 
 public partial class VistaAdmin : ContentPage
 {
+    public ObservableCollection<Usuario> listaAuxUsuario { get; set; } = new ObservableCollection<Usuario>();
     FirebaseConnection firebaseConnection = new FirebaseConnection();
-    bool menuAbierto = false;
+    bool menuAbierto = true;
     public VistaAdmin()
     {
         InitializeComponent();
         listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase");
+
     }
 
     private void Picker_SelectedIndexChanged(object sender, EventArgs e)
     {
-       
+
+        Picker picker = (Picker)sender;
+        string seleccionado = picker.SelectedItem as string;
+        switch (seleccionado)
+        {
+            case "1":
+                listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase").Take(1);
+
+                break;
+            case "2":
+                listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase").Take(2);
+
+                break;
+            case "4":
+                listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase").Take(4);
+                break;
+            default:
+                listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase");
+                break;
+        }
     }
 
     private void buscar(object sender, EventArgs e)
@@ -25,36 +48,12 @@ public partial class VistaAdmin : ContentPage
         switch (labeltitulo.Text)
         {
             case "USUARIOS":
-
-                ObservableCollection<Usuario> auxLista = new ObservableCollection<Usuario>();
-
-                try
-                {
-                    FirebaseResponse al = firebaseConnection.client.Get("UsuarioDatabase");
-                    Dictionary<string, Usuario> ListData = JsonConvert.DeserializeObject<Dictionary<string, Usuario>>(al.Body.ToString());
-                    auxLista = new ObservableCollection<Usuario>(ListData.Values.Where(u => u.NombreUser.Contains(buscador.Text)));
-                    listaUsuarios.ItemsSource = auxLista;
-                }
-                catch (Exception)
-                {
-                    System.Diagnostics.Debug.WriteLine("Error obtener");
-                }
+                listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase").Where(u => u.NombreUser.Contains(buscador.Text));
+               
                 break;
             case "RESTAURANTES":
+                listaRestaurantes.ItemsSource = firebaseConnection.obtenerInfo<Restaurante>("RestauranteDatabase").Where(u => u.Nombre.Contains(buscador.Text));
 
-                ObservableCollection<Restaurante> auxLista2 = new ObservableCollection<Restaurante>();
-
-                try
-                {
-                    FirebaseResponse al2 = firebaseConnection.client.Get("RestauranteDatabase");
-                    Dictionary<string, Restaurante> ListData2 = JsonConvert.DeserializeObject<Dictionary<string, Restaurante>>(al2.Body.ToString());
-                    auxLista2 = new ObservableCollection<Restaurante>(ListData2.Values.Where(u => u.Nombre.Contains(buscador.Text)));
-                    listaRestaurantes.ItemsSource = auxLista2;
-                }
-                catch (Exception)
-                {
-                    System.Diagnostics.Debug.WriteLine("Error obtener");
-                }
                 break;
 
         }
@@ -66,7 +65,9 @@ public partial class VistaAdmin : ContentPage
         switch (nombreDb)
         {
             case "Usuarios":
-                listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase");
+                listaAuxUsuario = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase");
+
+                listaUsuarios.ItemsSource = listaAuxUsuario;
                 break;
             case "Restaurantes":
                 listaRestaurantes.ItemsSource = firebaseConnection.obtenerInfo<Restaurante>("RestauranteDatabase");
@@ -90,7 +91,7 @@ public partial class VistaAdmin : ContentPage
     private void OnPointerExited(object sender, PointerEventArgs e)
     {
         ImageButton button = (ImageButton)sender;
-        button.BackgroundColor = Colors.SandyBrown;
+        button.BackgroundColor = default;
     }
 
     private void Button_Clicked(object sender, EventArgs e)

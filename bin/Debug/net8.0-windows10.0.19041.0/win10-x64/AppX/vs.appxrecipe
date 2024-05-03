@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-04-30T21:48:21.004</Modified>
+      <Modified>2024-05-03T16:08:14.944</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-04-28T23:36:34.778</Modified>
+      <Modified>2024-05-02T22:34:31.415</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ChefManager.runtimeconfig.json">
       <PackagePath>ChefManager.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ChefManager.dll">
       <PackagePath>ChefManager.dll</PackagePath>
-      <Modified>2024-04-30T21:48:18.302</Modified>
+      <Modified>2024-05-03T16:08:14.228</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ChefManager.exe</PackagePath>
-      <Modified>2024-04-30T21:48:18.398</Modified>
+      <Modified>2024-05-03T16:08:14.235</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -76,6 +76,10 @@
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\ARIAL.TTF">
       <PackagePath>ARIAL.TTF</PackagePath>
       <Modified>2024-04-11T15:24:29.219</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\Balance.ttf">
+      <PackagePath>Balance.ttf</PackagePath>
+      <Modified>2024-05-02T22:20:03.481</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -285,9 +289,17 @@
       <PackagePath>calendario.scale-100.png</PackagePath>
       <Modified>2024-04-12T10:54:58.307</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\calendariodinero.scale-100.png">
+      <PackagePath>calendariodinero.scale-100.png</PackagePath>
+      <Modified>2024-05-01T16:39:42.669</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\chefmg.scale-100.png">
       <PackagePath>chefmg.scale-100.png</PackagePath>
       <Modified>2024-02-12T12:20:24.762</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dinero.scale-100.png">
+      <PackagePath>dinero.scale-100.png</PackagePath>
+      <Modified>2024-05-01T16:37:14.004</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\editar.scale-100.png">
       <PackagePath>editar.scale-100.png</PackagePath>
@@ -323,11 +335,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\productos_icon.scale-100.png">
       <PackagePath>productos_icon.scale-100.png</PackagePath>
-      <Modified>2024-04-27T18:59:41.821</Modified>
+      <Modified>2024-05-01T14:43:00.513</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\proveedores.scale-100.png">
       <PackagePath>proveedores.scale-100.png</PackagePath>
       <Modified>2024-04-12T10:52:55.545</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\proveedoresproductos.scale-100.png">
+      <PackagePath>proveedoresproductos.scale-100.png</PackagePath>
+      <Modified>2024-05-01T14:46:52.259</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\restaurante.scale-100.png">
       <PackagePath>restaurante.scale-100.png</PackagePath>
@@ -340,6 +356,10 @@
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\suma.scale-100.png">
       <PackagePath>suma.scale-100.png</PackagePath>
       <Modified>2024-04-26T21:25:22.389</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ubicacion.scale-100.png">
+      <PackagePath>ubicacion.scale-100.png</PackagePath>
+      <Modified>2024-05-02T20:48:50.458</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\upload.scale-100.png">
       <PackagePath>upload.scale-100.png</PackagePath>

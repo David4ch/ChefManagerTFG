@@ -1,4 +1,5 @@
 ARIAL.TTF
+Balance.ttf
 OpenSans-Regular.ttf
 OpenSans-Semibold.ttf
 TT Cometus Trial Regular.ttf
@@ -51,7 +52,9 @@ appiconWideTile.scale-200.png
 appiconWideTile.scale-400.png
 caja.scale-100.png
 calendario.scale-100.png
+calendariodinero.scale-100.png
 chefmg.scale-100.png
+dinero.scale-100.png
 editar.scale-100.png
 eliminar.scale-100.png
 empleados.scale-100.png
@@ -62,9 +65,11 @@ inventario.scale-100.png
 notas.scale-100.png
 productos_icon.scale-100.png
 proveedores.scale-100.png
+proveedoresproductos.scale-100.png
 restaurante.scale-100.png
 restaurantes_icon.scale-100.png
 suma.scale-100.png
+ubicacion.scale-100.png
 upload.scale-100.png
 user.scale-100.png
 usuarios_icon.scale-100.png

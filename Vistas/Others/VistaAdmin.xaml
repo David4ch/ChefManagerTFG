@@ -33,7 +33,11 @@
                 FontFamily="Arial"
                 FontSize="20"
                 Text="Admin" />
-            <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,*,*,*">
+            <Grid
+                Margin="0,20,0,0"
+                ColumnDefinitions="*,*,*"
+                RowDefinitions="*,*,*,*"
+                RowSpacing="15">
 
                 <VerticalStackLayout Grid.Row="0" Grid.Column="0">
                     <ImageButton
@@ -90,9 +94,9 @@
                         </ImageButton.GestureRecognizers>
                     </ImageButton>
                     <Label
-                        FontSize="10"
+                        FontSize="13"
                         HorizontalTextAlignment="Center"
-                        Text="PROVEEDORES_HAS_PRODUCTOS" />
+                        Text="PROVEEDORES_HAS_ PRODUCTOS" />
                 </VerticalStackLayout>
 
                 <VerticalStackLayout Grid.Row="1" Grid.Column="2">
@@ -136,7 +140,7 @@
                         </ImageButton.GestureRecognizers>
                     </ImageButton>
                     <Label
-                        FontSize="10"
+                        FontSize="12"
                         HorizontalTextAlignment="Center"
                         Text="CALENDARIO_HAS_DINERO" />
                 </VerticalStackLayout>
@@ -146,7 +150,7 @@
                         Clicked="Button_Clicked"
                         CornerRadius="6"
                         HeightRequest="90"
-                        Source="dinero_icon.png"
+                        Source="dinero.png"
                         WidthRequest="80">
                         <ImageButton.GestureRecognizers>
                             <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
@@ -213,9 +217,12 @@
                     TextColor="Black"
                     VerticalTextAlignment="Center" />
             </Border>
+
+
             <StackLayout
                 Margin="0,30,0,0"
                 BackgroundColor="#fff"
+                HeightRequest="600"
                 WidthRequest="1000">
                 <StackLayout.Shadow>
                     <Shadow
@@ -237,9 +244,9 @@
                         TextColor="Black"
                         WidthRequest="90">
                         <Picker.Items>
-                            <x:String>5</x:String>
-                            <x:String>10</x:String>
-                            <x:String>15</x:String>
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>4</x:String>
                             <x:String>todos</x:String>
                         </Picker.Items>
                     </Picker>
@@ -331,7 +338,6 @@
                         VerticalOptions="Center" />
 
                 </Grid>
-
                 <CollectionView x:Name="listaUsuarios" IsVisible="True">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
@@ -349,7 +355,6 @@
                 </CollectionView>
 
             </StackLayout>
-
         </VerticalStackLayout>
 
     </HorizontalStackLayout>

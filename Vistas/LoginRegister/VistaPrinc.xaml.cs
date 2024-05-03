@@ -5,7 +5,7 @@ public partial class VistaPrinc : ContentPage
 	public VistaPrinc()
 	{
 		InitializeComponent();
-        imgLogo.Source = RegistroRestaurante._urlDescarga;
+        imgLogo.Source = "https://firebasestorage.googleapis.com/v0/b/chefmg-664a2.appspot.com/o/Imagenes%2Fchefmg.png?alt=media&token=75317dde-76a5-4395-bff8-fa82c19db5a2";
 	}
 	
 
