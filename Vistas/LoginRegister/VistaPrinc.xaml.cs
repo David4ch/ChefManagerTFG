@@ -1,13 +1,50 @@
+using Newtonsoft.Json;
+using System;
+using System.Collections.ObjectModel;
+
 namespace ChefManager.Vistas;
 
 public partial class VistaPrinc : ContentPage
 {
+    public static string _user;
+    public static string _ubicacion;
+    public static string _logo;
+
 	public VistaPrinc()
 	{
 		InitializeComponent();
-        imgLogo.Source = "https://firebasestorage.googleapis.com/v0/b/chefmg-664a2.appspot.com/o/Imagenes%2Fchefmg.png?alt=media&token=75317dde-76a5-4395-bff8-fa82c19db5a2";
+        iniciarTiempo();
 	}
-	
+
+    private async void iniciarTiempo()
+    {
+        string host = "https://api.openweathermap.org/data/2.5/weather?q= "+ _ubicacion + "&APPID=aca455c6610e2d9e9420cd2245432faf";
+        HttpClient resultado = new HttpClient();
+
+        string cadena = await resultado.GetStringAsync(host);
+        Modelo.Tiempo tiempo = JsonConvert.DeserializeObject<Modelo.Tiempo>(cadena);
+        var tiempoObservable = new ObservableCollection<Modelo.Tiempo>
+            {
+                tiempo
+            };
+
+        foreach (Modelo.Tiempo temp in tiempoObservable)
+        {
+            decimal numero0 = Math.Round(temp.Main.Temp - 273, 0);
+            int numero1 = Convert.ToInt32(temp.Main.Temp_max) - 273;
+            int numero2 = Convert.ToInt32(temp.Main.Temp_min) - 273;
+            int numero3 = Convert.ToInt32(temp.Main.Feels_like) - 273;
+            imgLogo.Source = _logo;
+            labelTiempoMain.Text = temp.Weather[0].Main + ", " +  temp.Weather[0].Description ;
+            labelGradosMinMax.Text = "Máx "  + numero1 + "º  /  " +  numero2+ "º";
+            labelUbi.Text = _ubicacion;
+            labelGrados.Text = numero0 + "º";
+            labelSensacion.Text = "Sens térmica: " + numero3 + "º";
+            imgUbicacion.Source = "https://openweathermap.org/img/wn/" + temp.Weather[0].Icon + "@2x.png";
+
+        }
+
+    }
 
     private void OnPointerEntered(object sender, PointerEventArgs e)
     {

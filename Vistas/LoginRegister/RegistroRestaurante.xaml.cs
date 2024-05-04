@@ -68,9 +68,8 @@ public partial class RegistroRestaurante : ContentPage
                 .PutAsync(await foto.OpenReadAsync());
 
             var urlDescarga = await task;
-
-            entryLogo.Text = foto.FileName;
             _urlDescarga = urlDescarga;
+            entryLogo.Text = foto.FileName;
             
         }
     }

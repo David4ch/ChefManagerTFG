@@ -66,10 +66,8 @@ namespace ChefManager.VistaModelo
                         Logo = RegistroRestaurante._urlDescarga
 
                     };
-
-                    var SetData = connection.client.SetAsync("RestauranteDatabase/" + restaurante.Id, restaurante);
-
                     RegistroRestaurante._idRestaurante = restaurante.Id;
+                    var SetData = connection.client.SetAsync("RestauranteDatabase/" + restaurante.Id, restaurante);
 
                     await AppShell.Current.GoToAsync(nameof(RegistroUser));
 

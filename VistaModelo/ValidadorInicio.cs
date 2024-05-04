@@ -26,26 +26,34 @@ namespace ChefManager.VistaModelo
         [RelayCommand]
         public async void validarInicio()
         {
-            
             FirebaseConnection connection = new FirebaseConnection();
             List<Usuario> listaUsuarios = connection.obtenerInfo<Usuario>("UsuarioDatabase").ToList();
+            List<Restaurante> listaRestaurantes = connection.obtenerInfo<Restaurante>("RestauranteDatabase").ToList();
 
-            bool esUsuarioValido = listaUsuarios.Any(u => u.Email == _email && u.Contrasena == _contrasena);
+            Usuario usuarioValido = listaUsuarios.FirstOrDefault(u => u.Email == _email && u.Contrasena == _contrasena);
 
-            if (esUsuarioValido)
+            if (usuarioValido != null)
             {
+
+                
+
                 if (_email == "Admin@gmail.com" && _contrasena == "Administrador4-")
                 {
                     await AppShell.Current.GoToAsync(nameof(VistaAdmin));
                 }
-                else { 
-                await AppShell.Current.GoToAsync(nameof(VistaPrinc));
+                else
+                {
+                    Restaurante restaurante = listaRestaurantes.FirstOrDefault(u => u.Id == usuarioValido.Restaurante_Id);
+                    VistaPrinc._ubicacion = restaurante.Direccion;
+                    VistaPrinc._user = usuarioValido.NombreUser;
+                    VistaPrinc._logo = restaurante.Logo;
+
+                    await AppShell.Current.GoToAsync(nameof(VistaPrinc));
                 }
-                
             }
             else
             {
-                await AppShell.Current.DisplayAlert("ERROR UPLOAD", "La contraseña o el correo son incorrectos", "OK");
+                await AppShell.Current.DisplayAlert("INCORRECTO", "La contraseña o el correo son incorrectos", "OK");
             }
         }
     }

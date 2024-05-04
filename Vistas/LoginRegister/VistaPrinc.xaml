@@ -30,12 +30,15 @@
 
     </ContentPage.MenuBarItems>
 
-    <VerticalStackLayout>
-        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+    <VerticalStackLayout Spacing="60" VerticalOptions="Center">
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+            Spacing="20"
+            VerticalOptions="Center">
             <Image
                 x:Name="imgLogo"
-                HeightRequest="400"
-                WidthRequest="400" />
+                HeightRequest="350"
+                WidthRequest="350" />
 
             <Grid Padding="10" VerticalOptions="Center">
 
@@ -61,10 +64,11 @@
                     Grid.Row="0"
                     Grid.RowSpan="2"
                     Grid.Column="0">
-                    <Image Source="https://openweathermap.org/img/wn/04d@2x.png" WidthRequest="170" />
+                    <Image x:Name="imgUbicacion" WidthRequest="170" />
                     <Label
+                        x:Name="labelTiempoMain"
                         FontFamily="Balance"
-                        FontSize="20"
+                        FontSize="18"
                         HorizontalTextAlignment="Center"
                         Text="Clouds"
                         TextColor="Black" />
@@ -78,18 +82,20 @@
 
                     <Image Source="ubicacion.png" WidthRequest="45" />
                     <Label
+                        x:Name="labelUbi"
                         FontFamily="Balance"
                         FontSize="25"
-                        Text="Madrid,Es"
+                        Text="Not found"
                         TextColor="Black"
                         VerticalOptions="Center" />
 
                 </HorizontalStackLayout>
                 <Label
+                    x:Name="labelGrados"
                     Grid.Row="1"
                     Grid.Column="1"
                     FontFamily="Balance"
-                    FontSize="85"
+                    FontSize="90"
                     HorizontalTextAlignment="Center"
                     Text="6º"
                     TextColor="Black" />
@@ -101,14 +107,16 @@
                     Spacing="25"
                     VerticalOptions="Center">
                     <Label
+                        x:Name="labelGradosMinMax"
                         FontFamily="Balance"
                         FontSize="20"
-                        Text="Máx 5º / 1º"
+                        Text="Default 0º / 0º"
                         TextColor="Black" />
                     <Label
+                        x:Name="labelSensacion"
                         FontFamily="Balance"
                         FontSize="20"
-                        Text="Sens. Term: 8º"
+                        Text="Sens. Term: 0º"
                         TextColor="Black" />
 
                 </HorizontalStackLayout>
