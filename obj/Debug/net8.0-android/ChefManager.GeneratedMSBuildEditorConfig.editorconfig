@@ -40,6 +40,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Resources.Styl
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/david/source/repos/ChefManager/Templates/TemplateNotas.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Templates.TemplateNotas.xaml
+build_metadata.AdditionalFiles.TargetPath = Templates\TemplateNotas.xaml
+build_metadata.AdditionalFiles.RelativePath = Templates\TemplateNotas.xaml
+
 [C:/Users/david/source/repos/ChefManager/Templates/TemplateRestaurantes.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Templates.TemplateRestaurantes.xaml
@@ -70,12 +76,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.LoginRe
 build_metadata.AdditionalFiles.TargetPath = Vistas\LoginRegister\VistaLogin.xaml
 build_metadata.AdditionalFiles.RelativePath = Vistas\LoginRegister\VistaLogin.xaml
 
-[C:/Users/david/source/repos/ChefManager/Vistas/LoginRegister/VistaPrinc.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.LoginRegister.VistaPrinc.xaml
-build_metadata.AdditionalFiles.TargetPath = Vistas\LoginRegister\VistaPrinc.xaml
-build_metadata.AdditionalFiles.RelativePath = Vistas\LoginRegister\VistaPrinc.xaml
-
 [C:/Users/david/source/repos/ChefManager/Vistas/MainPage/Caja.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.MainPage.Caja.xaml
@@ -100,11 +100,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.MainPag
 build_metadata.AdditionalFiles.TargetPath = Vistas\MainPage\Inventario.xaml
 build_metadata.AdditionalFiles.RelativePath = Vistas\MainPage\Inventario.xaml
 
-[C:/Users/david/source/repos/ChefManager/Vistas/MainPage/Notas.xaml]
+[C:/Users/david/source/repos/ChefManager/Vistas/MainPage/Notas/AgregarNota.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.MainPage.Notas.xaml
-build_metadata.AdditionalFiles.TargetPath = Vistas\MainPage\Notas.xaml
-build_metadata.AdditionalFiles.RelativePath = Vistas\MainPage\Notas.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.MainPage.Notas.AgregarNota.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\MainPage\Notas\AgregarNota.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\MainPage\Notas\AgregarNota.xaml
+
+[C:/Users/david/source/repos/ChefManager/Vistas/MainPage/Notas/Notas.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.MainPage.Notas.Notas.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\MainPage\Notas\Notas.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\MainPage\Notas\Notas.xaml
+
+[C:/Users/david/source/repos/ChefManager/Vistas/MainPage/Notas/VerNota.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.MainPage.Notas.VerNota.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\MainPage\Notas\VerNota.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\MainPage\Notas\VerNota.xaml
 
 [C:/Users/david/source/repos/ChefManager/Vistas/MainPage/Proveedores.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -123,3 +135,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.Others.VistaAdmin.xaml
 build_metadata.AdditionalFiles.TargetPath = Vistas\Others\VistaAdmin.xaml
 build_metadata.AdditionalFiles.RelativePath = Vistas\Others\VistaAdmin.xaml
+
+[C:/Users/david/source/repos/ChefManager/Vistas/Others/VistaPrinc.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.Others.VistaPrinc.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\Others\VistaPrinc.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\Others\VistaPrinc.xaml

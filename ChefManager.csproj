@@ -57,7 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Maui" Version="8.0.1" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="9.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="FirebaseAuthentication.net" Version="4.1.0" />
 		<PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
@@ -77,10 +77,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Templates\TemplateNotas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Templates\TemplateRestaurantes.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Templates\TemplateUsuarios.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vistas\MainPage\Notas\AgregarNota.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vistas\MainPage\Notas\VerNota.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vistas\Others\Bienvenida.xaml">
@@ -98,7 +107,7 @@
 	  <MauiXaml Update="Vistas\MainPage\Inventario.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vistas\MainPage\Notas.xaml">
+	  <MauiXaml Update="Vistas\MainPage\Notas\Notas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vistas\MainPage\Proveedores.xaml">
@@ -113,7 +122,7 @@
 	  <MauiXaml Update="Vistas\LoginRegister\VistaLogin.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vistas\LoginRegister\VistaPrinc.xaml">
+	  <MauiXaml Update="Vistas\Others\VistaPrinc.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vistas\LoginRegister\RegistroUser.xaml">

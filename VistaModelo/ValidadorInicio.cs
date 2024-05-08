@@ -47,6 +47,7 @@ namespace ChefManager.VistaModelo
                     VistaPrinc._ubicacion = restaurante.Direccion;
                     VistaPrinc._user = usuarioValido.NombreUser;
                     VistaPrinc._logo = restaurante.Logo;
+                    VistaPrinc._restauranteId = usuarioValido.Restaurante_Id;
 
                     await AppShell.Current.GoToAsync(nameof(VistaPrinc));
                 }

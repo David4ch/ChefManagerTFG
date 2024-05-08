@@ -8,7 +8,7 @@
 
     <Grid
         x:Name="miGrid"
-        Padding="20"
+        Padding="15"
         ColumnDefinitions="*,*,*,*"
         RowDefinitions="Auto">
         <Label
@@ -23,12 +23,8 @@
             Grid.Column="1"
             Text="{Binding Email}"
             TextColor="Black" />
-        <Label
-            Grid.Column="2"
-            Text="{Binding Contrasena}"
-            TextColor="Black" />
 
-        <HorizontalStackLayout Grid.Column="3" Spacing="10">
+        <HorizontalStackLayout Grid.Column="2" Spacing="10">
             <ImageButton
                 BackgroundColor="LightGray"
                 Clicked="ImageEdit_Clicked"

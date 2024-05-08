@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ChefManager.Vistas.Notas"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:te="clr-namespace:ChefManager.Templates"
+    BackgroundColor="Wheat">
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="Center">
+            <Label
+                Margin="0,50,0,20"
+                FontFamily="Balance"
+                FontSize="120"
+                HorizontalTextAlignment="Center"
+                Text="NOTAS"
+                TextColor="{StaticResource darkBrown}" />
+            <SearchBar
+                x:Name="buscador"
+                BackgroundColor="{StaticResource darkBrown}"
+                HorizontalTextAlignment="Center"
+                Placeholder="Buscar por Titulo"
+                SearchButtonPressed="buscar"
+                TextColor="White"
+                WidthRequest="400" />
+
+
+            <ImageButton
+                x:Name="imgButton"
+                Margin="0,20,0,20"
+                Background="Transparent"
+                Clicked="ImageButton_Clicked"
+                Scale="0.8"
+                Source="imgnota.png"
+                WidthRequest="450">
+                <ImageButton.Shadow>
+                    <Shadow
+                        Brush="SandyBrown"
+                        Opacity="5"
+                        Radius="11"
+                        Offset="0,9" />
+                </ImageButton.Shadow>
+
+                <ImageButton.GestureRecognizers>
+                    <PointerGestureRecognizer PointerEntered="PointerGestureRecognizer_PointerEntered" PointerExited="PointerGestureRecognizer_PointerExited" />
+                </ImageButton.GestureRecognizers>
+
+            </ImageButton>
+
+            <HorizontalStackLayout
+                HeightRequest="100"
+                HorizontalOptions="Center"
+                WidthRequest="930">
+                <CollectionView x:Name="listaNotas">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Horizontal" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <te:TemplateNotas />
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

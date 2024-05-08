@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ChefManager.Vistas.MainPage.AgregarNota"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="{StaticResource darkBrown}">
+
+
+    <VerticalStackLayout>
+        <Label
+            Margin="0,50,0,30"
+            FontFamily="Balance"
+            FontSize="100"
+            HorizontalTextAlignment="Center"
+            Text="Agregar Nota"
+            TextColor="Wheat" />
+
+        <Entry
+            x:Name="entryTitulo"
+            BackgroundColor="{StaticResource darkBrown2}"
+            HorizontalOptions="Center"
+            Placeholder="Titulo"
+            Text=""
+            TextColor="Black"
+            WidthRequest="400" />
+
+        <Editor
+            x:Name="TextEditor"
+            Margin="0,20,0,5"
+            BackgroundColor="{StaticResource darkBrown2}"
+            HeightRequest="200"
+            HorizontalOptions="Center"
+            Placeholder="Introduce la nota"
+            Text=""
+            TextColor="Wheat"
+            WidthRequest="500" />
+        <Label
+            Margin="0,0,0,20"
+            FontSize="15"
+            HorizontalTextAlignment="Center"
+            Text="(Máx 150 caracteres)"
+            TextColor="White" />
+
+        <Button
+            BackgroundColor="Wheat"
+            Clicked="Guardar_Clicked"
+            HorizontalOptions="Center"
+            Text="Guardar"
+            TextColor="{StaticResource darkBrown}"
+            WidthRequest="200" />
+
+    </VerticalStackLayout>
+</ContentPage>

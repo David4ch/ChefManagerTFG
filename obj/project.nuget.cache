@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "E1d42DXgx2z9siO0GAFv7qSHY6BIfDs5y8KGe0c49AfjD/9p/FeLNtMNPSp94NTgm5J40akMEMU26fLBYQseZw==",
+  "dgSpecHash": "QpT68NWBA4KQB790x+oQpae9YGFo+4xqiezYzQt4S7OI6BEqmlaFv2VOaacrlrLVxLqe7DG9BPubHVYkdJ0Omg==",
   "success": true,
   "projectFilePath": "C:\\Users\\david\\source\\repos\\ChefManager\\ChefManager.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\david\\.nuget\\packages\\communitytoolkit.maui\\8.0.1\\communitytoolkit.maui.8.0.1.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\communitytoolkit.maui.core\\8.0.1\\communitytoolkit.maui.core.8.0.1.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\communitytoolkit.maui\\9.0.0\\communitytoolkit.maui.9.0.0.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\communitytoolkit.maui.core\\9.0.0\\communitytoolkit.maui.core.9.0.0.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\firebaseauthentication.net\\4.1.0\\firebaseauthentication.net.4.1.0.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\firebasestorage.net\\1.0.3\\firebasestorage.net.1.0.3.nupkg.sha512",

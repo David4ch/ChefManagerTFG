@@ -11,6 +11,8 @@
             Routing.RegisterRoute(nameof(Vistas.Notas), typeof(Vistas.Notas));
             Routing.RegisterRoute(nameof(Vistas.VistaAdmin), typeof(Vistas.VistaAdmin));
             Routing.RegisterRoute(nameof(Vistas.VistaPrinc), typeof(Vistas.VistaPrinc));
+            Routing.RegisterRoute(nameof(Vistas.MainPage.AgregarNota), typeof(Vistas.MainPage.AgregarNota));
+            Routing.RegisterRoute(nameof(Vistas.MainPage.VerNota), typeof(Vistas.MainPage.VerNota));
         }
     }
 }

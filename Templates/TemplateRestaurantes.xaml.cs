@@ -24,7 +24,6 @@ public partial class TemplateRestaurantes : ContentView
         try
         {
             var SetData = connection.client.Delete("RestauranteDatabase/" + labelId.Text);
-            admin.actualizarLista("Restaurantes");
             await Application.Current.MainPage.DisplayAlert("!¡", "Restaurante eliminado correctamente","De acuerdo");
         }
         catch (Exception)

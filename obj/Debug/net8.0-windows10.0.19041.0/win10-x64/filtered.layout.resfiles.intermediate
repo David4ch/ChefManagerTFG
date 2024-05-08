@@ -1,8 +1,7 @@
-ARIAL.TTF
+Arial.ttf
 Balance.ttf
 OpenSans-Regular.ttf
 OpenSans-Semibold.ttf
-TT Cometus Trial Regular.ttf
 Wood Dragon.ttf
 appicon.ico
 appiconLargeTile.scale-100.png
@@ -61,6 +60,7 @@ empleados.scale-100.png
 empleados_icon.scale-100.png
 fondo.scale-100.jpg
 fondobienvenida.scale-100.jpg
+imgnota.scale-100.png
 inventario.scale-100.png
 notas.scale-100.png
 productos_icon.scale-100.png

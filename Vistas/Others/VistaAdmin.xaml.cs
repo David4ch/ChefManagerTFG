@@ -26,16 +26,16 @@ public partial class VistaAdmin : ContentPage
         string seleccionado = picker.SelectedItem as string;
         switch (seleccionado)
         {
-            case "1":
-                listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase").Take(1);
+            case "5":
+                listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase").Take(5);
 
                 break;
-            case "2":
-                listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase").Take(2);
+            case "10":
+                listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase").Take(10);
 
                 break;
-            case "4":
-                listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase").Take(4);
+            case "15":
+                listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase").Take(15);
                 break;
             default:
                 listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase");
@@ -59,25 +59,12 @@ public partial class VistaAdmin : ContentPage
         }
     }
 
-    public void actualizarLista(string nombreDb)
+    protected override void OnAppearing()
     {
+        base.OnAppearing();
 
-        switch (nombreDb)
-        {
-            case "Usuarios":
-                listaAuxUsuario = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase");
-
-                listaUsuarios.ItemsSource = listaAuxUsuario;
-                break;
-            case "Restaurantes":
-                listaRestaurantes.ItemsSource = firebaseConnection.obtenerInfo<Restaurante>("RestauranteDatabase");
-                break;
-            default:
-                break;
-
-        }
-
-
+        listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase");
+        listaRestaurantes.ItemsSource = firebaseConnection.obtenerInfo<Restaurante>("RestauranteDatabase");
     }
 
     private void OnPointerEntered(object sender, PointerEventArgs e)
@@ -107,12 +94,12 @@ public partial class VistaAdmin : ContentPage
 
                 label0.Text = "NombreUser";
                 label1.Text = "Email";
-                label2.Text = "Contraseña";
-                label3.Text = "Acciones";
-
-                label3.IsVisible = true;
-                label4.IsVisible = true;
-                label5.IsVisible = true;
+                label2.Text = "Acciones";
+                
+                
+                label3.IsVisible = false;
+                label4.IsVisible = false;
+                label5.IsVisible = false;
 
                 listaRestaurantes.IsVisible = false;
 
@@ -260,7 +247,7 @@ public partial class VistaAdmin : ContentPage
                                         Contrasena = contrasena
                                     };
                                     var SetData = firebaseConnection.client.SetAsync("UsuarioDatabase/" + usuario.Id, usuario);
-                                    actualizarLista("Usuarios");
+                                    
                                 }
                                 else
                                 {
@@ -310,7 +297,7 @@ public partial class VistaAdmin : ContentPage
                         if (!direccion.Equals(""))
                         {
 
-                            string logo = await Application.Current.MainPage.DisplayPromptAsync("Registro", "Contraseña:", placeholder: "url logo");
+                            string logo = await Application.Current.MainPage.DisplayPromptAsync("Registro", "Url Logo:", placeholder: "url logo");
 
                             if (logo == null)
                             {
@@ -329,7 +316,6 @@ public partial class VistaAdmin : ContentPage
                                     Logo = logo
                                 };
                                 var SetData = firebaseConnection.client.SetAsync("RestauranteDatabase/" + restaurante.Id, restaurante);
-                                actualizarLista("Restaurantes");
                             }
                             else
                             {

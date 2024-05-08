@@ -45,12 +45,17 @@ namespace ChefManager.Modelo
         public ObservableCollection<T> obtenerInfo<T>(string nombreDb) where T : class
         {
             ObservableCollection<T> auxLista = new ObservableCollection<T>();
-
+            
             try
             {
                 FirebaseResponse al = client.Get(nombreDb);
                 Dictionary<string, T> ListData = JsonConvert.DeserializeObject<Dictionary<string, T>>(al.Body.ToString());
-                auxLista = new ObservableCollection<T>(ListData.Values);
+
+                if (ListData != null)
+                {
+                    auxLista = new ObservableCollection<T>(ListData.Values);
+                }
+
             }
             catch (Exception)
             {

@@ -7,7 +7,7 @@
     x:DataType="mo:Restaurante">
 
     <Grid
-        Padding="20"
+        Padding="10"
         ColumnDefinitions="*,*,*,*"
         RowDefinitions="Auto">
         <Label

@@ -24,7 +24,6 @@ public partial class TemplateUsuarios : ContentView
         try
         {
             var SetData = connection.client.Delete("UsuarioDatabase/" + labelId.Text);
-            admin.actualizarLista("Usuarios");
             await Application.Current.MainPage.DisplayAlert("!¡", "Usuario eliminado correctamente", "De acuerdo");
         }
         catch (Exception)

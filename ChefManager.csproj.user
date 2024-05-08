@@ -11,10 +11,19 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
+    <MauiXaml Update="Templates\TemplateNotas.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Templates\TemplateRestaurantes.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Templates\TemplateUsuarios.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Vistas\MainPage\Notas\AgregarNota.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Vistas\MainPage\Notas\VerNota.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Vistas\Others\Bienvenida.xaml">
@@ -32,7 +41,7 @@
     <MauiXaml Update="Vistas\MainPage\Inventario.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Vistas\MainPage\Notas.xaml">
+    <MauiXaml Update="Vistas\MainPage\Notas\Notas.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Vistas\MainPage\Proveedores.xaml">
@@ -47,7 +56,7 @@
     <MauiXaml Update="Vistas\LoginRegister\VistaLogin.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Vistas\LoginRegister\VistaPrinc.xaml">
+    <MauiXaml Update="Vistas\Others\VistaPrinc.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Vistas\LoginRegister\RegistroUser.xaml">
