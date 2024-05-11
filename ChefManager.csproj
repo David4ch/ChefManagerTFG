@@ -80,6 +80,9 @@
 	  <MauiXaml Update="Templates\TemplateNotas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Templates\TemplateProveedores.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Templates\TemplateRestaurantes.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -90,6 +93,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vistas\MainPage\Notas\VerNota.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vistas\MainPage\Proveedores\AgregarProveedor.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vistas\Others\Bienvenida.xaml">
@@ -110,7 +116,7 @@
 	  <MauiXaml Update="Vistas\MainPage\Notas\Notas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vistas\MainPage\Proveedores.xaml">
+	  <MauiXaml Update="Vistas\MainPage\Proveedores\Proveedores.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vistas\LoginRegister\RegistroRestaurante.xaml">

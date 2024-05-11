@@ -12,367 +12,369 @@
         </MenuBarItem>
     </ContentPage.MenuBarItems>
 
+    <ScrollView>
 
-    <HorizontalStackLayout>
+        <HorizontalStackLayout>
 
-        <VerticalStackLayout
-            x:Name="verticalLayout"
-            BackgroundColor="{StaticResource darkBrown}"
-            TranslationX="0"
-            WidthRequest="465">
+            <VerticalStackLayout
+                x:Name="verticalLayout"
+                BackgroundColor="{StaticResource darkBrown}"
+                TranslationX="0"
+                WidthRequest="465">
 
-            <Image Source="chefmg.png" WidthRequest="200" />
-            <Label
-                Margin="30,0,0,0"
-                FontFamily="Arial"
-                FontSize="30"
-                Text="Administrador" />
-            <Label
-                Margin="30,0,0,0"
-                FontAttributes="Italic"
-                FontFamily="Arial"
-                FontSize="20"
-                Text="Admin" />
-            <Grid
-                Margin="0,20,0,0"
-                ColumnDefinitions="*,*,*"
-                RowDefinitions="*,*,*,*"
-                RowSpacing="15">
-
-                <VerticalStackLayout Grid.Row="0" Grid.Column="0">
-                    <ImageButton
-                        Clicked="Button_Clicked"
-                        CornerRadius="6"
-                        HeightRequest="90"
-                        Source="usuarios_icon.png"
-                        WidthRequest="80">
-                        <ImageButton.GestureRecognizers>
-                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                        </ImageButton.GestureRecognizers>
-                    </ImageButton>
-                    <Label HorizontalTextAlignment="Center" Text="USUARIOS" />
-
-                </VerticalStackLayout>
-
-                <VerticalStackLayout Grid.Row="0" Grid.Column="1">
-                    <ImageButton
-                        Clicked="Button_Clicked"
-                        CornerRadius="6"
-                        HeightRequest="90"
-                        Source="restaurantes_icon.png"
-                        WidthRequest="80">
-                        <ImageButton.GestureRecognizers>
-                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                        </ImageButton.GestureRecognizers>
-                    </ImageButton>
-                    <Label HorizontalTextAlignment="Center" Text="RESTAURANTES" />
-                </VerticalStackLayout>
-
-                <VerticalStackLayout Grid.Row="1" Grid.Column="0">
-                    <ImageButton
-                        Clicked="Button_Clicked"
-                        CornerRadius="6"
-                        HeightRequest="90"
-                        Source="proveedores.png"
-                        WidthRequest="80">
-                        <ImageButton.GestureRecognizers>
-                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                        </ImageButton.GestureRecognizers>
-                    </ImageButton>
-                    <Label HorizontalTextAlignment="Center" Text="PROVEEDORES" />
-                </VerticalStackLayout>
-
-                <VerticalStackLayout Grid.Row="1" Grid.Column="1">
-                    <ImageButton
-                        Clicked="Button_Clicked"
-                        CornerRadius="6"
-                        HeightRequest="90"
-                        Source="proveedoresproductos.png"
-                        WidthRequest="80">
-                        <ImageButton.GestureRecognizers>
-                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                        </ImageButton.GestureRecognizers>
-                    </ImageButton>
-                    <Label
-                        FontSize="13"
-                        HorizontalTextAlignment="Center"
-                        Text="PROVEEDORES_HAS_ PRODUCTOS" />
-                </VerticalStackLayout>
-
-                <VerticalStackLayout Grid.Row="1" Grid.Column="2">
-                    <ImageButton
-                        Clicked="Button_Clicked"
-                        CornerRadius="6"
-                        HeightRequest="90"
-                        Source="productos_icon.png"
-                        WidthRequest="80">
-                        <ImageButton.GestureRecognizers>
-                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                        </ImageButton.GestureRecognizers>
-                    </ImageButton>
-                    <Label HorizontalTextAlignment="Center" Text="PRODUCTOS" />
-
-                </VerticalStackLayout>
-
-                <VerticalStackLayout Grid.Row="2" Grid.Column="0">
-                    <ImageButton
-                        Clicked="Button_Clicked"
-                        CornerRadius="6"
-                        HeightRequest="90"
-                        Source="calendario.png"
-                        WidthRequest="80">
-                        <ImageButton.GestureRecognizers>
-                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                        </ImageButton.GestureRecognizers>
-                    </ImageButton>
-                    <Label HorizontalTextAlignment="Center" Text="CALENDARIOS" />
-                </VerticalStackLayout>
-
-                <VerticalStackLayout Grid.Row="2" Grid.Column="1">
-                    <ImageButton
-                        Clicked="Button_Clicked"
-                        CornerRadius="6"
-                        HeightRequest="90"
-                        Source="calendariodinero.png"
-                        WidthRequest="80">
-                        <ImageButton.GestureRecognizers>
-                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                        </ImageButton.GestureRecognizers>
-                    </ImageButton>
-                    <Label
-                        FontSize="12"
-                        HorizontalTextAlignment="Center"
-                        Text="CALENDARIO_HAS_DINERO" />
-                </VerticalStackLayout>
-
-                <VerticalStackLayout Grid.Row="2" Grid.Column="2">
-                    <ImageButton
-                        Clicked="Button_Clicked"
-                        CornerRadius="6"
-                        HeightRequest="90"
-                        Source="dinero.png"
-                        WidthRequest="80">
-                        <ImageButton.GestureRecognizers>
-                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                        </ImageButton.GestureRecognizers>
-                    </ImageButton>
-                    <Label HorizontalTextAlignment="Center" Text="DINERO" />
-
-                </VerticalStackLayout>
-
-                <VerticalStackLayout Grid.Row="3" Grid.Column="0">
-                    <ImageButton
-                        Clicked="Button_Clicked"
-                        CornerRadius="6"
-                        HeightRequest="90"
-                        Source="notas.png"
-                        WidthRequest="80">
-                        <ImageButton.GestureRecognizers>
-                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                        </ImageButton.GestureRecognizers>
-                    </ImageButton>
-                    <Label HorizontalTextAlignment="Center" Text="NOTAS" />
-
-                </VerticalStackLayout>
-
-                <VerticalStackLayout Grid.Row="3" Grid.Column="1">
-                    <ImageButton
-                        Clicked="Button_Clicked"
-                        CornerRadius="6"
-                        HeightRequest="90"
-                        Source="empleados_icon.png"
-                        WidthRequest="80">
-                        <ImageButton.GestureRecognizers>
-                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                        </ImageButton.GestureRecognizers>
-                    </ImageButton>
-                    <Label HorizontalTextAlignment="Center" Text="EMPLEADOS" />
-
-                </VerticalStackLayout>
-
-            </Grid>
-
-
-
-        </VerticalStackLayout>
-        <VerticalStackLayout
-            x:Name="verticalLayout2"
-            BackgroundColor="LightGray"
-            VerticalOptions="FillAndExpand"
-            WidthRequest="1071">
-            <Border
-                Padding="0,0,0,2"
-                Stroke="Black"
-                StrokeThickness="0.5">
-
+                <Image Source="chefmg.png" WidthRequest="200" />
                 <Label
-                    x:Name="labeltitulo"
-                    Padding="30,0,0,0"
-                    BackgroundColor="#FFF"
-                    CharacterSpacing="1"
+                    Margin="30,0,0,0"
                     FontFamily="Arial"
                     FontSize="30"
-                    HeightRequest="70"
-                    Text="USUARIOS"
-                    TextColor="Black"
-                    VerticalTextAlignment="Center" />
-            </Border>
-
-
-            <StackLayout
-                Margin="0,30,0,0"
-                BackgroundColor="#fff"
-                HeightRequest="600"
-                WidthRequest="1000">
-                <StackLayout.Shadow>
-                    <Shadow
-                        Brush="Black"
-                        Opacity="0.6"
-                        Radius="11" />
-
-                </StackLayout.Shadow>
-
-                <HorizontalStackLayout Padding="10" HorizontalOptions="Center">
-                    <Label
-                        Text="Mostrar"
-                        TextColor="Black"
-                        VerticalTextAlignment="Center" />
-                    <Picker
-                        Margin="10,0,10,0"
-                        BackgroundColor="LightGray"
-                        SelectedIndexChanged="Picker_SelectedIndexChanged"
-                        TextColor="Black"
-                        WidthRequest="90">
-                        <Picker.Items>
-                            <x:String>5</x:String>
-                            <x:String>10</x:String>
-                            <x:String>15</x:String>
-                            <x:String>todos</x:String>
-                        </Picker.Items>
-                    </Picker>
-                    <Label
-                        Text="registros"
-                        TextColor="Black"
-                        VerticalTextAlignment="Center" />
-
-                    <ImageButton
-                        Margin="80,0,0,0"
-                        BackgroundColor="LightGray"
-                        Clicked="ImageAdd_Clicked"
-                        HeightRequest="16"
-                        Source="suma.png"
-                        WidthRequest="16">
-                        <ImageButton.GestureRecognizers>
-                            <PointerGestureRecognizer PointerEntered="OnPointerEntered2" PointerExited="OnPointerExited2" />
-                        </ImageButton.GestureRecognizers>
-
-                    </ImageButton>
-                    <Label
-                        x:Name="labelAdd"
-                        Text="Añadir usuario"
-                        TextColor="Black"
-                        VerticalOptions="Center" />
-
-                    <SearchBar
-                        x:Name="buscador"
-                        Margin="80,0,0,0"
-                        BackgroundColor="LightGray"
-                        Placeholder="Buscar por NombreUser"
-                        SearchButtonPressed="buscar"
-                        TextColor="Black"
-                        WidthRequest="300" />
-
-                </HorizontalStackLayout>
-
+                    Text="Administrador" />
+                <Label
+                    Margin="30,0,0,0"
+                    FontAttributes="Italic"
+                    FontFamily="Arial"
+                    FontSize="20"
+                    Text="Admin" />
                 <Grid
-                    Padding="20"
-                    ColumnDefinitions="*,*,*,*"
-                    HeightRequest="-1"
-                    RowDefinitions="Auto"
-                    RowSpacing="1"
-                    WidthRequest="-1">
+                    Margin="0,20,0,0"
+                    ColumnDefinitions="*,*,*"
+                    RowDefinitions="*,*,*,*"
+                    RowSpacing="15">
 
-                    <Label
-                        x:Name="label0"
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        Text="NombreUser"
-                        TextColor="Black"
-                        VerticalOptions="Center" />
-                    <Label
-                        x:Name="label1"
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        Text="Correo"
-                        TextColor="Black"
-                        VerticalOptions="Center" />
-                    <Label
-                        x:Name="label2"
-                        Grid.Row="0"
-                        Grid.Column="2"
-                        Text="Acciones"
-                        TextColor="Black"
-                        VerticalOptions="Center" />
-                    <Label
-                        x:Name="label3"
-                        Grid.Row="0"
-                        Grid.Column="3"
-                        IsVisible="Hidden"
-                        Text="Acciones"
-                        TextColor="Black"
-                        VerticalOptions="Center" />
-                    <Label
-                        x:Name="label4"
-                        Grid.Row="0"
-                        Grid.Column="4"
-                        IsVisible="Hidden"
-                        Text=""
-                        TextColor="Black"
-                        VerticalOptions="Center" />
-                    <Label
-                        x:Name="label5"
-                        Grid.Row="0"
-                        Grid.Column="5"
-                        IsVisible="Hidden"
-                        Text=""
-                        TextColor="Black"
-                        VerticalOptions="Center" />
+                    <VerticalStackLayout Grid.Row="0" Grid.Column="0">
+                        <ImageButton
+                            Clicked="Button_Clicked"
+                            CornerRadius="6"
+                            HeightRequest="90"
+                            Source="usuarios_icon.png"
+                            WidthRequest="80">
+                            <ImageButton.GestureRecognizers>
+                                <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                            </ImageButton.GestureRecognizers>
+                        </ImageButton>
+                        <Label HorizontalTextAlignment="Center" Text="USUARIOS" />
+
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Row="0" Grid.Column="1">
+                        <ImageButton
+                            Clicked="Button_Clicked"
+                            CornerRadius="6"
+                            HeightRequest="90"
+                            Source="restaurantes_icon.png"
+                            WidthRequest="80">
+                            <ImageButton.GestureRecognizers>
+                                <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                            </ImageButton.GestureRecognizers>
+                        </ImageButton>
+                        <Label HorizontalTextAlignment="Center" Text="RESTAURANTES" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Row="1" Grid.Column="0">
+                        <ImageButton
+                            Clicked="Button_Clicked"
+                            CornerRadius="6"
+                            HeightRequest="90"
+                            Source="proveedores.png"
+                            WidthRequest="80">
+                            <ImageButton.GestureRecognizers>
+                                <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                            </ImageButton.GestureRecognizers>
+                        </ImageButton>
+                        <Label HorizontalTextAlignment="Center" Text="PROVEEDORES" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Row="1" Grid.Column="1">
+                        <ImageButton
+                            Clicked="Button_Clicked"
+                            CornerRadius="6"
+                            HeightRequest="90"
+                            Source="proveedoresproductos.png"
+                            WidthRequest="80">
+                            <ImageButton.GestureRecognizers>
+                                <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                            </ImageButton.GestureRecognizers>
+                        </ImageButton>
+                        <Label
+                            FontSize="13"
+                            HorizontalTextAlignment="Center"
+                            Text="PROVEEDORES_HAS_ PRODUCTOS" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Row="1" Grid.Column="2">
+                        <ImageButton
+                            Clicked="Button_Clicked"
+                            CornerRadius="6"
+                            HeightRequest="90"
+                            Source="productos_icon.png"
+                            WidthRequest="80">
+                            <ImageButton.GestureRecognizers>
+                                <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                            </ImageButton.GestureRecognizers>
+                        </ImageButton>
+                        <Label HorizontalTextAlignment="Center" Text="PRODUCTOS" />
+
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Row="2" Grid.Column="0">
+                        <ImageButton
+                            Clicked="Button_Clicked"
+                            CornerRadius="6"
+                            HeightRequest="90"
+                            Source="calendario.png"
+                            WidthRequest="80">
+                            <ImageButton.GestureRecognizers>
+                                <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                            </ImageButton.GestureRecognizers>
+                        </ImageButton>
+                        <Label HorizontalTextAlignment="Center" Text="CALENDARIOS" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Row="2" Grid.Column="1">
+                        <ImageButton
+                            Clicked="Button_Clicked"
+                            CornerRadius="6"
+                            HeightRequest="90"
+                            Source="calendariodinero.png"
+                            WidthRequest="80">
+                            <ImageButton.GestureRecognizers>
+                                <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                            </ImageButton.GestureRecognizers>
+                        </ImageButton>
+                        <Label
+                            FontSize="12"
+                            HorizontalTextAlignment="Center"
+                            Text="CALENDARIO_HAS_DINERO" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Row="2" Grid.Column="2">
+                        <ImageButton
+                            Clicked="Button_Clicked"
+                            CornerRadius="6"
+                            HeightRequest="90"
+                            Source="dinero.png"
+                            WidthRequest="80">
+                            <ImageButton.GestureRecognizers>
+                                <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                            </ImageButton.GestureRecognizers>
+                        </ImageButton>
+                        <Label HorizontalTextAlignment="Center" Text="DINERO" />
+
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Row="3" Grid.Column="0">
+                        <ImageButton
+                            Clicked="Button_Clicked"
+                            CornerRadius="6"
+                            HeightRequest="90"
+                            Source="notas.png"
+                            WidthRequest="80">
+                            <ImageButton.GestureRecognizers>
+                                <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                            </ImageButton.GestureRecognizers>
+                        </ImageButton>
+                        <Label HorizontalTextAlignment="Center" Text="NOTAS" />
+
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Row="3" Grid.Column="1">
+                        <ImageButton
+                            Clicked="Button_Clicked"
+                            CornerRadius="6"
+                            HeightRequest="90"
+                            Source="empleados_icon.png"
+                            WidthRequest="80">
+                            <ImageButton.GestureRecognizers>
+                                <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                            </ImageButton.GestureRecognizers>
+                        </ImageButton>
+                        <Label HorizontalTextAlignment="Center" Text="EMPLEADOS" />
+
+                    </VerticalStackLayout>
 
                 </Grid>
-                <CollectionView
-                    x:Name="listaUsuarios"
-                    HeightRequest="500"
-                    IsVisible="True">
-                    <CollectionView.ItemsLayout>
-                        <LinearItemsLayout Orientation="Vertical" />
-                    </CollectionView.ItemsLayout>
 
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <te:TemplateUsuarios />
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
 
-                </CollectionView>
 
-                <CollectionView
-                    x:Name="listaRestaurantes"
-                    HeightRequest="500"
-                    IsVisible="False">
-                    <CollectionView.ItemsLayout>
-                        <LinearItemsLayout Orientation="Vertical" />
-                    </CollectionView.ItemsLayout>
+            </VerticalStackLayout>
+            <VerticalStackLayout
+                x:Name="verticalLayout2"
+                BackgroundColor="LightGray"
+                VerticalOptions="FillAndExpand"
+                WidthRequest="1071">
+                <Border
+                    Padding="0,0,0,2"
+                    Stroke="Black"
+                    StrokeThickness="0.5">
 
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <te:TemplateRestaurantes />
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
+                    <Label
+                        x:Name="labeltitulo"
+                        Padding="30,0,0,0"
+                        BackgroundColor="#FFF"
+                        CharacterSpacing="1"
+                        FontFamily="Arial"
+                        FontSize="30"
+                        HeightRequest="70"
+                        Text="USUARIOS"
+                        TextColor="Black"
+                        VerticalTextAlignment="Center" />
+                </Border>
 
-            </StackLayout>
-        </VerticalStackLayout>
 
-    </HorizontalStackLayout>
+                <StackLayout
+                    Margin="0,30,0,0"
+                    BackgroundColor="#fff"
+                    HeightRequest="600"
+                    WidthRequest="1000">
+                    <StackLayout.Shadow>
+                        <Shadow
+                            Brush="Black"
+                            Opacity="0.6"
+                            Radius="11" />
+
+                    </StackLayout.Shadow>
+
+                    <HorizontalStackLayout Padding="10" HorizontalOptions="Center">
+                        <Label
+                            Text="Mostrar"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center" />
+                        <Picker
+                            Margin="10,0,10,0"
+                            BackgroundColor="LightGray"
+                            SelectedIndexChanged="Picker_SelectedIndexChanged"
+                            TextColor="Black"
+                            WidthRequest="90">
+                            <Picker.Items>
+                                <x:String>5</x:String>
+                                <x:String>10</x:String>
+                                <x:String>15</x:String>
+                                <x:String>todos</x:String>
+                            </Picker.Items>
+                        </Picker>
+                        <Label
+                            Text="registros"
+                            TextColor="Black"
+                            VerticalTextAlignment="Center" />
+
+                        <ImageButton
+                            Margin="80,0,0,0"
+                            BackgroundColor="LightGray"
+                            Clicked="ImageAdd_Clicked"
+                            HeightRequest="16"
+                            Source="suma.png"
+                            WidthRequest="16">
+                            <ImageButton.GestureRecognizers>
+                                <PointerGestureRecognizer PointerEntered="OnPointerEntered2" PointerExited="OnPointerExited2" />
+                            </ImageButton.GestureRecognizers>
+
+                        </ImageButton>
+                        <Label
+                            x:Name="labelAdd"
+                            Text="Añadir usuario"
+                            TextColor="Black"
+                            VerticalOptions="Center" />
+
+                        <SearchBar
+                            x:Name="buscador"
+                            Margin="80,0,0,0"
+                            BackgroundColor="LightGray"
+                            Placeholder="Buscar por NombreUser"
+                            SearchButtonPressed="buscar"
+                            TextColor="Black"
+                            WidthRequest="300" />
+
+                    </HorizontalStackLayout>
+
+                    <Grid
+                        Padding="20"
+                        ColumnDefinitions="*,*,*,*"
+                        HeightRequest="-1"
+                        RowDefinitions="Auto"
+                        RowSpacing="1"
+                        WidthRequest="-1">
+
+                        <Label
+                            x:Name="label0"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="NombreUser"
+                            TextColor="Black"
+                            VerticalOptions="Center" />
+                        <Label
+                            x:Name="label1"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Text="Correo"
+                            TextColor="Black"
+                            VerticalOptions="Center" />
+                        <Label
+                            x:Name="label2"
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            Text="Acciones"
+                            TextColor="Black"
+                            VerticalOptions="Center" />
+                        <Label
+                            x:Name="label3"
+                            Grid.Row="0"
+                            Grid.Column="3"
+                            IsVisible="Hidden"
+                            Text="Acciones"
+                            TextColor="Black"
+                            VerticalOptions="Center" />
+                        <Label
+                            x:Name="label4"
+                            Grid.Row="0"
+                            Grid.Column="4"
+                            IsVisible="Hidden"
+                            Text=""
+                            TextColor="Black"
+                            VerticalOptions="Center" />
+                        <Label
+                            x:Name="label5"
+                            Grid.Row="0"
+                            Grid.Column="5"
+                            IsVisible="Hidden"
+                            Text=""
+                            TextColor="Black"
+                            VerticalOptions="Center" />
+
+                    </Grid>
+                    <CollectionView
+                        x:Name="listaUsuarios"
+                        HeightRequest="500"
+                        IsVisible="True">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Vertical" />
+                        </CollectionView.ItemsLayout>
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <te:TemplateUsuarios />
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+
+                    </CollectionView>
+
+                    <CollectionView
+                        x:Name="listaRestaurantes"
+                        HeightRequest="500"
+                        IsVisible="False">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Vertical" />
+                        </CollectionView.ItemsLayout>
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <te:TemplateRestaurantes />
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                </StackLayout>
+            </VerticalStackLayout>
+
+        </HorizontalStackLayout>
+    </ScrollView>
 
 </ContentPage>

@@ -14,6 +14,9 @@
     <MauiXaml Update="Templates\TemplateNotas.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Templates\TemplateProveedores.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Templates\TemplateRestaurantes.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
@@ -24,6 +27,9 @@
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Vistas\MainPage\Notas\VerNota.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Vistas\MainPage\Proveedores\AgregarProveedor.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Vistas\Others\Bienvenida.xaml">
@@ -44,7 +50,7 @@
     <MauiXaml Update="Vistas\MainPage\Notas\Notas.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Vistas\MainPage\Proveedores.xaml">
+    <MauiXaml Update="Vistas\MainPage\Proveedores\Proveedores.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Vistas\LoginRegister\RegistroRestaurante.xaml">

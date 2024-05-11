@@ -42,6 +42,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Templates.Temp
 build_metadata.AdditionalFiles.TargetPath = Templates\TemplateNotas.xaml
 build_metadata.AdditionalFiles.RelativePath = Templates\TemplateNotas.xaml
 
+[C:/Users/david/source/repos/ChefManager/Templates/TemplateProveedores.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Templates.TemplateProveedores.xaml
+build_metadata.AdditionalFiles.TargetPath = Templates\TemplateProveedores.xaml
+build_metadata.AdditionalFiles.RelativePath = Templates\TemplateProveedores.xaml
+
 [C:/Users/david/source/repos/ChefManager/Templates/TemplateRestaurantes.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Templates.TemplateRestaurantes.xaml
@@ -114,11 +120,17 @@ build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.MainPag
 build_metadata.AdditionalFiles.TargetPath = Vistas\MainPage\Notas\VerNota.xaml
 build_metadata.AdditionalFiles.RelativePath = Vistas\MainPage\Notas\VerNota.xaml
 
-[C:/Users/david/source/repos/ChefManager/Vistas/MainPage/Proveedores.xaml]
+[C:/Users/david/source/repos/ChefManager/Vistas/MainPage/Proveedores/AgregarProveedor.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.MainPage.Proveedores.xaml
-build_metadata.AdditionalFiles.TargetPath = Vistas\MainPage\Proveedores.xaml
-build_metadata.AdditionalFiles.RelativePath = Vistas\MainPage\Proveedores.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.MainPage.Proveedores.AgregarProveedor.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\MainPage\Proveedores\AgregarProveedor.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\MainPage\Proveedores\AgregarProveedor.xaml
+
+[C:/Users/david/source/repos/ChefManager/Vistas/MainPage/Proveedores/Proveedores.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Vistas.MainPage.Proveedores.Proveedores.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\MainPage\Proveedores\Proveedores.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\MainPage\Proveedores\Proveedores.xaml
 
 [C:/Users/david/source/repos/ChefManager/Vistas/Others/Bienvenida.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

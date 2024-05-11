@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ChefManager.Vistas.Proveedores"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:te="clr-namespace:ChefManager.Templates"
+    BackgroundColor="{StaticResource lightBrown1}">
+
+    <ScrollView Orientation="Both">
+
+        <VerticalStackLayout>
+            <Label
+                Margin="0,50,0,30"
+                FontFamily="Balance"
+                FontSize="100"
+                HorizontalTextAlignment="Center"
+                Text="PROVEEDORES"
+                TextColor="{StaticResource darkBrown}" />
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <SearchBar
+                    x:Name="buscador"
+                    BackgroundColor="{StaticResource darkBrown}"
+                    MaxLength="40"
+                    Placeholder="Introduce nombre del proveedor"
+                    SearchButtonPressed="buscar"
+                    TextColor="White"
+                    WidthRequest="300" />
+
+                <Label
+                    Margin="40,0,5,0"
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    Text="Tipo:"
+                    TextColor="{StaticResource darkBrown}"
+                    VerticalOptions="Center" />
+                <Picker
+                    Margin="0,0,40,0"
+                    BackgroundColor="{StaticResource darkBrown}"
+                    SelectedIndexChanged="Picker_SelectedIndexChanged"
+                    TextColor="White"
+                    WidthRequest="200">
+                    <Picker.Items>
+                        <x:String>Productos frescos</x:String>
+                        <x:String>Productos secos</x:String>
+                        <x:String>Bebidas</x:String>
+                        <x:String>Productos de limpieza e higiene</x:String>
+                        <x:String>Utensilios y equipamiento</x:String>
+                        <x:String>Cualquiera</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label
+                    Margin="0,0,10,0"
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    Text="Añadir Proveedor"
+                    TextColor="{StaticResource darkBlue}"
+                    VerticalOptions="Center" />
+                <Button
+                    BackgroundColor="{StaticResource darkBlue}"
+                    Clicked="Button_Clicked"
+                    FontSize="30"
+                    Scale="1.2"
+                    Text="+"
+                    TextColor="White"
+                    WidthRequest="60" />
+
+
+            </HorizontalStackLayout>
+
+            <Label
+                x:Name="nohay"
+                Margin="0,40,0,0"
+                Padding="20"
+                BackgroundColor="{StaticResource darkBlue}"
+                FontFamily="Balance"
+                FontSize="60"
+                HeightRequest="400"
+                HorizontalTextAlignment="Center"
+                IsVisible="True"
+                Text="No hay ningún proveedor"
+                TextColor="Wheat"
+                VerticalTextAlignment="Center"
+                WidthRequest="1100" />
+
+            <CollectionView
+                x:Name="listaProveedores"
+                Margin="0,40,0,0"
+                BackgroundColor="{StaticResource darkBlue}"
+                HeightRequest="500"
+                HorizontalOptions="Center"
+                IsVisible="False"
+                VerticalOptions="Center"
+                WidthRequest="1100">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <te:TemplateProveedores />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+
+
+</ContentPage>

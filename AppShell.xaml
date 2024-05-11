@@ -5,9 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ChefManager"
     xmlns:vi="clr-namespace:ChefManager.Vistas"
-    xmlns:vis="clr-namespace:ChefManager.Vistas.MainPage"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent ContentTemplate="{DataTemplate vi:Inventario}" />
+    <ShellContent ContentTemplate="{DataTemplate vi:VistaLogin}" />
 
 </Shell>

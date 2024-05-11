@@ -1,17 +1,9 @@
 ﻿using FireSharp.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FireSharp;
 using FireSharp.Config;
 using FireSharp.Response;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
-using Firebase.Storage;
-using Firebase.Auth.Providers;
-using Firebase.Auth;
 
 namespace ChefManager.Modelo
 {
