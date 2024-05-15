@@ -69,6 +69,7 @@ public partial class VistaPrinc : ContentPage
          switch (imgbutton.Source.ToString()) {
 
             case "File: inventario.png":
+                AppShell.Current.GoToAsync(nameof(Inventario));
                 break;
             case "File: proveedores.png":
                 AppShell.Current.GoToAsync(nameof(Proveedores));

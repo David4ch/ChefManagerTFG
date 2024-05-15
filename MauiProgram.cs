@@ -8,7 +8,9 @@ namespace ChefManager
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
-            builder.UseMauiApp<App>().ConfigureFonts(fonts =>
+            builder.UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
+                .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
@@ -16,7 +18,7 @@ namespace ChefManager
                 fonts.AddFont("Arial.ttf", "Arial");
                 fonts.AddFont("Balance.ttf", "Balance");
 
-            }).UseMauiCommunityToolkit();
+            });
 #if DEBUG
             builder.Logging.AddDebug();
 #endif

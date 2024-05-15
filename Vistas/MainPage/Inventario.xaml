@@ -1,7 +1,232 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ChefManager.Vistas.Inventario"
-             Title="Inventario">
-    
+<ContentPage
+    x:Class="ChefManager.Vistas.Inventario"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:te="clr-namespace:ChefManager.Templates">
+
+    <ScrollView>
+        <HorizontalStackLayout>
+            <VerticalStackLayout
+                x:Name="stack1"
+                BackgroundColor="{StaticResource lightBrown2}"
+                WidthRequest="1550">
+
+                <Label
+                    Margin="70,50,0,20"
+                    FontFamily="Balance"
+                    FontSize="90"
+                    x:Name="lbl"
+                    HorizontalTextAlignment="Start"
+                    Text="Inventario" />
+
+                <Border
+                    x:Name="borde1"
+                    Margin="70,0,0,0"
+                    Padding="20"
+                    BackgroundColor="{StaticResource strongBrown}"
+                    HeightRequest="550"
+                    HorizontalOptions="Start"
+                    StrokeShape="RoundRectangle 20,20,20,20"
+                    StrokeThickness="0"
+                    WidthRequest="1200">
+
+                    <VerticalStackLayout HorizontalOptions="Center">
+                        <HorizontalStackLayout Margin="0,0,0,20" VerticalOptions="Center">
+                            <SearchBar
+                                x:Name="buscador"
+                                Margin="0,10,0,0"
+                                BackgroundColor="White"
+                                CancelButtonColor="Black"
+                                HorizontalOptions="Start"
+                                Placeholder="Busca por Nombre"
+                                SearchButtonPressed="buscar"
+                                TextColor="Black"
+                                WidthRequest="500" />
+
+                            <Button
+                                Margin="30,10,0,0"
+                                BackgroundColor="{StaticResource lightBrown2}"
+                                Clicked="agregar"
+                                FontSize="15"
+                                HorizontalOptions="Center"
+                                Scale="1.2"
+                                Text="+"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <Label
+                                Margin="10,15,0,0"
+                                FontFamily="OpenSansRegular"
+                                FontSize="30"
+                                Text="Agregar producto" />
+                        </HorizontalStackLayout>
+
+
+                        <Border
+                            HorizontalOptions="Center"
+                            StrokeShape="RoundRectangle 20,20,20,20"
+                            StrokeThickness="0"
+                            VerticalOptions="Center">
+                            <CollectionView
+                                x:Name="listaProductos"
+                                BackgroundColor="White"
+                                HeightRequest="430"
+                                WidthRequest="1100">
+                                <CollectionView.ItemsLayout>
+                                    <GridItemsLayout Orientation="Horizontal" />
+                                </CollectionView.ItemsLayout>
+
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <te:TemplateProductos />
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </Border>
+                    </VerticalStackLayout>
+                </Border>
+
+
+
+
+            </VerticalStackLayout>
+
+
+            <VerticalStackLayout
+                x:Name="stack2"
+                BackgroundColor="{StaticResource strongBrown}"
+                HorizontalOptions="Center"
+                IsVisible="False"
+                WidthRequest="540">
+
+                <Label
+                    x:Name="labelTitulo"
+                    Margin="0,50,0,40"
+                    FontFamily="Arial"
+                    FontSize="35"
+                    HorizontalTextAlignment="Center"
+                    Text="AÑADIR" />
+
+                <Label
+                    Margin="0,0,0,10"
+                    FontFamily="Balance"
+                    FontSize="22"
+                    HorizontalOptions="Center"
+                    Text="Nombre:" />
+                <Entry
+                    x:Name="entryNombre"
+                    MaxLength="30"
+                    Text=""
+                    WidthRequest="320" />
+
+                <Label
+                    Margin="0,30,0,10"
+                    FontFamily="Balance"
+                    FontSize="22"
+                    HorizontalOptions="Center"
+                    Text="Precio por unidad:" />
+                <Entry
+                    x:Name="entryPrecio"
+                    Keyboard="Numeric"
+                    MaxLength="10"
+                    Text=""
+                    WidthRequest="320" />
+
+                <Label
+                    Margin="0,30,0,10"
+                    FontFamily="Balance"
+                    FontSize="22"
+                    HorizontalOptions="Center"
+                    Text="Proveedor:" />
+                <Picker x:Name="pickerProveedor" WidthRequest="320" />
+
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+                    <VerticalStackLayout>
+                        <Label
+                            Margin="0,30,0,10"
+                            FontFamily="Balance"
+                            FontSize="22"
+                            HorizontalOptions="Center"
+                            Text="Imagen (no obligatorio):" />
+                        <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
+                            <ImageButton
+                                BackgroundColor="{StaticResource lightBrown2}"
+                                Clicked="subirFoto"
+                                HeightRequest="50"
+                                Source="upload.png"
+                                WidthRequest="50" />
+                            <Entry
+                                x:Name="entryImagen"
+                                IsEnabled="False"
+                                WidthRequest="200" />
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+                    <Image
+                        x:Name="imagen"
+                        Margin="0,20,0,20"
+                        BackgroundColor="{StaticResource lightBrown2}"
+                        HeightRequest="120"
+                        HorizontalOptions="Center"
+                        WidthRequest="120" />
+                </HorizontalStackLayout>
+
+                <Label
+                    Margin="0,0,0,10"
+                    FontFamily="Balance"
+                    FontSize="22"
+                    HorizontalOptions="Center"
+                    Text="Cantidad:" />
+
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+                    <Button
+                        BackgroundColor="{StaticResource lightBrown2}"
+                        Clicked="sumarRestarCantidad"
+                        HorizontalOptions="Center"
+                        Text="-"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        WidthRequest="30" />
+                    <Entry
+                        x:Name="entryCantidad"
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        Text="0"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        WidthRequest="20" />
+                    <Button
+                        BackgroundColor="{StaticResource lightBrown2}"
+                        Clicked="sumarRestarCantidad"
+                        HorizontalOptions="Center"
+                        Text="+"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        WidthRequest="30" />
+                </HorizontalStackLayout>
+
+                <Button
+                    x:Name="botonGuardar"
+                    Margin="0,20,0,10"
+                    BackgroundColor="{StaticResource lightBrown1}"
+                    Clicked="guardarProducto"
+                    HeightRequest="50"
+                    Text="Guardar"
+                    TextColor="Black"
+                    WidthRequest="200" />
+                <Button
+                    x:Name="botonEliminar"
+                    BackgroundColor="{StaticResource lightBrown2}"
+                    Clicked="eliminarProducto"
+                    HeightRequest="50"
+                    IsVisible="False"
+                    Text="Eliminar"
+                    TextColor="White"
+                    WidthRequest="200" />
+
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+    </ScrollView>
+
+
 </ContentPage>

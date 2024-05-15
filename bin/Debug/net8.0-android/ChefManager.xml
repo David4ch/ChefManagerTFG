@@ -31,15 +31,6 @@
         <member name="P:ChefManager.VistaModelo.ValidadorRegistroUsuario.validarRegistroCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:ChefManager.VistaModelo.ValidadorRegistroUsuario.validarRegistro"/>.</summary>
         </member>
-        <member name="T:ChefManager.VistaModelo.ValidarNota">
-            <inheritdoc/>
-        </member>
-        <member name="F:ChefManager.VistaModelo.ValidarNota._validarNotaCommand">
-            <summary>The backing field for <see cref="P:ChefManager.VistaModelo.ValidarNota.validarNotaCommand"/>.</summary>
-        </member>
-        <member name="P:ChefManager.VistaModelo.ValidarNota.validarNotaCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:ChefManager.VistaModelo.ValidarNota.validarNota"/>.</summary>
-        </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
             <summary>
             Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
@@ -167,7 +158,6 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
-            <inheritdoc/>
         </member>
         <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(ChefManager.VistaModelo.ValidadorInicio)">
             <summary>
@@ -189,13 +179,6 @@
             </summary>
             <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
             <returns>A validation stub for <see cref="T:ChefManager.VistaModelo.ValidadorRegistroUsuario"/> objects.</returns>
-        </member>
-        <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(ChefManager.VistaModelo.ValidarNota)">
-            <summary>
-            Creates a validation stub for <see cref="T:ChefManager.VistaModelo.ValidarNota"/> objects.
-            </summary>
-            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
-            <returns>A validation stub for <see cref="T:ChefManager.VistaModelo.ValidarNota"/> objects.</returns>
         </member>
     </members>
 </doc>

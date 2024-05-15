@@ -20,7 +20,9 @@
 
 
     <Color x:Key="darkBrown2">#472910</Color>
+    <Color x:Key="lightBrown2">#542E02</Color>
     <Color x:Key="darkBrown">#361f00</Color>
+    <Color x:Key="strongBrown">#2E1902</Color>
     <Color x:Key="darkBlue">#122224</Color>
     <Color x:Key="lightBrown1">#FDBD6C</Color>
 

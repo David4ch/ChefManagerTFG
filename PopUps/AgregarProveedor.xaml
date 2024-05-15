@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup
+    x:Class="ChefManager.PopUps.AgregarProveedor"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    CanBeDismissedByTappingOutsideOfPopup="False"
+    Color="{StaticResource darkBrown}">
+    <ScrollView
+        HeightRequest="700"
+        Orientation="Both"
+        WidthRequest="850">
+
+        <StackLayout>
+            <Label
+                Margin="0,50,0,0"
+                FontFamily="Balance"
+                FontSize="80"
+                HorizontalTextAlignment="Center"
+                Text="Agregar Proveedor" />
+
+            <Grid
+                Margin="0,50,0,0"
+                ColumnDefinitions="*,*"
+                ColumnSpacing="50"
+                HorizontalOptions="Center"
+                RowDefinitions="*,*,*"
+                RowSpacing="20">
+
+                <VerticalStackLayout
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Spacing="12">
+                    <Label Text="Nombre Empresa:" />
+                    <Entry
+                        x:Name="entryNombre"
+                        ClearButtonVisibility="WhileEditing"
+                        MaxLength="40"
+                        Text=""
+                        WidthRequest="290" />
+
+                </VerticalStackLayout>
+
+                <VerticalStackLayout
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Spacing="12">
+                    <Label Text="Número Contacto:" />
+                    <Entry
+                        x:Name="entryNumero"
+                        Keyboard="Numeric"
+                        MaxLength="9"
+                        Text=""
+                        WidthRequest="290" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Spacing="12">
+                    <Label Text="Tipo de producto:" />
+                    <Picker SelectedIndexChanged="Picker_SelectedIndexChanged" WidthRequest="290">
+                        <Picker.Items>
+                            <x:String>Productos frescos</x:String>
+                            <x:String>Productos secos</x:String>
+                            <x:String>Bebidas</x:String>
+                            <x:String>Productos de limpieza e higiene</x:String>
+                            <x:String>Utensilios y equipamiento</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Spacing="12">
+                    <Label Text="Descripción y cantidad del producto:" />
+                    <Entry
+                        x:Name="entryDescripcion"
+                        MaxLength="50"
+                        Text=""
+                        WidthRequest="290" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Spacing="12">
+                    <Label Text="Periocidad" />
+                    <Picker SelectedIndexChanged="Picker_SelectedIndexChanged2" WidthRequest="290">
+                        <Picker.Items>
+                            <x:String>Diaria</x:String>
+                            <x:String>Semanal</x:String>
+                            <x:String>Quincenal</x:String>
+                            <x:String>Mensual</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Spacing="12">
+                    <Label Text="Precio total por encargo:" />
+                    <Entry
+                        x:Name="entryPrecio"
+                        MaxLength="10"
+                        Text=""
+                        WidthRequest="290" />
+                </VerticalStackLayout>
+            </Grid>
+
+            <Button
+                Margin="0,20,0,0"
+                BackgroundColor="Wheat"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                Text="Añadir Proveedor"
+                TextColor="Black"
+                WidthRequest="300" />
+
+        </StackLayout>
+
+    </ScrollView>
+</toolkit:Popup>
