@@ -9,8 +9,25 @@
     <ScrollView Orientation="Both">
 
         <VerticalStackLayout>
+            <HorizontalStackLayout Margin="30,10" Spacing="10">
+                <ImageButton
+                    Padding="3"
+                    BackgroundColor="LightBlue"
+                    Clicked="Volver"
+                    CornerRadius="10"
+                    HorizontalOptions="Start"
+                    Source="volver.png"
+                    WidthRequest="40" />
+                <Label
+                    FontFamily="Balance"
+                    FontSize="25"
+                    Text="Volver"
+                    TextColor="Black"
+                    VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
             <Label
-                Margin="0,50,0,30"
+                Margin="0,0,0,30"
                 FontFamily="Balance"
                 FontSize="100"
                 HorizontalTextAlignment="Center"

@@ -28,11 +28,29 @@ build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
+[C:/Users/david/source/repos/ChefManager/PopUps/AgregarEmpleado.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.PopUps.AgregarEmpleado.xaml
+build_metadata.AdditionalFiles.TargetPath = PopUps\AgregarEmpleado.xaml
+build_metadata.AdditionalFiles.RelativePath = PopUps\AgregarEmpleado.xaml
+
 [C:/Users/david/source/repos/ChefManager/PopUps/AgregarProveedor.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.PopUps.AgregarProveedor.xaml
 build_metadata.AdditionalFiles.TargetPath = PopUps\AgregarProveedor.xaml
 build_metadata.AdditionalFiles.RelativePath = PopUps\AgregarProveedor.xaml
+
+[C:/Users/david/source/repos/ChefManager/PopUps/EditarEmpleado.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.PopUps.EditarEmpleado.xaml
+build_metadata.AdditionalFiles.TargetPath = PopUps\EditarEmpleado.xaml
+build_metadata.AdditionalFiles.RelativePath = PopUps\EditarEmpleado.xaml
+
+[C:/Users/david/source/repos/ChefManager/PopUps/VerNomina.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.PopUps.VerNomina.xaml
+build_metadata.AdditionalFiles.TargetPath = PopUps\VerNomina.xaml
+build_metadata.AdditionalFiles.RelativePath = PopUps\VerNomina.xaml
 
 [C:/Users/david/source/repos/ChefManager/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -45,6 +63,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/david/source/repos/ChefManager/Templates/TemplateEmpleados.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Templates.TemplateEmpleados.xaml
+build_metadata.AdditionalFiles.TargetPath = Templates\TemplateEmpleados.xaml
+build_metadata.AdditionalFiles.RelativePath = Templates\TemplateEmpleados.xaml
 
 [C:/Users/david/source/repos/ChefManager/Templates/TemplateNotas.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

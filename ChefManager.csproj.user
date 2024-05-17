@@ -11,7 +11,19 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
+    <MauiXaml Update="PopUps\AgregarEmpleado.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="PopUps\AgregarProveedor.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="PopUps\EditarEmpleado.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="PopUps\VerNomina.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Templates\TemplateEmpleados.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Templates\TemplateNotas.xaml">

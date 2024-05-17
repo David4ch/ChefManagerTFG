@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup
+    x:Class="ChefManager.PopUps.EditarEmpleado"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    CanBeDismissedByTappingOutsideOfPopup="False"
+    Color="Transparent">
+    <Border
+        BackgroundColor="{StaticResource lightBrown1}"
+        HorizontalOptions="Center"
+        StrokeShape="RoundRectangle 20,20,20,20"
+        StrokeThickness="0">
+        <StackLayout
+            HeightRequest="600"
+            HorizontalOptions="Center"
+            WidthRequest="850">
+            <Label
+                Margin="0,50,0,0"
+                FontFamily="Balance"
+                FontSize="80"
+                HorizontalTextAlignment="Center"
+                Text="Editar Empleado"
+                TextColor="{StaticResource darkBrown}" />
+
+            <Grid
+                Margin="0,50,0,0"
+                ColumnDefinitions="*,*"
+                ColumnSpacing="50"
+                HorizontalOptions="Center"
+                RowDefinitions="*,*,*"
+                RowSpacing="20">
+
+                <VerticalStackLayout
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Spacing="12">
+                    <Label
+                        FontSize="18"
+                        Text="Nombre Empleado:"
+                        TextColor="Black" />
+                    <Entry
+                        x:Name="entryNombre"
+                        BackgroundColor="{StaticResource darkBrown}"
+                        ClearButtonVisibility="WhileEditing"
+                        MaxLength="15"
+                        Text=""
+                        TextColor="Wheat"
+                        WidthRequest="290" />
+
+                </VerticalStackLayout>
+
+                <VerticalStackLayout
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Spacing="12">
+                    <Label
+                        FontSize="18"
+                        Text="Puesto:"
+                        TextColor="Black" />
+                    <Entry
+                        x:Name="entryPuesto"
+                        BackgroundColor="{StaticResource darkBrown}"
+                        HorizontalOptions="Start"
+                        MaxLength="15"
+                        Text=""
+                        TextColor="Wheat"
+                        WidthRequest="290" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Spacing="12">
+                    <Label
+                        FontSize="18"
+                        Text="Añadir nómina:"
+                        TextColor="Black" />
+                    <HorizontalStackLayout>
+                        <ImageButton
+                            BackgroundColor="Transparent"
+                            Clicked="SubirFoto"
+                            Source="upload.png" />
+                        <Entry
+                            x:Name="entryImagen"
+                            BackgroundColor="{StaticResource darkBrown}"
+                            Text=""
+                            TextColor="Wheat"
+                            WidthRequest="235" />
+                    </HorizontalStackLayout>
+
+                </VerticalStackLayout>
+
+                <VerticalStackLayout
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Spacing="12">
+
+                    <Label
+                        FontSize="18"
+                        Text="Contacto(Email o Numero de teléfono):"
+                        TextColor="Black" />
+                    <Entry
+                        x:Name="entryContacto"
+                        BackgroundColor="{StaticResource darkBrown}"
+                        HorizontalOptions="Start"
+                        MaxLength="20"
+                        Text=""
+                        TextColor="White"
+                        WidthRequest="290" />
+
+
+                </VerticalStackLayout>
+
+
+
+                <VerticalStackLayout
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="Center"
+                    Spacing="12">
+                    <Label
+                        FontSize="18"
+                        Text="Disponibilidad:"
+                        TextColor="Black" />
+                    <Switch
+                        x:Name="switchh"
+                        BackgroundColor="{StaticResource darkBrown}"
+                        IsToggled="False"
+                        OnColor="Black"
+                        ThumbColor="Wheat" />
+                </VerticalStackLayout>
+            </Grid>
+
+            <Button
+                Margin="0,20,0,0"
+                BackgroundColor="SaddleBrown"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center"
+                Text="Guardar cambios"
+                TextColor="Black"
+                WidthRequest="300" />
+
+        </StackLayout>
+    </Border>
+
+</toolkit:Popup>

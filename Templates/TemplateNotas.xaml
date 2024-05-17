@@ -10,7 +10,9 @@
         Margin="0,0,30,0"
         Padding="16,8"
         Background="{StaticResource darkBrown}"
-        Opacity="1">
+        HeightRequest="100"
+        Opacity="1"
+        WidthRequest="300">
         <Border.Shadow>
             <Shadow
                 Brush="{StaticResource darkBrown2}"

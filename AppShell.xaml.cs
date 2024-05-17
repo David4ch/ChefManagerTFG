@@ -15,6 +15,7 @@
             Routing.RegisterRoute(nameof(Vistas.MainPage.VerNota), typeof(Vistas.MainPage.VerNota));
             Routing.RegisterRoute(nameof(Vistas.Proveedores), typeof(Vistas.Proveedores));
             Routing.RegisterRoute(nameof(Vistas.Inventario), typeof(Vistas.Inventario));
+            Routing.RegisterRoute(nameof(Vistas.Empleados), typeof(Vistas.Empleados));
         }
     }
 }

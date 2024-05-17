@@ -5,8 +5,27 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:te="clr-namespace:ChefManager.Templates"
     BackgroundColor="Wheat">
+
     <ScrollView>
+
         <VerticalStackLayout HorizontalOptions="Center">
+            <HorizontalStackLayout Margin="0,10" Spacing="10">
+                <ImageButton
+                    Padding="3"
+                    BackgroundColor="LightBlue"
+                    Clicked="Volver"
+                    CornerRadius="10"
+                    HorizontalOptions="Start"
+                    Source="volver.png"
+                    WidthRequest="40" />
+                <Label
+                    FontFamily="Balance"
+                    FontSize="25"
+                    Text="Volver"
+                    TextColor="Black"
+                    VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
             <Label
                 Margin="0,50,0,20"
                 FontFamily="Balance"
@@ -46,11 +65,12 @@
 
             </ImageButton>
 
-            <HorizontalStackLayout
-                HeightRequest="100"
-                HorizontalOptions="Center"
-                WidthRequest="930">
-                <CollectionView x:Name="listaNotas">
+            <HorizontalStackLayout>
+                <CollectionView
+                    x:Name="listaNotas"
+                    HeightRequest="300"
+                    HorizontalOptions="Center"
+                    WidthRequest="970">
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout Orientation="Horizontal" />
                     </CollectionView.ItemsLayout>

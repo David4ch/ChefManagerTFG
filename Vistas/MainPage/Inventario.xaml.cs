@@ -29,8 +29,8 @@ public partial class Inventario : ContentPage
     {
         InitializeComponent();
         BindingContext = this;
-        obtenerToken();
-        
+        MainThread.BeginInvokeOnMainThread(new Action(async () => await obtenerToken()));
+
         listaAuxProductos = connection.obtenerInfo<Producto>("ProductoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
 
         if (listaAuxProductos.Count != 0)
@@ -323,4 +323,8 @@ public partial class Inventario : ContentPage
         }
     }
 
+    private async void Volver(object sender, EventArgs e)
+    {
+        await AppShell.Current.GoToAsync(nameof(VistaPrinc));
+    }
 }

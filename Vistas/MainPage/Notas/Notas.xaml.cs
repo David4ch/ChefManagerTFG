@@ -57,4 +57,9 @@ public partial class Notas : ContentPage
         await AppShell.Current.GoToAsync(nameof(AgregarNota));
 
     }
+
+    private async void Volver(object sender, EventArgs e)
+    {
+        await AppShell.Current.GoToAsync(nameof(VistaPrinc));
+    }
 }

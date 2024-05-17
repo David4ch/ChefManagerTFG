@@ -7,16 +7,36 @@
 
     <ScrollView>
         <HorizontalStackLayout>
+
+
+
             <VerticalStackLayout
                 x:Name="stack1"
                 BackgroundColor="{StaticResource lightBrown2}"
                 WidthRequest="1550">
 
+                <HorizontalStackLayout Margin="70,10" Spacing="10">
+                    <ImageButton
+                        Padding="3"
+                        BackgroundColor="LightBlue"
+                        Clicked="Volver"
+                        CornerRadius="10"
+                        HorizontalOptions="Start"
+                        Source="volver.png"
+                        WidthRequest="40" />
+                    <Label
+                        FontFamily="Balance"
+                        FontSize="23"
+                        Text="Volver"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
                 <Label
-                    Margin="70,50,0,20"
+                    x:Name="lbl"
+                    Margin="70,20,0,20"
                     FontFamily="Balance"
                     FontSize="90"
-                    x:Name="lbl"
                     HorizontalTextAlignment="Start"
                     Text="Inventario" />
 

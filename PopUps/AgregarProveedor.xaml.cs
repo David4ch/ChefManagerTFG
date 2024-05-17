@@ -21,7 +21,7 @@ public partial class AgregarProveedor : Popup
     {
         if (entryNombre.Text.Length != 0 && entryNumero.Text.Length != 0 && entryPrecio.Text.Length != 0 && entryDescripcion.Text.Length != 0)
         {
-            if (decimal.TryParse(entryPrecio.Text, out decimal numeroDecimal))
+            if (decimal.TryParse(entryPrecio.Text, out decimal numeroDecimal) && int.TryParse(entryNumero.Text, out int numeroInt))
             {
 
                 Proveedor proveedor = new Proveedor
@@ -29,13 +29,14 @@ public partial class AgregarProveedor : Popup
                     Id = Guid.NewGuid().ToString(),
                     Restaurante_Id = VistaPrinc._restauranteId,
                     NombreEmpresa = entryNombre.Text,
-                    Contacto = int.Parse(entryNumero.Text),
+                    Contacto = numeroInt,
                     TipoProducto = pickerTipo,
                     Descripción = entryDescripcion.Text,
-                    Precio = decimal.Parse(entryPrecio.Text),
+                    Precio = numeroDecimal,
                     Periocidad = pickerPeriocidad
                 };
-                var SetData = connection.client.SetAsync("ProveedorDatabase/" + proveedor.Id, proveedor);
+                
+                await connection.client.SetAsync("ProveedorDatabase/" + proveedor.Id, proveedor);
 
                 await AppShell.Current.DisplayAlert("¡!", "Proveedor Añadido Correctamente", "Ok");
 
@@ -44,7 +45,7 @@ public partial class AgregarProveedor : Popup
             }
             else
             {
-                await AppShell.Current.DisplayAlert("Error", "El campo Precio tiene que ser numero \n Ej: 22,00 o 22", "Ok");
+                await AppShell.Current.DisplayAlert("Error", "El campo Precio y Contacto tienen que ser numeros \n Ej: 22,00 o 22", "Ok");
             }
         }
         else

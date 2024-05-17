@@ -72,4 +72,9 @@ public partial class Proveedores : ContentPage
         var popup = new AgregarProveedor();
         this.ShowPopup(popup);
     }
+
+    private async void Volver(object sender, EventArgs e)
+    {
+        await AppShell.Current.GoToAsync(nameof(VistaPrinc));
+    }
 }
