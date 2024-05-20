@@ -679,7 +679,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -3595,7 +3595,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -6447,7 +6447,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -9299,7 +9299,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -12151,7 +12151,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -15003,7 +15003,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -17855,7 +17855,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -20707,7 +20707,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -23554,7 +23554,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -25468,7 +25468,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -27688,7 +27688,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -29908,7 +29908,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -32128,7 +32128,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -34348,7 +34348,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -36568,7 +36568,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -38788,7 +38788,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -40997,7 +40997,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -42905,7 +42905,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -45119,7 +45119,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -47333,7 +47333,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -49547,7 +49547,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -51761,7 +51761,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -53975,7 +53975,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -56189,7 +56189,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -58560,7 +58560,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -60597,7 +60597,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -62934,7 +62934,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -65271,7 +65271,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -67608,7 +67608,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -69945,7 +69945,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -72282,7 +72282,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -74625,7 +74625,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.6": {
+      "Plugin.Maui.Calendar/1.1.7": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -78777,10 +78777,10 @@
         "packageIcon.png"
       ]
     },
-    "Plugin.Maui.Calendar/1.1.6": {
-      "sha512": "FWVR8rCgk8L07e5krNCEQDzswL/VJTnV5taZmIqnd4v3xT0VNCappE2p7bjfJ3fmmzGVIo27TmzCe8AJe30bjg==",
+    "Plugin.Maui.Calendar/1.1.7": {
+      "sha512": "nXmchOXxhGTqLLUd1VB6xHuUtxpYxXhaQoz8jcokLms/E0Qk9DqPeiBCcHqkraei0wlxbKaSd+ECIZMBTYYwgg==",
       "type": "package",
-      "path": "plugin.maui.calendar/1.1.6",
+      "path": "plugin.maui.calendar/1.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -78792,7 +78792,7 @@
         "lib/net8.0-windows10.0.19041/Plugin.Maui.Calendar.dll",
         "lib/net8.0/Plugin.Maui.Calendar.dll",
         "nuget.png",
-        "plugin.maui.calendar.1.1.6.nupkg.sha512",
+        "plugin.maui.calendar.1.1.7.nupkg.sha512",
         "plugin.maui.calendar.nuspec"
       ]
     },
@@ -85096,7 +85096,7 @@
       "Microsoft.Maui.Controls.Compatibility >= 8.0.40",
       "Microsoft.NET.ILLink.Tasks >= 8.0.5",
       "Newtonsoft.Json >= 13.0.3",
-      "Plugin.Maui.Calendar >= 1.1.6",
+      "Plugin.Maui.Calendar >= 1.1.7",
       "Xam.Plugin.Media >= 6.0.2"
     ],
     "net8.0-ios17.2": [
@@ -85110,7 +85110,7 @@
       "Microsoft.Maui.Controls.Compatibility >= 8.0.40",
       "Microsoft.NET.ILLink.Tasks >= 8.0.5",
       "Newtonsoft.Json >= 13.0.3",
-      "Plugin.Maui.Calendar >= 1.1.6",
+      "Plugin.Maui.Calendar >= 1.1.7",
       "Xam.Plugin.Media >= 6.0.2"
     ],
     "net8.0-maccatalyst17.2": [
@@ -85124,7 +85124,7 @@
       "Microsoft.Maui.Controls.Compatibility >= 8.0.40",
       "Microsoft.NET.ILLink.Tasks >= 8.0.5",
       "Newtonsoft.Json >= 13.0.3",
-      "Plugin.Maui.Calendar >= 1.1.6",
+      "Plugin.Maui.Calendar >= 1.1.7",
       "Xam.Plugin.Media >= 6.0.2"
     ],
     "net8.0-windows10.0.19041": [
@@ -85137,7 +85137,7 @@
       "Microsoft.Maui.Controls >= 8.0.40",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.40",
       "Newtonsoft.Json >= 13.0.3",
-      "Plugin.Maui.Calendar >= 1.1.6",
+      "Plugin.Maui.Calendar >= 1.1.7",
       "Xam.Plugin.Media >= 6.0.2"
     ]
   },
@@ -85251,7 +85251,7 @@
           },
           "Plugin.Maui.Calendar": {
             "target": "Package",
-            "version": "[1.1.6, )"
+            "version": "[1.1.7, )"
           },
           "Xam.Plugin.Media": {
             "target": "Package",
@@ -85326,7 +85326,7 @@
           },
           "Plugin.Maui.Calendar": {
             "target": "Package",
-            "version": "[1.1.6, )"
+            "version": "[1.1.7, )"
           },
           "Xam.Plugin.Media": {
             "target": "Package",
@@ -85401,7 +85401,7 @@
           },
           "Plugin.Maui.Calendar": {
             "target": "Package",
-            "version": "[1.1.6, )"
+            "version": "[1.1.7, )"
           },
           "Xam.Plugin.Media": {
             "target": "Package",
@@ -85471,7 +85471,7 @@
           },
           "Plugin.Maui.Calendar": {
             "target": "Package",
-            "version": "[1.1.6, )"
+            "version": "[1.1.7, )"
           },
           "Xam.Plugin.Media": {
             "target": "Package",

@@ -2,19 +2,18 @@ using ChefManager.Modelo;
 using Firebase.Auth.Providers;
 using Firebase.Auth;
 using Firebase.Storage;
-using ChefManager.PopUps;
-using CommunityToolkit.Maui.Views;
-using Microsoft.Maui.Controls;
-using ChefManager.Templates;
+using System.Collections.ObjectModel;
+using CommunityToolkit.Maui.Core.Extensions;
 namespace ChefManager.Vistas;
 
 public partial class Inventario : ContentPage
 {
+    public ObservableCollection<Producto> ListaAuxProductos { get; set; } = new ObservableCollection<Producto>();
+
     public string TituloProducto { get; set; }
     public static string idProducto;
     FirebaseConnection connection = new FirebaseConnection();
-    List<Producto> listaAuxProductos = new List<Producto>();
-    List<Proveedor> listaAuxProveedores = new List<Proveedor>();
+    List<Proveedor> listaAuxProveedores = [];
     public static string _idRestaurante;
     string authDomain = "chefmg-664a2.firebaseapp.com";
     string api_key = "AIzaSyCyrx6jgU-a2dnYYOqlMX2k_8tbO1ia1rw";
@@ -28,17 +27,23 @@ public partial class Inventario : ContentPage
     public Inventario()
     {
         InitializeComponent();
-        BindingContext = this;
+
         MainThread.BeginInvokeOnMainThread(new Action(async () => await obtenerToken()));
 
-        listaAuxProductos = connection.obtenerInfo<Producto>("ProductoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
-
-        if (listaAuxProductos.Count != 0)
+       
+        if (ListaAuxProductos.Count != 0)
         {
-            listaProductos.ItemsSource = listaAuxProductos;
+            actualizarLista();
         }
     }
 
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        ListaAuxProductos = connection.obtenerInfo<Producto>("ProductoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToObservableCollection();
+
+
+    }
 
     private async Task obtenerToken()
     {
@@ -59,9 +64,9 @@ public partial class Inventario : ContentPage
 
     }
 
-    public void actualizarLista()
+    private void actualizarLista()
     {
-        listaProductos.ItemsSource = listaAuxProductos;
+        listaProductos.ItemsSource = ListaAuxProductos;
     }
 
     private async void subirFoto(object sender, EventArgs e)
@@ -94,7 +99,7 @@ public partial class Inventario : ContentPage
 
     private void buscar(object sender, EventArgs e)
     {
-        listaProductos.ItemsSource = listaAuxProductos.Where(u => u.Nombre.Contains(buscador.Text));
+        listaProductos.ItemsSource = ListaAuxProductos.Where(u => u.Nombre.Contains(buscador.Text));
     }
 
     private void agregar(object sender, EventArgs e)
@@ -256,7 +261,7 @@ public partial class Inventario : ContentPage
     public async void verProducto()
     {
 
-        Producto producto = listaAuxProductos.FirstOrDefault(u => u.Id.Equals(idProducto));
+        Producto producto = ListaAuxProductos.FirstOrDefault(u => u.Id.Equals(idProducto));
         await AppShell.Current.DisplayAlert("Información del producto: ",
             " Nombre: " + producto.Nombre + "\n" +
             " Proveedor: " + producto.Proveedor + "\n" +

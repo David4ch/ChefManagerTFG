@@ -7,7 +7,7 @@ using System.Collections.ObjectModel;
 
 namespace ChefManager.Modelo
 {
-    class FirebaseConnection
+    public class FirebaseConnection
     {
       
         //Configuracion conexion Firebase

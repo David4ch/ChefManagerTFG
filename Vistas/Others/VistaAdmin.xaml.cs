@@ -1,22 +1,36 @@
 using ChefManager.Modelo;
-using FireSharp.Response;
-using Microsoft.Maui.Controls;
-using Microsoft.Maui.Controls.Internals;
-using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 
 namespace ChefManager.Vistas;
 
 public partial class VistaAdmin : ContentPage
 {
-    public ObservableCollection<Usuario> listaAuxUsuario { get; set; } = new ObservableCollection<Usuario>();
-    FirebaseConnection firebaseConnection = new FirebaseConnection();
+    public ObservableCollection<Usuario> ListaAuxUsuarios { get; set; } = new ObservableCollection<Usuario>();
+    public ObservableCollection<Restaurante> ListaAuxRestaurantes { get; set; } = new ObservableCollection<Restaurante>();
+
+    FirebaseConnection firebaseConnection = new();
     bool menuAbierto = true;
+
     public VistaAdmin()
     {
         InitializeComponent();
-        listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase");
+        ObservableCollection<Usuario> lista1 =  firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase");
 
+        foreach (var item in lista1)
+        {
+            ListaAuxUsuarios.Add(item);
+        }
+
+        
+        ListaAuxRestaurantes = firebaseConnection.obtenerInfo<Restaurante>("RestauranteDatabase");
+
+        ActualizarListas();
+
+    }
+
+    private void ActualizarListas() {
+        listaUsuarios.ItemsSource = ListaAuxUsuarios;
+        listaRestaurantes.ItemsSource = ListaAuxRestaurantes;
     }
 
     private void Picker_SelectedIndexChanged(object sender, EventArgs e)
@@ -57,14 +71,6 @@ public partial class VistaAdmin : ContentPage
                 break;
 
         }
-    }
-
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-
-        listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase");
-        listaRestaurantes.ItemsSource = firebaseConnection.obtenerInfo<Restaurante>("RestauranteDatabase");
     }
 
     private void OnPointerEntered(object sender, PointerEventArgs e)
@@ -247,7 +253,7 @@ public partial class VistaAdmin : ContentPage
                                         Contrasena = contrasena
                                     };
                                     var SetData = firebaseConnection.client.SetAsync("UsuarioDatabase/" + usuario.Id, usuario);
-                                    
+                                    ActualizarListas();
                                 }
                                 else
                                 {
@@ -316,6 +322,7 @@ public partial class VistaAdmin : ContentPage
                                     Logo = logo
                                 };
                                 var SetData = firebaseConnection.client.SetAsync("RestauranteDatabase/" + restaurante.Id, restaurante);
+                                ActualizarListas();
                             }
                             else
                             {

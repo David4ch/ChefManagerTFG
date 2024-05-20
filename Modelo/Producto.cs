@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace ChefManager.Modelo
 {
-    class Producto
+    public class Producto
     {
-        public string Id { get; set; }
-        public string Restaurante_Id { get; set; }
-        public string Nombre { get; set; }
-        public string Proveedor { get; set; }
-        public int Cantidad { get; set; }
-        public decimal Precio { get; set; }
-        public string Imagen { get; set; }
+        public required String Id { get; set; }
+        public required String Restaurante_Id { get; set; }
+        public required String Nombre { get; set; }
+        public required String Proveedor { get; set; }
+        public required int Cantidad { get; set; }
+        public required decimal Precio { get; set; }
+        public required String Imagen { get; set; }
 
 
     }

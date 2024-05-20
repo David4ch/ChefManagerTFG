@@ -110,7 +110,7 @@
             },
             "Plugin.Maui.Calendar": {
               "target": "Package",
-              "version": "[1.1.6, )"
+              "version": "[1.1.7, )"
             },
             "Xam.Plugin.Media": {
               "target": "Package",
@@ -185,7 +185,7 @@
             },
             "Plugin.Maui.Calendar": {
               "target": "Package",
-              "version": "[1.1.6, )"
+              "version": "[1.1.7, )"
             },
             "Xam.Plugin.Media": {
               "target": "Package",
@@ -260,7 +260,7 @@
             },
             "Plugin.Maui.Calendar": {
               "target": "Package",
-              "version": "[1.1.6, )"
+              "version": "[1.1.7, )"
             },
             "Xam.Plugin.Media": {
               "target": "Package",
@@ -330,7 +330,7 @@
             },
             "Plugin.Maui.Calendar": {
               "target": "Package",
-              "version": "[1.1.6, )"
+              "version": "[1.1.7, )"
             },
             "Xam.Plugin.Media": {
               "target": "Package",

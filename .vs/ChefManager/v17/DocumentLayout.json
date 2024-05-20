@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\david\\source\\repos\\ChefManager\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\templates\\templatenotas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:templates\\templatenotas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\vistas\\mainpage\\notas\\notas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:vistas\\mainpage\\notas\\notas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,37 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 310,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TemplateNotas.xaml",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Templates\\TemplateNotas.xaml",
-              "RelativeDocumentMoniker": "Templates\\TemplateNotas.xaml",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Templates\\TemplateNotas.xaml",
-              "RelativeToolTip": "Templates\\TemplateNotas.xaml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAgAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-17T11:59:40.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Notas.xaml",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\MainPage\\Notas\\Notas.xaml",
-              "RelativeDocumentMoniker": "Vistas\\MainPage\\Notas\\Notas.xaml",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\MainPage\\Notas\\Notas.xaml",
-              "RelativeToolTip": "Vistas\\MainPage\\Notas\\Notas.xaml",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAEMAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-17T11:50:35.132Z",
-              "EditorCaption": ""
             }
           ]
         }

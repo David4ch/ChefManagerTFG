@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChefManager.Modelo
 {
-    class Restaurante
+    public class Restaurante
     {
         public string Id { get; set; }
         public string Nombre { get; set; }

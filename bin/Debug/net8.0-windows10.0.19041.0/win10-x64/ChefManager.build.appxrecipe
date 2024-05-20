@@ -430,7 +430,7 @@
     <AppxPackagedFile Include="C:\Users\david\.nuget\packages\newtonsoft.json\13.0.3\lib\net6.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\david\.nuget\packages\plugin.maui.calendar\1.1.6\lib\net8.0-windows10.0.19041\Plugin.Maui.Calendar.dll">
+    <AppxPackagedFile Include="C:\Users\david\.nuget\packages\plugin.maui.calendar\1.1.7\lib\net8.0-windows10.0.19041\Plugin.Maui.Calendar.dll">
       <PackagePath>Plugin.Maui.Calendar.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\.nuget\packages\system.speech\8.0.0\runtimes\win\lib\net8.0\System.Speech.dll">

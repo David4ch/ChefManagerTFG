@@ -1,19 +1,43 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ChefManager.Vistas.Calendario"
-             xmlns:cal="clr-namespace:Plugin.Maui.Calendar.Controls;assembly=Plugin.Maui.Calendar"
-             Title="Calendario">
-    <cal:Calendar Events="{Binding Events}" EventsScrollViewVisible="True" ArrowsFontSize="30" FooterArrowVisible="False">
+<ContentPage
+    x:Class="ChefManager.Vistas.Calendario"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:cal="clr-namespace:Plugin.Maui.Calendar.Controls;assembly=Plugin.Maui.Calendar"
+    xmlns:mo="clr-namespace:ChefManager.Modelo"
+    BackgroundColor="{StaticResource darkBrown2}">
+    <ScrollView Orientation="Both">
+        <StackLayout>
+            <Label
+                Margin="30,30,0,0"
+                FontFamily="Balance"
+                FontSize="70"
+                Text="CALENDARIO" />
 
-        <cal:Calendar.EventTemplate>
-            <DataTemplate>
-                <VerticalStackLayout>
-                    <Label Text="{Binding Name}"></Label>
-                    <Label Text="{Binding Description}"></Label>
-                </VerticalStackLayout>
-            </DataTemplate>
-        </cal:Calendar.EventTemplate>
-        
-    </cal:Calendar>
+            <cal:Calendar
+                EventIndicatorSelectedTextColor="AliceBlue"
+                Events="{Binding Events}"
+                EventsScrollViewVisible="True"
+                FooterArrowVisible="False"
+                SelectedDayBackgroundColor="{StaticResource lightBrown1}"
+                VerticalOptions="Center">
+
+                <cal:Calendar.EventTemplate>
+                    <DataTemplate x:DataType="mo:Dinero">
+                        <VerticalStackLayout>
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="25"
+                                Text="{Binding Turno}" />
+                            <Label Text="{Binding Cantidad}" />
+                            <Button Clicked="Button_Clicked" Text="+" />
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </cal:Calendar.EventTemplate>
+
+            </cal:Calendar>
+        </StackLayout>
+
+    </ScrollView>
+
 </ContentPage>
