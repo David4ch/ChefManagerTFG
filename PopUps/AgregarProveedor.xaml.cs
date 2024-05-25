@@ -5,43 +5,43 @@ namespace ChefManager.PopUps;
 
 public partial class AgregarProveedor : Popup
 {
-    string pickerPeriocidad;
-
-    string pickerTipo;
 
     FirebaseConnection connection = new FirebaseConnection();
 
-
     public AgregarProveedor()
-	{
-		InitializeComponent();
-	}
+    {
+        InitializeComponent();
+    }
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
-        if (entryNombre.Text.Length != 0 && entryNumero.Text.Length != 0 && entryPrecio.Text.Length != 0 && entryDescripcion.Text.Length != 0)
+        if (entryNombre.Text.Length != 0 && entryNumero.Text.Length != 0 && entryPrecio.Text.Length != 0 && entryDescripcion.Text.Length != 0 && entryDia.Text.Length != 0 && pickerPeriocidad.SelectedIndex != -1 && pickerProducto.SelectedIndex != -1)
         {
             if (decimal.TryParse(entryPrecio.Text, out decimal numeroDecimal) && int.TryParse(entryNumero.Text, out int numeroInt))
             {
-
-                Proveedor proveedor = new Proveedor
+                if (ValidarDia())
                 {
-                    Id = Guid.NewGuid().ToString(),
-                    Restaurante_Id = VistaPrinc._restauranteId,
-                    NombreEmpresa = entryNombre.Text,
-                    Contacto = numeroInt,
-                    TipoProducto = pickerTipo,
-                    Descripción = entryDescripcion.Text,
-                    Precio = numeroDecimal,
-                    Periocidad = pickerPeriocidad
-                };
-                
-                await connection.client.SetAsync("ProveedorDatabase/" + proveedor.Id, proveedor);
+                    Proveedor proveedor = new Proveedor
+                    {
+                        Id = Guid.NewGuid().ToString(),
+                        Restaurante_Id = VistaPrinc._restauranteId,
+                        NombreEmpresa = entryNombre.Text,
+                        Contacto = numeroInt,
+                        TipoProducto = pickerProducto.SelectedItem.ToString(),
+                        Descripción = entryDescripcion.Text,
+                        Precio = numeroDecimal,
+                        Periocidad = pickerPeriocidad.SelectedItem.ToString() + "-" + entryDia.Text
+                    };
 
-                await AppShell.Current.DisplayAlert("¡!", "Proveedor Añadido Correctamente", "Ok");
+                    await connection.client.SetAsync("ProveedorDatabase/" + proveedor.Id, proveedor);
 
-                Close();
-
+                    await AppShell.Current.DisplayAlert("¡!", "Proveedor Añadido Correctamente", "Ok");
+                    
+                    await AppShell.Current.GoToAsync(nameof(Proveedores));
+                    
+                    Close();
+                    
+                }
             }
             else
             {
@@ -56,15 +56,59 @@ public partial class AgregarProveedor : Popup
 
     }
 
-    private void Picker_SelectedIndexChanged(object sender, EventArgs e)
+    private bool ValidarDia()
     {
-        Picker picker = (Picker)sender;
-        pickerTipo = picker.SelectedItem as string;
+        bool correcto = false;
+
+        switch (pickerPeriocidad.SelectedItem)
+        {
+            case "Semanal":
+                if (entryDia.Text == "L" || entryDia.Text == "M" || entryDia.Text == "X" || entryDia.Text == "J" || entryDia.Text == "V")
+                {
+                    correcto = true;
+                }
+                else
+                {
+                    AppShell.Current.DisplayAlert("Error", "Si la periocidad es Semanal, introduce la inicial del dia de la semana que empieza a venir el proveedor \n L = Lunes \n M = Martes \n X = Miercoles \n J = Jueves \n V = Viernes ", "Ok");
+                }
+                break;
+            case "Quincenal":
+                if (entryDia.Text == "L" || entryDia.Text == "M" || entryDia.Text == "X" || entryDia.Text == "J" || entryDia.Text == "V")
+                {
+                    correcto = true;
+                }
+                else
+                {
+                    AppShell.Current.DisplayAlert("Error", "Si la periocidad es Semanal, introduce la inicial del dia de la semana que empieza a venir el proveedor \n L = Lunes \n M = Martes \n X = Miercoles \n J = Jueves \n V = Viernes ", "Ok");
+                }
+                break;
+            case "Mensual":
+                if (int.TryParse(entryDia.Text, out int numeroInt2))
+                {
+                    int numeroDiasMesActual = DateTime.DaysInMonth(DateTime.Today.Year, DateTime.Today.Month);
+
+                    if (numeroInt2 < numeroDiasMesActual && numeroInt2 > 0)
+                    {
+                        correcto = true;
+                    }
+                    else
+                    {
+                        AppShell.Current.DisplayAlert("Error", "Este mes tiene " + numeroDiasMesActual + " días, introduce un numero mayor a uno o menor a esos dias", "Gracias");
+
+                    }
+                }
+                else
+                {
+
+                    AppShell.Current.DisplayAlert("Error", "Si la periocidad es Diaria, introduce el numero del dia del mes que empieza a venir el proveedor ", "Gracias");
+                }
+                break;
+            default:
+                AppShell.Current.DisplayAlert("Error", "Error inesperado ", "Gracias");
+
+                break;
+        }
+        return correcto;
     }
 
-    private void Picker_SelectedIndexChanged2(object sender, EventArgs e)
-    {
-        Picker picker = (Picker)sender;
-        pickerPeriocidad = picker.SelectedItem as string;
-    }
 }

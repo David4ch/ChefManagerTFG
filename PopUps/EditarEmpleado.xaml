@@ -84,6 +84,7 @@
                         <Entry
                             x:Name="entryImagen"
                             BackgroundColor="{StaticResource darkBrown}"
+                            IsEnabled="False"
                             Text=""
                             TextColor="Wheat"
                             WidthRequest="235" />

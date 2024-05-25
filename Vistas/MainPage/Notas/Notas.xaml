@@ -3,7 +3,7 @@
     x:Class="ChefManager.Vistas.Notas"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:te="clr-namespace:ChefManager.Templates"
+    xmlns:mo="clr-namespace:ChefManager.Modelo"
     BackgroundColor="Wheat">
 
     <ScrollView>
@@ -38,7 +38,7 @@
                 BackgroundColor="{StaticResource darkBrown}"
                 HorizontalTextAlignment="Center"
                 Placeholder="Buscar por Titulo"
-                SearchButtonPressed="buscar"
+                SearchButtonPressed="Buscar"
                 TextColor="White"
                 WidthRequest="400" />
 
@@ -68,16 +68,53 @@
             <HorizontalStackLayout>
                 <CollectionView
                     x:Name="listaNotas"
-                    HeightRequest="300"
-                    HorizontalOptions="Center"
-                    WidthRequest="970">
+                    BackgroundColor="BurlyWood"
+                    HeightRequest="-1"
+                    MaximumHeightRequest="320"
+                    VerticalOptions="Start"
+                    WidthRequest="1200">
                     <CollectionView.ItemsLayout>
-                        <GridItemsLayout Orientation="Horizontal" />
+                        <LinearItemsLayout
+                            ItemSpacing="12"
+                            Orientation="Horizontal"
+                            SnapPointsAlignment="Start"
+                            SnapPointsType="MandatorySingle" />
                     </CollectionView.ItemsLayout>
 
                     <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <te:TemplateNotas />
+                        <DataTemplate x:DataType="mo:Nota">
+
+
+                            <VerticalStackLayout
+                                Padding="16,8"
+                                Background="{StaticResource darkBrown}"
+                                HeightRequest="100"
+                                WidthRequest="300">
+                                <Label
+                                    x:Name="idNota"
+                                    IsVisible="False"
+                                    Text="{Binding Id}" />
+
+                                <Label
+                                    BackgroundColor="{StaticResource darkBrown2}"
+                                    CharacterSpacing="1"
+                                    FontFamily="Arial"
+                                    FontSize="20"
+                                    Text="{Binding Titulo}"
+                                    TextColor="White"
+                                    TextTransform="Uppercase" />
+
+                                <Label
+                                    Margin="0,20,0,0"
+                                    FontSize="13"
+                                    Text="{Binding Date, StringFormat='Ultima modificación: {0}'}"
+                                    TextColor="White" />
+
+                                <VerticalStackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped" />
+                                </VerticalStackLayout.GestureRecognizers>
+                            </VerticalStackLayout>
+
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>

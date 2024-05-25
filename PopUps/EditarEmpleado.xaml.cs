@@ -5,6 +5,7 @@ using Firebase.Auth.Providers;
 using Firebase.Auth;
 using Firebase.Storage;
 using Microsoft.Maui.ApplicationModel.Communication;
+using ChefManager.Vistas;
 
 namespace ChefManager.PopUps;
 
@@ -31,7 +32,7 @@ public partial class EditarEmpleado : Popup
     {
         if (entryNombre.Text.Length != 0 && entryPuesto.Text.Length != 0 && entryContacto.Text.Length != 0 && entryImagen.Text.Length != 0)
         {
-            Empleado empleado_old = connection.obtenerInfo<Empleado>("EmpleadoDatabase").FirstOrDefault(u => u.Id.Equals(TemplateEmpleados._idEmpleado));
+            Empleado empleado_old = connection.obtenerInfo<Empleado>("EmpleadoDatabase").FirstOrDefault(u => u.Id.Equals(Empleados._idEmpleado));
 
             _entryImagenFinal = (entryImagen.Text == Path.GetFileName(new Uri(empleado_old.ImagenNomina).LocalPath)) ? empleado_old.ImagenNomina : _urlDescarga;
 
@@ -47,9 +48,11 @@ public partial class EditarEmpleado : Popup
                 Disponibilidad = switchh.IsToggled
             };
 
-            var SetData = connection.client.Update("EmpleadoDatabase/" + empleado.Id, empleado);
+            var Set = connection.client.Update("EmpleadoDatabase/" + empleado.Id, empleado);
 
             await AppShell.Current.DisplayAlert("¡!", "Empleado Editado Correctamente", "Ok");
+
+            await AppShell.Current.GoToAsync(nameof(Empleados));
 
             Close();
         }
@@ -61,7 +64,7 @@ public partial class EditarEmpleado : Popup
     }
 
 	private void EstablecerEntrys() {
-		Empleado empleado = connection.obtenerInfo<Empleado>("EmpleadoDatabase").FirstOrDefault(u=> u.Id.Equals(TemplateEmpleados._idEmpleado));
+		Empleado empleado = connection.obtenerInfo<Empleado>("EmpleadoDatabase").FirstOrDefault(u=> u.Id.Equals(Empleados._idEmpleado));
 
 		entryNombre.Text = empleado.Nombre;
 		entryPuesto.Text = empleado.Puesto;

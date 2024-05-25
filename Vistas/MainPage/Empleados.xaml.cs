@@ -6,20 +6,33 @@ namespace ChefManager.Vistas;
 
 public partial class Empleados : ContentPage
 {
-    List<Empleado> listaAuxEmpleados;
-    FirebaseConnection connection = new FirebaseConnection();
+   public static string _sourceNomina;
+   public static string _idEmpleado;
+   List<Empleado> listaAuxEmpleados;
+   FirebaseConnection connection;
 
     public Empleados()
 	{
 		InitializeComponent();
+        connection = new FirebaseConnection();
         listaAuxEmpleados = connection.obtenerInfo<Empleado>("EmpleadoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
 
         if (listaAuxEmpleados.Count != 0)
         {
             nohay.IsVisible = false;
             listaEmpleados.IsVisible = true;
-            listaEmpleados.ItemsSource = listaAuxEmpleados;
+
+            ActualizarLista();
         }
+    }
+
+    private void ActualizarLista() { 
+        
+        listaAuxEmpleados =  connection.obtenerInfo<Empleado>("EmpleadoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
+
+        listaEmpleados.ItemsSource = listaAuxEmpleados;
+
+        labelNum.Text = "Número empleados: " + listaAuxEmpleados.Count().ToString();
     }
 
     private void Buscador_TextChanged(object sender, TextChangedEventArgs e)
@@ -59,5 +72,60 @@ public partial class Empleados : ContentPage
     private async void Volver(object sender, EventArgs e)
     {
         await AppShell.Current.GoToAsync(nameof(VistaPrinc));
+    }
+    
+    private void VerNomina(object sender, EventArgs e)
+    {
+
+        var button = (ImageButton)sender;
+        var empleado = (Empleado)button.Parent.Parent.BindingContext;
+
+        _sourceNomina = empleado.ImagenNomina;
+
+            var popup = new VerNomina();
+            this.ShowPopup(popup);
+        
+    }
+
+    private void EditarEmpleado(object sender, EventArgs e)
+    {
+
+        var button = (ImageButton)sender;
+        var empleado = (Empleado)button.Parent.Parent.BindingContext;
+
+        _idEmpleado = empleado.Id;
+
+        var popup = new EditarEmpleado();
+        this.ShowPopup(popup);
+        
+    }
+
+    private void EliminarEmpleado(object sender, EventArgs e)
+    {
+        var button = (ImageButton)sender;
+        var empleado = (Empleado)button.Parent.Parent.BindingContext;
+
+        try
+        {
+            var SetData = connection.client.Delete("EmpleadoDatabase/" + empleado.Id);
+            AppShell.Current.DisplayAlert("¡!", "Empleado despedido correctamente", "Ok");
+            ActualizarLista();
+        }
+        catch (Exception)
+        {
+            System.Diagnostics.Debug.WriteLine("Error al eliminar");
+        }
+    }
+
+    private void OnPointerEntered(object sender, PointerEventArgs e)
+    {
+        ImageButton button = (ImageButton)sender;
+        button.BackgroundColor = Colors.Red;
+    }
+   
+    private void OnPointerExited(object sender, PointerEventArgs e)
+    {
+        ImageButton button = (ImageButton)sender;
+        button.BackgroundColor = Colors.Transparent;
     }
 }

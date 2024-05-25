@@ -40,9 +40,11 @@ public partial class AgregarEmpleado : Popup
                 Disponibilidad = switchh.IsToggled
             };
 
-            var SetData = connection.client.SetAsync("EmpleadoDatabase/" + empleado.Id, empleado);
+            await connection.client.SetAsync("EmpleadoDatabase/" + empleado.Id, empleado);
 
             await AppShell.Current.DisplayAlert("¡!", "Empleado Añadido Correctamente", "Ok");
+
+            await AppShell.Current.GoToAsync(nameof(Empleados));
 
             Close();
         }

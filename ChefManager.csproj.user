@@ -23,18 +23,6 @@
     <MauiXaml Update="PopUps\VerNomina.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Templates\TemplateEmpleados.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Templates\TemplateNotas.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Templates\TemplateProductos.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Templates\TemplateProveedores.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
     <MauiXaml Update="Templates\TemplateRestaurantes.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

@@ -21,7 +21,7 @@
             HorizontalOptions="Center"
             Placeholder="Titulo"
             Text=""
-            TextColor="Black"
+            TextColor="Wheat"
             WidthRequest="400" />
 
         <Editor

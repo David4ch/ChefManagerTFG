@@ -17,7 +17,7 @@ public partial class VerNota : ContentPage
     private Nota obtenerNota() {
         List<Nota> listaNotas = connection.obtenerInfo<Nota>("NotaDatabase").ToList();
 
-        Nota nota = listaNotas.FirstOrDefault(u => u.Id == TemplateNotas._idNota);
+        Nota nota = listaNotas.FirstOrDefault(u => u.Id == Notas._idNota);
 
         return nota;
     }

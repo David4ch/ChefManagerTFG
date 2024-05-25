@@ -3,12 +3,10 @@
     x:Class="ChefManager.Vistas.Inventario"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:te="clr-namespace:ChefManager.Templates">
+    xmlns:mo="clr-namespace:ChefManager.Modelo">
 
     <ScrollView>
         <HorizontalStackLayout>
-
-
 
             <VerticalStackLayout
                 x:Name="stack1"
@@ -33,7 +31,6 @@
                 </HorizontalStackLayout>
 
                 <Label
-                    x:Name="lbl"
                     Margin="70,20,0,20"
                     FontFamily="Balance"
                     FontSize="90"
@@ -60,14 +57,14 @@
                                 CancelButtonColor="Black"
                                 HorizontalOptions="Start"
                                 Placeholder="Busca por Nombre"
-                                SearchButtonPressed="buscar"
+                                SearchButtonPressed="Buscar"
                                 TextColor="Black"
                                 WidthRequest="500" />
 
                             <Button
                                 Margin="30,10,0,0"
                                 BackgroundColor="{StaticResource lightBrown2}"
-                                Clicked="agregar"
+                                Clicked="Agregar"
                                 FontSize="15"
                                 HorizontalOptions="Center"
                                 Scale="1.2"
@@ -82,23 +79,61 @@
                         </HorizontalStackLayout>
 
 
-                        <Border
-                            HorizontalOptions="Center"
-                            StrokeShape="RoundRectangle 20,20,20,20"
-                            StrokeThickness="0"
-                            VerticalOptions="Center">
+                        <Border StrokeShape="RoundRectangle 20,20,20,20" StrokeThickness="0">
+
                             <CollectionView
                                 x:Name="listaProductos"
                                 BackgroundColor="White"
                                 HeightRequest="430"
+                                ItemSizingStrategy="MeasureAllItems"
+                                ItemsUpdatingScrollMode="KeepItemsInView"
                                 WidthRequest="1100">
                                 <CollectionView.ItemsLayout>
-                                    <GridItemsLayout Orientation="Horizontal" />
+                                    <GridItemsLayout HorizontalItemSpacing="10" Orientation="Horizontal" />
                                 </CollectionView.ItemsLayout>
 
                                 <CollectionView.ItemTemplate>
-                                    <DataTemplate>
-                                        <te:TemplateProductos />
+                                    <DataTemplate x:DataType="mo:Producto">
+
+                                        <Border
+                                            Padding="16"
+                                            Background="{StaticResource darkBrown}"
+                                            MaximumHeightRequest="180"
+                                            StrokeShape="RoundRectangle 20,20,20,20"
+                                            StrokeThickness="0"
+                                            VerticalOptions="Start"
+                                            WidthRequest="130">
+
+                                            <VerticalStackLayout HorizontalOptions="Center" Spacing="10">
+                                                <Label
+                                                    x:Name="idProducto"
+                                                    IsVisible="False"
+                                                    Text="{Binding Id}" />
+                                                <Image
+                                                    BackgroundColor="{StaticResource lightBrown1}"
+                                                    Source="{Binding Imagen}"
+                                                    WidthRequest="50" />
+                                                <Label
+                                                    FontSize="13"
+                                                    HorizontalOptions="Center"
+                                                    Text="{Binding Nombre}"
+                                                    TextTransform="Uppercase" />
+                                                <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                                                    <ImageButton
+                                                        BackgroundColor="LightGray"
+                                                        Clicked="VerProducto"
+                                                        Source="ojo.png"
+                                                        WidthRequest="30" />
+                                                    <ImageButton
+                                                        x:Name="editarBoton"
+                                                        BackgroundColor="LightGray"
+                                                        Clicked="EditarProducto"
+                                                        Source="editar.png" />
+                                                </HorizontalStackLayout>
+                                            </VerticalStackLayout>
+
+                                        </Border>
+
                                     </DataTemplate>
                                 </CollectionView.ItemTemplate>
                             </CollectionView>
@@ -171,7 +206,7 @@
                         <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
                             <ImageButton
                                 BackgroundColor="{StaticResource lightBrown2}"
-                                Clicked="subirFoto"
+                                Clicked="SubirFoto"
                                 HeightRequest="50"
                                 Source="upload.png"
                                 WidthRequest="50" />
@@ -201,7 +236,7 @@
                 <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
                     <Button
                         BackgroundColor="{StaticResource lightBrown2}"
-                        Clicked="sumarRestarCantidad"
+                        Clicked="SumarRestarCantidad"
                         HorizontalOptions="Center"
                         Text="-"
                         TextColor="White"
@@ -217,7 +252,7 @@
                         WidthRequest="20" />
                     <Button
                         BackgroundColor="{StaticResource lightBrown2}"
-                        Clicked="sumarRestarCantidad"
+                        Clicked="SumarRestarCantidad"
                         HorizontalOptions="Center"
                         Text="+"
                         TextColor="White"
@@ -229,7 +264,7 @@
                     x:Name="botonGuardar"
                     Margin="0,20,0,10"
                     BackgroundColor="{StaticResource lightBrown1}"
-                    Clicked="guardarProducto"
+                    Clicked="GuardarProducto"
                     HeightRequest="50"
                     Text="Guardar"
                     TextColor="Black"
@@ -237,7 +272,7 @@
                 <Button
                     x:Name="botonEliminar"
                     BackgroundColor="{StaticResource lightBrown2}"
-                    Clicked="eliminarProducto"
+                    Clicked="EliminarProducto"
                     HeightRequest="50"
                     IsVisible="False"
                     Text="Eliminar"

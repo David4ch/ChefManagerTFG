@@ -75,8 +75,10 @@ public partial class VistaPrinc : ContentPage
                 AppShell.Current.GoToAsync(nameof(Proveedores));
                 break;
             case "File: caja.png":
+                AppShell.Current.GoToAsync(nameof(Caja));
                 break;
             case "File: calendario.png":
+                AppShell.Current.GoToAsync(nameof(Calendario));
                 break;
             case "File: empleados.png":
                 AppShell.Current.GoToAsync(nameof(Empleados));

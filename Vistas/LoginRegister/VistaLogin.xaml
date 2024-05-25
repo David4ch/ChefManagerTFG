@@ -9,81 +9,84 @@
     <ContentPage.BindingContext>
         <vm:ValidadorInicio />
     </ContentPage.BindingContext>
+    <ScrollView>
 
-    <StackLayout
-        Padding="20"
-        HorizontalOptions="Center"
-        Spacing="20"
-        VerticalOptions="Center">
+        <StackLayout
+            Padding="20"
+            HorizontalOptions="Center"
+            Spacing="20"
+            VerticalOptions="Center">
 
-        <Border
-            Background="#fff"
-            HeightRequest="500"
-            Stroke="Black"
-            StrokeThickness="3"
-            WidthRequest="700">
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="10,10,10,10" />
-            </Border.StrokeShape>
-            <VerticalStackLayout BackgroundColor="#fff7e5">
+            <Border
+                Background="#fff"
+                HeightRequest="500"
+                Stroke="Black"
+                StrokeThickness="3"
+                WidthRequest="700">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10,10,10,10" />
+                </Border.StrokeShape>
+                <VerticalStackLayout BackgroundColor="#fff7e5">
 
-                <Image
-                    Margin="0,20,0,0"
-                    Background="Transparent"
-                    HeightRequest="70"
-                    Source="user.png"
-                    WidthRequest="70" />
-                <Label
-                    FontSize="30"
-                    HorizontalOptions="Center"
-                    Text="LOGIN"
-                    TextColor="#361f00" />
+                    <Image
+                        Margin="0,20,0,0"
+                        Background="Transparent"
+                        HeightRequest="70"
+                        Source="user.png"
+                        WidthRequest="70" />
+                    <Label
+                        FontSize="30"
+                        HorizontalOptions="Center"
+                        Text="LOGIN"
+                        TextColor="#361f00" />
 
-                <Label
-                    Margin="85,0,0,10"
-                    FontSize="16"
-                    Text="Email"
-                    TextColor="Black" />
+                    <Label
+                        Margin="85,0,0,10"
+                        FontSize="16"
+                        Text="Email"
+                        TextColor="Black" />
 
-                <Entry
-                    x:Name="entryEmail"
-                    BackgroundColor="#320000"
-                    FontSize="14"
-                    Text="{Binding Email}"
-                    WidthRequest="530" />
+                    <Entry
+                        x:Name="entryEmail"
+                        BackgroundColor="#320000"
+                        FontSize="14"
+                        Text="{Binding Email}"
+                        WidthRequest="530" />
 
-                <Label
-                    Margin="85,30,0,10"
-                    FontSize="16"
-                    Text="Contraseña"
-                    TextColor="Black" />
-                <Entry
-                    x:Name="entryPassword"
-                    BackgroundColor="#320000"
-                    FontSize="14"
-                    IsPassword="True"
-                    Text="{Binding Contrasena}"
-                    WidthRequest="530" />
+                    <Label
+                        Margin="85,30,0,10"
+                        FontSize="16"
+                        Text="Contraseña"
+                        TextColor="Black" />
+                    <Entry
+                        x:Name="entryPassword"
+                        BackgroundColor="#320000"
+                        FontSize="14"
+                        IsPassword="True"
+                        Text="{Binding Contrasena}"
+                        WidthRequest="530" />
 
-                <Button
-                    Margin="0,20,0,0"
-                    BackgroundColor="#eee6ab"
-                    BorderColor="#320000"
-                    BorderWidth="2"
-                    Command="{Binding validarInicioCommand}"
-                    FontSize="14"
-                    Text="LOGIN"
-                    TextColor="Black"
-                    WidthRequest="330" />
-            </VerticalStackLayout>
+                    <Button
+                        Margin="0,20,0,0"
+                        BackgroundColor="#eee6ab"
+                        BorderColor="#320000"
+                        BorderWidth="2"
+                        Command="{Binding validarInicioCommand}"
+                        FontSize="14"
+                        Text="LOGIN"
+                        TextColor="Black"
+                        WidthRequest="330" />
+                </VerticalStackLayout>
 
-            <Border.Shadow>
-                <Shadow
-                    Brush="Black"
-                    Opacity="1.2"
-                    Radius="5"
-                    Offset="0,10" />
-            </Border.Shadow>
-        </Border>
-    </StackLayout>
+                <Border.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity="1.2"
+                        Radius="5"
+                        Offset="0,10" />
+                </Border.Shadow>
+            </Border>
+        </StackLayout>
+
+    </ScrollView>
 </ContentPage>

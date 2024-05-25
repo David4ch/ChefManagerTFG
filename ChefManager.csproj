@@ -89,18 +89,6 @@
 	  <MauiXaml Update="PopUps\VerNomina.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Templates\TemplateEmpleados.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Templates\TemplateNotas.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Templates\TemplateProductos.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Templates\TemplateProveedores.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Templates\TemplateRestaurantes.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -16,6 +16,8 @@
             Routing.RegisterRoute(nameof(Vistas.Proveedores), typeof(Vistas.Proveedores));
             Routing.RegisterRoute(nameof(Vistas.Inventario), typeof(Vistas.Inventario));
             Routing.RegisterRoute(nameof(Vistas.Empleados), typeof(Vistas.Empleados));
+            Routing.RegisterRoute(nameof(Vistas.Calendario), typeof(Vistas.Calendario));
+            Routing.RegisterRoute(nameof(Vistas.Caja), typeof(Vistas.Caja));
         }
     }
 }

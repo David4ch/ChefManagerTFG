@@ -5,37 +5,108 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:cal="clr-namespace:Plugin.Maui.Calendar.Controls;assembly=Plugin.Maui.Calendar"
     xmlns:mo="clr-namespace:ChefManager.Modelo"
-    BackgroundColor="{StaticResource darkBrown2}">
+    BackgroundColor="{StaticResource strongBrown}">
     <ScrollView Orientation="Both">
         <StackLayout>
+            <HorizontalStackLayout Margin="50,20" Spacing="10">
+                <ImageButton
+                    Padding="3"
+                    BackgroundColor="LightBlue"
+                    Clicked="Volver"
+                    CornerRadius="10"
+                    HorizontalOptions="Start"
+                    Source="volver.png"
+                    WidthRequest="40" />
+                <Label
+                    FontFamily="Balance"
+                    FontSize="25"
+                    Text="Volver"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </HorizontalStackLayout>
             <Label
-                Margin="30,30,0,0"
+                Margin="50,30,0,30"
                 FontFamily="Balance"
                 FontSize="70"
                 Text="CALENDARIO" />
 
+
             <cal:Calendar
-                EventIndicatorSelectedTextColor="AliceBlue"
+                Padding="10"
+                BackgroundColor="{StaticResource lightBrown2}"
+                Culture="{Binding Culture}"
+                DayViewFontSize="17"
+                DaysTitleColor="Beige"
+                DaysTitleHeight="45"
+                EventIndicatorColor="{StaticResource lightBrown1}"
                 Events="{Binding Events}"
                 EventsScrollViewVisible="True"
-                FooterArrowVisible="False"
+                MonthLabelColor="{StaticResource Black}"
+                OtherMonthDayColor="DimGrey"
                 SelectedDayBackgroundColor="{StaticResource lightBrown1}"
-                VerticalOptions="Center">
+                ShowYearPicker="False"
+                TodayFillColor="Wheat"
+                TodayOutlineColor="{StaticResource lightBrown1}"
+                VerticalOptions="Center"
+                WidthRequest="700">
+                <cal:Calendar.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity="0.8"
+                        Radius="15"
+                        Offset="5,5" />
+                </cal:Calendar.Shadow>
 
                 <cal:Calendar.EventTemplate>
-                    <DataTemplate x:DataType="mo:Dinero">
-                        <VerticalStackLayout>
+                    <DataTemplate x:DataType="mo:Proveedor">
+                        <VerticalStackLayout Margin="30,0,0,0">
                             <Label
                                 FontAttributes="Bold"
                                 FontSize="25"
-                                Text="{Binding Turno}" />
-                            <Label Text="{Binding Cantidad}" />
-                            <Button Clicked="Button_Clicked" Text="+" />
+                                Text="{Binding NombreEmpresa}" />
+                            <Grid
+                                Margin="0,5,0,15"
+                                ColumnDefinitions="*,*,*"
+                                RowDefinitions="*,*"
+                                RowSpacing="10">
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Text="{Binding TipoProducto}" />
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    Text="{Binding Descripción}" />
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Text="{Binding Precio, StringFormat='{0} €'}" />
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Text="{Binding Contacto}" />
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="2"
+                                    Text="{Binding Periocidad}" />
+                            </Grid>
+
+
+
+                            <Line
+                                Stroke="Black"
+                                StrokeThickness="2"
+                                X1="0"
+                                X2="600"
+                                Y1="0"
+                                Y2="0" />
+
                         </VerticalStackLayout>
                     </DataTemplate>
                 </cal:Calendar.EventTemplate>
 
             </cal:Calendar>
+
         </StackLayout>
 
     </ScrollView>
