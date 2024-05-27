@@ -1,168 +1,141 @@
-using System.Collections.ObjectModel;
+
+using ChefManager.Modelo;
+using System.Globalization;
 
 namespace ChefManager.Vistas
 {
     public partial class Caja : ContentPage
     {
-        public DateTime dia { get; }
-        public ObservableCollection<int> lista2 = new ObservableCollection<int>();
-       
+        FirebaseConnection connection;
+        List<Dinero> ListaDineroAux;
+        public CultureInfo Culture { get; set; }
         public Caja()
         {
             InitializeComponent();
-            
-            dia = DateTime.Now;
-            mes.Text = dia.ToString("MMMM");
-            string numDias = dia.ToString("MM");
-            int numDias2 = ObtenerDiasEnMes(int.Parse(numDias));
-            for (int i = 1; i <= numDias2; i++)
+            Culture = new CultureInfo("es-ES");
+            BindingContext = this;
+            connection = new FirebaseConnection();
+
+            ListaDineroAux = connection.obtenerInfo<Dinero>("DineroDatabase").Where(u => u.Restaurante_Id.Equals(VistaPrinc._restauranteId)).ToList();
+
+            ActualizarLista();
+
+        }
+
+        private void ActualizarLista()
+        {
+            ListaDineroAux = connection.obtenerInfo<Dinero>("DineroDatabase").Where(u => u.Restaurante_Id.Equals(VistaPrinc._restauranteId)).ToList();
+
+            if (ListaDineroAux.Count != 0)
             {
-                lista2.Add(i);
+                nohay.IsVisible = false;
+                listaDinero.IsVisible = true;
+                stackOjo.IsVisible = true;
+                listaDinero.ItemsSource = ListaDineroAux;
             }
-            
-            lista.ItemsSource = lista2;
-
-        }
-        public int ObtenerDiasEnMes(int numeroMes)
-        {
-            return DateTime.DaysInMonth(DateTime.Now.Year, numeroMes);
         }
 
-        private async void numeroClick(object sender, EventArgs e)
+        private void VerInforme(object sender, EventArgs e)
         {
-           
-            
-            if (sender is StackLayout stackLayout)
+
+        }
+
+        private async void Agregar_Registro(object sender, EventArgs e)
+        {
+            if (entryCantidad.Text.Length != 0 && picker1.SelectedIndex != -1)
             {
-                if (stackLayout.Children.OfType<Border>().FirstOrDefault() != null)
+                if (decimal.TryParse(entryCantidad.Text, out decimal numero))
                 {
-                    stackLayout.Children.OfType<Border>().FirstOrDefault().BackgroundColor = Colors.Orange;
-                    System.Diagnostics.Debug.WriteLine("bien");
+                    Dinero dinero = new()
+                    {
+                        Id = Guid.NewGuid().ToString(),
+                        Restaurante_Id = VistaPrinc._restauranteId,
+                        Turno = picker1.SelectedItem.ToString(),
+                        Cantidad = numero,
+                        Fecha = datepicker1.Date
+                    };
+
+                    await connection.client.SetAsync("DineroDatabase/" + dinero.Id, dinero);
+
+                    ActualizarLista();
+                    entryCantidad.Text = "";
+                    picker1.SelectedIndex = -1;
+                    datepicker1.Date = DateTime.Now;
+
+                    await AppShell.Current.DisplayAlert("¡!", "Registro Añadido Correctamente", "Ok");
+
                 }
-            }
+                else
+                {
+                    await AppShell.Current.DisplayAlert("¡!", "La cantidad tiene que ser un numero o un decimal", "Ok");
+                }
 
-        }
-        private void pick(object sender, EventArgs e)
-        {
-            Picker picker = (Picker)sender;
-            string seleccionado = picker.SelectedItem as string;
-            ObservableCollection<int> listaAux = new ObservableCollection<int>();
-            int numDias=0;
-            switch (seleccionado)
+            }
+            else
             {
-                case "Enero":
-                    numDias = ObtenerDiasEnMes(1);
-                    for (int i = 1; i <= numDias; i++)
-                    {
-                        listaAux.Add(i);
-                    }
-                    mes.Text = "Enero";
-                    lista.ItemsSource = listaAux;
-                    break;
-                case "Febrero":
-                    numDias = ObtenerDiasEnMes(2);
-                    for (int i = 1; i <= numDias; i++)
-                    {
-                        listaAux.Add(i);
-                    }
-                    mes.Text = "Febrero";
-                    lista.ItemsSource = listaAux;
-                    break;
-                case "Marzo":
-                    numDias = ObtenerDiasEnMes(3);
-                    for (int i = 1; i <= numDias; i++)
-                    {
-                        listaAux.Add(i);
-                    }
-                    mes.Text = "Marzo";
-                    lista.ItemsSource = listaAux;
-                    break;
-                case "Abril":
-                    numDias = ObtenerDiasEnMes(4);
-                    for (int i = 1; i <= numDias; i++)
-                    {
-                        listaAux.Add(i);
-                    }
-                    mes.Text = "Abril";
-                    lista.ItemsSource = listaAux;
-                    break;
-                case "Mayo":
-                    numDias = ObtenerDiasEnMes(5);
-                    for (int i = 1; i <= numDias; i++)
-                    {
-                        listaAux.Add(i);
-                    }
-                    mes.Text = "Mayo";
-                    lista.ItemsSource = listaAux;
-                    break;
-                case "Junio":
-                    numDias = ObtenerDiasEnMes(6);
-                    for (int i = 1; i <= numDias; i++)
-                    {
-                        listaAux.Add(i);
-                    }
-                    mes.Text = "Junio";
-                    lista.ItemsSource = listaAux;
-                    break;
-                case "Julio":
-                    numDias = ObtenerDiasEnMes(7);
-                    for (int i = 1; i <= numDias; i++)
-                    {
-                        listaAux.Add(i);
-                    }
-                    mes.Text = "Julio";
-                    lista.ItemsSource = listaAux;
-                    break;
-                case "Agosto":
-                    numDias = ObtenerDiasEnMes(8);
-                    for (int i = 1; i <= numDias; i++)
-                    {
-                        listaAux.Add(i);
-                    }
-                    mes.Text = "Agosto";
-                    lista.ItemsSource = listaAux;
-                    break;
-                case "Septiembre":
-                    numDias = ObtenerDiasEnMes(9);
-                    for (int i = 1; i <= numDias; i++)
-                    {
-                        listaAux.Add(i);
-                    }
-                    mes.Text = "Septiembre";
-                    lista.ItemsSource = listaAux;
-                    break;
-                case "Octubre":
-                    numDias = ObtenerDiasEnMes(10);
-                    for (int i = 1; i <= numDias; i++)
-                    {
-                        listaAux.Add(i);
-                    }
-                    mes.Text = "Octubre";
-                    lista.ItemsSource = listaAux;
-                    break;
-                case "Noviembre":
-                    numDias = ObtenerDiasEnMes(11);
-                    for (int i = 1; i <= numDias; i++)
-                    {
-                        listaAux.Add(i);
-                    }
-                    mes.Text = "Noviembre";
-                    lista.ItemsSource = listaAux;
-                    break;
-                case "Diciembre":
-                    numDias = ObtenerDiasEnMes(12);
-                    for (int i = 1; i <= numDias; i++)
-                    {
-                        listaAux.Add(i);
-                    }
-                    mes.Text = "Diciembre";
-                    lista.ItemsSource = listaAux;
-                    break;
-                default:
-                    
-                    break;
+                await AppShell.Current.DisplayAlert("¡!", "Los campos no pueden estar vacíos", "Ok");
+            }
+
+        }
+
+        private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            double valor = e.NewValue;
+            precio.Text = "0€ - " + (int)valor + "€";
+        }
+
+        private void Slider_DragCompleted(object sender, EventArgs e)
+        {
+            if (checkbox.IsChecked)
+            {
+                listaDinero.ItemsSource = ListaDineroAux.Where(u => u.Fecha == datepicker2.Date && u.Cantidad >= (int)slider.Value && u.Turno.Equals(picker2.SelectedItem.ToString()));
+
+            }
+            else
+            {
+                listaDinero.ItemsSource = ListaDineroAux.Where(u => u.Cantidad >= (int)slider.Value);
+            }
+
+        }
+
+        private void Dia_Seleccionado(object sender, DateChangedEventArgs e)
+        {
+            if (checkbox.IsChecked)
+            {
+                listaDinero.ItemsSource = ListaDineroAux.Where(u => u.Fecha == datepicker2.Date && u.Cantidad >= (int)slider.Value && u.Turno.Equals(picker2.SelectedItem.ToString()));
+
+            }
+            else
+            {
+                listaDinero.ItemsSource = ListaDineroAux.Where(u => u.Fecha == datepicker2.Date);
+            }
+
+        }
+
+        private void Turno_Seleccionado(object sender, EventArgs e)
+        {
+            if (checkbox.IsChecked)
+            {
+                listaDinero.ItemsSource = ListaDineroAux.Where(u => u.Fecha == datepicker2.Date && u.Cantidad >= (int)slider.Value && u.Turno.Equals(picker2.SelectedItem.ToString()));
+
+            }
+            else
+            {
+                listaDinero.ItemsSource = ListaDineroAux.Where(u => u.Turno.Equals(picker2.SelectedItem.ToString()));
             }
         }
+
+        private void EntryCantidad_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            lbldinero.Text = entryCantidad.Text + "€";
+        }
+
+        private async void Volver(object sender, EventArgs e)
+        {
+            await AppShell.Current.GoToAsync(nameof(VistaPrinc));
+        }
+
+        
     }
 
-    }
+}

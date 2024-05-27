@@ -9,7 +9,7 @@
     <ContentPage.BindingContext>
         <vm:ValidadorInicio />
     </ContentPage.BindingContext>
-    <ScrollView>
+    <FlexLayout AlignContent="Center" JustifyContent="Center">
 
         <StackLayout
             Padding="20"
@@ -88,5 +88,5 @@
             </Border>
         </StackLayout>
 
-    </ScrollView>
+    </FlexLayout>
 </ContentPage>

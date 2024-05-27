@@ -41,7 +41,7 @@
                 EventIndicatorColor="{StaticResource lightBrown1}"
                 Events="{Binding Events}"
                 EventsScrollViewVisible="True"
-                MonthLabelColor="{StaticResource Black}"
+                MonthLabelColor="Pink"
                 OtherMonthDayColor="DimGrey"
                 SelectedDayBackgroundColor="{StaticResource lightBrown1}"
                 ShowYearPicker="False"
@@ -59,36 +59,64 @@
 
                 <cal:Calendar.EventTemplate>
                     <DataTemplate x:DataType="mo:Proveedor">
-                        <VerticalStackLayout Margin="30,0,0,0">
+                        <VerticalStackLayout Margin="30,10,0,10" HorizontalOptions="Start">
                             <Label
                                 FontAttributes="Bold"
+                                FontFamily="Balance"
                                 FontSize="25"
                                 Text="{Binding NombreEmpresa}" />
                             <Grid
-                                Margin="0,5,0,15"
-                                ColumnDefinitions="*,*,*"
-                                RowDefinitions="*,*"
-                                RowSpacing="10">
+                                Margin="0,10,0,15"
+                                Padding="10"
+                                BackgroundColor="{StaticResource lightBrown1}"
+                                HorizontalOptions="Start"
+                                RowSpacing="20"
+                                WidthRequest="550">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="230" />
+                                    <ColumnDefinition Width="160" />
+                                    <ColumnDefinition Width="90" />
+                                </Grid.ColumnDefinitions>
                                 <Label
                                     Grid.Row="0"
                                     Grid.Column="0"
-                                    Text="{Binding TipoProducto}" />
+                                    FontFamily="Arial"
+                                    FontSize="15"
+                                    Text="{Binding TipoProducto, StringFormat='Tipo: {0}'}"
+                                    TextColor="Black" />
                                 <Label
                                     Grid.Row="1"
                                     Grid.Column="0"
-                                    Text="{Binding Descripción}" />
+                                    FontFamily="Arial"
+                                    FontSize="15"
+                                    Text="{Binding Descripción, StringFormat='Descripción: {0}'}"
+                                    TextColor="Black" />
                                 <Label
                                     Grid.Row="0"
                                     Grid.Column="1"
-                                    Text="{Binding Precio, StringFormat='{0} €'}" />
+                                    FontFamily="Arial"
+                                    FontSize="15"
+                                    Text="{Binding Precio, StringFormat='Precio por encargo: {0} €'}"
+                                    TextColor="Black" />
                                 <Label
                                     Grid.Row="1"
                                     Grid.Column="1"
-                                    Text="{Binding Contacto}" />
+                                    FontFamily="Arial"
+                                    FontSize="15"
+                                    Text="{Binding Contacto, StringFormat='Contacto: {0}'}"
+                                    TextColor="Black" />
                                 <Label
                                     Grid.Row="0"
                                     Grid.Column="2"
-                                    Text="{Binding Periocidad}" />
+                                    FontFamily="Arial"
+                                    FontSize="15"
+                                    Text="{Binding Periocidad, StringFormat='Periocidad: {0}'}"
+                                    TextColor="Black" />
                             </Grid>
 
 

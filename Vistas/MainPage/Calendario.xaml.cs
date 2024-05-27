@@ -8,14 +8,18 @@ namespace ChefManager.Vistas;
 public partial class Calendario : ContentPage
 {
     FirebaseConnection connection;
+    List<Proveedor> ListaProveedoresAux;
+    List<DateTime> ListaDiasMensual;
 
-
+    
     public EventCollection Events { get; set; }
     public CultureInfo Culture { get; set; }
    
 
     public Calendario()
     {
+        ListaDiasMensual = new List<DateTime>();
+        ListaProveedoresAux = new List<Proveedor>();
         Culture = new CultureInfo("es-ES");
         connection = new FirebaseConnection();
         Events = new EventCollection();
@@ -110,12 +114,9 @@ public partial class Calendario : ContentPage
                     break;
                 case "Mensual":
                     DateTime fecha = new DateTime(DateTime.Now.Year, DateTime.Now.Month, int.Parse(partes[1]));
-
-                    Events[fecha] = new List<Proveedor>() { item };
-
+                    Events.Add(fecha, new List<Proveedor>() { item });
+                    BindingContext = this;
                     break;
-
-
 
             }
         }
@@ -137,9 +138,8 @@ public partial class Calendario : ContentPage
         }
 
 
-
-
     }
+
     private void AgregarListaACalendario(List<Proveedor> listaProveedoresSemanal, DayOfWeek dia)
     {
         List<DateTime> listaDiasSemana = Enumerable.Range(1, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month))
@@ -185,6 +185,7 @@ public partial class Calendario : ContentPage
 
         BindingContext = this;
     }
+
 
 
 

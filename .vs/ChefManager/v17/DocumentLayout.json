@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\david\\source\\repos\\ChefManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\vistas\\mainpage\\calendario.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:vistas\\mainpage\\calendario.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\vistas\\mainpage\\caja.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:vistas\\mainpage\\caja.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\vistas\\mainpage\\caja.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|solutionrelative:vistas\\mainpage\\caja.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{38AB4386-E75B-4252-80D2-399FA356854A}|ChefManager.csproj|c:\\users\\david\\source\\repos\\chefmanager\\vistas\\mainpage\\calendario.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -26,28 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Calendario.xaml",
               "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\MainPage\\Calendario.xaml",
               "RelativeDocumentMoniker": "Vistas\\MainPage\\Calendario.xaml",
               "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\MainPage\\Calendario.xaml",
               "RelativeToolTip": "Vistas\\MainPage\\Calendario.xaml",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAQwCkAAAApAAAA",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAAAHsAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-25T10:43:36.255Z",
+              "WhenOpened": "2024-05-27T21:55:38.436Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Calendario.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\MainPage\\Calendario.xaml.cs",
-              "RelativeDocumentMoniker": "Vistas\\MainPage\\Calendario.xaml.cs",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\MainPage\\Calendario.xaml.cs",
-              "RelativeToolTip": "Vistas\\MainPage\\Calendario.xaml.cs",
-              "ViewState": "AQIAAHsAAAAAAAAAAAAYwK0AAAAJAAAA",
+              "Title": "Caja.xaml",
+              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\MainPage\\Caja.xaml",
+              "RelativeDocumentMoniker": "Vistas\\MainPage\\Caja.xaml",
+              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\MainPage\\Caja.xaml",
+              "RelativeToolTip": "Vistas\\MainPage\\Caja.xaml",
+              "ViewState": "AQIAAOUAAAAAAAAAAAAkwOsAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-25T22:49:15.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Caja.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\MainPage\\Caja.xaml.cs",
+              "RelativeDocumentMoniker": "Vistas\\MainPage\\Caja.xaml.cs",
+              "ToolTip": "C:\\Users\\david\\source\\repos\\ChefManager\\Vistas\\MainPage\\Caja.xaml.cs",
+              "RelativeToolTip": "Vistas\\MainPage\\Caja.xaml.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAIAwwCwAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T10:43:35.042Z",
+              "WhenOpened": "2024-05-25T22:49:13.868Z",
               "EditorCaption": ""
             }
           ]

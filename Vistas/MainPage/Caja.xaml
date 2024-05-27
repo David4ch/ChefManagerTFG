@@ -3,78 +3,300 @@
     x:Class="ChefManager.Vistas.Caja"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="Caja">
+    xmlns:cal="clr-namespace:Plugin.Maui.Calendar.Controls;assembly=Plugin.Maui.Calendar"
+    xmlns:mo="clr-namespace:ChefManager.Modelo"
+    BackgroundColor="{StaticResource lightBrown1}">
     <ScrollView>
         <VerticalStackLayout>
-
-            <Label
-                x:Name="mes"
-                FontSize="50"
+            <HorizontalStackLayout Margin="50,20" Spacing="10">
+                <ImageButton
+                    Padding="3"
+                    BackgroundColor="LightBlue"
+                    Clicked="Volver"
+                    CornerRadius="10"
+                    HorizontalOptions="Start"
+                    Source="volver.png"
+                    WidthRequest="40" />
+                <Label
+                    FontFamily="Balance"
+                    FontSize="25"
+                    Text="Volver"
+                    TextColor="Black"
+                    VerticalOptions="Center" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
                 HorizontalOptions="Center"
-                Text="" />
-            <Picker
-                x:Name="picker"
-                Margin="30,10,0,15"
-                HorizontalOptions="Center"
-                SelectedIndexChanged="pick"
-                WidthRequest="530">
-                <Picker.Items>
-                    <x:String>Enero</x:String>
-                    <x:String>Febrero</x:String>
-                    <x:String>Marzo</x:String>
-                    <x:String>Abril</x:String>
-                    <x:String>Mayo</x:String>
-                    <x:String>Junio</x:String>
-                    <x:String>Julio</x:String>
-                    <x:String>Agosto</x:String>
-                    <x:String>Septiembre</x:String>
-                    <x:String>Octubre</x:String>
-                    <x:String>Noviembre</x:String>
-                    <x:String>Diciembre</x:String>
-                </Picker.Items>
-            </Picker>
+                Spacing="50"
+                VerticalOptions="Center">
 
-            <FlexLayout Direction="Column" JustifyContent="SpaceAround">
-                <CollectionView x:Name="lista">
-                    <CollectionView.ItemsLayout>
-                        <GridItemsLayout Orientation="Vertical" Span="7" />
-                    </CollectionView.ItemsLayout>
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid BackgroundColor="Black">
-                                <StackLayout>
-                                    <StackLayout.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="numeroClick" />
-                                    </StackLayout.GestureRecognizers>
+                <VerticalStackLayout BackgroundColor="{StaticResource lightBrown2}" WidthRequest="600">
+
+
+
+                    <cal:Calendar
+                        Margin="0,20"
+                        Padding="10"
+                        Culture="{Binding Culture}"
+                        DaysTitleColor="Beige"
+                        EventIndicatorColor="{StaticResource lightBrown1}"
+                        EventsScrollViewVisible="True"
+                        HeightRequest="340"
+                        MonthLabelColor="Pink"
+                        OtherMonthDayColor="DimGrey"
+                        Scale="0.9"
+                        SelectedDayBackgroundColor="{StaticResource lightBrown1}"
+                        ShowYearPicker="False"
+                        TodayFillColor="Wheat"
+                        TodayOutlineColor="{StaticResource lightBrown1}"
+                        VerticalOptions="Center"
+                        WidthRequest="360" />
+
+                    <Label
+                        Margin="50,0"
+                        FontFamily="OpenSansSemibold"
+                        FontSize="20"
+                        Text="Agregar recuento:" />
+                    <Grid
+                        Margin="50,20"
+                        ColumnDefinitions="*,*"
+                        RowDefinitions="*,*"
+                        RowSpacing="25">
+                        <HorizontalStackLayout
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Spacing="10">
+                            <Label
+                                FontFamily="OpenSansSemibold"
+                                FontSize="17"
+                                Text="Turno: "
+                                VerticalTextAlignment="Center" />
+                            <Picker
+                                x:Name="picker1"
+                                BackgroundColor="{StaticResource strongBrown}"
+                                TextColor="Wheat"
+                                WidthRequest="150">
+                                <Picker.Items>
+
+                                    <x:String>Mañana</x:String>
+                                    <x:String>Tarde</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Spacing="0">
+                            <Label
+                                Margin="17,0"
+                                FontFamily="OpenSansSemibold"
+                                FontSize="17"
+                                Text="Dia: "
+                                VerticalTextAlignment="Center" />
+
+                            <DatePicker
+                                x:Name="datepicker1"
+                                BackgroundColor="{StaticResource strongBrown}"
+                                TextColor="Wheat"
+                                WidthRequest="145" />
+                        </HorizontalStackLayout>
+
+                        <Label
+                            x:Name="lbldinero"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            FontFamily="Balance"
+                            FontSize="30"
+                            HorizontalOptions="Center"
+                            Text="0€" />
+
+                        <HorizontalStackLayout
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Spacing="10">
+                            <Label
+                                FontSize="17"
+                                Text="Cantidad: "
+                                VerticalTextAlignment="Center" />
+                            <Entry
+                                Text=""
+                                x:Name="entryCantidad"
+                                BackgroundColor="{StaticResource strongBrown}"
+                                Keyboard="Numeric"
+                                TextChanged="EntryCantidad_TextChanged"
+                                TextColor="Wheat"
+                                WidthRequest="100" />
+                        </HorizontalStackLayout>
+                    </Grid>
+                    <Button
+                        Margin="0,10,0,20"
+                        BackgroundColor="{StaticResource strongBrown}"
+                        Clicked="Agregar_Registro"
+                        FontFamily="OpenSansSemibold"
+                        Text="Agregar"
+                        TextColor="Wheat"
+                        WidthRequest="200" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout WidthRequest="700">
+                    <Label
+                        FontFamily="Balance"
+                        FontSize="90"
+                        HorizontalTextAlignment="Center"
+                        Text="Caja"
+                        TextColor="{StaticResource strongBrown}" />
+
+                    <HorizontalStackLayout Margin="0,0,25,0" HorizontalOptions="End">
+                        <CheckBox x:Name="checkbox" Color="{StaticResource lightBrown2}" />
+                        <Label
+                            FontAttributes="Bold"
+                            Text="Mezclar filtros"
+                            TextColor="{StaticResource strongBrown}"
+                            VerticalOptions="Center" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout
+                        Margin="0,10"
+                        Padding="15"
+                        BackgroundColor="{StaticResource strongBrown}"
+                        HorizontalOptions="Center"
+                        Spacing="20">
+                        <VerticalStackLayout Margin="20,0">
+                            <Label
+                                x:Name="precio"
+                                HorizontalTextAlignment="Center"
+                                Text="0€ - 1000€"
+                                TextColor="Wheat" />
+                            <Slider
+                                x:Name="slider"
+                                DragCompleted="Slider_DragCompleted"
+                                Maximum="1000"
+                                MaximumTrackColor="{StaticResource lightBrown2}"
+                                Minimum="0"
+                                MinimumTrackColor="Wheat"
+                                ThumbColor="{StaticResource lightBrown1}"
+                                ValueChanged="Slider_ValueChanged"
+                                WidthRequest="150" />
+                        </VerticalStackLayout>
+
+                        <HorizontalStackLayout Spacing="10">
+                            <Label
+                                FontSize="15"
+                                Text="Dia: "
+                                TextColor="Wheat"
+                                VerticalTextAlignment="Center" />
+                            <DatePicker
+                                x:Name="datepicker2"
+                                DateSelected="Dia_Seleccionado"
+                                WidthRequest="150" />
+                        </HorizontalStackLayout>
+
+
+                        <HorizontalStackLayout Margin="0,0,20,0" Spacing="10">
+                            <Label
+                                FontSize="15"
+                                Text="Turno"
+                                TextColor="Wheat"
+                                VerticalTextAlignment="Center" />
+                            <Picker
+                                x:Name="picker2"
+                                SelectedIndexChanged="Turno_Seleccionado"
+                                WidthRequest="150">
+                                <Picker.Items>
+                                    <x:String>Mañana</x:String>
+                                    <x:String>Tarde</x:String>
+                                    <x:String>Ambos</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </HorizontalStackLayout>
+
+                    </HorizontalStackLayout>
+
+                    <Label
+                        x:Name="nohay"
+                        Margin="0,30"
+                        FontFamily="Balance"
+                        FontSize="85"
+                        HorizontalTextAlignment="Center"
+                        Scale="0.9"
+                        Text="No hay ningún registro"
+                        TextColor="{StaticResource strongBrown}" />
+
+                    <CollectionView
+                        x:Name="listaDinero"
+                        HeightRequest="400"
+                        IsVisible="False"
+                        VerticalScrollBarVisibility="Always"
+                        WidthRequest="650">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout ItemSpacing="12" Orientation="Vertical" />
+                        </CollectionView.ItemsLayout>
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="mo:Dinero">
+                                <HorizontalStackLayout
+                                    Padding="25"
+                                    BackgroundColor="SaddleBrown"
+                                    Spacing="15">
                                     <Label
-                                        Margin="0,0,0,5"
+                                        FontFamily="OpenSansSemibold"
                                         FontSize="15"
-                                        HorizontalOptions="Center"
-                                        Text="{Binding .}"
-                                        TextColor="White"
-                                        VerticalOptions="Center" />
-                                    <Border
-                                        Margin="5,0,5,0"
-                                        Background="Aqua"
-                                        HeightRequest="10"
-                                        IsVisible="True" 
-                                        x:Name="borde1"
-                                        >
-                                        
-                                    </Border>
-                                    <Border
-                                        Margin="5,0,5,0"
-                                        HeightRequest="10"
-                                        Background="Blue"
-                                        IsVisible="True">
-                                    </Border>
-                                </StackLayout>
-                            </Grid>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
+                                        Text="{Binding Fecha, StringFormat='Fecha: {0}'}"
+                                        TextColor="Black" />
+                                    <Label
+                                        FontFamily="OpenSansSemibold"
+                                        FontSize="15"
+                                        Text="{Binding Turno, StringFormat='Turno: {0}'}"
+                                        TextColor="Black" />
+                                    <Label
+                                        FontFamily="OpenSansSemibold"
+                                        FontSize="15"
+                                        Text="{Binding Cantidad, StringFormat='Cantidad: {0}€'}"
+                                        TextColor="Black" />
+                                </HorizontalStackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
 
-            </FlexLayout>
+                        <CollectionView.Shadow>
+                            <Shadow
+                                Brush="Black"
+                                Opacity="0.7"
+                                Radius="5"
+                                Offset="2,2" />
+                        </CollectionView.Shadow>
+
+
+                    </CollectionView>
+                    <Line
+                        HorizontalOptions="Center"
+                        Stroke="Black"
+                        StrokeThickness="2"
+                        X1="0"
+                        X2="650"
+                        Y1="0"
+                        Y2="0" />
+                    <HorizontalStackLayout
+                        x:Name="stackOjo"
+                        Margin="0,10,20,0"
+                        Padding="5"
+                        BackgroundColor="SaddleBrown"
+                        HorizontalOptions="End"
+                        IsVisible="False"
+                        Spacing="10">
+                        <ImageButton
+                            x:Name="ojoFoto"
+                            BackgroundColor="Transparent"
+                            Clicked="VerInforme"
+                            Source="ojo.png" />
+                        <Label
+                            x:Name="letrasOjo"
+                            Margin="0,0,10,0"
+                            FontSize="12"
+                            Text="Ver recuento semanal/mensual"
+                            VerticalTextAlignment="Center" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
 
