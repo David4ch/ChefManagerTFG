@@ -24,32 +24,23 @@
                     TextColor="Black"
                     VerticalOptions="Center" />
             </HorizontalStackLayout>
+
             <HorizontalStackLayout
                 HorizontalOptions="Center"
                 Spacing="50"
                 VerticalOptions="Center">
 
-                <VerticalStackLayout BackgroundColor="{StaticResource lightBrown2}" WidthRequest="600">
+                <VerticalStackLayout
+                    Margin="0,90,0,0"
+                    BackgroundColor="{StaticResource lightBrown2}"
+                    HeightRequest="490"
+                    HorizontalOptions="Center"
+                    WidthRequest="550">
 
-
-
-                    <cal:Calendar
+                    <Image
                         Margin="0,20"
-                        Padding="10"
-                        Culture="{Binding Culture}"
-                        DaysTitleColor="Beige"
-                        EventIndicatorColor="{StaticResource lightBrown1}"
-                        EventsScrollViewVisible="True"
-                        HeightRequest="340"
-                        MonthLabelColor="Pink"
-                        OtherMonthDayColor="DimGrey"
-                        Scale="0.9"
-                        SelectedDayBackgroundColor="{StaticResource lightBrown1}"
-                        ShowYearPicker="False"
-                        TodayFillColor="Wheat"
-                        TodayOutlineColor="{StaticResource lightBrown1}"
-                        VerticalOptions="Center"
-                        WidthRequest="360" />
+                        Source="registro.png"
+                        WidthRequest="200" />
 
                     <Label
                         Margin="50,0"
@@ -76,7 +67,6 @@
                                 TextColor="Wheat"
                                 WidthRequest="150">
                                 <Picker.Items>
-
                                     <x:String>Mañana</x:String>
                                     <x:String>Tarde</x:String>
                                 </Picker.Items>
@@ -119,10 +109,10 @@
                                 Text="Cantidad: "
                                 VerticalTextAlignment="Center" />
                             <Entry
-                                Text=""
                                 x:Name="entryCantidad"
                                 BackgroundColor="{StaticResource strongBrown}"
                                 Keyboard="Numeric"
+                                Text=""
                                 TextChanged="EntryCantidad_TextChanged"
                                 TextColor="Wheat"
                                 WidthRequest="100" />
@@ -167,16 +157,30 @@
                                 HorizontalTextAlignment="Center"
                                 Text="0€ - 1000€"
                                 TextColor="Wheat" />
-                            <Slider
-                                x:Name="slider"
-                                DragCompleted="Slider_DragCompleted"
-                                Maximum="1000"
-                                MaximumTrackColor="{StaticResource lightBrown2}"
-                                Minimum="0"
-                                MinimumTrackColor="Wheat"
-                                ThumbColor="{StaticResource lightBrown1}"
-                                ValueChanged="Slider_ValueChanged"
-                                WidthRequest="150" />
+
+                            <HorizontalStackLayout>
+                                <Slider
+                                    x:Name="sliderMin"
+                                    DragCompleted="Slider_DragCompleted"
+                                    Maximum="500"
+                                    MaximumTrackColor="{StaticResource lightBrown2}"
+                                    Minimum="0"
+                                    MinimumTrackColor="Wheat"
+                                    ThumbColor="{StaticResource lightBrown1}"
+                                    ValueChanged="Slider_ValueChanged"
+                                    WidthRequest="80" />
+
+                                <Slider
+                                    x:Name="sliderMax"
+                                    DragCompleted="Slider_DragCompleted"
+                                    Maximum="1000"
+                                    MaximumTrackColor="Wheat"
+                                    Minimum="500"
+                                    MinimumTrackColor="{StaticResource lightBrown2}"
+                                    ThumbColor="{StaticResource lightBrown1}"
+                                    ValueChanged="Slider_ValueChanged2"
+                                    WidthRequest="80" />
+                            </HorizontalStackLayout>
                         </VerticalStackLayout>
 
                         <HorizontalStackLayout Spacing="10">
@@ -222,6 +226,7 @@
                         Text="No hay ningún registro"
                         TextColor="{StaticResource strongBrown}" />
 
+
                     <CollectionView
                         x:Name="listaDinero"
                         HeightRequest="400"
@@ -235,51 +240,82 @@
                         <CollectionView.ItemTemplate>
                             <DataTemplate x:DataType="mo:Dinero">
                                 <HorizontalStackLayout
-                                    Padding="25"
+                                    Padding="15"
                                     BackgroundColor="SaddleBrown"
-                                    Spacing="15">
+                                    Spacing="17">
+                                    <Label
+                                        x:Name="id"
+                                        IsVisible="False"
+                                        Text="{Binding Id}" />
                                     <Label
                                         FontFamily="OpenSansSemibold"
                                         FontSize="15"
                                         Text="{Binding Fecha, StringFormat='Fecha: {0}'}"
-                                        TextColor="Black" />
+                                        TextColor="Black"
+                                        VerticalTextAlignment="Center" />
+                                    <Line
+                                        Stroke="Black"
+                                        StrokeThickness="2"
+                                        VerticalOptions="Center"
+                                        X1="0"
+                                        X2="0"
+                                        Y1="20"
+                                        Y2="0" />
                                     <Label
                                         FontFamily="OpenSansSemibold"
                                         FontSize="15"
                                         Text="{Binding Turno, StringFormat='Turno: {0}'}"
-                                        TextColor="Black" />
+                                        TextColor="Black"
+                                        VerticalTextAlignment="Center" />
+                                    <Line
+                                        Stroke="Black"
+                                        StrokeThickness="2"
+                                        VerticalOptions="Center"
+                                        X1="0"
+                                        X2="0"
+                                        Y1="20"
+                                        Y2="0" />
                                     <Label
                                         FontFamily="OpenSansSemibold"
                                         FontSize="15"
                                         Text="{Binding Cantidad, StringFormat='Cantidad: {0}€'}"
-                                        TextColor="Black" />
+                                        TextColor="Black"
+                                        VerticalTextAlignment="Center" />
+                                    <Line
+                                        Stroke="Black"
+                                        StrokeThickness="2"
+                                        VerticalOptions="Center"
+                                        X1="0"
+                                        X2="0"
+                                        Y1="20"
+                                        Y2="0" />
+                                    <ImageButton
+                                        BackgroundColor="Transparent"
+                                        Clicked="EliminarRegistro"
+                                        HorizontalOptions="End"
+                                        Source="eliminar.png">
+                                        <ImageButton.GestureRecognizers>
+                                            <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+                                        </ImageButton.GestureRecognizers>
+                                    </ImageButton>
+
+                                    <HorizontalStackLayout.Shadow>
+                                        <Shadow
+                                            Brush="Black"
+                                            Opacity="1.7"
+                                            Radius="5"
+                                            Offset="3,3" />
+                                    </HorizontalStackLayout.Shadow>
                                 </HorizontalStackLayout>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
-
-                        <CollectionView.Shadow>
-                            <Shadow
-                                Brush="Black"
-                                Opacity="0.7"
-                                Radius="5"
-                                Offset="2,2" />
-                        </CollectionView.Shadow>
-
-
                     </CollectionView>
-                    <Line
-                        HorizontalOptions="Center"
-                        Stroke="Black"
-                        StrokeThickness="2"
-                        X1="0"
-                        X2="650"
-                        Y1="0"
-                        Y2="0" />
+
                     <HorizontalStackLayout
                         x:Name="stackOjo"
                         Margin="0,10,20,0"
                         Padding="5"
-                        BackgroundColor="SaddleBrown"
+                        BackgroundColor="{StaticResource darkBrown}"
                         HorizontalOptions="End"
                         IsVisible="False"
                         Spacing="10">

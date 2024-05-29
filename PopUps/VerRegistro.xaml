@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup
+    x:Class="ChefManager.PopUps.VerRegistro"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    CanBeDismissedByTappingOutsideOfPopup="False"
+    Color="Wheat">
+    <VerticalStackLayout HeightRequest="500" WidthRequest="600">
+        <StackLayout
+            BackgroundColor="{StaticResource darkBlue}"
+            HeightRequest="100"
+            Orientation="Horizontal"
+            Spacing="20">
+            <Image
+                Margin="10,0"
+                HeightRequest="60"
+                HorizontalOptions="Start"
+                Source="dinero2.png"
+                VerticalOptions="Center" />
+            <Label
+                FontFamily="Balance"
+                FontSize="40"
+                HorizontalOptions="Center"
+                Text="Recuento semanal/mensual"
+                VerticalOptions="Center" />
+        </StackLayout>
+
+        <HorizontalStackLayout Margin="65,15,0,5" Spacing="120">
+            <Label
+                FontAttributes="Bold"
+                Text="Fecha Inicio"
+                TextColor="{StaticResource darkBlue}" />
+            <Label
+                FontAttributes="Bold"
+                Text="Fecha Fin"
+                TextColor="{StaticResource darkBlue}" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+            <DatePicker
+                x:Name="datepickerInicio"
+                BackgroundColor="{StaticResource darkBlue}"
+                TextColor="Wheat"
+                WidthRequest="180" />
+            <DatePicker
+                x:Name="datepickerFin"
+                BackgroundColor="{StaticResource darkBlue}"
+                TextColor="Wheat"
+                WidthRequest="180" />
+            <Button
+                BackgroundColor="{StaticResource darkBlue}"
+                Clicked="Button_Clicked"
+                Text="Ver"
+                TextColor="Wheat"
+                WidthRequest="90" />
+        </HorizontalStackLayout>
+
+        <VerticalStackLayout>
+
+            <HorizontalStackLayout Margin="30,30,0,15" Spacing="10">
+                <Label
+                    FontAttributes="Bold"
+                    Text="Turno de mañana: "
+                    TextColor="{StaticResource darkBlue}" />
+                <Label
+                    x:Name="label1"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Text=""
+                    TextColor="{StaticResource darkBlue}" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Margin="30,15" Spacing="10">
+                <Label
+                    FontAttributes="Bold"
+                    Text="Turno de tarde: "
+                    TextColor="{StaticResource darkBlue}" />
+                <Label
+                    x:Name="label2"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Text=""
+                    TextColor="{StaticResource darkBlue}" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Margin="30,15" Spacing="10">
+                <Label
+                    FontAttributes="Bold"
+                    Text="Total: "
+                    TextColor="{StaticResource darkBlue}" />
+                <Label
+                    x:Name="labelTotal"
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    Text=""
+                    TextColor="{StaticResource darkBlue}" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+
+        <Button
+            Margin="0,0,70,0"
+            BackgroundColor="{StaticResource darkBlue}"
+            Clicked="Button_Clicked2"
+            HorizontalOptions="End"
+            Text="Volver"
+            TextColor="Wheat"
+            WidthRequest="100" />
+
+
+    </VerticalStackLayout>
+</toolkit:Popup>

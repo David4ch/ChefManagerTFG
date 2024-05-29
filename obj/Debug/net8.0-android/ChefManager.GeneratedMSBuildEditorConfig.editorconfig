@@ -52,6 +52,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.PopUps.VerNomi
 build_metadata.AdditionalFiles.TargetPath = PopUps\VerNomina.xaml
 build_metadata.AdditionalFiles.RelativePath = PopUps\VerNomina.xaml
 
+[C:/Users/david/source/repos/ChefManager/PopUps/VerRegistro.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.PopUps.VerRegistro.xaml
+build_metadata.AdditionalFiles.TargetPath = PopUps\VerRegistro.xaml
+build_metadata.AdditionalFiles.RelativePath = PopUps\VerRegistro.xaml
+
 [C:/Users/david/source/repos/ChefManager/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.Resources.Styles.Colors.xaml

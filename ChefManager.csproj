@@ -89,6 +89,9 @@
 	  <MauiXaml Update="PopUps\VerNomina.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="PopUps\VerRegistro.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Templates\TemplateRestaurantes.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

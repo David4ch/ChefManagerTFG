@@ -1,18 +1,22 @@
 
 using ChefManager.Modelo;
+using ChefManager.PopUps;
+using CommunityToolkit.Maui.Views;
 using System.Globalization;
 
 namespace ChefManager.Vistas
 {
     public partial class Caja : ContentPage
     {
+   
         FirebaseConnection connection;
         List<Dinero> ListaDineroAux;
-        public CultureInfo Culture { get; set; }
+
         public Caja()
         {
             InitializeComponent();
-            Culture = new CultureInfo("es-ES");
+            
+            CultureInfo.CurrentCulture = new CultureInfo("es-ES");
             BindingContext = this;
             connection = new FirebaseConnection();
 
@@ -37,7 +41,8 @@ namespace ChefManager.Vistas
 
         private void VerInforme(object sender, EventArgs e)
         {
-
+            var popup = new VerRegistro();
+            this.ShowPopup(popup);
         }
 
         private async void Agregar_Registro(object sender, EventArgs e)
@@ -77,23 +82,32 @@ namespace ChefManager.Vistas
             }
 
         }
-
+        
         private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
         {
+       
             double valor = e.NewValue;
-            precio.Text = "0€ - " + (int)valor + "€";
+            precio.Text = (int)valor + "€ - " + sliderMax.Value + "€";
         }
+        private void Slider_ValueChanged2(object sender, ValueChangedEventArgs e)
+        {
+
+            double valor = e.NewValue;
+            precio.Text = sliderMin.Value + "€ - " + (int)valor + "€";
+        }
+
 
         private void Slider_DragCompleted(object sender, EventArgs e)
         {
+
             if (checkbox.IsChecked)
             {
-                listaDinero.ItemsSource = ListaDineroAux.Where(u => u.Fecha == datepicker2.Date && u.Cantidad >= (int)slider.Value && u.Turno.Equals(picker2.SelectedItem.ToString()));
+                listaDinero.ItemsSource = ListaDineroAux.Where(u => u.Fecha == datepicker2.Date && u.Cantidad <= (int)sliderMax.Value && u.Cantidad >= (int)sliderMin.Value && u.Turno.Equals(picker2.SelectedItem.ToString()));
 
             }
             else
             {
-                listaDinero.ItemsSource = ListaDineroAux.Where(u => u.Cantidad >= (int)slider.Value);
+                listaDinero.ItemsSource = ListaDineroAux.Where(u => u.Cantidad <= (int)sliderMax.Value && u.Cantidad >= (int)sliderMin.Value);
             }
 
         }
@@ -102,7 +116,7 @@ namespace ChefManager.Vistas
         {
             if (checkbox.IsChecked)
             {
-                listaDinero.ItemsSource = ListaDineroAux.Where(u => u.Fecha == datepicker2.Date && u.Cantidad >= (int)slider.Value && u.Turno.Equals(picker2.SelectedItem.ToString()));
+                listaDinero.ItemsSource = ListaDineroAux.Where(u => u.Fecha == datepicker2.Date && u.Cantidad <= (int)sliderMax.Value && u.Cantidad <= (int)sliderMax.Value && u.Turno.Equals(picker2.SelectedItem.ToString()));
 
             }
             else
@@ -116,7 +130,7 @@ namespace ChefManager.Vistas
         {
             if (checkbox.IsChecked)
             {
-                listaDinero.ItemsSource = ListaDineroAux.Where(u => u.Fecha == datepicker2.Date && u.Cantidad >= (int)slider.Value && u.Turno.Equals(picker2.SelectedItem.ToString()));
+                listaDinero.ItemsSource = ListaDineroAux.Where(u => u.Fecha == datepicker2.Date && u.Cantidad <= (int)sliderMax.Value && u.Cantidad <= (int)sliderMax.Value && u.Turno.Equals(picker2.SelectedItem.ToString()));
 
             }
             else
@@ -135,7 +149,35 @@ namespace ChefManager.Vistas
             await AppShell.Current.GoToAsync(nameof(VistaPrinc));
         }
 
-        
+        private void EliminarRegistro(object sender, EventArgs e)
+        {
+            var button = (ImageButton)sender;
+            var dinero = (Dinero)button.Parent.BindingContext;
+
+            try
+            {
+                var SetData = connection.client.Delete("DineroDatabase/" + dinero.Id);
+                AppShell.Current.DisplayAlert("¡!", "Dinero Eliminado correctamente", "Ok");
+                ActualizarLista();
+            }
+            catch (Exception)
+            {
+                System.Diagnostics.Debug.WriteLine("Error al eliminar");
+            }
+        }
+
+
+        private void OnPointerEntered(object sender, PointerEventArgs e)
+        {
+            ImageButton button = (ImageButton)sender;
+            button.BackgroundColor = Colors.Red;
+        }
+
+        private void OnPointerExited(object sender, PointerEventArgs e)
+        {
+            ImageButton button = (ImageButton)sender;
+            button.BackgroundColor = Colors.Transparent;
+        }
     }
 
 }
