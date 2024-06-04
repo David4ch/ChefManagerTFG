@@ -1,5 +1,4 @@
 using ChefManager.Modelo;
-using ChefManager.Templates;
 using CommunityToolkit.Maui.Views;
 using Firebase.Auth.Providers;
 using Firebase.Auth;

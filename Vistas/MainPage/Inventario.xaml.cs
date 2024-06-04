@@ -26,13 +26,11 @@ public partial class Inventario : ContentPage
 
         MainThread.BeginInvokeOnMainThread(new Action(async () => await ObtenerToken()));
 
-        ListaAuxProductos = connection.obtenerInfo<Producto>("ProductoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
+        //ListaAuxProductos = connection.obtenerInfo<Producto>("ProductoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
+        ListaAuxProductos = connection.obtenerInfo<Producto>("ProductoDatabase").Where(u => u.Restaurante_Id == "28193324-b08d-4c44-a07a-226a21788eae").ToList();
 
-
-        if (ListaAuxProductos.Count != 0)
-        {
-            ActualizarLista();
-        }
+        ActualizarLista();
+        
     }
 
     private async Task ObtenerToken()
@@ -56,10 +54,15 @@ public partial class Inventario : ContentPage
 
     private void ActualizarLista()
     {
-        ListaAuxProductos = connection.obtenerInfo<Producto>("ProductoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
+        //ListaAuxProductos = connection.obtenerInfo<Producto>("ProductoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
+        ListaAuxProductos = connection.obtenerInfo<Producto>("ProductoDatabase").Where(u => u.Restaurante_Id == "28193324-b08d-4c44-a07a-226a21788eae").ToList();
 
+        if (ListaAuxProductos.Count != 0) { 
+            listaProductos.ItemsSource = ListaAuxProductos;
+        }
+       
 
-        listaProductos.ItemsSource = ListaAuxProductos;
+        
     }
 
     private async void SubirFoto(object sender, EventArgs e)
@@ -190,6 +193,13 @@ public partial class Inventario : ContentPage
                 borde1.WidthRequest = 1200;
                 buscador.WidthRequest = 500;
 
+                entryNombre.Text = "";
+                entryCantidad.Text = "";
+                entryImagen.Text = "";
+                entryPrecio.Text = "";
+                imagen.Source = "";
+                pickerProveedor.SelectedIndex = -1;
+
                 ActualizarLista();
             }
 
@@ -207,7 +217,7 @@ public partial class Inventario : ContentPage
             {
                 if (_urlDescarga.Length == 0)
                 {
-                    _urlDescarga = "https://firebasestorage.googleapis.com/v0/b/chefmg-664a2.appspot.com/o/Imagenes%2Fproducto.png?alt=media&token=c661172d-e919-49ff-a084-5934f4d14e02";
+                    _urlDescarga = "https://firebasestorage.googleapis.com/v0/b/chefmg-664a2.appspot.com/o/Imagenes%2Fproducto.png?alt=media&token=f2c72a51-fb6e-4ea8-b906-0e659599053d";
                 }
 
                 correcto = true;
@@ -245,12 +255,32 @@ public partial class Inventario : ContentPage
         entryNombre.Text = producto.Nombre;
         entryPrecio.Text = producto.Precio.ToString();
         pickerProveedor.SelectedItem = producto.Proveedor;
-        entryImagen.Text = producto.Imagen;
+        entryImagen.Text = Path.GetFileName(new Uri(producto.Imagen).LocalPath);
+        _urlDescarga = producto.Imagen;
         imagen.Source = producto.Imagen;
         entryCantidad.Text = producto.Cantidad.ToString();
         botonEliminar.IsVisible = true;
-       
-        
+
+        listaAuxProveedores = connection.obtenerInfo<Proveedor>("ProveedorDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
+
+        if (listaAuxProveedores.Count != 0)
+        {
+            foreach (var item in listaAuxProveedores)
+            {
+                opciones.Add(item.NombreEmpresa);
+            }
+
+            opciones.Add("Otro");
+            pickerProveedor.ItemsSource = opciones;
+            pickerProveedor.SelectedItem = producto.Proveedor;
+        }
+        else
+        {
+            opciones.Add("Otro");
+            pickerProveedor.ItemsSource = opciones;
+        }
+
+
     }
     
     public async void VerProducto(object sender, EventArgs e)

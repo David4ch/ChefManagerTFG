@@ -19,7 +19,6 @@
           "Microsoft.Maui.Controls.Compatibility": "8.0.40",
           "Newtonsoft.Json": "13.0.3",
           "Plugin.Maui.Calendar": "1.1.7",
-          "Xam.Plugin.Media": "6.0.2",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.31"
         },
         "runtime": {
@@ -1447,14 +1446,6 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
         }
-      },
-      "Xam.Plugin.Media/6.0.2": {
-        "runtime": {
-          "lib/net6.0-windows10.0.19041/Plugin.Media.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
       }
     }
   },
@@ -2448,13 +2439,6 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
-    },
-    "Xam.Plugin.Media/6.0.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-QLl5CXxSDF92+E154djfDKOoPSjvGkQSxYmLY0Fitnb6P4B103JQDU7lZlH0ez67GtzZDa8kWvS0Go0Yv1w9og==",
-      "path": "xam.plugin.media/6.0.2",
-      "hashPath": "xam.plugin.media.6.0.2.nupkg.sha512"
     }
   }
 }

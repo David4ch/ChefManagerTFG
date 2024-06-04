@@ -29,13 +29,21 @@
                         TextColor="White"
                         VerticalOptions="Center" />
                 </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        Margin="70,0,0,0"
+                        FontFamily="Balance"
+                        FontSize="90"
+                        HorizontalTextAlignment="Start"
+                        Text="Inventario" />
+                    <Image
+                        Margin="450,0,0,20"
+                        HorizontalOptions="Center"
+                        Scale="1.4"
+                        Source="pilacajas.png"
+                        WidthRequest="80" />
+                </HorizontalStackLayout>
 
-                <Label
-                    Margin="70,20,0,20"
-                    FontFamily="Balance"
-                    FontSize="90"
-                    HorizontalTextAlignment="Start"
-                    Text="Inventario" />
 
                 <Border
                     x:Name="borde1"
@@ -49,7 +57,7 @@
                     WidthRequest="1200">
 
                     <VerticalStackLayout HorizontalOptions="Center">
-                        <HorizontalStackLayout Margin="0,0,0,20" VerticalOptions="Center">
+                        <HorizontalStackLayout Margin="16,0,0,20" VerticalOptions="Center">
                             <SearchBar
                                 x:Name="buscador"
                                 Margin="0,10,0,0"
@@ -62,47 +70,52 @@
                                 WidthRequest="500" />
 
                             <Button
-                                Margin="30,10,0,0"
+                                Margin="50,10,0,0"
                                 BackgroundColor="{StaticResource lightBrown2}"
                                 Clicked="Agregar"
-                                FontSize="15"
+                                FontSize="20"
                                 HorizontalOptions="Center"
                                 Scale="1.2"
                                 Text="+"
                                 TextColor="White"
-                                VerticalOptions="Center" />
+                                VerticalOptions="Center"
+                                WidthRequest="50" />
                             <Label
-                                Margin="10,15,0,0"
-                                FontFamily="OpenSansRegular"
-                                FontSize="30"
-                                Text="Agregar producto" />
+                                Margin="15,10,0,0"
+                                FontFamily="OpenSansSemibold"
+                                FontSize="25"
+                                Text="Agregar producto"
+                                VerticalOptions="Center" />
                         </HorizontalStackLayout>
 
-
-                        <Border StrokeShape="RoundRectangle 20,20,20,20" StrokeThickness="0">
+                        <FlexLayout
+                            AlignItems="Center"
+                            Direction="Column"
+                            JustifyContent="SpaceBetween">
 
                             <CollectionView
                                 x:Name="listaProductos"
-                                BackgroundColor="White"
+                                BackgroundColor="Wheat"
                                 HeightRequest="430"
-                                ItemSizingStrategy="MeasureAllItems"
-                                ItemsUpdatingScrollMode="KeepItemsInView"
                                 WidthRequest="1100">
                                 <CollectionView.ItemsLayout>
-                                    <GridItemsLayout HorizontalItemSpacing="10" Orientation="Horizontal" />
+                                    <GridItemsLayout
+                                        HorizontalItemSpacing="10"
+                                        Orientation="Vertical"
+                                        Span="5"
+                                        VerticalItemSpacing="10" />
                                 </CollectionView.ItemsLayout>
 
                                 <CollectionView.ItemTemplate>
                                     <DataTemplate x:DataType="mo:Producto">
 
                                         <Border
-                                            Padding="16"
+                                            Padding="0"
                                             Background="{StaticResource darkBrown}"
-                                            MaximumHeightRequest="180"
+                                            HeightRequest="185"
                                             StrokeShape="RoundRectangle 20,20,20,20"
                                             StrokeThickness="0"
-                                            VerticalOptions="Start"
-                                            WidthRequest="130">
+                                            WidthRequest="180">
 
                                             <VerticalStackLayout HorizontalOptions="Center" Spacing="10">
                                                 <Label
@@ -110,14 +123,16 @@
                                                     IsVisible="False"
                                                     Text="{Binding Id}" />
                                                 <Image
+                                                    Aspect="Fill"
                                                     BackgroundColor="{StaticResource lightBrown1}"
+                                                    HeightRequest="90"
                                                     Source="{Binding Imagen}"
-                                                    WidthRequest="50" />
+                                                    WidthRequest="200" />
                                                 <Label
-                                                    FontSize="13"
+                                                    FontFamily="OpenSansSemibold"
+                                                    FontSize="14"
                                                     HorizontalOptions="Center"
-                                                    Text="{Binding Nombre}"
-                                                    TextTransform="Uppercase" />
+                                                    Text="{Binding Nombre}" />
                                                 <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
                                                     <ImageButton
                                                         BackgroundColor="LightGray"
@@ -137,7 +152,8 @@
                                     </DataTemplate>
                                 </CollectionView.ItemTemplate>
                             </CollectionView>
-                        </Border>
+
+                        </FlexLayout>
                     </VerticalStackLayout>
                 </Border>
 
@@ -170,7 +186,7 @@
                     Text="Nombre:" />
                 <Entry
                     x:Name="entryNombre"
-                    MaxLength="30"
+                    MaxLength="15"
                     Text=""
                     WidthRequest="320" />
 

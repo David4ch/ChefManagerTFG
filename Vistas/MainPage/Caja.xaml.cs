@@ -37,6 +37,9 @@ namespace ChefManager.Vistas
                 stackOjo.IsVisible = true;
                 listaDinero.ItemsSource = ListaDineroAux;
             }
+            else {
+                nohay.IsVisible = true; listaDinero.IsVisible = false; stackOjo.IsVisible = false;
+            }
         }
 
         private void VerInforme(object sender, EventArgs e)
@@ -116,8 +119,15 @@ namespace ChefManager.Vistas
         {
             if (checkbox.IsChecked)
             {
-                listaDinero.ItemsSource = ListaDineroAux.Where(u => u.Fecha == datepicker2.Date && u.Cantidad <= (int)sliderMax.Value && u.Cantidad <= (int)sliderMax.Value && u.Turno.Equals(picker2.SelectedItem.ToString()));
+                if (picker2.SelectedItem.ToString() != null)
+                {
+                    listaDinero.ItemsSource = ListaDineroAux.Where(u => u.Fecha == datepicker2.Date && u.Cantidad <= (int)sliderMax.Value && u.Cantidad <= (int)sliderMax.Value && u.Turno.Equals(picker2.SelectedItem.ToString()));
 
+                }
+                else {
+                    AppShell.Current.DisplayAlert("¡!", "Rellena primero el Turno", "Ok");
+                }
+                
             }
             else
             {

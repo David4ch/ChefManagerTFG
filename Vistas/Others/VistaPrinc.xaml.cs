@@ -1,5 +1,5 @@
+using ChefManager.Modelo;
 using Newtonsoft.Json;
-using System;
 using System.Collections.ObjectModel;
 
 namespace ChefManager.Vistas;
@@ -15,6 +15,7 @@ public partial class VistaPrinc : ContentPage
 	{
 		InitializeComponent();
         iniciarTiempo();
+        nombreUser.Text = _user;
 	}
 
     private async void iniciarTiempo()
@@ -90,5 +91,22 @@ public partial class VistaPrinc : ContentPage
             
                 break;
         }
+    }
+
+    private async void EliminarCuenta_Clicked(object sender, EventArgs e)
+    {
+        FirebaseConnection connection = new FirebaseConnection();
+        bool answer = await DisplayAlert("Confirmación", "Se va a eliminar tu cuenta, pero los datos del restaurante seguirán intactos", "Aceptar", "Cancelar");
+        if (answer)
+        {
+            Usuario usuario = connection.obtenerInfo<Usuario>("UsuarioDatabase").FirstOrDefault(u => u.NombreUser.Equals(nombreUser.Text));
+            var SetData = connection.client.Delete("RestauranteDatabase/" + usuario.Id);
+            await Application.Current.MainPage.DisplayAlert("!¡", "Elemento eliminado correctamente", "De acuerdo");
+        }
+    }
+
+    private async void CerrarSesion_Clicked(object sender, EventArgs e)
+    {
+        await AppShell.Current.GoToAsync(nameof(VistaLogin));
     }
 }

@@ -8,20 +8,13 @@
     <ContentPage.MenuBarItems>
         <MenuBarItem Text="Configuracion">
 
-
-            <MenuFlyoutItem Text="Ver perfil">
-                <MenuFlyoutItem.IconImageSource>
-                    <FontImageSource FontFamily="Arial" Glyph="&#x2630;" />
-                </MenuFlyoutItem.IconImageSource>
-            </MenuFlyoutItem>
-
-            <MenuFlyoutItem Text="Ajustes">
+            <MenuFlyoutItem Clicked="EliminarCuenta_Clicked" Text="Eliminar Cuenta">
                 <MenuFlyoutItem.IconImageSource>
                     <FontImageSource FontFamily="Arial" Glyph="&#x2699;" />
                 </MenuFlyoutItem.IconImageSource>
             </MenuFlyoutItem>
 
-            <MenuFlyoutItem Text="Cerrar sesión">
+            <MenuFlyoutItem Clicked="CerrarSesion_Clicked" Text="Cerrar sesión">
                 <MenuFlyoutItem.IconImageSource>
                     <FontImageSource FontFamily="Arial" Glyph="&#xE8BB;" />
                 </MenuFlyoutItem.IconImageSource>
@@ -31,6 +24,25 @@
     </ContentPage.MenuBarItems>
 
     <VerticalStackLayout Spacing="60" VerticalOptions="Center">
+
+        <HorizontalStackLayout
+            Margin="0,0,80,0"
+            Padding="15"
+            BackgroundColor="Wheat"
+            HorizontalOptions="End"
+            Spacing="20">
+            <Image Source="user.png" WidthRequest="40" />
+            <Label
+                x:Name="nombreUser"
+                Margin="0,0,20,0"
+                FontFamily="OpenSansSemibold"
+                FontSize="20"
+                HorizontalTextAlignment="Center"
+                Text=""
+                TextColor="Black"
+                VerticalTextAlignment="Center" />
+        </HorizontalStackLayout>
+
         <HorizontalStackLayout
             HorizontalOptions="Center"
             Spacing="20"

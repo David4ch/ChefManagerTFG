@@ -8,6 +8,7 @@ public partial class Notas : ContentPage
     FirebaseConnection firebaseconnection = new FirebaseConnection();
     public static string _idNota;
     List<Nota> listaNotasAux;
+    Label _labelId;
 
 
     public Notas()
@@ -59,10 +60,8 @@ public partial class Notas : ContentPage
 
     private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
     {
-        var stack = (VerticalStackLayout)sender;
-        var nota = (Nota)stack.Parent.Parent.BindingContext;
-
-        _idNota = nota.Id;
+        _labelId = ((VerticalStackLayout)sender).Parent.FindByName<Label>("idNota");
+        _idNota = _labelId.Text;
         AppShell.Current.GoToAsync(nameof(VerNota));
     }
 }

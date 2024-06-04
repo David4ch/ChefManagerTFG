@@ -1,5 +1,4 @@
 using ChefManager.Modelo;
-using ChefManager.Templates;
 
 namespace ChefManager.Vistas.MainPage;
 

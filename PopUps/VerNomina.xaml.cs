@@ -1,4 +1,3 @@
-using ChefManager.Templates;
 using ChefManager.Vistas;
 using CommunityToolkit.Maui.Views;
 

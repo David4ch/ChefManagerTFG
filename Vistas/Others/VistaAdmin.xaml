@@ -3,12 +3,11 @@
     x:Class="ChefManager.Vistas.VistaAdmin"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:mo="clr-namespace:ChefManager.Modelo"
-    xmlns:te="clr-namespace:ChefManager.Templates">
+    xmlns:mo="clr-namespace:ChefManager.Modelo">
 
     <ContentPage.MenuBarItems>
         <MenuBarItem Text="&#x2630;">
-            <MenuFlyoutItem Clicked="mostrarMenu" Text="Abrir/Cerrar Menú" />
+            <MenuFlyoutItem Clicked="MostrarMenu" Text="Abrir/Cerrar Menú" />
         </MenuBarItem>
     </ContentPage.MenuBarItems>
 
@@ -25,20 +24,20 @@
                 <Image Source="chefmg.png" WidthRequest="200" />
                 <Label
                     Margin="30,0,0,0"
-                    FontFamily="Arial"
+                    FontFamily="OpenSansSemibold"
                     FontSize="30"
                     Text="Administrador" />
                 <Label
                     Margin="30,0,0,0"
                     FontAttributes="Italic"
-                    FontFamily="Arial"
+                    FontFamily="OpenSansSemibold"
                     FontSize="20"
                     Text="Admin" />
                 <Grid
                     Margin="0,20,0,0"
                     ColumnDefinitions="*,*,*"
-                    RowDefinitions="*,*,*,*"
-                    RowSpacing="15">
+                    RowDefinitions="*,*,*"
+                    RowSpacing="30">
 
                     <VerticalStackLayout Grid.Row="0" Grid.Column="0">
                         <ImageButton
@@ -83,24 +82,9 @@
                         <Label HorizontalTextAlignment="Center" Text="PROVEEDORES" />
                     </VerticalStackLayout>
 
-                    <VerticalStackLayout Grid.Row="1" Grid.Column="1">
-                        <ImageButton
-                            Clicked="Button_Clicked"
-                            CornerRadius="6"
-                            HeightRequest="90"
-                            Source="proveedoresproductos.png"
-                            WidthRequest="80">
-                            <ImageButton.GestureRecognizers>
-                                <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                            </ImageButton.GestureRecognizers>
-                        </ImageButton>
-                        <Label
-                            FontSize="13"
-                            HorizontalTextAlignment="Center"
-                            Text="PROVEEDORES_HAS_ PRODUCTOS" />
-                    </VerticalStackLayout>
 
-                    <VerticalStackLayout Grid.Row="1" Grid.Column="2">
+
+                    <VerticalStackLayout Grid.Row="0" Grid.Column="2">
                         <ImageButton
                             Clicked="Button_Clicked"
                             CornerRadius="6"
@@ -115,38 +99,9 @@
 
                     </VerticalStackLayout>
 
-                    <VerticalStackLayout Grid.Row="2" Grid.Column="0">
-                        <ImageButton
-                            Clicked="Button_Clicked"
-                            CornerRadius="6"
-                            HeightRequest="90"
-                            Source="calendario.png"
-                            WidthRequest="80">
-                            <ImageButton.GestureRecognizers>
-                                <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                            </ImageButton.GestureRecognizers>
-                        </ImageButton>
-                        <Label HorizontalTextAlignment="Center" Text="CALENDARIOS" />
-                    </VerticalStackLayout>
 
-                    <VerticalStackLayout Grid.Row="2" Grid.Column="1">
-                        <ImageButton
-                            Clicked="Button_Clicked"
-                            CornerRadius="6"
-                            HeightRequest="90"
-                            Source="calendariodinero.png"
-                            WidthRequest="80">
-                            <ImageButton.GestureRecognizers>
-                                <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
-                            </ImageButton.GestureRecognizers>
-                        </ImageButton>
-                        <Label
-                            FontSize="12"
-                            HorizontalTextAlignment="Center"
-                            Text="CALENDARIO_HAS_DINERO" />
-                    </VerticalStackLayout>
 
-                    <VerticalStackLayout Grid.Row="2" Grid.Column="2">
+                    <VerticalStackLayout Grid.Row="1" Grid.Column="2">
                         <ImageButton
                             Clicked="Button_Clicked"
                             CornerRadius="6"
@@ -176,7 +131,7 @@
 
                     </VerticalStackLayout>
 
-                    <VerticalStackLayout Grid.Row="3" Grid.Column="1">
+                    <VerticalStackLayout Grid.Row="1" Grid.Column="1">
                         <ImageButton
                             Clicked="Button_Clicked"
                             CornerRadius="6"
@@ -257,6 +212,7 @@
                             VerticalTextAlignment="Center" />
 
                         <ImageButton
+                            x:Name="imgAdd"
                             Margin="80,0,0,0"
                             BackgroundColor="LightGray"
                             Clicked="ImageAdd_Clicked"
@@ -279,97 +235,568 @@
                             Margin="80,0,0,0"
                             BackgroundColor="LightGray"
                             Placeholder="Buscar por NombreUser"
-                            SearchButtonPressed="buscar"
+                            SearchButtonPressed="Buscar"
                             TextColor="Black"
                             WidthRequest="300" />
 
                     </HorizontalStackLayout>
+                    <VerticalStackLayout>
+                        <Grid
+                            x:Name="gridHeader"
+                            Padding="20"
+                            ColumnDefinitions="*,*,*,*,*,*,*"
+                            HeightRequest="-1"
+                            RowDefinitions="Auto"
+                            RowSpacing="1"
+                            WidthRequest="-1">
 
-                    <Grid
-                        Padding="20"
-                        ColumnDefinitions="*,*,*,*"
-                        HeightRequest="-1"
-                        RowDefinitions="Auto"
-                        RowSpacing="1"
-                        WidthRequest="-1">
+                            <Label
+                                x:Name="label0"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Text="Restaurante_ID"
+                                TextColor="Black"
+                                VerticalOptions="Center" />
+                            <Label
+                                x:Name="label1"
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Text="NombreUser"
+                                TextColor="Black"
+                                VerticalOptions="Center" />
+                            <Label
+                                x:Name="label2"
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                Text="Email"
+                                TextColor="Black"
+                                VerticalOptions="Center" />
+                            <Label
+                                x:Name="label3"
+                                Grid.Row="0"
+                                Grid.Column="3"
+                                Text="Acciones"
+                                TextColor="Black"
+                                VerticalOptions="Center" />
+                            <Label
+                                x:Name="label4"
+                                Grid.Row="0"
+                                Grid.Column="4"
+                                IsVisible="Hidden"
+                                Text=""
+                                TextColor="Black"
+                                VerticalOptions="Center" />
+                            <Label
+                                x:Name="label5"
+                                Grid.Row="0"
+                                Grid.Column="5"
+                                IsVisible="Hidden"
+                                Text=""
+                                TextColor="Black"
+                                VerticalOptions="Center" />
+                            <Label
+                                x:Name="label6"
+                                Grid.Row="0"
+                                Grid.Column="6"
+                                IsVisible="Hidden"
+                                Text=""
+                                TextColor="Black"
+                                VerticalOptions="Center" />
+                            <Label
+                                x:Name="label7"
+                                Grid.Row="0"
+                                Grid.Column="7"
+                                IsVisible="Hidden"
+                                Text=""
+                                TextColor="Black"
+                                VerticalOptions="Center" />
 
-                        <Label
-                            x:Name="label0"
-                            Grid.Row="0"
-                            Grid.Column="0"
-                            Text="NombreUser"
-                            TextColor="Black"
-                            VerticalOptions="Center" />
-                        <Label
-                            x:Name="label1"
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            Text="Correo"
-                            TextColor="Black"
-                            VerticalOptions="Center" />
-                        <Label
-                            x:Name="label2"
-                            Grid.Row="0"
-                            Grid.Column="2"
-                            Text="Acciones"
-                            TextColor="Black"
-                            VerticalOptions="Center" />
-                        <Label
-                            x:Name="label3"
-                            Grid.Row="0"
-                            Grid.Column="3"
-                            IsVisible="Hidden"
-                            Text="Acciones"
-                            TextColor="Black"
-                            VerticalOptions="Center" />
-                        <Label
-                            x:Name="label4"
-                            Grid.Row="0"
-                            Grid.Column="4"
-                            IsVisible="Hidden"
-                            Text=""
-                            TextColor="Black"
-                            VerticalOptions="Center" />
-                        <Label
-                            x:Name="label5"
-                            Grid.Row="0"
-                            Grid.Column="5"
-                            IsVisible="Hidden"
-                            Text=""
-                            TextColor="Black"
-                            VerticalOptions="Center" />
+                        </Grid>
+                        <CollectionView
+                            x:Name="listaUsuarios"
+                            HeightRequest="500"
+                            IsVisible="True">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Vertical" />
+                            </CollectionView.ItemsLayout>
 
-                    </Grid>
-                    <CollectionView
-                        x:Name="listaUsuarios"
-                        HeightRequest="500"
-                        IsVisible="True">
-                        <CollectionView.ItemsLayout>
-                            <LinearItemsLayout Orientation="Vertical" />
-                        </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="mo:Usuario">
+                                    <Grid
+                                        x:Name="miGrid"
+                                        Padding="15"
+                                        ColumnDefinitions="*,*,*,*,*,*,*"
+                                        RowDefinitions="Auto">
+                                        <Label
+                                            x:Name="labelId"
+                                            IsVisible="False"
+                                            Text="{Binding Id}" />
+                                        <Label
+                                            x:Name="labelId2"
+                                            Grid.Column="0"
+                                            Text="{Binding Restaurante_Id}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="1"
+                                            Text="{Binding NombreUser}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="2"
+                                            Text="{Binding Email}"
+                                            TextColor="Black" />
 
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <te:TemplateUsuarios />
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
+                                        <HorizontalStackLayout Grid.Column="3" Spacing="10">
+                                            <ImageButton
+                                                BackgroundColor="LightGray"
+                                                Clicked="ImageEdit_Clicked"
+                                                HeightRequest="16"
+                                                Source="editar.png"
+                                                WidthRequest="16">
+                                                <ImageButton.GestureRecognizers>
+                                                    <PointerGestureRecognizer PointerEntered="OnPointerEntered3" PointerExited="OnPointerExited3" />
+                                                </ImageButton.GestureRecognizers>
+                                            </ImageButton>
+                                            <ImageButton
+                                                BackgroundColor="LightGray"
+                                                Clicked="ImageDelete_Clicked"
+                                                HeightRequest="16"
+                                                Source="eliminar.png"
+                                                WidthRequest="16">
+                                                <ImageButton.GestureRecognizers>
+                                                    <PointerGestureRecognizer PointerEntered="OnPointerEntered3" PointerExited="OnPointerExited3" />
+                                                </ImageButton.GestureRecognizers>
+                                            </ImageButton>
+                                        </HorizontalStackLayout>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
 
-                    </CollectionView>
+                        </CollectionView>
 
-                    <CollectionView
-                        x:Name="listaRestaurantes"
-                        HeightRequest="500"
-                        IsVisible="False">
-                        <CollectionView.ItemsLayout>
-                            <LinearItemsLayout Orientation="Vertical" />
-                        </CollectionView.ItemsLayout>
+                        <CollectionView
+                            x:Name="listaRestaurantes"
+                            HeightRequest="500"
+                            IsVisible="False"
+                            WidthRequest="-1">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Vertical" />
+                            </CollectionView.ItemsLayout>
 
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate>
-                                <te:TemplateRestaurantes />
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="mo:Restaurante">
+                                    <Grid
+                                        Padding="10"
+                                        ColumnDefinitions="*,*,*,*,*,*,*"
+                                        RowDefinitions="Auto"
+                                        WidthRequest="-1">
+                                        <Label
+                                            Grid.Column="0"
+                                            Text="{Binding Id}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="1"
+                                            Text="{Binding Nombre}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="2"
+                                            Text="{Binding Direccion}"
+                                            TextColor="Black" />
+                                        <Image
+                                            Grid.Column="3"
+                                            HeightRequest="70"
+                                            HorizontalOptions="Start"
+                                            Source="{Binding Logo}"
+                                            VerticalOptions="Center"
+                                            WidthRequest="70" />
+
+                                        <HorizontalStackLayout Grid.Column="4" Spacing="10">
+                                            <ImageButton
+                                                BackgroundColor="LightGray"
+                                                Clicked="ImageEdit_Clicked"
+                                                HeightRequest="16"
+                                                Source="editar.png"
+                                                WidthRequest="16">
+                                                <ImageButton.GestureRecognizers>
+                                                    <PointerGestureRecognizer PointerEntered="OnPointerEntered3" PointerExited="OnPointerExited3" />
+                                                </ImageButton.GestureRecognizers>
+                                            </ImageButton>
+                                            <ImageButton
+                                                BackgroundColor="LightGray"
+                                                Clicked="ImageDelete_Clicked"
+                                                HeightRequest="16"
+                                                Source="eliminar.png"
+                                                WidthRequest="16">
+                                                <ImageButton.GestureRecognizers>
+                                                    <PointerGestureRecognizer PointerEntered="OnPointerEntered3" PointerExited="OnPointerExited3" />
+                                                </ImageButton.GestureRecognizers>
+                                            </ImageButton>
+
+                                        </HorizontalStackLayout>
+
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <CollectionView
+                            x:Name="listaProveedores"
+                            HeightRequest="500"
+                            IsVisible="False">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Vertical" />
+                            </CollectionView.ItemsLayout>
+
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="mo:Proveedor">
+                                    <Grid
+                                        Padding="10"
+                                        ColumnDefinitions="*,*,*,*,*,*,*"
+                                        RowDefinitions="Auto">
+                                        <Label
+                                            IsVisible="False"
+                                            Text="{Binding Id}"
+                                            TextColor="Black" />
+
+                                        <Label
+                                            Grid.Column="0"
+                                            Text="{Binding Restaurante_Id}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="1"
+                                            Text="{Binding NombreEmpresa}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="2"
+                                            Text="{Binding TipoProducto}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="3"
+                                            Text="{Binding Descripción}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="4"
+                                            Text="{Binding Precio}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="5"
+                                            Text="{Binding Periocidad}"
+                                            TextColor="Black" />
+
+                                        <HorizontalStackLayout Grid.Column="6" Spacing="10">
+                                            <ImageButton
+                                                BackgroundColor="LightGray"
+                                                Clicked="ImageEdit_Clicked"
+                                                HeightRequest="16"
+                                                Source="editar.png"
+                                                WidthRequest="16">
+                                                <ImageButton.GestureRecognizers>
+                                                    <PointerGestureRecognizer PointerEntered="OnPointerEntered3" PointerExited="OnPointerExited3" />
+                                                </ImageButton.GestureRecognizers>
+                                            </ImageButton>
+                                            <ImageButton
+                                                BackgroundColor="LightGray"
+                                                Clicked="ImageDelete_Clicked"
+                                                HeightRequest="16"
+                                                Source="eliminar.png"
+                                                WidthRequest="16">
+                                                <ImageButton.GestureRecognizers>
+                                                    <PointerGestureRecognizer PointerEntered="OnPointerEntered3" PointerExited="OnPointerExited3" />
+                                                </ImageButton.GestureRecognizers>
+                                            </ImageButton>
+
+                                        </HorizontalStackLayout>
+
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <CollectionView
+                            x:Name="listaProductos"
+                            HeightRequest="500"
+                            IsVisible="False">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Vertical" />
+                            </CollectionView.ItemsLayout>
+
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="mo:Producto">
+                                    <Grid
+                                        Padding="10"
+                                        ColumnDefinitions="*,*,*,*,*,*,*"
+                                        RowDefinitions="Auto">
+                                        <Label
+                                            IsVisible="False"
+                                            Text="{Binding Id}"
+                                            TextColor="Black" />
+
+                                        <Label
+                                            Grid.Column="0"
+                                            Text="{Binding Restaurante_Id}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="1"
+                                            Text="{Binding Nombre}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="2"
+                                            Text="{Binding Precio}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="3"
+                                            Text="{Binding Cantidad}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="4"
+                                            Text="{Binding Proveedor}"
+                                            TextColor="Black" />
+                                        <Image
+                                            Grid.Column="5"
+                                            HeightRequest="70"
+                                            HorizontalOptions="Start"
+                                            Source="{Binding Imagen}"
+                                            VerticalOptions="Center"
+                                            WidthRequest="70" />
+
+                                        <HorizontalStackLayout Grid.Column="6" Spacing="10">
+                                            <ImageButton
+                                                BackgroundColor="LightGray"
+                                                Clicked="ImageEdit_Clicked"
+                                                HeightRequest="16"
+                                                Source="editar.png"
+                                                WidthRequest="16">
+                                                <ImageButton.GestureRecognizers>
+                                                    <PointerGestureRecognizer PointerEntered="OnPointerEntered3" PointerExited="OnPointerExited3" />
+                                                </ImageButton.GestureRecognizers>
+                                            </ImageButton>
+                                            <ImageButton
+                                                BackgroundColor="LightGray"
+                                                Clicked="ImageDelete_Clicked"
+                                                HeightRequest="16"
+                                                Source="eliminar.png"
+                                                WidthRequest="16">
+                                                <ImageButton.GestureRecognizers>
+                                                    <PointerGestureRecognizer PointerEntered="OnPointerEntered3" PointerExited="OnPointerExited3" />
+                                                </ImageButton.GestureRecognizers>
+                                            </ImageButton>
+
+                                        </HorizontalStackLayout>
+
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <CollectionView
+                            x:Name="listaNotas"
+                            HeightRequest="500"
+                            IsVisible="False">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Vertical" />
+                            </CollectionView.ItemsLayout>
+
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="mo:Nota">
+                                    <Grid
+                                        Padding="10"
+                                        ColumnDefinitions="*,*,*,*,*,*,*"
+                                        RowDefinitions="Auto">
+                                        <Label
+                                            IsVisible="False"
+                                            Text="{Binding Id}"
+                                            TextColor="Black" />
+
+                                        <Label
+                                            Grid.Column="0"
+                                            Text="{Binding Restaurante_Id}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="1"
+                                            Text="{Binding Titulo}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="2"
+                                            Text="{Binding Mensaje}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="3"
+                                            Margin="0,0,20,0"
+                                            Text="{Binding Date}"
+                                            TextColor="Black" />
+
+                                        <HorizontalStackLayout Grid.Column="4" Spacing="10">
+                                            <ImageButton
+                                                BackgroundColor="LightGray"
+                                                Clicked="ImageEdit_Clicked"
+                                                HeightRequest="16"
+                                                Source="editar.png"
+                                                WidthRequest="16">
+                                                <ImageButton.GestureRecognizers>
+                                                    <PointerGestureRecognizer PointerEntered="OnPointerEntered3" PointerExited="OnPointerExited3" />
+                                                </ImageButton.GestureRecognizers>
+                                            </ImageButton>
+                                            <ImageButton
+                                                BackgroundColor="LightGray"
+                                                Clicked="ImageDelete_Clicked"
+                                                HeightRequest="16"
+                                                Source="eliminar.png"
+                                                WidthRequest="16">
+                                                <ImageButton.GestureRecognizers>
+                                                    <PointerGestureRecognizer PointerEntered="OnPointerEntered3" PointerExited="OnPointerExited3" />
+                                                </ImageButton.GestureRecognizers>
+                                            </ImageButton>
+
+                                        </HorizontalStackLayout>
+
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <CollectionView
+                            x:Name="listaEmpleados"
+                            HeightRequest="500"
+                            IsVisible="False">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Vertical" />
+                            </CollectionView.ItemsLayout>
+
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="mo:Empleado">
+                                    <Grid
+                                        Padding="10"
+                                        ColumnDefinitions="*,*,*,*,*,*,*"
+                                        RowDefinitions="Auto">
+                                        <Label
+                                            IsVisible="False"
+                                            Text="{Binding Id}"
+                                            TextColor="Black" />
+
+                                        <Label
+                                            Grid.Column="0"
+                                            Text="{Binding Restaurante_Id}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="1"
+                                            Text="{Binding Nombre}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="2"
+                                            Text="{Binding Puesto}"
+                                            TextColor="Black" />
+                                        <Image
+                                            Grid.Column="3"
+                                            HeightRequest="70"
+                                            HorizontalOptions="Start"
+                                            Source="{Binding ImagenNomina}"
+                                            VerticalOptions="Center"
+                                            WidthRequest="70" />
+                                        <Label
+                                            Grid.Column="4"
+                                            Text="{Binding Contacto}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="5"
+                                            Text="{Binding Disponibilidad}"
+                                            TextColor="Black" />
+
+                                        <HorizontalStackLayout Grid.Column="6" Spacing="10">
+                                            <ImageButton
+                                                BackgroundColor="LightGray"
+                                                Clicked="ImageEdit_Clicked"
+                                                HeightRequest="16"
+                                                Source="editar.png"
+                                                WidthRequest="16">
+                                                <ImageButton.GestureRecognizers>
+                                                    <PointerGestureRecognizer PointerEntered="OnPointerEntered3" PointerExited="OnPointerExited3" />
+                                                </ImageButton.GestureRecognizers>
+                                            </ImageButton>
+                                            <ImageButton
+                                                BackgroundColor="LightGray"
+                                                Clicked="ImageDelete_Clicked"
+                                                HeightRequest="16"
+                                                Source="eliminar.png"
+                                                WidthRequest="16">
+                                                <ImageButton.GestureRecognizers>
+                                                    <PointerGestureRecognizer PointerEntered="OnPointerEntered3" PointerExited="OnPointerExited3" />
+                                                </ImageButton.GestureRecognizers>
+                                            </ImageButton>
+
+                                        </HorizontalStackLayout>
+
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <CollectionView
+                            x:Name="listaDinero"
+                            HeightRequest="500"
+                            IsVisible="False"
+                            WidthRequest="-1">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Vertical" />
+                            </CollectionView.ItemsLayout>
+
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate x:DataType="mo:Dinero">
+                                    <Grid
+                                        Padding="10"
+                                        ColumnDefinitions="*,*,*,*,*,*,*"
+                                        RowDefinitions="Auto"
+                                        WidthRequest="-1">
+                                        <Label
+                                            IsVisible="False"
+                                            Text="{Binding Id}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="0"
+                                            Text="{Binding Restaurante_Id}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="1"
+                                            Text="{Binding Turno}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="2"
+                                            Text="{Binding Cantidad}"
+                                            TextColor="Black" />
+                                        <Label
+                                            Grid.Column="3"
+                                            Margin="0,0,20,0"
+                                            Text="{Binding Fecha.Date}"
+                                            TextColor="Black" />
+
+
+                                        <HorizontalStackLayout Grid.Column="4" Spacing="10">
+                                            <ImageButton
+                                                BackgroundColor="LightGray"
+                                                Clicked="ImageEdit_Clicked"
+                                                HeightRequest="16"
+                                                Source="editar.png"
+                                                WidthRequest="16">
+                                                <ImageButton.GestureRecognizers>
+                                                    <PointerGestureRecognizer PointerEntered="OnPointerEntered3" PointerExited="OnPointerExited3" />
+                                                </ImageButton.GestureRecognizers>
+                                            </ImageButton>
+                                            <ImageButton
+                                                BackgroundColor="LightGray"
+                                                Clicked="ImageDelete_Clicked"
+                                                HeightRequest="16"
+                                                Source="eliminar.png"
+                                                WidthRequest="16">
+                                                <ImageButton.GestureRecognizers>
+                                                    <PointerGestureRecognizer PointerEntered="OnPointerEntered3" PointerExited="OnPointerExited3" />
+                                                </ImageButton.GestureRecognizers>
+                                            </ImageButton>
+
+                                        </HorizontalStackLayout>
+
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </VerticalStackLayout>
 
                 </StackLayout>
             </VerticalStackLayout>

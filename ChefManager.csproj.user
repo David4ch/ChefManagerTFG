@@ -26,12 +26,6 @@
     <MauiXaml Update="PopUps\VerRegistro.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Templates\TemplateRestaurantes.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Templates\TemplateUsuarios.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
     <MauiXaml Update="Vistas\MainPage\Notas\AgregarNota.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
