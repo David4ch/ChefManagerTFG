@@ -7,6 +7,6 @@
     xmlns:vi="clr-namespace:ChefManager.Vistas"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent ContentTemplate="{DataTemplate vi:VistaLogin}" />
+    <ShellContent ContentTemplate="{DataTemplate vi:Bienvenida}" />
 
 </Shell>

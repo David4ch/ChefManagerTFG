@@ -40,6 +40,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.PopUps.Agregar
 build_metadata.AdditionalFiles.TargetPath = PopUps\AgregarProveedor.xaml
 build_metadata.AdditionalFiles.RelativePath = PopUps\AgregarProveedor.xaml
 
+[C:/Users/david/source/repos/ChefManager/PopUps/EditarElemento.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.PopUps.EditarElemento.xaml
+build_metadata.AdditionalFiles.TargetPath = PopUps\EditarElemento.xaml
+build_metadata.AdditionalFiles.RelativePath = PopUps\EditarElemento.xaml
+
 [C:/Users/david/source/repos/ChefManager/PopUps/EditarEmpleado.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ChefManager.PopUps.EditarEmpleado.xaml

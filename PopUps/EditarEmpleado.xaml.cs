@@ -3,7 +3,6 @@ using CommunityToolkit.Maui.Views;
 using Firebase.Auth.Providers;
 using Firebase.Auth;
 using Firebase.Storage;
-using Microsoft.Maui.ApplicationModel.Communication;
 using ChefManager.Vistas;
 
 namespace ChefManager.PopUps;

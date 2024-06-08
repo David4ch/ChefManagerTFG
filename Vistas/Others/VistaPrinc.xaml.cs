@@ -14,11 +14,11 @@ public partial class VistaPrinc : ContentPage
 	public VistaPrinc()
 	{
 		InitializeComponent();
-        iniciarTiempo();
-        nombreUser.Text = _user;
+        IniciarTiempo();
+        nombreUser.Text = "Hola, " + _user + "!";
 	}
 
-    private async void iniciarTiempo()
+    private async void IniciarTiempo()
     {
         string host = "https://api.openweathermap.org/data/2.5/weather?q= "+ _ubicacion + "&APPID=aca455c6610e2d9e9420cd2245432faf";
         HttpClient resultado = new HttpClient();

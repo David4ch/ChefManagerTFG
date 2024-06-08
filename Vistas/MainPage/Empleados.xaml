@@ -91,7 +91,7 @@
                             HorizontalTextAlignment="Center"
                             IsVisible="True"
                             Text="No hay ningún empleado"
-                            TextColor="Wheat"
+                            TextColor="Black"
                             VerticalTextAlignment="Center"
                             WidthRequest="750" />
                         <Label

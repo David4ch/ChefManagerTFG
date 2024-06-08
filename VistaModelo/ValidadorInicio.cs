@@ -2,13 +2,13 @@
 using ChefManager.Vistas;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System.Collections.ObjectModel;
+using System.Security.Cryptography;
 
 namespace ChefManager.VistaModelo
 {
     public partial class ValidadorInicio : ObservableValidator
     {
-      
+
         private string _contrasena;
         public string Contrasena
         {
@@ -30,32 +30,42 @@ namespace ChefManager.VistaModelo
             List<Usuario> listaUsuarios = connection.obtenerInfo<Usuario>("UsuarioDatabase").ToList();
             List<Restaurante> listaRestaurantes = connection.obtenerInfo<Restaurante>("RestauranteDatabase").ToList();
 
-            Usuario usuarioValido = listaUsuarios.FirstOrDefault(u => u.Email == _email && u.Contrasena == _contrasena);
-
-            if (usuarioValido != null)
+            try
             {
+                Usuario usuarioValido = listaUsuarios.FirstOrDefault(u => u.Email == _email && u.Contrasena.Equals(Encriptacion.Encriptar(_contrasena)));
 
-                
 
-                if (_email == "Admin@gmail.com" && _contrasena == "Administrador4-")
+                if (usuarioValido != null)
                 {
-                    await AppShell.Current.GoToAsync(nameof(VistaAdmin));
+                    if (_email == "Admin@gmail.com")
+                    {
+                        await AppShell.Current.GoToAsync(nameof(VistaAdmin));
+                    }
+                    else
+                    {
+                        Restaurante restaurante = listaRestaurantes.FirstOrDefault(u => u.Id == usuarioValido.Restaurante_Id);
+                        VistaPrinc._ubicacion = restaurante.Direccion;
+                        VistaPrinc._user = usuarioValido.NombreUser;
+                        VistaPrinc._logo = restaurante.Logo;
+                        VistaPrinc._restauranteId = restaurante.Id;
+
+                        await AppShell.Current.GoToAsync(nameof(VistaPrinc));
+                    }
+
                 }
                 else
                 {
-                    Restaurante restaurante = listaRestaurantes.FirstOrDefault(u => u.Id == usuarioValido.Restaurante_Id);
-                    VistaPrinc._ubicacion = restaurante.Direccion;
-                    VistaPrinc._user = usuarioValido.NombreUser;
-                    VistaPrinc._logo = restaurante.Logo;
-                    VistaPrinc._restauranteId = usuarioValido.Restaurante_Id;
-
-                    await AppShell.Current.GoToAsync(nameof(VistaPrinc));
+                    await AppShell.Current.DisplayAlert("INCORRECTO", "La contraseña o el correo son incorrectos", "OK");
                 }
             }
-            else
+            catch (FormatException ex)
             {
-                await AppShell.Current.DisplayAlert("INCORRECTO", "La contraseña o el correo son incorrectos", "OK");
+                await AppShell.Current.DisplayAlert("Error", "Decodificar mal", "OK");
             }
+
+
+
+
         }
     }
 }

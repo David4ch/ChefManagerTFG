@@ -1,6 +1,5 @@
 using ChefManager.Modelo;
 using Plugin.Maui.Calendar.Models;
-using System.Collections.Generic;
 using System.Globalization;
 
 namespace ChefManager.Vistas;
@@ -185,9 +184,6 @@ public partial class Calendario : ContentPage
 
         BindingContext = this;
     }
-
-
-
 
     private async void Volver(object sender, EventArgs e)
     {

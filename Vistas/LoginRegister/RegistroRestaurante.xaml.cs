@@ -1,4 +1,3 @@
-using ChefManager.Modelo;
 using Firebase.Auth;
 using Firebase.Auth.Providers;
 using Firebase.Storage;
@@ -74,4 +73,8 @@ public partial class RegistroRestaurante : ContentPage
         }
     }
 
+    private async void Volver(object sender, EventArgs e)
+    {
+        await AppShell.Current.GoToAsync(nameof(Bienvenida));
+    }
 }

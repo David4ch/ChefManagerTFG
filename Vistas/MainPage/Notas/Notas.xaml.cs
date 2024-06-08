@@ -18,8 +18,13 @@ public partial class Notas : ContentPage
 
         if (listaNotasAux.Count != 0)
         {
-
+            nohay.IsVisible = false;
+            listaNotas.IsVisible = true;
             listaNotas.ItemsSource = listaNotasAux;
+        }
+        else {
+            nohay.IsVisible = true;
+            listaNotas.IsVisible = false;
         }
     }
 

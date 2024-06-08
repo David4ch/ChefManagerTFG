@@ -1,6 +1,4 @@
 using ChefManager.Modelo;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
 namespace ChefManager.Vistas.MainPage;
 
 public partial class AgregarNota : ContentPage

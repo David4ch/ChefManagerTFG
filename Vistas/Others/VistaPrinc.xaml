@@ -31,7 +31,7 @@
             BackgroundColor="Wheat"
             HorizontalOptions="End"
             Spacing="20">
-            <Image Source="user.png" WidthRequest="40" />
+            <Image Source="saludo.png" WidthRequest="40" />
             <Label
                 x:Name="nombreUser"
                 Margin="0,0,20,0"

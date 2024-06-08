@@ -7,7 +7,6 @@
 
     <ScrollView>
         <HorizontalStackLayout>
-
             <VerticalStackLayout
                 x:Name="stack1"
                 BackgroundColor="{StaticResource lightBrown2}"

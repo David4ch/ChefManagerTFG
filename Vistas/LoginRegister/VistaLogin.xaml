@@ -9,82 +9,107 @@
     <ContentPage.BindingContext>
         <vm:ValidadorInicio />
     </ContentPage.BindingContext>
+    <ScrollView Orientation="Both">
 
-    <StackLayout
-        Padding="20"
-        HorizontalOptions="Center"
-        Spacing="20"
-        VerticalOptions="Center">
-
-        <Border
-            Background="#fff"
-            HeightRequest="500"
-            Stroke="Black"
-            StrokeThickness="3"
-            WidthRequest="700">
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="10,10,10,10" />
-            </Border.StrokeShape>
-            <VerticalStackLayout BackgroundColor="#fff7e5">
-
-                <Image
-                    Margin="0,20,0,0"
-                    Background="Transparent"
-                    HeightRequest="70"
-                    Source="user.png"
-                    WidthRequest="70" />
+        <StackLayout Padding="20">
+            <HorizontalStackLayout
+                Margin="20,20"
+                HorizontalOptions="Start"
+                Spacing="10">
+                <ImageButton
+                    Padding="3"
+                    BackgroundColor="LightBlue"
+                    Clicked="Volver"
+                    CornerRadius="10"
+                    HorizontalOptions="Start"
+                    Source="volver.png"
+                    WidthRequest="40" />
                 <Label
-                    FontSize="30"
-                    HorizontalOptions="Center"
-                    Text="LOGIN"
-                    TextColor="#361f00" />
+                    FontFamily="Balance"
+                    FontSize="25"
+                    Text="Volver"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </HorizontalStackLayout>
+            <Border
+                Background="#fff"
+                HeightRequest="500"
+                Stroke="Black"
+                StrokeThickness="3"
+                WidthRequest="600">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10,10,10,10" />
+                </Border.StrokeShape>
+                <VerticalStackLayout BackgroundColor="#fff7e5">
 
-                <Label
-                    Margin="85,0,0,10"
-                    FontSize="16"
-                    Text="Email"
-                    TextColor="Black" />
+                    <Image
+                        Margin="0,20,0,0"
+                        Background="Transparent"
+                        HeightRequest="70"
+                        Source="user.png"
+                        WidthRequest="70" />
+                    <Label
+                        FontFamily="OpenSansSemibold"
+                        FontSize="30"
+                        HorizontalOptions="Center"
+                        Text="INICIO SESIÓN"
+                        TextColor="#361f00" />
 
-                <Entry
-                    x:Name="entryEmail"
-                    BackgroundColor="#320000"
-                    FontSize="14"
-                    Text="{Binding Email}"
-                    WidthRequest="530" />
+                    <Label
+                        Margin="55,0,0,10"
+                        FontSize="16"
+                        HorizontalOptions="Start"
+                        Text="Email"
+                        TextColor="Black" />
 
-                <Label
-                    Margin="85,30,0,10"
-                    FontSize="16"
-                    Text="Contraseña"
-                    TextColor="Black" />
-                <Entry
-                    x:Name="entryPassword"
-                    BackgroundColor="#320000"
-                    FontSize="14"
-                    IsPassword="True"
-                    Text="{Binding Contrasena}"
-                    WidthRequest="530" />
+                    <Entry
+                        x:Name="entryEmail"
+                        BackgroundColor="#320000"
+                        FontFamily="OpenSansRegular"
+                        FontSize="14"
+                        HorizontalOptions="Center"
+                        Text="{Binding Email}"
+                        WidthRequest="500" />
 
-                <Button
-                    Margin="0,20,0,0"
-                    BackgroundColor="#eee6ab"
-                    BorderColor="#320000"
-                    BorderWidth="2"
-                    Command="{Binding validarInicioCommand}"
-                    FontSize="14"
-                    Text="LOGIN"
-                    TextColor="Black"
-                    WidthRequest="330" />
-            </VerticalStackLayout>
+                    <Label
+                        Margin="55,30,0,10"
+                        FontFamily="OpenSansRegular"
+                        FontSize="16"
+                        Text="Contraseña"
+                        TextColor="Black" />
+                    <Entry
+                        x:Name="entryPassword"
+                        BackgroundColor="#320000"
+                        FontSize="14"
+                        HorizontalOptions="Center"
+                        IsPassword="True"
+                        Text="{Binding Contrasena}"
+                        WidthRequest="500" />
 
-            <Border.Shadow>
-                <Shadow
-                    Brush="Black"
-                    Opacity="1.2"
-                    Radius="5"
-                    Offset="0,10" />
-            </Border.Shadow>
-        </Border>
-    </StackLayout>
+                    <Button
+                        Margin="0,20,0,0"
+                        BackgroundColor="#eee6ab"
+                        BorderColor="#320000"
+                        BorderWidth="2"
+                        Command="{Binding validarInicioCommand}"
+                        FontSize="14"
+                        Text="LOGIN"
+                        TextColor="Black"
+                        WidthRequest="300" />
+                </VerticalStackLayout>
+
+                <Border.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Opacity="1.2"
+                        Radius="5"
+                        Offset="0,10" />
+                </Border.Shadow>
+            </Border>
+        </StackLayout>
+
+    </ScrollView>
+
+
 
 </ContentPage>

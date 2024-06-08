@@ -12,6 +12,7 @@ public partial class VerRegistro : Popup
     public VerRegistro()
 	{
 		InitializeComponent();
+
         _connection = new FirebaseConnection();
         ListaDinero = _connection.obtenerInfo<Dinero>("DineroDatabase").Where(u => u.Restaurante_Id.Equals(VistaPrinc._restauranteId)).ToList();
 

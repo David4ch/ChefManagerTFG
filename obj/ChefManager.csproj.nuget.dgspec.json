@@ -68,7 +68,7 @@
           "dependencies": {
             "CommunityToolkit.Maui": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.1, )"
             },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
@@ -110,7 +110,7 @@
             },
             "Plugin.Maui.Calendar": {
               "target": "Package",
-              "version": "[1.1.7, )"
+              "version": "[1.1.8, )"
             }
           },
           "imports": [
@@ -139,7 +139,7 @@
           "dependencies": {
             "CommunityToolkit.Maui": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.1, )"
             },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
@@ -181,7 +181,7 @@
             },
             "Plugin.Maui.Calendar": {
               "target": "Package",
-              "version": "[1.1.7, )"
+              "version": "[1.1.8, )"
             }
           },
           "imports": [
@@ -210,7 +210,7 @@
           "dependencies": {
             "CommunityToolkit.Maui": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.1, )"
             },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
@@ -252,7 +252,7 @@
             },
             "Plugin.Maui.Calendar": {
               "target": "Package",
-              "version": "[1.1.7, )"
+              "version": "[1.1.8, )"
             }
           },
           "imports": [
@@ -282,7 +282,7 @@
           "dependencies": {
             "CommunityToolkit.Maui": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.1, )"
             },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
@@ -318,7 +318,7 @@
             },
             "Plugin.Maui.Calendar": {
               "target": "Package",
-              "version": "[1.1.7, )"
+              "version": "[1.1.8, )"
             }
           },
           "imports": [

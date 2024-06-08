@@ -10,7 +10,7 @@ namespace ChefManager.Modelo
     public class FirebaseConnection
     {
       
-        //Configuracion conexion Firebase
+        //Configuracion conexión Firebase
         public IFirebaseConfig fc = new FirebaseConfig()
         {
             AuthSecret = "H58xpKu2FTVE58DvJcVWSmRTbaPmlZkjJuvdzr7O",

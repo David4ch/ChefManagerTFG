@@ -1,4 +1,6 @@
 using ChefManager.Modelo;
+using ChefManager.PopUps;
+using CommunityToolkit.Maui.Views;
 using System.Collections.ObjectModel;
 
 namespace ChefManager.Vistas;
@@ -13,24 +15,15 @@ public partial class VistaAdmin : ContentPage
     public ObservableCollection<Empleado> ListaAuxEmpleados { get; set; } = new ObservableCollection<Empleado>();
     public ObservableCollection<Dinero> ListaAuxDinero { get; set; } = new ObservableCollection<Dinero>();
 
-    FirebaseConnection firebaseConnection = new();
+    FirebaseConnection firebaseConnection;
     bool menuAbierto = true;
 
     public VistaAdmin()
     {
+        firebaseConnection = new FirebaseConnection();
         InitializeComponent();
-        CargarListas();
-        ActualizarListas("UsuarioDatabase");
+        listaUsuarios.ItemsSource = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase");
 
-    }
-    private void CargarListas() {
-        ListaAuxUsuarios = firebaseConnection.obtenerInfo<Usuario>("UsuarioDatabase");
-        ListaAuxRestaurantes = firebaseConnection.obtenerInfo<Restaurante>("RestauranteDatabase");
-        ListaAuxProductos = firebaseConnection.obtenerInfo<Producto>("ProductoDatabase");
-        ListaAuxProveedores = firebaseConnection.obtenerInfo<Proveedor>("ProveedorDatabase");
-        ListaAuxNotas = firebaseConnection.obtenerInfo<Nota>("NotaDatabase");
-        ListaAuxEmpleados = firebaseConnection.obtenerInfo<Empleado>("EmpleadoDatabase");
-        ListaAuxDinero = firebaseConnection.obtenerInfo<Dinero>("DineroDatabase");
     }
 
     private void ActualizarListas(string database)
@@ -186,7 +179,8 @@ public partial class VistaAdmin : ContentPage
                 labelAdd.IsVisible = true;
 
                 listaUsuarios.IsVisible = true;
-                listaUsuarios.ItemsSource = ListaAuxUsuarios;
+
+                ActualizarListas("UsuarioDatabase");
 
                 break;
             case "File: restaurantes_icon.png":
@@ -217,7 +211,7 @@ public partial class VistaAdmin : ContentPage
                 labelAdd.IsVisible = true;
 
                 listaRestaurantes.IsVisible = true;
-                listaRestaurantes.ItemsSource = ListaAuxRestaurantes;
+                ActualizarListas("RestauranteDatabase");
                 break;
             case "File: dinero.png":
                 labeltitulo.Text = "DINERO";
@@ -246,7 +240,7 @@ public partial class VistaAdmin : ContentPage
                 labelAdd.IsVisible = false;
 
                 listaDinero.IsVisible = true;
-                listaDinero.ItemsSource = ListaAuxDinero;
+                ActualizarListas("DineroDatabase");
                 break;
             case "File: empleados_icon.png":
                 labeltitulo.Text = "EMPLEADOS";
@@ -277,7 +271,7 @@ public partial class VistaAdmin : ContentPage
                 labelAdd.IsVisible = false;
 
                 listaEmpleados.IsVisible = true;
-                listaEmpleados.ItemsSource = ListaAuxEmpleados;
+                ActualizarListas("EmpleadoDatabase");
                 break;
             case "File: notas.png":
                 labeltitulo.Text = "NOTAS";
@@ -306,7 +300,7 @@ public partial class VistaAdmin : ContentPage
                 labelAdd.IsVisible = false;
 
                 listaNotas.IsVisible = true;
-                listaNotas.ItemsSource = ListaAuxNotas;
+                ActualizarListas("NotaDatabase");
                 break;
             case "File: proveedores.png":
                 labeltitulo.Text = "PROVEEDORES";
@@ -337,7 +331,7 @@ public partial class VistaAdmin : ContentPage
                 labelAdd.IsVisible = false;
 
                 listaProveedores.IsVisible = true;
-                listaProveedores.ItemsSource = ListaAuxProveedores;
+                ActualizarListas("ProveedorDatabase");
                 break;
             case "File: productos_icon.png":
                 labeltitulo.Text = "PRODUCTOS";
@@ -368,9 +362,7 @@ public partial class VistaAdmin : ContentPage
                 labelAdd.IsVisible = false;
 
                 listaProductos.IsVisible = true;
-                listaProductos.ItemsSource = ListaAuxProductos;
-
-
+                ActualizarListas("ProductoDatabase");
                 break;
             default:
                 System.Diagnostics.Debug.WriteLine("Error");
@@ -444,7 +436,7 @@ public partial class VistaAdmin : ContentPage
                         Restaurante_Id = idRestaurante,
                         NombreUser = nombre,
                         Email = email,
-                        Contrasena = contrasena
+                        Contrasena = Encriptacion.Encriptar(contrasena)
                     };
                     var SetData = firebaseConnection.client.SetAsync("UsuarioDatabase/" + usuario.Id, usuario);
                     ActualizarListas("UsuarioDatabase");
@@ -501,22 +493,109 @@ public partial class VistaAdmin : ContentPage
         }
     }
 
-    private void ImageEdit_Clicked(object sender, EventArgs e)
+    private async void ImageEdit_Clicked(object sender, EventArgs e)
     {
-
+        switch (labeltitulo.Text)
+        {
+            case "USUARIOS":
+            case "PRODUCTOS":
+            case "RESTAURANTES":
+            case "PROVEEDORES":
+            case "NOTAS":
+            case "EMPLEADOS":
+                Label labelId = ((ImageButton)sender).Parent.FindByName<Label>("labelId");
+                EditarElemento.idElemento = labelId.Text;
+                EditarElemento.nombreElemento = labeltitulo.Text;
+                break;
+            default:
+                await AppShell.Current.DisplayAlert("¡!", "No está habilitado esta opción", "Ok");
+                break;
+        }
+        var popup = new EditarElemento();
+        this.ShowPopup(popup);
     }
 
     private async void ImageDelete_Clicked(object sender, EventArgs e)
-    {
-        try
+    { try
+            {
+        switch (labeltitulo.Text)
         {
-            // var SetData = firebaseConnection.client.Delete("RestauranteDatabase/" + labelId.Text);
-            await Application.Current.MainPage.DisplayAlert("!¡", "Elemento eliminado correctamente", "De acuerdo");
+            case "USUARIOS":
+                    var button0 = (ImageButton)sender;
+                    var usuario = (Usuario)button0.Parent.Parent.BindingContext;
+
+
+                    var SetData0 = firebaseConnection.client.Delete("EmpleadoDatabase/" + usuario.Id);
+                    await AppShell.Current.DisplayAlert("¡!", "Elemento eliminado correctamente", "Ok");
+                    ActualizarListas("EmpleadoDatabase");
+                    break;
+            case "PRODUCTOS":
+                    var button1 = (ImageButton)sender;
+                    var producto = (Producto)button1.Parent.Parent.BindingContext;
+
+
+                    var SetData1 = firebaseConnection.client.Delete("ProductoDatabase/" + producto.Id);
+                    await AppShell.Current.DisplayAlert("¡!", "Elemento eliminado correctamente", "Ok");
+                    ActualizarListas("ProductoDatabase");
+                    break;
+            case "RESTAURANTES":
+                    var button2 = (ImageButton)sender;
+                    var restaurante = (Restaurante)button2.Parent.Parent.BindingContext;
+
+
+                    var SetData2 = firebaseConnection.client.Delete("RestauranteDatabase/" + restaurante.Id);
+                    await AppShell.Current.DisplayAlert("¡!", "Elemento eliminado correctamente", "Ok");
+                    ActualizarListas("RestauranteDatabase");
+                    break;
+            case "PROVEEDORES":
+                    var button3 = (ImageButton)sender;
+                    var proveedor = (Proveedor)button3.Parent.Parent.BindingContext;
+
+
+                    var SetData3 = firebaseConnection.client.Delete("ProveedorDatabase/" + proveedor.Id);
+                    await AppShell.Current.DisplayAlert("¡!", "Elemento eliminado correctamente", "Ok");
+                    ActualizarListas("ProveedorDatabase");
+                    break;
+            case "NOTAS":
+                    var button4 = (ImageButton)sender;
+                    var nota = (Nota)button4.Parent.Parent.BindingContext;
+
+
+                    var SetData4 = firebaseConnection.client.Delete("NotaDatabase/" + nota.Id);
+                    await AppShell.Current.DisplayAlert("¡!", "Elemento eliminado correctamente", "Ok");
+                    ActualizarListas("NotaDatabase");
+                    break;
+            case "EMPLEADOS":
+                    var button = (ImageButton)sender;
+                    var empleado = (Empleado)button.Parent.Parent.BindingContext;
+
+
+                    var SetData = firebaseConnection.client.Delete("EmpleadoDatabase/" + empleado.Id);
+                    await AppShell.Current.DisplayAlert("¡!", "Empleado despedido correctamente", "Ok");
+                    ActualizarListas("EmpleadoDatabase");
+                    break;
+            case "DINERO":
+                    var button6 = (ImageButton)sender;
+                    var dinero = (Dinero)button6.Parent.Parent.BindingContext;
+
+
+                    var SetData6 = firebaseConnection.client.Delete("DineroDatabase/" + dinero.Id);
+                    await AppShell.Current.DisplayAlert("¡!", "Elemento eliminado correctamente", "Ok");
+                    ActualizarListas("DineroDatabase");
+                    break;
+            default:
+
+                System.Diagnostics.Debug.WriteLine("Error");
+                break;
         }
-        catch (Exception)
-        {
-            System.Diagnostics.Debug.WriteLine("Error al eliminar el restaurante");
-        }
+ }
+            catch (Exception)
+            {
+                System.Diagnostics.Debug.WriteLine("Error al eliminar");
+            }
+               
+           
+           
     }
 
     //CAMBIAR COLOR DE LOS BOTONES DE EMPLEADOS USUARIOS RESTAURANTES ETC
@@ -579,5 +658,10 @@ public partial class VistaAdmin : ContentPage
         ImageButton button = (ImageButton)sender;
         button.BackgroundColor = Colors.LightGray;
 
+    }
+
+    private async void CerrarSesion_Clicked(object sender, EventArgs e)
+    {
+        await AppShell.Current.GoToAsync(nameof(VistaLogin));
     }
 }

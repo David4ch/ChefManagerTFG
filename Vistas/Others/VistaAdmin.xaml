@@ -8,7 +8,15 @@
     <ContentPage.MenuBarItems>
         <MenuBarItem Text="&#x2630;">
             <MenuFlyoutItem Clicked="MostrarMenu" Text="Abrir/Cerrar Menú" />
+
+            <MenuFlyoutItem Clicked="CerrarSesion_Clicked" Text="Cerrar sesión">
+                <MenuFlyoutItem.IconImageSource>
+                    <FontImageSource FontFamily="Arial" Glyph="&#xE8BB;" />
+                </MenuFlyoutItem.IconImageSource>
+            </MenuFlyoutItem>
         </MenuBarItem>
+
+
     </ContentPage.MenuBarItems>
 
     <ScrollView>
@@ -312,6 +320,7 @@
                                 VerticalOptions="Center" />
 
                         </Grid>
+
                         <CollectionView
                             x:Name="listaUsuarios"
                             HeightRequest="500"
@@ -390,6 +399,7 @@
                                         RowDefinitions="Auto"
                                         WidthRequest="-1">
                                         <Label
+                                            x:Name="labelId"
                                             Grid.Column="0"
                                             Text="{Binding Id}"
                                             TextColor="Black" />
@@ -453,6 +463,7 @@
                                         ColumnDefinitions="*,*,*,*,*,*,*"
                                         RowDefinitions="Auto">
                                         <Label
+                                            x:Name="labelId"
                                             IsVisible="False"
                                             Text="{Binding Id}"
                                             TextColor="Black" />
@@ -526,6 +537,7 @@
                                         ColumnDefinitions="*,*,*,*,*,*,*"
                                         RowDefinitions="Auto">
                                         <Label
+                                            x:Name="labelId"
                                             IsVisible="False"
                                             Text="{Binding Id}"
                                             TextColor="Black" />
@@ -602,6 +614,7 @@
                                         ColumnDefinitions="*,*,*,*,*,*,*"
                                         RowDefinitions="Auto">
                                         <Label
+                                            x:Name="labelId"
                                             IsVisible="False"
                                             Text="{Binding Id}"
                                             TextColor="Black" />
@@ -668,6 +681,7 @@
                                         ColumnDefinitions="*,*,*,*,*,*,*"
                                         RowDefinitions="Auto">
                                         <Label
+                                            x:Name="labelId"
                                             IsVisible="False"
                                             Text="{Binding Id}"
                                             TextColor="Black" />
@@ -746,6 +760,7 @@
                                         RowDefinitions="Auto"
                                         WidthRequest="-1">
                                         <Label
+                                            x:Name="labelId"
                                             IsVisible="False"
                                             Text="{Binding Id}"
                                             TextColor="Black" />

@@ -24,6 +24,7 @@
                     TextColor="White"
                     VerticalOptions="Center" />
             </HorizontalStackLayout>
+
             <Label
                 Margin="50,30,0,30"
                 FontFamily="Balance"

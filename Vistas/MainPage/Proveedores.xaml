@@ -45,7 +45,7 @@
 
                 <Label
                     Margin="40,0,5,0"
-                    FontAttributes="Bold"
+                    FontFamily="OpenSansSemibold"
                     FontSize="30"
                     Text="Tipo:"
                     TextColor="{StaticResource darkBrown}"
@@ -67,7 +67,7 @@
                 </Picker>
                 <Label
                     Margin="0,0,10,0"
-                    FontAttributes="Bold"
+                    FontFamily="OpenSansSemibold"
                     FontSize="30"
                     Text="Añadir Proveedor"
                     TextColor="{StaticResource darkBlue}"
@@ -98,91 +98,95 @@
                 TextColor="Wheat"
                 VerticalTextAlignment="Center"
                 WidthRequest="1100" />
+            <FlexLayout
+                AlignItems="Center"
+                Direction="Column"
+                JustifyContent="SpaceBetween">
+                <CollectionView
+                    x:Name="listaProveedores"
+                    Margin="0,40,0,0"
+                    BackgroundColor="{StaticResource darkBlue}"
+                    HeightRequest="500"
+                    HorizontalOptions="Center"
+                    IsVisible="False"
+                    VerticalOptions="Center"
+                    WidthRequest="1100">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout
+                            HorizontalItemSpacing="30"
+                            Orientation="Vertical"
+                            Span="3"
+                            VerticalItemSpacing="10" />
+                    </CollectionView.ItemsLayout>
 
-            <CollectionView
-                x:Name="listaProveedores"
-                Margin="0,40,0,0"
-                BackgroundColor="{StaticResource darkBlue}"
-                HeightRequest="500"
-                HorizontalOptions="Center"
-                IsVisible="False"
-                VerticalOptions="Center"
-                WidthRequest="1100">
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout ItemSpacing="15" Orientation="Vertical" />
-                </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="mo:Proveedor">
+                            <Border
+                                Padding="10"
+                                BackgroundColor="Wheat"
+                                WidthRequest="300">
+                                <StackLayout>
 
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="mo:Proveedor">
-
-                        <Border
-                            Margin="10,30,0,20"
-                            Padding="15"
-                            BackgroundColor="Wheat"
-                            HeightRequest="220"
-                            StrokeShape="RoundRectangle 10,10,0,0"
-                            StrokeThickness="0"
-                            WidthRequest="980">
-
-                            <Grid
-                                ColumnDefinitions="*,*,*,*"
-                                ColumnSpacing="15"
-                                RowDefinitions="*,*">
-                                <VerticalStackLayout Grid.Row="0" Grid.Column="0">
-                                    <Label
+                                    <HorizontalStackLayout>
+                                        <Label
+                                            Margin="10,0"
+                                            FontFamily="OpenSansSemibold"
+                                            FontSize="15"
+                                            Text="Nombre Empresa:"
+                                            TextColor="{StaticResource darkBrown}"
+                                            VerticalTextAlignment="End" />
+                                        <ImageButton
+                                            x:Name="botonEliminar"
+                                            Margin="20,10,0,0"
+                                            BackgroundColor="DarkRed"
+                                            Clicked="Eliminar_Clicked"
+                                            Source="eliminar.png"
+                                            WidthRequest="30" />
+                                        <ImageButton
+                                            x:Name="botonEditar"
+                                            Margin="10,10,0,0"
+                                            Padding="5"
+                                            BackgroundColor="LightGray"
+                                            Clicked="Editar_Clicked"
+                                            Source="editar.png"
+                                            WidthRequest="30" />
+                                    </HorizontalStackLayout>
+                                    <Entry
                                         x:Name="entryId"
                                         IsVisible="False"
                                         Text="{Binding Id}" />
-                                    <Label
-                                        FontAttributes="Bold"
-                                        FontFamily="Arial"
-                                        FontSize="20"
-                                        Text="Nombre Empresa:"
-                                        TextColor="{StaticResource darkBrown}" />
                                     <Entry
                                         x:Name="entryNombreEmpresa"
-                                        Margin="0,0,0,10"
+                                        Margin="10,10,0,0"
                                         BackgroundColor="{StaticResource darkBrown2}"
                                         FontSize="15"
+                                        HorizontalOptions="Start"
                                         IsEnabled="False"
                                         MaxLength="40"
                                         Text="{Binding NombreEmpresa}"
-                                        TextColor="White" />
-                                </VerticalStackLayout>
-
-                                <VerticalStackLayout Grid.Row="1" Grid.Column="0">
-
-                                    <Label
-                                        FontAttributes="Bold"
-                                        FontFamily="Arial"
-                                        FontSize="20"
-                                        Text="Contacto:"
-                                        TextColor="{StaticResource darkBrown}" />
+                                        TextColor="White"
+                                        WidthRequest="250" />
                                     <Entry
                                         x:Name="entryContacto"
-                                        Margin="0,0,0,10"
+                                        Margin="10,10,0,0"
                                         BackgroundColor="{StaticResource darkBrown2}"
                                         FontSize="15"
+                                        HorizontalOptions="Start"
                                         IsEnabled="False"
-                                        Keyboard="Numeric"
-                                        MaxLength="9"
+                                        MaxLength="40"
                                         Text="{Binding Contacto}"
-                                        TextColor="White" />
-                                </VerticalStackLayout>
+                                        TextColor="White"
+                                        WidthRequest="250" />
 
-                                <VerticalStackLayout Grid.Row="0" Grid.Column="1">
-                                    <Label
-                                        FontAttributes="Bold"
-                                        FontFamily="Arial"
-                                        FontSize="20"
-                                        Text="Tipo Producto:"
-                                        TextColor="{StaticResource darkBrown}" />
                                     <Picker
                                         x:Name="pickerTipo"
-                                        BackgroundColor="{StaticResource darkBrown}"
+                                        Margin="10,10,0,0"
+                                        BackgroundColor="{StaticResource darkBrown2}"
+                                        HorizontalOptions="Start"
                                         IsEnabled="False"
                                         SelectedItem="{Binding TipoProducto}"
-                                        TextColor="Wheat">
+                                        TextColor="White"
+                                        WidthRequest="250">
                                         <Picker.Items>
                                             <x:String>Productos frescos</x:String>
                                             <x:String>Productos secos</x:String>
@@ -191,95 +195,46 @@
                                             <x:String>Utensilios y equipamiento</x:String>
                                         </Picker.Items>
                                     </Picker>
-                                </VerticalStackLayout>
 
-                                <VerticalStackLayout Grid.Row="1" Grid.Column="1">
-                                    <Label
-                                        FontAttributes="Bold"
-                                        FontFamily="Arial"
-                                        FontSize="20"
-                                        Text="Descripción:"
-                                        TextColor="{StaticResource darkBrown}" />
-                                    <Entry
+                                    <Editor
                                         x:Name="entryDescripcion"
-                                        Margin="0,0,0,10"
+                                        Margin="10,10,0,0"
                                         BackgroundColor="{StaticResource darkBrown2}"
                                         FontSize="15"
+                                        HorizontalOptions="Start"
                                         IsEnabled="False"
-                                        MaxLength="50"
+                                        MaxLength="40"
                                         Text="{Binding Descripción}"
-                                        TextColor="White" />
-                                </VerticalStackLayout>
-
-                                <VerticalStackLayout Grid.Row="0" Grid.Column="2">
-                                    <Label
-                                        FontAttributes="Bold"
-                                        FontFamily="Arial"
-                                        FontSize="20"
-                                        Text="Periocidad:"
-                                        TextColor="{StaticResource darkBrown}" />
+                                        TextColor="White"
+                                        WidthRequest="250" />
                                     <Entry
                                         x:Name="entryPeriocidad"
-                                        BackgroundColor="{StaticResource darkBrown}"
-                                        IsEnabled="False"
-                                        Text="{Binding Periocidad}"
-                                        TextColor="Wheat" />
-                                </VerticalStackLayout>
-
-                                <VerticalStackLayout Grid.Row="1" Grid.Column="2">
-                                    <Label
-                                        FontAttributes="Bold"
-                                        FontFamily="Arial"
-                                        FontSize="20"
-                                        Text="Precio:"
-                                        TextColor="{StaticResource darkBrown}" />
-                                    <Entry
-                                        x:Name="entryPrecio"
-                                        Margin="0,0,0,10"
+                                        Margin="10,10,0,0"
                                         BackgroundColor="{StaticResource darkBrown2}"
                                         FontSize="15"
+                                        HorizontalOptions="Start"
                                         IsEnabled="False"
-                                        MaxLength="10"
-                                        Text="{Binding Precio}"
-                                        TextColor="White" />
-                                </VerticalStackLayout>
-
-                                <VerticalStackLayout
-                                    Grid.Row="0"
-                                    Grid.RowSpan="2"
-                                    Grid.Column="3"
-                                    Spacing="10"
-                                    VerticalOptions="Center">
-                                    <Button
-                                        x:Name="botonEditar"
-                                        BackgroundColor="DarkCyan"
-                                        Clicked="Editar_Clicked"
-                                        FontAttributes="Bold"
+                                        MaxLength="40"
+                                        Text="{Binding Periocidad}"
+                                        TextColor="White"
+                                        WidthRequest="250" />
+                                    <Entry
+                                        x:Name="entryPrecio"
+                                        Margin="10,10,0,0"
+                                        BackgroundColor="{StaticResource darkBrown2}"
                                         FontSize="15"
-                                        Text="Editar"
-                                        TextColor="Wheat"
-                                        WidthRequest="150" />
-                                    <Button
-                                        x:Name="botonEliminar"
-                                        BackgroundColor="DarkRed"
-                                        Clicked="Eliminar_Clicked"
-                                        FontAttributes="Bold"
-                                        FontSize="15"
-                                        IsEnabled="true"
-                                        Text="Eliminar"
-                                        TextColor="Wheat"
-                                        WidthRequest="150" />
-                                </VerticalStackLayout>
-
-                            </Grid>
-
-
-                        </Border>
-
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-
+                                        HorizontalOptions="Start"
+                                        IsEnabled="False"
+                                        MaxLength="40"
+                                        Text="{Binding Precio, StringFormat='{0}'}"
+                                        TextColor="White"
+                                        WidthRequest="250" />
+                                </StackLayout>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </FlexLayout>
         </VerticalStackLayout>
 
     </ScrollView>

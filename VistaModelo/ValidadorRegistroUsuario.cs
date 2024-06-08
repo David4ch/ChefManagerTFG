@@ -5,6 +5,7 @@ using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 
+
 namespace ChefManager.VistaModelo
 {
     public partial class ValidadorRegistroUsuario : ObservableValidator
@@ -76,8 +77,7 @@ namespace ChefManager.VistaModelo
                         Restaurante_Id = RegistroRestaurante._idRestaurante,
                         NombreUser = nombre,
                         Email = email,
-                        Contrasena = contrasena,
-
+                        Contrasena = Encriptacion.Encriptar(contrasena),
 
                     };
                     var SetData = connection.client.SetAsync("UsuarioDatabase/" + usuario.Id, usuario);

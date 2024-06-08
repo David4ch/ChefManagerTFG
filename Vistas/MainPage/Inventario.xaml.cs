@@ -26,9 +26,8 @@ public partial class Inventario : ContentPage
 
         MainThread.BeginInvokeOnMainThread(new Action(async () => await ObtenerToken()));
 
-        //ListaAuxProductos = connection.obtenerInfo<Producto>("ProductoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
-        ListaAuxProductos = connection.obtenerInfo<Producto>("ProductoDatabase").Where(u => u.Restaurante_Id == "28193324-b08d-4c44-a07a-226a21788eae").ToList();
-
+        ListaAuxProductos = connection.obtenerInfo<Producto>("ProductoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
+       
         ActualizarLista();
         
     }
@@ -54,9 +53,8 @@ public partial class Inventario : ContentPage
 
     private void ActualizarLista()
     {
-        //ListaAuxProductos = connection.obtenerInfo<Producto>("ProductoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
-        ListaAuxProductos = connection.obtenerInfo<Producto>("ProductoDatabase").Where(u => u.Restaurante_Id == "28193324-b08d-4c44-a07a-226a21788eae").ToList();
-
+        ListaAuxProductos = connection.obtenerInfo<Producto>("ProductoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
+       
         if (ListaAuxProductos.Count != 0) { 
             listaProductos.ItemsSource = ListaAuxProductos;
         }

@@ -6,10 +6,11 @@ namespace ChefManager.PopUps;
 public partial class AgregarProveedor : Popup
 {
 
-    FirebaseConnection connection = new FirebaseConnection();
+    FirebaseConnection connection;
 
     public AgregarProveedor()
     {
+        connection = new FirebaseConnection();
         InitializeComponent();
     }
 

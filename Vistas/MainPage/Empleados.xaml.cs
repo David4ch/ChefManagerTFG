@@ -6,15 +6,22 @@ namespace ChefManager.Vistas;
 
 public partial class Empleados : ContentPage
 {
-   public static string _sourceNomina;
-   public static string _idEmpleado;
-   List<Empleado> listaAuxEmpleados;
-   FirebaseConnection connection;
+    public static string _sourceNomina;
+    public static string _idEmpleado;
+    List<Empleado> listaAuxEmpleados;
+    FirebaseConnection connection;
 
     public Empleados()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         connection = new FirebaseConnection();
+        listaAuxEmpleados = connection.obtenerInfo<Empleado>("EmpleadoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
+
+        ActualizarLista();
+    }
+
+    private void ActualizarLista()
+    {
         listaAuxEmpleados = connection.obtenerInfo<Empleado>("EmpleadoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
 
         if (listaAuxEmpleados.Count != 0)
@@ -22,22 +29,24 @@ public partial class Empleados : ContentPage
             nohay.IsVisible = false;
             listaEmpleados.IsVisible = true;
 
-            ActualizarLista();
+
+            listaEmpleados.ItemsSource = listaAuxEmpleados;
+
+            labelNum.Text = "Número empleados: " + listaAuxEmpleados.Count().ToString();
         }
-    }
+        else
+        {
+            labelNum.IsVisible= false;
+            nohay.IsVisible = true;
+            listaEmpleados.IsVisible = false;
+        }
 
-    private void ActualizarLista() { 
-        
-        listaAuxEmpleados =  connection.obtenerInfo<Empleado>("EmpleadoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
 
-        listaEmpleados.ItemsSource = listaAuxEmpleados;
-
-        labelNum.Text = "Número empleados: " + listaAuxEmpleados.Count().ToString();
     }
 
     private void Buscador_TextChanged(object sender, TextChangedEventArgs e)
     {
-        listaEmpleados.ItemsSource = listaAuxEmpleados.Where(u=> u.Nombre.Contains(buscador.Text));
+        listaEmpleados.ItemsSource = listaAuxEmpleados.Where(u => u.Nombre.Contains(buscador.Text));
     }
 
     private void Agregar_Empleado(object sender, EventArgs e)
@@ -54,7 +63,7 @@ public partial class Empleados : ContentPage
         {
             case "Disponibilidad(Si)":
 
-                listaEmpleados.ItemsSource = listaAuxEmpleados.Where(u =>u.Disponibilidad );
+                listaEmpleados.ItemsSource = listaAuxEmpleados.Where(u => u.Disponibilidad);
                 break;
             case "Disponibilidad(No)":
                 listaEmpleados.ItemsSource = listaAuxEmpleados.Where(u => !u.Disponibilidad);
@@ -73,7 +82,7 @@ public partial class Empleados : ContentPage
     {
         await AppShell.Current.GoToAsync(nameof(VistaPrinc));
     }
-    
+
     private void VerNomina(object sender, EventArgs e)
     {
 
@@ -82,9 +91,9 @@ public partial class Empleados : ContentPage
 
         _sourceNomina = empleado.ImagenNomina;
 
-            var popup = new VerNomina();
-            this.ShowPopup(popup);
-        
+        var popup = new VerNomina();
+        this.ShowPopup(popup);
+
     }
 
     private void EditarEmpleado(object sender, EventArgs e)
@@ -97,7 +106,7 @@ public partial class Empleados : ContentPage
 
         var popup = new EditarEmpleado();
         this.ShowPopup(popup);
-        
+
     }
 
     private void EliminarEmpleado(object sender, EventArgs e)
@@ -122,7 +131,7 @@ public partial class Empleados : ContentPage
         ImageButton button = (ImageButton)sender;
         button.BackgroundColor = Colors.Red;
     }
-   
+
     private void OnPointerExited(object sender, PointerEventArgs e)
     {
         ImageButton button = (ImageButton)sender;

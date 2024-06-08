@@ -2,10 +2,10 @@
   "version": 3,
   "targets": {
     "net8.0-android34.0": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -20,7 +20,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -679,7 +679,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -2902,10 +2902,10 @@
       }
     },
     "net8.0-android34.0/android-arm": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -2920,7 +2920,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -3579,7 +3579,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -5738,10 +5738,10 @@
       }
     },
     "net8.0-android34.0/android-arm64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -5756,7 +5756,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -6415,7 +6415,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -8574,10 +8574,10 @@
       }
     },
     "net8.0-android34.0/android-x64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -8592,7 +8592,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -9251,7 +9251,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -11410,10 +11410,10 @@
       }
     },
     "net8.0-android34.0/android-x86": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -11428,7 +11428,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -12087,7 +12087,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -14246,10 +14246,10 @@
       }
     },
     "net8.0-android34.0/iossimulator-x64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -14264,7 +14264,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -14923,7 +14923,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -17082,10 +17082,10 @@
       }
     },
     "net8.0-android34.0/maccatalyst-x64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -17100,7 +17100,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -17759,7 +17759,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -19918,10 +19918,10 @@
       }
     },
     "net8.0-android34.0/win10-x64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -19936,7 +19936,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -20595,7 +20595,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -22754,10 +22754,10 @@
       }
     },
     "net8.0-ios17.2": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -22772,7 +22772,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -23426,7 +23426,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -24643,10 +24643,10 @@
       }
     },
     "net8.0-ios17.2/android-arm": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -24661,7 +24661,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -25316,7 +25316,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -26839,10 +26839,10 @@
       }
     },
     "net8.0-ios17.2/android-arm64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -26857,7 +26857,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -27512,7 +27512,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -29035,10 +29035,10 @@
       }
     },
     "net8.0-ios17.2/android-x64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -29053,7 +29053,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -29708,7 +29708,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -31231,10 +31231,10 @@
       }
     },
     "net8.0-ios17.2/android-x86": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -31249,7 +31249,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -31904,7 +31904,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -33427,10 +33427,10 @@
       }
     },
     "net8.0-ios17.2/iossimulator-x64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -33445,7 +33445,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -34100,7 +34100,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -35623,10 +35623,10 @@
       }
     },
     "net8.0-ios17.2/maccatalyst-x64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -35641,7 +35641,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -36296,7 +36296,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -37819,10 +37819,10 @@
       }
     },
     "net8.0-ios17.2/win10-x64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -37837,7 +37837,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -38492,7 +38492,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -40011,10 +40011,10 @@
       }
     },
     "net8.0-maccatalyst17.2": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -40029,7 +40029,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -40677,7 +40677,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -41894,10 +41894,10 @@
       }
     },
     "net8.0-maccatalyst17.2/android-arm": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -41912,7 +41912,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -42561,7 +42561,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -44084,10 +44084,10 @@
       }
     },
     "net8.0-maccatalyst17.2/android-arm64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -44102,7 +44102,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -44751,7 +44751,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -46274,10 +46274,10 @@
       }
     },
     "net8.0-maccatalyst17.2/android-x64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -46292,7 +46292,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -46941,7 +46941,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -48464,10 +48464,10 @@
       }
     },
     "net8.0-maccatalyst17.2/android-x86": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -48482,7 +48482,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -49131,7 +49131,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -50654,10 +50654,10 @@
       }
     },
     "net8.0-maccatalyst17.2/iossimulator-x64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -50672,7 +50672,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -51321,7 +51321,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -52844,10 +52844,10 @@
       }
     },
     "net8.0-maccatalyst17.2/maccatalyst-x64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -52862,7 +52862,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -53511,7 +53511,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -55034,10 +55034,10 @@
       }
     },
     "net8.0-maccatalyst17.2/win10-x64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -55052,7 +55052,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -55701,7 +55701,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -57220,10 +57220,10 @@
       }
     },
     "net8.0-windows10.0.19041": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -57238,7 +57238,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -58048,7 +58048,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -59283,10 +59283,10 @@
       }
     },
     "net8.0-windows10.0.19041/android-arm": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -59301,7 +59301,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -60072,7 +60072,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -61607,10 +61607,10 @@
       }
     },
     "net8.0-windows10.0.19041/android-arm64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -61625,7 +61625,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -62396,7 +62396,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -63931,10 +63931,10 @@
       }
     },
     "net8.0-windows10.0.19041/android-x64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -63949,7 +63949,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -64720,7 +64720,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -66255,10 +66255,10 @@
       }
     },
     "net8.0-windows10.0.19041/android-x86": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -66273,7 +66273,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -67044,7 +67044,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -68579,10 +68579,10 @@
       }
     },
     "net8.0-windows10.0.19041/iossimulator-x64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -68597,7 +68597,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -69368,7 +69368,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -70903,10 +70903,10 @@
       }
     },
     "net8.0-windows10.0.19041/maccatalyst-x64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -70921,7 +70921,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -71692,7 +71692,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -73227,10 +73227,10 @@
       }
     },
     "net8.0-windows10.0.19041/win10-x64": {
-      "CommunityToolkit.Maui/9.0.0": {
+      "CommunityToolkit.Maui/9.0.1": {
         "type": "package",
         "dependencies": {
-          "CommunityToolkit.Maui.Core": "9.0.0",
+          "CommunityToolkit.Maui.Core": "9.0.1",
           "Microsoft.Maui.Controls": "8.0.14",
           "Microsoft.Maui.Controls.Compatibility": "8.0.14"
         },
@@ -73245,7 +73245,7 @@
           }
         }
       },
-      "CommunityToolkit.Maui.Core/9.0.0": {
+      "CommunityToolkit.Maui.Core/9.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Maui.Core": "8.0.14",
@@ -74022,7 +74022,7 @@
           }
         }
       },
-      "Plugin.Maui.Calendar/1.1.7": {
+      "Plugin.Maui.Calendar/1.1.8": {
         "type": "package",
         "dependencies": {
           "CommunityToolkit.Mvvm": "8.2.2",
@@ -75554,10 +75554,10 @@
     }
   },
   "libraries": {
-    "CommunityToolkit.Maui/9.0.0": {
-      "sha512": "G1z3FFAokpu18rDt4L2SZj827xIzqOv7PLq54Lxx46/57zUa8QjVTRTowl6s1qAeSW9r4XyFwnTb1sY1KOnzWg==",
+    "CommunityToolkit.Maui/9.0.1": {
+      "sha512": "w9+Lt5grGljPQ9tHQF6GAbmsCQtFj7H9NbduOx2nHSFKUAnuy+D7iSDqS3ds/uVCjsylw2x+FXroG3R1tTB2CQ==",
       "type": "package",
-      "path": "communitytoolkit.maui/9.0.0",
+      "path": "communitytoolkit.maui/9.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -75565,7 +75565,7 @@
         "analyzers/dotnet/cs/CommunityToolkit.Maui.Analyzers.CodeFixes.dll",
         "analyzers/dotnet/cs/CommunityToolkit.Maui.Analyzers.dll",
         "analyzers/dotnet/cs/CommunityToolkit.Maui.SourceGenerators.dll",
-        "communitytoolkit.maui.9.0.0.nupkg.sha512",
+        "communitytoolkit.maui.9.0.1.nupkg.sha512",
         "communitytoolkit.maui.nuspec",
         "icon.png",
         "lib/net8.0-android34.0/CommunityToolkit.Maui.dll",
@@ -75582,15 +75582,15 @@
         "lib/net8.0/CommunityToolkit.Maui.xml"
       ]
     },
-    "CommunityToolkit.Maui.Core/9.0.0": {
-      "sha512": "wzOYHQPs5yokoYyoCm2Ri5RDEkDmnvSklotzp0M4jfOE5M0ZPmCDvEVUJpVzZR9J5cudPlsL3Hh1cK3QzQd2NQ==",
+    "CommunityToolkit.Maui.Core/9.0.1": {
+      "sha512": "0lBnt0cWGXONKAc26E31rsSm0lCD6JSwDB1AngEYEly4Oybv6KrxmVTx3irpuaMNXJKnhbf4xSgG2ObGf4vw6g==",
       "type": "package",
-      "path": "communitytoolkit.maui.core/9.0.0",
+      "path": "communitytoolkit.maui.core/9.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "ReadMe.txt",
-        "communitytoolkit.maui.core.9.0.0.nupkg.sha512",
+        "communitytoolkit.maui.core.9.0.1.nupkg.sha512",
         "communitytoolkit.maui.core.nuspec",
         "icon.png",
         "lib/net8.0-android34.0/CommunityToolkit.Maui.Core.dll",
@@ -78161,10 +78161,10 @@
         "packageIcon.png"
       ]
     },
-    "Plugin.Maui.Calendar/1.1.7": {
-      "sha512": "nXmchOXxhGTqLLUd1VB6xHuUtxpYxXhaQoz8jcokLms/E0Qk9DqPeiBCcHqkraei0wlxbKaSd+ECIZMBTYYwgg==",
+    "Plugin.Maui.Calendar/1.1.8": {
+      "sha512": "X+/2xx6PNHyEzpaPFASKauQe7z6YO4zo471ZyHuPpqpI9yhW3Ud75S+csGKo0ULYdKqNzrDWbbR0tJFh94NdMg==",
       "type": "package",
-      "path": "plugin.maui.calendar/1.1.7",
+      "path": "plugin.maui.calendar/1.1.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -78176,7 +78176,7 @@
         "lib/net8.0-windows10.0.19041/Plugin.Maui.Calendar.dll",
         "lib/net8.0/Plugin.Maui.Calendar.dll",
         "nuget.png",
-        "plugin.maui.calendar.1.1.7.nupkg.sha512",
+        "plugin.maui.calendar.1.1.8.nupkg.sha512",
         "plugin.maui.calendar.nuspec"
       ]
     },
@@ -84413,7 +84413,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-android34.0": [
-      "CommunityToolkit.Maui >= 9.0.0",
+      "CommunityToolkit.Maui >= 9.0.1",
       "CommunityToolkit.Mvvm >= 8.2.2",
       "FireSharp >= 2.0.4",
       "FirebaseAuthentication.net >= 4.1.0",
@@ -84423,10 +84423,10 @@
       "Microsoft.Maui.Controls.Compatibility >= 8.0.40",
       "Microsoft.NET.ILLink.Tasks >= 8.0.5",
       "Newtonsoft.Json >= 13.0.3",
-      "Plugin.Maui.Calendar >= 1.1.7"
+      "Plugin.Maui.Calendar >= 1.1.8"
     ],
     "net8.0-ios17.2": [
-      "CommunityToolkit.Maui >= 9.0.0",
+      "CommunityToolkit.Maui >= 9.0.1",
       "CommunityToolkit.Mvvm >= 8.2.2",
       "FireSharp >= 2.0.4",
       "FirebaseAuthentication.net >= 4.1.0",
@@ -84436,10 +84436,10 @@
       "Microsoft.Maui.Controls.Compatibility >= 8.0.40",
       "Microsoft.NET.ILLink.Tasks >= 8.0.5",
       "Newtonsoft.Json >= 13.0.3",
-      "Plugin.Maui.Calendar >= 1.1.7"
+      "Plugin.Maui.Calendar >= 1.1.8"
     ],
     "net8.0-maccatalyst17.2": [
-      "CommunityToolkit.Maui >= 9.0.0",
+      "CommunityToolkit.Maui >= 9.0.1",
       "CommunityToolkit.Mvvm >= 8.2.2",
       "FireSharp >= 2.0.4",
       "FirebaseAuthentication.net >= 4.1.0",
@@ -84449,10 +84449,10 @@
       "Microsoft.Maui.Controls.Compatibility >= 8.0.40",
       "Microsoft.NET.ILLink.Tasks >= 8.0.5",
       "Newtonsoft.Json >= 13.0.3",
-      "Plugin.Maui.Calendar >= 1.1.7"
+      "Plugin.Maui.Calendar >= 1.1.8"
     ],
     "net8.0-windows10.0.19041": [
-      "CommunityToolkit.Maui >= 9.0.0",
+      "CommunityToolkit.Maui >= 9.0.1",
       "CommunityToolkit.Mvvm >= 8.2.2",
       "FireSharp >= 2.0.4",
       "FirebaseAuthentication.net >= 4.1.0",
@@ -84461,7 +84461,7 @@
       "Microsoft.Maui.Controls >= 8.0.40",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.40",
       "Newtonsoft.Json >= 13.0.3",
-      "Plugin.Maui.Calendar >= 1.1.7"
+      "Plugin.Maui.Calendar >= 1.1.8"
     ]
   },
   "packageFolders": {
@@ -84532,7 +84532,7 @@
         "dependencies": {
           "CommunityToolkit.Maui": {
             "target": "Package",
-            "version": "[9.0.0, )"
+            "version": "[9.0.1, )"
           },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
@@ -84574,7 +84574,7 @@
           },
           "Plugin.Maui.Calendar": {
             "target": "Package",
-            "version": "[1.1.7, )"
+            "version": "[1.1.8, )"
           }
         },
         "imports": [
@@ -84603,7 +84603,7 @@
         "dependencies": {
           "CommunityToolkit.Maui": {
             "target": "Package",
-            "version": "[9.0.0, )"
+            "version": "[9.0.1, )"
           },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
@@ -84645,7 +84645,7 @@
           },
           "Plugin.Maui.Calendar": {
             "target": "Package",
-            "version": "[1.1.7, )"
+            "version": "[1.1.8, )"
           }
         },
         "imports": [
@@ -84674,7 +84674,7 @@
         "dependencies": {
           "CommunityToolkit.Maui": {
             "target": "Package",
-            "version": "[9.0.0, )"
+            "version": "[9.0.1, )"
           },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
@@ -84716,7 +84716,7 @@
           },
           "Plugin.Maui.Calendar": {
             "target": "Package",
-            "version": "[1.1.7, )"
+            "version": "[1.1.8, )"
           }
         },
         "imports": [
@@ -84746,7 +84746,7 @@
         "dependencies": {
           "CommunityToolkit.Maui": {
             "target": "Package",
-            "version": "[9.0.0, )"
+            "version": "[9.0.1, )"
           },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
@@ -84782,7 +84782,7 @@
           },
           "Plugin.Maui.Calendar": {
             "target": "Package",
-            "version": "[1.1.7, )"
+            "version": "[1.1.8, )"
           }
         },
         "imports": [

@@ -2,10 +2,10 @@ namespace ChefManager.Vistas;
 
 public partial class Bienvenida : ContentPage
 {
-	public Bienvenida()
-	{
-		InitializeComponent();
-	}
+    public Bienvenida()
+    {
+        InitializeComponent();
+    }
     private async void RegisterButton_Clicked(object sender, EventArgs e)
     {
         try
@@ -15,7 +15,7 @@ public partial class Bienvenida : ContentPage
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Processing failed: {ex.Message}");
+            System.Diagnostics.Debug.WriteLine(ex.Message);
         }
     }
 
@@ -28,7 +28,7 @@ public partial class Bienvenida : ContentPage
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Processing failed: {ex.Message}");
+            System.Diagnostics.Debug.WriteLine(ex.Message);
         }
     }
 }

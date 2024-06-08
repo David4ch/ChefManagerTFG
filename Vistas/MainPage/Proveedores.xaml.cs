@@ -12,34 +12,40 @@ public partial class Proveedores : ContentPage
     string _idProveedor = "";
     Entry entryNombreEmpresa;
     Entry entryContacto;
-    Entry entryDescripcion;
+    Editor entryDescripcion;
     Entry entryPrecio;
     Entry entryPeriocidad;
+    Entry entryId;
     Picker pickerTipo;
-    Button botonEditar;
-    Button botonEliminar;
+    ImageButton botonEditar;
+    ImageButton botonEliminar;
 
     public Proveedores()
     {
         InitializeComponent();
 
         listaAuxProveedores = connection.obtenerInfo<Proveedor>("ProveedorDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
+       
+        ActualizarLista();
 
+    }
 
+    private void ActualizarLista()
+    {
+        listaAuxProveedores = connection.obtenerInfo<Proveedor>("ProveedorDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
         if (listaAuxProveedores.Count != 0)
         {
             nohay.IsVisible = false;
             listaProveedores.IsVisible = true;
-            ActualizarLista();
+            listaProveedores.ItemsSource = listaAuxProveedores;
         }
-    }
+        else
+        {
+            nohay.IsVisible = true;
+            listaProveedores.IsVisible = false;
+        }
 
-    public void ActualizarLista()
-    {
-        listaAuxProveedores = connection.obtenerInfo<Proveedor>("ProveedorDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
 
-
-        listaProveedores.ItemsSource = listaAuxProveedores;
     }
 
     private void Picker_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,7 +82,7 @@ public partial class Proveedores : ContentPage
 
     private void Eliminar_Clicked(object sender, EventArgs e)
     {
-        var button = (Button)sender;
+        var button = (ImageButton)sender;
         var proveedor = (Proveedor)button.Parent.Parent.BindingContext;
         _idProveedor = proveedor.Id;
 
@@ -94,17 +100,21 @@ public partial class Proveedores : ContentPage
 
     private void Editar_Clicked(object sender, EventArgs e)
     {
-        entryNombreEmpresa = ((Button)sender).Parent.FindByName<Entry>("entryNombreEmpresa");
-        entryContacto = ((Button)sender).Parent.FindByName<Entry>("entryContacto");
-        entryDescripcion = ((Button)sender).Parent.FindByName<Entry>("entryDescripcion");
-        entryPrecio = ((Button)sender).Parent.FindByName<Entry>("entryPrecio");
-        entryPeriocidad = ((Button)sender).Parent.FindByName<Entry>("entryPeriocidad");
-        pickerTipo = ((Button)sender).Parent.FindByName<Picker>("pickerTipo");
-        botonEditar = ((Button)sender).Parent.FindByName<Button>("botonEditar");
-        botonEliminar = ((Button)sender).Parent.FindByName<Button>("botonEliminar");
+        entryNombreEmpresa = ((ImageButton)sender).Parent.FindByName<Entry>("entryNombreEmpresa");
+        entryContacto = ((ImageButton)sender).Parent.FindByName<Entry>("entryContacto");
+        entryDescripcion = ((ImageButton)sender).Parent.FindByName<Editor>("entryDescripcion");
+        entryPrecio = ((ImageButton)sender).Parent.FindByName<Entry>("entryPrecio");
+        entryId = ((ImageButton)sender).Parent.FindByName<Entry>("entryId");
+        entryPeriocidad = ((ImageButton)sender).Parent.FindByName<Entry>("entryPeriocidad");
+        pickerTipo = ((ImageButton)sender).Parent.FindByName<Picker>("pickerTipo");
+        botonEditar = ((ImageButton)sender).Parent.FindByName<ImageButton>("botonEditar");
+        botonEliminar = ((ImageButton)sender).Parent.FindByName<ImageButton>("botonEliminar");
+
+        _idProveedor = entryId.Text;
 
         if (estaEditando)
         {
+           
             Editando();
 
             if (entryNombreEmpresa.Text.Length != 0 && entryContacto.Text.Length != 0 && entryDescripcion.Text.Length != 0 && entryPeriocidad.Text.Length != 0 && entryPrecio.Text.Length != 0 && decimal.TryParse(entryPrecio.Text, out decimal numero2) && int.TryParse(entryContacto.Text, out int numero))
@@ -113,7 +123,8 @@ public partial class Proveedores : ContentPage
                 {
                     try
                     {
-                        Proveedor old_proveedor = listaAuxProveedores.FirstOrDefault(u => u.Id == _idProveedor);
+
+                        Proveedor old_proveedor = listaAuxProveedores.FirstOrDefault(u => u.Id == entryId.Text);
 
                         Proveedor proveedor = new()
                         {
@@ -130,6 +141,7 @@ public partial class Proveedores : ContentPage
 
                         var SetData = connection.client.Update("ProveedorDatabase/" + proveedor.Id, proveedor);
                         AppShell.Current.DisplayAlert("!¡", "Proveedor actualizado correctamente", "Ok");
+                        botonEditar.Source = "editar.png";
                         ActualizarLista();
                     }
                     catch (Exception)
@@ -150,9 +162,8 @@ public partial class Proveedores : ContentPage
         else
         {
             estaEditando = true;
-            botonEditar.Text = "Guardar";
             botonEliminar.BackgroundColor = Colors.Gray;
-            botonEditar.TextColor = Colors.Black;
+            botonEditar.Source = "save.png";
 
             botonEliminar.IsEnabled = false;
 
@@ -165,8 +176,6 @@ public partial class Proveedores : ContentPage
 
 
         }
-
-
     }
 
     private void ReestablecerEntrys()
@@ -189,8 +198,7 @@ public partial class Proveedores : ContentPage
         botonEliminar.BackgroundColor = Colors.DarkRed;
         botonEliminar.IsEnabled = true;
 
-        botonEditar.Text = "Editar";
-        botonEditar.TextColor = Colors.Wheat;
+        botonEditar.Source = "save.png";
 
         entryNombreEmpresa.IsEnabled = false;
         entryContacto.IsEnabled = false;

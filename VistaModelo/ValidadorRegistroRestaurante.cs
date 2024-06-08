@@ -54,7 +54,6 @@ namespace ChefManager.VistaModelo
 
             if (ErroresRegistro.Count == 0)
             {
-
                 try
                 {
 

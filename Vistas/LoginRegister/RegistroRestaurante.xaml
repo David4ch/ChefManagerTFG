@@ -10,8 +10,26 @@
         <vm:ValidadorRegistroRestaurante />
     </ContentPage.BindingContext>
 
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-
+    <StackLayout>
+        <HorizontalStackLayout
+            Margin="20,20,0,50"
+            HorizontalOptions="Start"
+            Spacing="10">
+            <ImageButton
+                Padding="3"
+                BackgroundColor="LightBlue"
+                Clicked="Volver"
+                CornerRadius="10"
+                HorizontalOptions="Start"
+                Source="volver.png"
+                WidthRequest="40" />
+            <Label
+                FontFamily="Balance"
+                FontSize="25"
+                Text="Volver"
+                TextColor="White"
+                VerticalOptions="Center" />
+        </HorizontalStackLayout>
         <Border
             HorizontalOptions="Center"
             Stroke="Black"
@@ -29,8 +47,8 @@
                     Source="restaurante.png"
                     WidthRequest="70" />
                 <Label
-                    FontFamily="Arial"
-                    FontSize="25"
+                    FontFamily="OpenSansSemibold"
+                    FontSize="30"
                     HorizontalOptions="Center"
                     Text="REGISTRO RESTAURANTE"
                     TextColor="#361f00" />

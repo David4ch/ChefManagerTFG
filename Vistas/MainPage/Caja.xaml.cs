@@ -99,7 +99,6 @@ namespace ChefManager.Vistas
             precio.Text = sliderMin.Value + "€ - " + (int)valor + "€";
         }
 
-
         private void Slider_DragCompleted(object sender, EventArgs e)
         {
 

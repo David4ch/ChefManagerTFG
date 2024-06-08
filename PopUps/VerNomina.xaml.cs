@@ -6,7 +6,6 @@ namespace ChefManager.PopUps;
 public partial class VerNomina : Popup
 {
 	
-
 	public VerNomina()
 	{
 		InitializeComponent();

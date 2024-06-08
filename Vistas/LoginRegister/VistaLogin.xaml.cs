@@ -1,5 +1,3 @@
-using FireSharp.Config;
-using FireSharp.Interfaces;
 
 namespace ChefManager.Vistas;
 
@@ -13,4 +11,8 @@ public partial class VistaLogin : ContentPage
         
 	}
 
+    private async void Volver(object sender, EventArgs e)
+    {
+        await AppShell.Current.GoToAsync(nameof(Bienvenida));
+    }
 }

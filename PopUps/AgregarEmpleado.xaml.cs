@@ -59,7 +59,6 @@ public partial class AgregarEmpleado : Popup
 
         var client = new FirebaseAuthClient(new FirebaseAuthConfig()
         {
-
             ApiKey = api_key,
             AuthDomain = authDomain,
             Providers = new FirebaseAuthProvider[]

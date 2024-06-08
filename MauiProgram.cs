@@ -17,7 +17,6 @@ namespace ChefManager
                 fonts.AddFont("Wood Dragon.ttf", "WoodDragon");
                 fonts.AddFont("Arial.ttf", "Arial");
                 fonts.AddFont("Balance.ttf", "Balance");
-
             });
 #if DEBUG
             builder.Logging.AddDebug();

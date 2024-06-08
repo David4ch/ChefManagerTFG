@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-06-04T22:43:38.118</Modified>
+      <Modified>2024-06-08T23:06:09.099</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-06-03T22:57:35.887</Modified>
+      <Modified>2024-06-08T22:57:58.860</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ChefManager.runtimeconfig.json">
       <PackagePath>ChefManager.runtimeconfig.json</PackagePath>
-      <Modified>2024-05-31T21:30:44.613</Modified>
+      <Modified>2024-06-08T22:57:58.461</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ChefManager.dll">
       <PackagePath>ChefManager.dll</PackagePath>
-      <Modified>2024-06-04T22:43:35.828</Modified>
+      <Modified>2024-06-08T23:06:05.128</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ChefManager.exe</PackagePath>
-      <Modified>2024-06-04T22:43:35.837</Modified>
+      <Modified>2024-06-08T23:06:05.220</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -55,23 +55,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-05-29T08:45:33.147</Modified>
+      <Modified>2024-06-08T22:39:05.999</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-05-29T08:45:33.181</Modified>
+      <Modified>2024-06-08T22:39:06.015</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-05-29T08:45:33.228</Modified>
+      <Modified>2024-06-08T22:39:06.046</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-05-29T08:45:33.305</Modified>
+      <Modified>2024-06-08T22:39:06.078</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-05-29T08:45:33.573</Modified>
+      <Modified>2024-06-08T22:39:06.219</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\Arial.ttf">
       <PackagePath>Arial.ttf</PackagePath>
@@ -95,303 +95,311 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-06-03T22:47:45.679</Modified>
+      <Modified>2024-06-08T22:39:07.344</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.662</Modified>
+      <Modified>2024-06-08T22:39:07.334</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.662</Modified>
+      <Modified>2024-06-08T22:39:07.334</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.662</Modified>
+      <Modified>2024-06-08T22:39:07.334</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.662</Modified>
+      <Modified>2024-06-08T22:39:07.334</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.662</Modified>
+      <Modified>2024-06-08T22:39:07.334</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.673</Modified>
+      <Modified>2024-06-08T22:39:07.340</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.673</Modified>
+      <Modified>2024-06-08T22:39:07.340</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.670</Modified>
+      <Modified>2024-06-08T22:39:07.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.673</Modified>
+      <Modified>2024-06-08T22:39:07.340</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.670</Modified>
+      <Modified>2024-06-08T22:39:07.340</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.673</Modified>
+      <Modified>2024-06-08T22:39:07.342</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.673</Modified>
+      <Modified>2024-06-08T22:39:07.342</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.673</Modified>
+      <Modified>2024-06-08T22:39:07.340</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.673</Modified>
+      <Modified>2024-06-08T22:39:07.342</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.673</Modified>
+      <Modified>2024-06-08T22:39:07.342</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.679</Modified>
+      <Modified>2024-06-08T22:39:07.344</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.678</Modified>
+      <Modified>2024-06-08T22:39:07.344</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.678</Modified>
+      <Modified>2024-06-08T22:39:07.344</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.678</Modified>
+      <Modified>2024-06-08T22:39:07.343</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.677</Modified>
+      <Modified>2024-06-08T22:39:07.343</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.677</Modified>
+      <Modified>2024-06-08T22:39:07.343</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.677</Modified>
+      <Modified>2024-06-08T22:39:07.343</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.673</Modified>
+      <Modified>2024-06-08T22:39:07.342</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.677</Modified>
+      <Modified>2024-06-08T22:39:07.343</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.677</Modified>
+      <Modified>2024-06-08T22:39:07.343</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.662</Modified>
+      <Modified>2024-06-08T22:39:07.338</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.662</Modified>
+      <Modified>2024-06-08T22:39:07.338</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.662</Modified>
+      <Modified>2024-06-08T22:39:07.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.662</Modified>
+      <Modified>2024-06-08T22:39:07.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.662</Modified>
+      <Modified>2024-06-08T22:39:07.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.669</Modified>
+      <Modified>2024-06-08T22:39:07.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.669</Modified>
+      <Modified>2024-06-08T22:39:07.338</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.668</Modified>
+      <Modified>2024-06-08T22:39:07.338</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.662</Modified>
+      <Modified>2024-06-08T22:39:07.338</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.662</Modified>
+      <Modified>2024-06-08T22:39:07.338</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.670</Modified>
+      <Modified>2024-06-08T22:39:07.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.670</Modified>
+      <Modified>2024-06-08T22:39:07.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.670</Modified>
+      <Modified>2024-06-08T22:39:07.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.670</Modified>
+      <Modified>2024-06-08T22:39:07.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.669</Modified>
+      <Modified>2024-06-08T22:39:07.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.662</Modified>
+      <Modified>2024-06-08T22:39:07.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.662</Modified>
+      <Modified>2024-06-08T22:39:07.337</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.662</Modified>
+      <Modified>2024-06-08T22:39:07.335</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.662</Modified>
+      <Modified>2024-06-08T22:39:07.335</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.662</Modified>
+      <Modified>2024-06-08T22:39:07.335</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\caja.scale-100.png">
       <PackagePath>caja.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.679</Modified>
+      <Modified>2024-06-08T22:39:07.347</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\calendario.scale-100.png">
       <PackagePath>calendario.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.659</Modified>
+      <Modified>2024-06-08T22:39:07.346</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\chefmg.scale-100.png">
       <PackagePath>chefmg.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.659</Modified>
+      <Modified>2024-06-08T22:39:07.333</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dinero.scale-100.png">
       <PackagePath>dinero.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.679</Modified>
+      <Modified>2024-06-08T22:39:07.349</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dinero2.scale-100.png">
       <PackagePath>dinero2.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.654</Modified>
+      <Modified>2024-06-08T22:39:07.349</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\editar.scale-100.png">
       <PackagePath>editar.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.679</Modified>
+      <Modified>2024-06-08T22:39:07.346</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\eliminar.scale-100.png">
       <PackagePath>eliminar.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.654</Modified>
+      <Modified>2024-06-08T22:39:07.333</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\empleados.scale-100.png">
       <PackagePath>empleados.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.654</Modified>
+      <Modified>2024-06-08T22:39:07.345</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\empleados_icon.scale-100.png">
       <PackagePath>empleados_icon.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.654</Modified>
+      <Modified>2024-06-08T22:39:07.349</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\fondo.scale-100.jpg">
       <PackagePath>fondo.scale-100.jpg</PackagePath>
-      <Modified>2024-06-03T22:47:45.679</Modified>
+      <Modified>2024-06-08T22:39:07.350</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\fondobienvenida.scale-100.jpg">
       <PackagePath>fondobienvenida.scale-100.jpg</PackagePath>
-      <Modified>2024-06-03T22:47:45.679</Modified>
+      <Modified>2024-06-08T22:39:07.344</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\imgnota.scale-100.png">
       <PackagePath>imgnota.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.685</Modified>
+      <Modified>2024-06-08T22:39:07.345</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\inventario.scale-100.png">
       <PackagePath>inventario.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.679</Modified>
+      <Modified>2024-06-08T22:39:07.327</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\notas.scale-100.png">
       <PackagePath>notas.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.679</Modified>
+      <Modified>2024-06-08T22:39:07.333</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ojo.scale-100.png">
       <PackagePath>ojo.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.661</Modified>
+      <Modified>2024-06-08T22:39:07.344</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\pilacajas.scale-100.png">
       <PackagePath>pilacajas.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.661</Modified>
+      <Modified>2024-06-08T22:39:07.345</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\producto.scale-100.png">
       <PackagePath>producto.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.679</Modified>
+      <Modified>2024-06-08T22:39:07.345</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\productos_icon.scale-100.png">
       <PackagePath>productos_icon.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.679</Modified>
+      <Modified>2024-06-08T22:39:07.346</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\proveedores.scale-100.png">
       <PackagePath>proveedores.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.679</Modified>
+      <Modified>2024-06-08T22:39:07.346</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\registro.scale-100.png">
       <PackagePath>registro.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.659</Modified>
+      <Modified>2024-06-08T22:39:07.347</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\restaurante.scale-100.png">
       <PackagePath>restaurante.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.654</Modified>
+      <Modified>2024-06-08T22:39:07.347</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\restaurantes_icon.scale-100.png">
       <PackagePath>restaurantes_icon.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.679</Modified>
+      <Modified>2024-06-08T22:39:07.349</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\saludo.scale-100.png">
+      <PackagePath>saludo.scale-100.png</PackagePath>
+      <Modified>2024-06-08T22:39:07.349</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\save.scale-100.png">
+      <PackagePath>save.scale-100.png</PackagePath>
+      <Modified>2024-06-08T22:39:07.349</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\suma.scale-100.png">
       <PackagePath>suma.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.659</Modified>
+      <Modified>2024-06-08T22:39:07.345</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ubicacion.scale-100.png">
       <PackagePath>ubicacion.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.679</Modified>
+      <Modified>2024-06-08T22:39:07.327</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\upload.scale-100.png">
       <PackagePath>upload.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.685</Modified>
+      <Modified>2024-06-08T22:39:07.347</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\user.scale-100.png">
       <PackagePath>user.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.661</Modified>
+      <Modified>2024-06-08T22:39:07.347</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\usuarios_icon.scale-100.png">
       <PackagePath>usuarios_icon.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.679</Modified>
+      <Modified>2024-06-08T22:39:07.333</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\volver.scale-100.png">
       <PackagePath>volver.scale-100.png</PackagePath>
-      <Modified>2024-06-03T22:47:45.679</Modified>
+      <Modified>2024-06-08T22:39:07.346</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\source\repos\ChefManager\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ChefManager.deps.json">
       <PackagePath>ChefManager.deps.json</PackagePath>
-      <Modified>2024-06-03T22:29:25.133</Modified>
+      <Modified>2024-06-08T22:57:58.181</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -401,13 +409,13 @@
       <PackagePath>WinRT.Runtime.dll</PackagePath>
       <Modified>2023-10-16T19:41:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\david\.nuget\packages\communitytoolkit.maui\9.0.0\lib\net8.0-windows10.0.19041\CommunityToolkit.Maui.dll">
+    <AppxPackagedFile Include="C:\Users\david\.nuget\packages\communitytoolkit.maui\9.0.1\lib\net8.0-windows10.0.19041\CommunityToolkit.Maui.dll">
       <PackagePath>CommunityToolkit.Maui.dll</PackagePath>
-      <Modified>2024-05-03T07:49:12.000</Modified>
+      <Modified>2024-06-07T09:45:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\david\.nuget\packages\communitytoolkit.maui.core\9.0.0\lib\net8.0-windows10.0.19041\CommunityToolkit.Maui.Core.dll">
+    <AppxPackagedFile Include="C:\Users\david\.nuget\packages\communitytoolkit.maui.core\9.0.1\lib\net8.0-windows10.0.19041\CommunityToolkit.Maui.Core.dll">
       <PackagePath>CommunityToolkit.Maui.Core.dll</PackagePath>
-      <Modified>2024-05-03T07:49:14.000</Modified>
+      <Modified>2024-06-07T09:45:28.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\.nuget\packages\communitytoolkit.mvvm\8.2.2\lib\net6.0\CommunityToolkit.Mvvm.dll">
       <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
@@ -577,9 +585,9 @@
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2023-03-08T07:09:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\david\.nuget\packages\plugin.maui.calendar\1.1.7\lib\net8.0-windows10.0.19041\Plugin.Maui.Calendar.dll">
+    <AppxPackagedFile Include="C:\Users\david\.nuget\packages\plugin.maui.calendar\1.1.8\lib\net8.0-windows10.0.19041\Plugin.Maui.Calendar.dll">
       <PackagePath>Plugin.Maui.Calendar.dll</PackagePath>
-      <Modified>2024-05-17T17:05:10.000</Modified>
+      <Modified>2024-06-04T16:46:30.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\david\.nuget\packages\system.speech\8.0.0\runtimes\win\lib\net8.0\System.Speech.dll">
       <PackagePath>System.Speech.dll</PackagePath>

@@ -17,6 +17,9 @@
     <MauiXaml Update="PopUps\AgregarProveedor.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="PopUps\EditarElemento.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="PopUps\EditarEmpleado.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
