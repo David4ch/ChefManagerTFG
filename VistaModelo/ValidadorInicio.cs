@@ -32,31 +32,40 @@ namespace ChefManager.VistaModelo
 
             try
             {
-                Usuario usuarioValido = listaUsuarios.FirstOrDefault(u => u.Email == _email && u.Contrasena.Equals(Encriptacion.Encriptar(_contrasena)));
 
-
-                if (usuarioValido != null)
+                if (_email != null || _contrasena !=null)
                 {
-                    if (_email == "Admin@gmail.com")
+                    Usuario usuarioValido = listaUsuarios.FirstOrDefault(u => u.Email == _email && u.Contrasena.Equals(Encriptacion.Encriptar(_contrasena)));
+
+
+                    if (usuarioValido != null)
                     {
-                        await AppShell.Current.GoToAsync(nameof(VistaAdmin));
+                        if (_email == "Admin@gmail.com")
+                        {
+                            await AppShell.Current.GoToAsync(nameof(VistaAdmin));
+                        }
+                        else
+                        {
+                            Restaurante restaurante = listaRestaurantes.FirstOrDefault(u => u.Id == usuarioValido.Restaurante_Id);
+                            VistaPrinc._ubicacion = restaurante.Direccion;
+                            VistaPrinc._user = usuarioValido.NombreUser;
+                            VistaPrinc._logo = restaurante.Logo;
+                            VistaPrinc._restauranteId = restaurante.Id;
+
+                            await AppShell.Current.GoToAsync(nameof(VistaPrinc));
+                        }
+
                     }
                     else
                     {
-                        Restaurante restaurante = listaRestaurantes.FirstOrDefault(u => u.Id == usuarioValido.Restaurante_Id);
-                        VistaPrinc._ubicacion = restaurante.Direccion;
-                        VistaPrinc._user = usuarioValido.NombreUser;
-                        VistaPrinc._logo = restaurante.Logo;
-                        VistaPrinc._restauranteId = restaurante.Id;
-
-                        await AppShell.Current.GoToAsync(nameof(VistaPrinc));
+                        await AppShell.Current.DisplayAlert("INCORRECTO", "La contraseña o el correo son incorrectos", "OK");
                     }
-
                 }
                 else
                 {
-                    await AppShell.Current.DisplayAlert("INCORRECTO", "La contraseña o el correo son incorrectos", "OK");
+                    await AppShell.Current.DisplayAlert("!¡", "Los campos no pueden estar vacíos", "OK");
                 }
+
             }
             catch (FormatException ex)
             {

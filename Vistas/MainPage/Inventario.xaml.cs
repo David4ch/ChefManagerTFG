@@ -7,7 +7,7 @@ namespace ChefManager.Vistas;
 public partial class Inventario : ContentPage
 {
     List<Producto> ListaAuxProductos = new List<Producto>();
-   private string _idProducto="";
+    private string _idProducto = "";
 
     FirebaseConnection connection = new FirebaseConnection();
     List<Proveedor> listaAuxProveedores = [];
@@ -27,9 +27,9 @@ public partial class Inventario : ContentPage
         MainThread.BeginInvokeOnMainThread(new Action(async () => await ObtenerToken()));
 
         ListaAuxProductos = connection.obtenerInfo<Producto>("ProductoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
-       
+
         ActualizarLista();
-        
+
     }
 
     private async Task ObtenerToken()
@@ -54,13 +54,14 @@ public partial class Inventario : ContentPage
     private void ActualizarLista()
     {
         ListaAuxProductos = connection.obtenerInfo<Producto>("ProductoDatabase").Where(u => u.Restaurante_Id == VistaPrinc._restauranteId).ToList();
-       
-        if (ListaAuxProductos.Count != 0) { 
+
+        if (ListaAuxProductos.Count != 0)
+        {
             listaProductos.ItemsSource = ListaAuxProductos;
         }
-       
 
-        
+
+
     }
 
     private async void SubirFoto(object sender, EventArgs e)
@@ -134,41 +135,42 @@ public partial class Inventario : ContentPage
 
         if (labelTitulo.Text == "AÑADIR")
         {
-            
-            if (ValidarProducto()) { 
-            Producto producto = new Producto
+
+            if (ValidarProducto())
             {
-                Id = Guid.NewGuid().ToString(),
-                Restaurante_Id = VistaPrinc._restauranteId,
-                Nombre = entryNombre.Text,
-                Proveedor = pickerProveedor.SelectedItem.ToString(),
-                Cantidad = int.Parse(entryCantidad.Text),
-                Precio = decimal.Parse(entryPrecio.Text),
-                Imagen = _urlDescarga
+                Producto producto = new Producto
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Restaurante_Id = VistaPrinc._restauranteId,
+                    Nombre = entryNombre.Text,
+                    Proveedor = pickerProveedor.SelectedItem.ToString(),
+                    Cantidad = int.Parse(entryCantidad.Text),
+                    Precio = decimal.Parse(entryPrecio.Text),
+                    Imagen = _urlDescarga
 
-            };
+                };
 
-            connection.client.SetAsync("ProductoDatabase/" + producto.Id, producto);
-            await AppShell.Current.DisplayAlert("¡!", "Producto añadido correctamente", "OK");
+                connection.client.SetAsync("ProductoDatabase/" + producto.Id, producto);
+                await AppShell.Current.DisplayAlert("¡!", "Producto añadido correctamente", "OK");
 
-            stack2.TranslateTo(540, 0);
-            stack2.IsVisible = false;
-            listaProductos.WidthRequest = 1100;
-            stack1.WidthRequest = 1550;
-            borde1.WidthRequest = 1200;
-            buscador.WidthRequest = 500;
+                stack2.TranslateTo(540, 0);
+                stack2.IsVisible = false;
+                listaProductos.WidthRequest = 1100;
+                stack1.WidthRequest = 1550;
+                borde1.WidthRequest = 1200;
+                buscador.WidthRequest = 500;
 
-            ActualizarLista();
+                ActualizarLista();
             }
 
-            
+
 
         }
         else if (labelTitulo.Text == "EDITAR")
         {
             if (ValidarProducto())
             {
-                
+
                 Producto producto = new Producto
                 {
                     Id = _idProducto,
@@ -232,7 +234,7 @@ public partial class Inventario : ContentPage
 
         return correcto;
     }
-    
+
     public async void EditarProducto(object sender, EventArgs e)
     {
         var button = (ImageButton)sender;
@@ -247,7 +249,7 @@ public partial class Inventario : ContentPage
 
         stack1.WidthRequest = 1000;
 
-        
+
 
         labelTitulo.Text = "EDITAR";
         entryNombre.Text = producto.Nombre;
@@ -280,7 +282,7 @@ public partial class Inventario : ContentPage
 
 
     }
-    
+
     public async void VerProducto(object sender, EventArgs e)
     {
         var button = (ImageButton)sender;
@@ -291,12 +293,12 @@ public partial class Inventario : ContentPage
             " Cantidad: " + producto.Cantidad + "\n" +
             " Precio: " + producto.Precio
             , "Volver");
-           
+
     }
 
     private async void EliminarProducto(object sender, EventArgs e)
     {
-       
+
         try
         {
             var SetData = connection.client.Delete("ProductoDatabase/" + _idProducto);
@@ -320,38 +322,46 @@ public partial class Inventario : ContentPage
     private async void SumarRestarCantidad(object sender, EventArgs e)
     {
         Button button = (Button)sender;
-        if (button.Text == "-")
+        if (entryCantidad.Text.Length > 0)
         {
-            if (int.Parse(entryCantidad.Text) > 0) { 
-             if (int.TryParse(entryCantidad.Text, out int numero))
+            if (button.Text == "-")
             {
-                int numeromenos = numero - 1;
+                if (int.Parse(entryCantidad.Text) > 0)
+                {
+                    if (int.TryParse(entryCantidad.Text, out int numero))
+                    {
+                        int numeromenos = numero - 1;
 
-                entryCantidad.Text = numeromenos.ToString();
+                        entryCantidad.Text = numeromenos.ToString();
+                    }
+                    else
+                    {
+                        await AppShell.Current.DisplayAlert("Error", "Porfavor introduce solo numeros en el campo Cantidad", "OK");
+                    }
+                }
+
+
+
+
             }
-            else
+            else if (button.Text == "+")
             {
-                await AppShell.Current.DisplayAlert("Error", "Porfavor introduce solo numeros en el campo Cantidad", "OK");
+                if (int.TryParse(entryCantidad.Text, out int numero))
+                {
+                    int numeromenos = numero + 1;
+
+                    entryCantidad.Text = numeromenos.ToString();
+                }
+                else
+                {
+                    await AppShell.Current.DisplayAlert("Error", "Porfavor introduce solo numeros en el campo Cantidad", "OK");
+                }
             }
-            }
-
-           
-
-
         }
-        else if (button.Text == "+")
-        {
-            if (int.TryParse(entryCantidad.Text, out int numero))
-            {
-                int numeromenos = numero + 1;
-
-                entryCantidad.Text = numeromenos.ToString();
-            }
-            else
-            {
-                await AppShell.Current.DisplayAlert("Error", "Porfavor introduce solo numeros en el campo Cantidad", "OK");
-            }
+        else {
+            await AppShell.Current.DisplayAlert("Error", "Porfavor introduce solo numeros en el campo Cantidad", "OK");
         }
+
     }
 
     private async void Volver(object sender, EventArgs e)

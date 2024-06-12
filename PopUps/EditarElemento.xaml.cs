@@ -5,8 +5,8 @@ namespace ChefManager.PopUps;
 
 public partial class EditarElemento : Popup
 {
-	public static string nombreElemento;
-	public static string idElemento;
+    public static string nombreElemento;
+    public static string idElemento;
     FirebaseConnection connection;
 
     public EditarElemento()
@@ -130,7 +130,7 @@ public partial class EditarElemento : Popup
                 label2.Text = "Mensaje";
                 entry2.Text = nota.Mensaje;
 
-             
+
 
                 label3.IsVisible = false;
                 label4.IsVisible = false;
@@ -204,7 +204,8 @@ public partial class EditarElemento : Popup
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
-        switch (titulo.Text) {
+        switch (titulo.Text)
+        {
             case "Editar Usuario":
                 Usuario old_usuario = connection.obtenerInfo<Usuario>("UsuarioDatabase").FirstOrDefault(u => u.Id.Equals(idElemento));
                 Usuario usuario = new Usuario
@@ -246,29 +247,36 @@ public partial class EditarElemento : Popup
                     Imagen = entry6.Text
 
                 };
-               
+
                 connection.client.Update("ProductoDatabase/" + producto.Id, producto);
                 await AppShell.Current.DisplayAlert("¡!", "Producto actualizado correctamente", "OK");
 
                 break;
             case "Editar Proveedor":
-                Proveedor old_proveedor = connection.obtenerInfo<Proveedor>("ProveedorDatabase").FirstOrDefault(u => u.Id == idElemento);
-
-                Proveedor proveedor = new()
+                try
                 {
-                    Id = idElemento,
-                    Restaurante_Id = entry1.Text,
-                    NombreEmpresa = entry2.Text,
-                    Contacto = old_proveedor.Contacto,
-                    TipoProducto = entry3.Text,
-                    Descripción = entry4.Text,
-                    Periocidad = entry6.Text,
-                    Precio = int.Parse(entry5.Text)
+                    Proveedor old_proveedor = connection.obtenerInfo<Proveedor>("ProveedorDatabase").FirstOrDefault(u => u.Id == idElemento);
 
-                };
+                    Proveedor proveedor = new()
+                    {
+                        Id = idElemento,
+                        Restaurante_Id = entry1.Text,
+                        NombreEmpresa = entry2.Text,
+                        Contacto = old_proveedor.Contacto,
+                        TipoProducto = entry3.Text,
+                        Descripción = entry4.Text,
+                        Periocidad = entry6.Text,
+                        Precio = decimal.Parse(entry5.Text)
 
-                connection.client.Update("ProveedorDatabase/" + proveedor.Id, proveedor);
-                await AppShell.Current.DisplayAlert("!¡", "Proveedor actualizado correctamente", "Ok");
+                    };
+
+                    connection.client.Update("ProveedorDatabase/" + proveedor.Id, proveedor);
+                    await AppShell.Current.DisplayAlert("!¡", "Proveedor actualizado correctamente", "Ok");
+                }
+                catch (IOException ex)
+                {
+                    await AppShell.Current.DisplayAlert("!¡", "Error al actualizar el proveedor: " + ex.Message, "Ok");
+                }
                 break;
             case "Editar Nota":
                 Nota notaanterior = connection.obtenerInfo<Nota>("NotaDatabase").FirstOrDefault(u => u.Id == idElemento);
@@ -299,7 +307,7 @@ public partial class EditarElemento : Popup
                     ImagenNomina = entry4.Text,
                     Disponibilidad = bool.Parse(entry6.Text)
                 };
-                
+
                 connection.client.Update("EmpleadoDatabase/" + empleado.Id, empleado);
 
                 await AppShell.Current.DisplayAlert("¡!", "Empleado Editado Correctamente", "Ok");

@@ -173,7 +173,7 @@
                                         FontSize="15"
                                         HorizontalOptions="Start"
                                         IsEnabled="False"
-                                        MaxLength="40"
+                                        MaxLength="10"
                                         Text="{Binding Contacto}"
                                         TextColor="White"
                                         WidthRequest="250" />
@@ -226,7 +226,7 @@
                                         HorizontalOptions="Start"
                                         IsEnabled="False"
                                         MaxLength="40"
-                                        Text="{Binding Precio, StringFormat='{0}'}"
+                                        Text="{Binding Precio}"
                                         TextColor="White"
                                         WidthRequest="250" />
                                 </StackLayout>

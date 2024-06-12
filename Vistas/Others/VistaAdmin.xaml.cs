@@ -506,21 +506,24 @@ public partial class VistaAdmin : ContentPage
                 Label labelId = ((ImageButton)sender).Parent.FindByName<Label>("labelId");
                 EditarElemento.idElemento = labelId.Text;
                 EditarElemento.nombreElemento = labeltitulo.Text;
+
+                var popup = new EditarElemento();
+                this.ShowPopup(popup);
                 break;
             default:
                 await AppShell.Current.DisplayAlert("¡!", "No está habilitado esta opción", "Ok");
                 break;
         }
-        var popup = new EditarElemento();
-        this.ShowPopup(popup);
+
     }
 
     private async void ImageDelete_Clicked(object sender, EventArgs e)
-    { try
-            {
-        switch (labeltitulo.Text)
+    {
+        try
         {
-            case "USUARIOS":
+            switch (labeltitulo.Text)
+            {
+                case "USUARIOS":
                     var button0 = (ImageButton)sender;
                     var usuario = (Usuario)button0.Parent.Parent.BindingContext;
 
@@ -529,7 +532,7 @@ public partial class VistaAdmin : ContentPage
                     await AppShell.Current.DisplayAlert("¡!", "Elemento eliminado correctamente", "Ok");
                     ActualizarListas("EmpleadoDatabase");
                     break;
-            case "PRODUCTOS":
+                case "PRODUCTOS":
                     var button1 = (ImageButton)sender;
                     var producto = (Producto)button1.Parent.Parent.BindingContext;
 
@@ -538,7 +541,7 @@ public partial class VistaAdmin : ContentPage
                     await AppShell.Current.DisplayAlert("¡!", "Elemento eliminado correctamente", "Ok");
                     ActualizarListas("ProductoDatabase");
                     break;
-            case "RESTAURANTES":
+                case "RESTAURANTES":
                     var button2 = (ImageButton)sender;
                     var restaurante = (Restaurante)button2.Parent.Parent.BindingContext;
 
@@ -547,7 +550,7 @@ public partial class VistaAdmin : ContentPage
                     await AppShell.Current.DisplayAlert("¡!", "Elemento eliminado correctamente", "Ok");
                     ActualizarListas("RestauranteDatabase");
                     break;
-            case "PROVEEDORES":
+                case "PROVEEDORES":
                     var button3 = (ImageButton)sender;
                     var proveedor = (Proveedor)button3.Parent.Parent.BindingContext;
 
@@ -556,7 +559,7 @@ public partial class VistaAdmin : ContentPage
                     await AppShell.Current.DisplayAlert("¡!", "Elemento eliminado correctamente", "Ok");
                     ActualizarListas("ProveedorDatabase");
                     break;
-            case "NOTAS":
+                case "NOTAS":
                     var button4 = (ImageButton)sender;
                     var nota = (Nota)button4.Parent.Parent.BindingContext;
 
@@ -565,7 +568,7 @@ public partial class VistaAdmin : ContentPage
                     await AppShell.Current.DisplayAlert("¡!", "Elemento eliminado correctamente", "Ok");
                     ActualizarListas("NotaDatabase");
                     break;
-            case "EMPLEADOS":
+                case "EMPLEADOS":
                     var button = (ImageButton)sender;
                     var empleado = (Empleado)button.Parent.Parent.BindingContext;
 
@@ -574,7 +577,7 @@ public partial class VistaAdmin : ContentPage
                     await AppShell.Current.DisplayAlert("¡!", "Empleado despedido correctamente", "Ok");
                     ActualizarListas("EmpleadoDatabase");
                     break;
-            case "DINERO":
+                case "DINERO":
                     var button6 = (ImageButton)sender;
                     var dinero = (Dinero)button6.Parent.Parent.BindingContext;
 
@@ -583,19 +586,19 @@ public partial class VistaAdmin : ContentPage
                     await AppShell.Current.DisplayAlert("¡!", "Elemento eliminado correctamente", "Ok");
                     ActualizarListas("DineroDatabase");
                     break;
-            default:
+                default:
 
-                System.Diagnostics.Debug.WriteLine("Error");
-                break;
-        }
- }
-            catch (Exception)
-            {
-                System.Diagnostics.Debug.WriteLine("Error al eliminar");
+                    System.Diagnostics.Debug.WriteLine("Error");
+                    break;
             }
-               
-           
-           
+        }
+        catch (Exception)
+        {
+            System.Diagnostics.Debug.WriteLine("Error al eliminar");
+        }
+
+
+
     }
 
     //CAMBIAR COLOR DE LOS BOTONES DE EMPLEADOS USUARIOS RESTAURANTES ETC

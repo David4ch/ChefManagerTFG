@@ -114,9 +114,6 @@ public partial class Proveedores : ContentPage
 
         if (estaEditando)
         {
-           
-            Editando();
-
             if (entryNombreEmpresa.Text.Length != 0 && entryContacto.Text.Length != 0 && entryDescripcion.Text.Length != 0 && entryPeriocidad.Text.Length != 0 && entryPrecio.Text.Length != 0 && decimal.TryParse(entryPrecio.Text, out decimal numero2) && int.TryParse(entryContacto.Text, out int numero))
             {
                 if (ValidarPeriocidad())
@@ -141,7 +138,7 @@ public partial class Proveedores : ContentPage
 
                         var SetData = connection.client.Update("ProveedorDatabase/" + proveedor.Id, proveedor);
                         AppShell.Current.DisplayAlert("!¡", "Proveedor actualizado correctamente", "Ok");
-                        botonEditar.Source = "editar.png";
+                        ReestablecerEntrys();
                         ActualizarLista();
                     }
                     catch (Exception)
@@ -149,14 +146,17 @@ public partial class Proveedores : ContentPage
                         System.Diagnostics.Debug.WriteLine("Error");
                     }
                 }
-
+                else
+                {
+                    AppShell.Current.DisplayAlert("Error", "Si la periocidad es Semanal o Quincenal, introduce la inicial del dia de la semana que empieza a venir el proveedor \n L = Lunes \n M = Martes \n X = Miercoles \n J = Jueves \n V = Viernes \n Si es Mensual, introduce un numero del actual mes", "Ok");
+                    ReestablecerEntrys();
+                }
             }
             else
             {
+               
+                AppShell.Current.DisplayAlert("ERROR", " Los campos no pueden estar vacíos  \n Deben haber solo numeros en el campo Contacto y Precio \n El formato del campo Periocidad es Semanal-M o Mensual-9", "Ok");
                 ReestablecerEntrys();
-
-                AppShell.Current.DisplayAlert("ERROR", "Los campos no pueden estar vacíos  \n Deben haber solo numeros en el campo Contacto y Precio", "Ok");
-                Editando();
             }
         }
         else
@@ -180,25 +180,10 @@ public partial class Proveedores : ContentPage
 
     private void ReestablecerEntrys()
     {
-
-
-        Proveedor old_proveedor = listaAuxProveedores.FirstOrDefault(u => u.Id == _idProveedor);
-
-        entryNombreEmpresa.Text = old_proveedor.NombreEmpresa;
-        entryContacto.Text = old_proveedor.Contacto.ToString();
-        pickerTipo.SelectedItem = old_proveedor.TipoProducto;
-        entryDescripcion.Text = old_proveedor.Descripción;
-        entryPeriocidad.Text = old_proveedor.Periocidad;
-        entryPrecio.Text = old_proveedor.Precio.ToString();
-    }
-
-    private void Editando()
-    {
         estaEditando = false;
+        botonEditar.Source = "editar.png";
         botonEliminar.BackgroundColor = Colors.DarkRed;
         botonEliminar.IsEnabled = true;
-
-        botonEditar.Source = "save.png";
 
         entryNombreEmpresa.IsEnabled = false;
         entryContacto.IsEnabled = false;
@@ -213,6 +198,15 @@ public partial class Proveedores : ContentPage
         entryDescripcion.TextColor = Colors.White;
         entryPeriocidad.TextColor = Colors.White;
         entryPrecio.TextColor = Colors.White;
+
+        Proveedor old_proveedor = listaAuxProveedores.FirstOrDefault(u => u.Id == _idProveedor);
+
+        entryNombreEmpresa.Text = old_proveedor.NombreEmpresa;
+        entryContacto.Text = old_proveedor.Contacto.ToString();
+        pickerTipo.SelectedItem = old_proveedor.TipoProducto;
+        entryDescripcion.Text = old_proveedor.Descripción;
+        entryPeriocidad.Text = old_proveedor.Periocidad;
+        entryPrecio.Text = old_proveedor.Precio.ToString();
     }
 
     private bool ValidarPeriocidad()
@@ -234,21 +228,11 @@ public partial class Proveedores : ContentPage
                         {
                             correcto = true;
                         }
-                        else
-                        {
-                            AppShell.Current.DisplayAlert("Error", "Si la periocidad es Semanal, introduce la inicial del dia de la semana que empieza a venir el proveedor \n L = Lunes \n M = Martes \n X = Miercoles \n J = Jueves \n V = Viernes ", "Ok");
-                            ReestablecerEntrys();
-                        }
                         break;
                     case "Quincenal":
                         if (partes[1] == "L" || partes[1] == "M" || partes[1] == "X" || partes[1] == "J" || partes[1] == "V")
                         {
                             correcto = true;
-                        }
-                        else
-                        {
-                            AppShell.Current.DisplayAlert("Error", "Si la periocidad es Semanal, introduce la inicial del dia de la semana que empieza a venir el proveedor \n L = Lunes \n M = Martes \n X = Miercoles \n J = Jueves \n V = Viernes ", "Ok");
-                            ReestablecerEntrys();
                         }
                         break;
                     case "Mensual":
@@ -260,37 +244,14 @@ public partial class Proveedores : ContentPage
                             {
                                 correcto = true;
                             }
-                            else
-                            {
-                                AppShell.Current.DisplayAlert("Error", "Este mes tiene " + numeroDiasMesActual + "días, introduce un numero mayor a uno o menor a esos dias", "Gracias");
-                                ReestablecerEntrys();
-                            }
-                        }
-                        else
-                        {
-
-                            AppShell.Current.DisplayAlert("Error", "Si la periocidad es Diaria, introduce el numero del dia del mes que empieza a venir el proveedor ", "Gracias");
-                            ReestablecerEntrys();
                         }
                         break;
                     default:
-                        AppShell.Current.DisplayAlert("Error", "Error inesperado ", "Gracias");
-                        ReestablecerEntrys();
                         break;
 
                 }
 
             }
-            else
-            {
-                AppShell.Current.DisplayAlert("ERROR", "Antes del guión hay que introducir la periocidad(Diaria, Semanal, Quincenal, Mensual)", "Ok");
-                ReestablecerEntrys();
-            }
-        }
-        else
-        {
-            AppShell.Current.DisplayAlert("ERROR", "Tiene que haber solo 1 guión en la palabra", "Ok");
-            ReestablecerEntrys();
         }
 
 

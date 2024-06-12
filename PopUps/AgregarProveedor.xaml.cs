@@ -80,7 +80,7 @@ public partial class AgregarProveedor : Popup
                 }
                 else
                 {
-                    AppShell.Current.DisplayAlert("Error", "Si la periocidad es Semanal, introduce la inicial del dia de la semana que empieza a venir el proveedor \n L = Lunes \n M = Martes \n X = Miercoles \n J = Jueves \n V = Viernes ", "Ok");
+                    AppShell.Current.DisplayAlert("Error", "Si la periocidad es Quincenal, introduce la inicial del dia de la semana que empieza a venir el proveedor \n L = Lunes \n M = Martes \n X = Miercoles \n J = Jueves \n V = Viernes ", "Ok");
                 }
                 break;
             case "Mensual":

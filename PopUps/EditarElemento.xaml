@@ -70,6 +70,7 @@
             x:Name="entry4"
             Margin="20,5,0,10"
             BackgroundColor="{StaticResource darkBlue}"
+            HorizontalOptions="Start"
             Text=""
             WidthRequest="300" />
 
@@ -82,6 +83,7 @@
             x:Name="entry5"
             Margin="20,5,0,10"
             BackgroundColor="{StaticResource darkBlue}"
+            HorizontalOptions="Start"
             Text=""
             WidthRequest="300" />
 
@@ -94,6 +96,7 @@
             x:Name="entry6"
             Margin="20,5,0,10"
             BackgroundColor="{StaticResource darkBlue}"
+            HorizontalOptions="Start"
             Text=""
             WidthRequest="300" />
 
